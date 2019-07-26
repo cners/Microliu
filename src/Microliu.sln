@@ -1,0 +1,119 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Utils", "Microliu.Utils\Microliu.Utils\Microliu.Utils.csproj", "{AEDEC798-51C9-4BE7-BEAD-9CBDC8D7163A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.ORM.DapperIntegration", "Microliu.Modules\Microliu.Modules.ORM.DapperIntegration\Microliu.ORM.DapperIntegration.csproj", "{5DEBDE56-EC52-4FB3-AAB0-568744432D2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microliu.Modules", "Microliu.Modules", "{66A2F15D-C891-49C4-A7CE-8C614B8BD44E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.EventBus.MasstransitIntegration", "Microliu.Modules\Microliu.EventBus.MasstransitIntegration\Microliu.EventBus.MasstransitIntegration.csproj", "{CD2A1835-2E13-4FE4-88C2-7AC980FBEB40}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microliu.Services", "Microliu.Services", "{052D9C23-996F-430C-8E5A-316BB053407E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.EmailService", "Microliu.EmailService\Microliu.EmailService\Microliu.EmailService.csproj", "{2A3BAE7F-A3B4-45E1-A81D-24E53DB77DCC}"
+EndProject
+<<<<<<< HEAD
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.ApiGetway", "Services\Microliu.ApiGateway\Microliu.ApiGetway.csproj", "{0987BDBD-BF2E-44A9-B1BA-A175936A2A41}"
+=======
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.IdentityServer", "Microliu.IdentityServer\Microliu.IdentityServer\Microliu.IdentityServer.csproj", "{B4C091F5-7AA7-407F-ABAB-9B4932CC3F55}"
+>>>>>>> parent of eef5af6... 调整结构
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.ApiGateway.SwaggerIntegration", "Microliu.Modules\Microliu.ApiGateway.SwaggerIntegration\Microliu.ApiGateway.SwaggerIntegration.csproj", "{88CCAFA5-04EE-42C3-B3A6-BF28DFCCC016}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.BizLogger", "Services\Microliu.BizLogger\Microliu.BizLogger.csproj", "{5C867284-1628-4961-9200-87EB2A98A17D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{3030D236-A055-419B-B3E6-367500621BC3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AEDEC798-51C9-4BE7-BEAD-9CBDC8D7163A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEDEC798-51C9-4BE7-BEAD-9CBDC8D7163A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEDEC798-51C9-4BE7-BEAD-9CBDC8D7163A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEDEC798-51C9-4BE7-BEAD-9CBDC8D7163A}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
+		{DF1BC822-61CD-4D57-9ACC-BF9D9FADF6DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF1BC822-61CD-4D57-9ACC-BF9D9FADF6DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF1BC822-61CD-4D57-9ACC-BF9D9FADF6DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF1BC822-61CD-4D57-9ACC-BF9D9FADF6DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56A00CDB-4D76-4FD7-ADB4-EAD93EC85881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56A00CDB-4D76-4FD7-ADB4-EAD93EC85881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56A00CDB-4D76-4FD7-ADB4-EAD93EC85881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56A00CDB-4D76-4FD7-ADB4-EAD93EC85881}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A20DDF6D-2916-415E-BEC2-3F3C9D1337B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A20DDF6D-2916-415E-BEC2-3F3C9D1337B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A20DDF6D-2916-415E-BEC2-3F3C9D1337B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A20DDF6D-2916-415E-BEC2-3F3C9D1337B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0987BDBD-BF2E-44A9-B1BA-A175936A2A41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0987BDBD-BF2E-44A9-B1BA-A175936A2A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0987BDBD-BF2E-44A9-B1BA-A175936A2A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0987BDBD-BF2E-44A9-B1BA-A175936A2A41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32FE9B44-73D3-4F4F-87C0-23D5235DFA86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32FE9B44-73D3-4F4F-87C0-23D5235DFA86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32FE9B44-73D3-4F4F-87C0-23D5235DFA86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32FE9B44-73D3-4F4F-87C0-23D5235DFA86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D03099D6-4D95-4B95-91F4-46676B8F5743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D03099D6-4D95-4B95-91F4-46676B8F5743}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D03099D6-4D95-4B95-91F4-46676B8F5743}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D03099D6-4D95-4B95-91F4-46676B8F5743}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E63A29B-AA92-4067-B90E-50A82B777F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E63A29B-AA92-4067-B90E-50A82B777F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E63A29B-AA92-4067-B90E-50A82B777F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E63A29B-AA92-4067-B90E-50A82B777F7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C867284-1628-4961-9200-87EB2A98A17D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C867284-1628-4961-9200-87EB2A98A17D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C867284-1628-4961-9200-87EB2A98A17D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C867284-1628-4961-9200-87EB2A98A17D}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{5DEBDE56-EC52-4FB3-AAB0-568744432D2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DEBDE56-EC52-4FB3-AAB0-568744432D2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DEBDE56-EC52-4FB3-AAB0-568744432D2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DEBDE56-EC52-4FB3-AAB0-568744432D2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD2A1835-2E13-4FE4-88C2-7AC980FBEB40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD2A1835-2E13-4FE4-88C2-7AC980FBEB40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD2A1835-2E13-4FE4-88C2-7AC980FBEB40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD2A1835-2E13-4FE4-88C2-7AC980FBEB40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A3BAE7F-A3B4-45E1-A81D-24E53DB77DCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A3BAE7F-A3B4-45E1-A81D-24E53DB77DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A3BAE7F-A3B4-45E1-A81D-24E53DB77DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A3BAE7F-A3B4-45E1-A81D-24E53DB77DCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4C091F5-7AA7-407F-ABAB-9B4932CC3F55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4C091F5-7AA7-407F-ABAB-9B4932CC3F55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4C091F5-7AA7-407F-ABAB-9B4932CC3F55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4C091F5-7AA7-407F-ABAB-9B4932CC3F55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88CCAFA5-04EE-42C3-B3A6-BF28DFCCC016}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88CCAFA5-04EE-42C3-B3A6-BF28DFCCC016}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88CCAFA5-04EE-42C3-B3A6-BF28DFCCC016}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88CCAFA5-04EE-42C3-B3A6-BF28DFCCC016}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> parent of eef5af6... 调整结构
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+<<<<<<< HEAD
+		{DF1BC822-61CD-4D57-9ACC-BF9D9FADF6DA} = {66A2F15D-C891-49C4-A7CE-8C614B8BD44E}
+		{56A00CDB-4D76-4FD7-ADB4-EAD93EC85881} = {66A2F15D-C891-49C4-A7CE-8C614B8BD44E}
+		{A20DDF6D-2916-415E-BEC2-3F3C9D1337B7} = {66A2F15D-C891-49C4-A7CE-8C614B8BD44E}
+		{0987BDBD-BF2E-44A9-B1BA-A175936A2A41} = {052D9C23-996F-430C-8E5A-316BB053407E}
+		{32FE9B44-73D3-4F4F-87C0-23D5235DFA86} = {052D9C23-996F-430C-8E5A-316BB053407E}
+		{D03099D6-4D95-4B95-91F4-46676B8F5743} = {052D9C23-996F-430C-8E5A-316BB053407E}
+		{6E63A29B-AA92-4067-B90E-50A82B777F7A} = {052D9C23-996F-430C-8E5A-316BB053407E}
+		{5C867284-1628-4961-9200-87EB2A98A17D} = {052D9C23-996F-430C-8E5A-316BB053407E}
+=======
+		{5DEBDE56-EC52-4FB3-AAB0-568744432D2E} = {66A2F15D-C891-49C4-A7CE-8C614B8BD44E}
+		{CD2A1835-2E13-4FE4-88C2-7AC980FBEB40} = {66A2F15D-C891-49C4-A7CE-8C614B8BD44E}
+		{2A3BAE7F-A3B4-45E1-A81D-24E53DB77DCC} = {052D9C23-996F-430C-8E5A-316BB053407E}
+		{88CCAFA5-04EE-42C3-B3A6-BF28DFCCC016} = {66A2F15D-C891-49C4-A7CE-8C614B8BD44E}
+>>>>>>> parent of eef5af6... 调整结构
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F32ECF0-6010-4F59-AC16-6FFA191BC558}
+	EndGlobalSection
+EndGlobal

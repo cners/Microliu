@@ -1,0 +1,15 @@
+D:\02、程序测试\MicroDotnet\Test\Microliu.SMS\Microliu.SMS\bin\Release\netcoreapp2.2\Dockerfile
+D:\02、程序测试\MicroDotnet\Test\Microliu.SMS\Microliu.SMS\bin\Release\netcoreapp2.2\Microliu.SMS.deps.json
+D:\02、程序测试\MicroDotnet\Test\Microliu.SMS\Microliu.SMS\bin\Release\netcoreapp2.2\Microliu.SMS.runtimeconfig.json
+D:\02、程序测试\MicroDotnet\Test\Microliu.SMS\Microliu.SMS\bin\Release\netcoreapp2.2\Microliu.SMS.runtimeconfig.dev.json
+D:\02、程序测试\MicroDotnet\Test\Microliu.SMS\Microliu.SMS\bin\Release\netcoreapp2.2\Microliu.SMS.dll
+D:\02、程序测试\MicroDotnet\Test\Microliu.SMS\Microliu.SMS\bin\Release\netcoreapp2.2\Microliu.SMS.pdb
+D:\02、程序测试\MicroDotnet\Test\Microliu.SMS\Microliu.SMS\obj\Release\netcoreapp2.2\Microliu.SMS.csprojAssemblyReference.cache
+D:\02、程序测试\MicroDotnet\Test\Microliu.SMS\Microliu.SMS\obj\Release\netcoreapp2.2\Microliu.SMS.csproj.CoreCompileInputs.cache
+D:\02、程序测试\MicroDotnet\Test\Microliu.SMS\Microliu.SMS\obj\Release\netcoreapp2.2\Microliu.SMS.RazorAssemblyInfo.cache
+D:\02、程序测试\MicroDotnet\Test\Microliu.SMS\Microliu.SMS\obj\Release\netcoreapp2.2\Microliu.SMS.RazorAssemblyInfo.cs
+D:\02、程序测试\MicroDotnet\Test\Microliu.SMS\Microliu.SMS\obj\Release\netcoreapp2.2\Microliu.SMS.AssemblyInfoInputs.cache
+D:\02、程序测试\MicroDotnet\Test\Microliu.SMS\Microliu.SMS\obj\Release\netcoreapp2.2\Microliu.SMS.AssemblyInfo.cs
+D:\02、程序测试\MicroDotnet\Test\Microliu.SMS\Microliu.SMS\obj\Release\netcoreapp2.2\Microliu.SMS.RazorTargetAssemblyInfo.cache
+D:\02、程序测试\MicroDotnet\Test\Microliu.SMS\Microliu.SMS\obj\Release\netcoreapp2.2\Microliu.SMS.dll
+D:\02、程序测试\MicroDotnet\Test\Microliu.SMS\Microliu.SMS\obj\Release\netcoreapp2.2\Microliu.SMS.pdb

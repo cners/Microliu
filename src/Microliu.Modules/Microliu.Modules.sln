@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29009.5
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.Modules.ORM.DapperIntegration", "Microliu.Modules.ORM.DapperIntegration\Microliu.Modules.ORM.DapperIntegration.csproj", "{3A41B891-C057-4A4D-A609-DDC7F1FBA1F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3A41B891-C057-4A4D-A609-DDC7F1FBA1F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A41B891-C057-4A4D-A609-DDC7F1FBA1F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A41B891-C057-4A4D-A609-DDC7F1FBA1F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A41B891-C057-4A4D-A609-DDC7F1FBA1F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9CC87725-8D40-496C-88D1-C494A893F8F8}
+	EndGlobalSection
+EndGlobal

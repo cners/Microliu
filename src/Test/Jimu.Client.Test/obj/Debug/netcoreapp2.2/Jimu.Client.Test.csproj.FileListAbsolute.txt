@@ -1,0 +1,8 @@
+D:\Microliu\src\Test\Jimu.Client.Test\bin\Debug\netcoreapp2.2\Jimu.Client.Test.deps.json
+D:\Microliu\src\Test\Jimu.Client.Test\bin\Debug\netcoreapp2.2\Jimu.Client.Test.runtimeconfig.json
+D:\Microliu\src\Test\Jimu.Client.Test\bin\Debug\netcoreapp2.2\Jimu.Client.Test.runtimeconfig.dev.json
+D:\Microliu\src\Test\Jimu.Client.Test\bin\Debug\netcoreapp2.2\Jimu.Client.Test.dll
+D:\Microliu\src\Test\Jimu.Client.Test\obj\Debug\netcoreapp2.2\Jimu.Client.Test.csproj.CoreCompileInputs.cache
+D:\Microliu\src\Test\Jimu.Client.Test\obj\Debug\netcoreapp2.2\Jimu.Client.Test.AssemblyInfoInputs.cache
+D:\Microliu\src\Test\Jimu.Client.Test\obj\Debug\netcoreapp2.2\Jimu.Client.Test.AssemblyInfo.cs
+D:\Microliu\src\Test\Jimu.Client.Test\obj\Debug\netcoreapp2.2\Jimu.Client.Test.csprojAssemblyReference.cache
