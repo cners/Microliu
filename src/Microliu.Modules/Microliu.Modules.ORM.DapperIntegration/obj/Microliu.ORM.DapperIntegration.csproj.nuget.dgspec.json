@@ -10,14 +10,14 @@
         "projectUniqueName": "D:\\Microliu\\src\\Microliu.Modules\\Microliu.Modules.ORM.DapperIntegration\\Microliu.ORM.DapperIntegration.csproj",
         "projectName": "Microliu.ORM.DapperIntegration",
         "projectPath": "D:\\Microliu\\src\\Microliu.Modules\\Microliu.Modules.ORM.DapperIntegration\\Microliu.ORM.DapperIntegration.csproj",
-        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\liuzh\\.nuget\\packages\\",
         "outputPath": "D:\\Microliu\\src\\Microliu.Modules\\Microliu.Modules.ORM.DapperIntegration\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\liuzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -86,14 +86,14 @@
         "projectUniqueName": "D:\\Microliu\\src\\Microliu.Utils\\Microliu.Utils\\Microliu.Utils.csproj",
         "projectName": "Microliu.Utils",
         "projectPath": "D:\\Microliu\\src\\Microliu.Utils\\Microliu.Utils\\Microliu.Utils.csproj",
-        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\liuzh\\.nuget\\packages\\",
         "outputPath": "D:\\Microliu\\src\\Microliu.Utils\\Microliu.Utils\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\liuzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

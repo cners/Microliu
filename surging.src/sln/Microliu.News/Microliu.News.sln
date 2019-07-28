@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.88
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.IModuleServices", "..\..\src\Demo.IModuleServices\Demo.IModuleServices.csproj", "{F0454317-F5CA-4BE6-8AF3-4E44318D8EC8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Surging", "Surging", "{1A9FE29D-EC10-4128-A954-AF34D61F150A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "System.Core", "System.Core", "{5A292262-A397-40BE-A5B6-82988AAAF204}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0454317-F5CA-4BE6-8AF3-4E44318D8EC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0454317-F5CA-4BE6-8AF3-4E44318D8EC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0454317-F5CA-4BE6-8AF3-4E44318D8EC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0454317-F5CA-4BE6-8AF3-4E44318D8EC8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5A292262-A397-40BE-A5B6-82988AAAF204} = {1A9FE29D-EC10-4128-A954-AF34D61F150A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30D726D9-529F-4E77-9EFA-D8E8058AA6B3}
+	EndGlobalSection
+EndGlobal
