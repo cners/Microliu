@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <StartupObject>NewsHost.Program</StartupObject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\surging\src\Surging.Core\Surging.Core.Caching\Surging.Core.Caching.csproj" />
+    <ProjectReference Include="..\..\..\surging\src\Surging.Core\Surging.Core.Codec.MessagePack\Surging.Core.Codec.MessagePack.csproj" />
+    <ProjectReference Include="..\..\..\surging\src\Surging.Core\Surging.Core.Codec.ProtoBuffer\Surging.Core.Codec.ProtoBuffer.csproj" />
+    <ProjectReference Include="..\..\..\surging\src\Surging.Core\Surging.Core.Consul\Surging.Core.Consul.csproj" />
+    <ProjectReference Include="..\..\..\surging\src\Surging.Core\Surging.Core.CPlatform\Surging.Core.CPlatform.csproj" />
+    <ProjectReference Include="..\..\..\surging\src\Surging.Core\Surging.Core.DotNetty\Surging.Core.DotNetty.csproj" />
+    <ProjectReference Include="..\..\..\surging\src\Surging.Core\Surging.Core.EventBusRabbitMQ\Surging.Core.EventBusRabbitMQ.csproj" />
+    <ProjectReference Include="..\..\..\surging\src\Surging.Core\Surging.Core.ServiceHosting\Surging.Core.ServiceHosting.csproj" />
+    <ProjectReference Include="..\..\..\surging\src\Surging.Core\Surging.Core.Swagger\Surging.Core.Swagger.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="configs\cacheSettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="configs\consul.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="configs\eventBusSettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="configs\log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="configs\surgingSettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
