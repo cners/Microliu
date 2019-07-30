@@ -4,6 +4,244 @@
     "D:\\Microliu\\surging.src\\services\\NewsService\\NewsHost\\NewsHost.csproj": {}
   },
   "projects": {
+    "D:\\Microliu\\surging.src\\services\\NewsService\\News.Application\\News.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Microliu\\surging.src\\services\\NewsService\\News.Application\\News.Application.csproj",
+        "projectName": "News.Application",
+        "projectPath": "D:\\Microliu\\surging.src\\services\\NewsService\\News.Application\\News.Application.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\surging.src\\services\\NewsService\\News.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "D:\\Microliu\\surging.src\\services\\NewsService\\News.Doamin\\News.Doamin.csproj": {
+                "projectPath": "D:\\Microliu\\surging.src\\services\\NewsService\\News.Doamin\\News.Doamin.csproj"
+              },
+              "D:\\Microliu\\surging.src\\services\\NewsService\\News.IApplication\\News.IApplication.csproj": {
+                "projectPath": "D:\\Microliu\\surging.src\\services\\NewsService\\News.IApplication\\News.IApplication.csproj"
+              },
+              "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.AutoMapper\\Surging.Core.AutoMapper.csproj": {
+                "projectPath": "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.AutoMapper\\Surging.Core.AutoMapper.csproj"
+              },
+              "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.ProxyGenerator\\Surging.Core.ProxyGenerator.csproj": {
+                "projectPath": "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.ProxyGenerator\\Surging.Core.ProxyGenerator.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\Microliu\\surging.src\\services\\NewsService\\News.Common\\News.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Microliu\\surging.src\\services\\NewsService\\News.Common\\News.Common.csproj",
+        "projectName": "News.Common",
+        "projectPath": "D:\\Microliu\\surging.src\\services\\NewsService\\News.Common\\News.Common.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\surging.src\\services\\NewsService\\News.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\Microliu\\surging.src\\services\\NewsService\\News.Doamin\\News.Doamin.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Microliu\\surging.src\\services\\NewsService\\News.Doamin\\News.Doamin.csproj",
+        "projectName": "News.Doamin",
+        "projectPath": "D:\\Microliu\\surging.src\\services\\NewsService\\News.Doamin\\News.Doamin.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\surging.src\\services\\NewsService\\News.Doamin\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.CPlatform\\Surging.Core.CPlatform.csproj": {
+                "projectPath": "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.CPlatform\\Surging.Core.CPlatform.csproj"
+              },
+              "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.Dapper\\Surging.Core.Dapper.csproj": {
+                "projectPath": "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.Dapper\\Surging.Core.Dapper.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\Microliu\\surging.src\\services\\NewsService\\News.IApplication\\News.IApplication.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Microliu\\surging.src\\services\\NewsService\\News.IApplication\\News.IApplication.csproj",
+        "projectName": "News.IApplication",
+        "projectPath": "D:\\Microliu\\surging.src\\services\\NewsService\\News.IApplication\\News.IApplication.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\surging.src\\services\\NewsService\\News.IApplication\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "D:\\Microliu\\surging.src\\services\\NewsService\\News.Common\\News.Common.csproj": {
+                "projectPath": "D:\\Microliu\\surging.src\\services\\NewsService\\News.Common\\News.Common.csproj"
+              },
+              "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.CPlatform\\Surging.Core.CPlatform.csproj": {
+                "projectPath": "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.CPlatform\\Surging.Core.CPlatform.csproj"
+              },
+              "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.Domain\\Surging.Core.Domain.csproj": {
+                "projectPath": "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.Domain\\Surging.Core.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
     "D:\\Microliu\\surging.src\\services\\NewsService\\NewsHost\\NewsHost.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -30,6 +268,9 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
+              "D:\\Microliu\\surging.src\\services\\NewsService\\News.Application\\News.Application.csproj": {
+                "projectPath": "D:\\Microliu\\surging.src\\services\\NewsService\\News.Application\\News.Application.csproj"
+              },
               "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.Caching\\Surging.Core.Caching.csproj": {
                 "projectPath": "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.Caching\\Surging.Core.Caching.csproj"
               },
@@ -69,6 +310,70 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.AutoMapper\\Surging.Core.AutoMapper.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.AutoMapper\\Surging.Core.AutoMapper.csproj",
+        "projectName": "Surging.Core.AutoMapper",
+        "projectPath": "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.AutoMapper\\Surging.Core.AutoMapper.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.AutoMapper\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.CPlatform\\Surging.Core.CPlatform.csproj": {
+                "projectPath": "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.CPlatform\\Surging.Core.CPlatform.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "AutoMapper.Attributes": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
@@ -441,6 +746,137 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[11.0.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.Dapper\\Surging.Core.Dapper.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.Dapper\\Surging.Core.Dapper.csproj",
+        "projectName": "Surging.Core.Dapper",
+        "projectPath": "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.Dapper\\Surging.Core.Dapper.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.Dapper\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.CPlatform\\Surging.Core.CPlatform.csproj": {
+                "projectPath": "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.CPlatform\\Surging.Core.CPlatform.csproj"
+              },
+              "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.Domain\\Surging.Core.Domain.csproj": {
+                "projectPath": "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.Domain\\Surging.Core.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[1.50.5, )"
+            },
+            "DapperExtensions.DotnetCore": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.13, )"
+            },
+            "Oracle.ManagedDataAccess.Core": {
+              "target": "Package",
+              "version": "[2.12.0-beta3, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.Domain\\Surging.Core.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.Domain\\Surging.Core.Domain.csproj",
+        "projectName": "Surging.Core.Domain",
+        "projectPath": "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.Domain\\Surging.Core.Domain.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.CPlatform\\Surging.Core.CPlatform.csproj": {
+                "projectPath": "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.CPlatform\\Surging.Core.CPlatform.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
             }
           },
           "imports": [

@@ -76,3 +76,17 @@ D:\Microliu\surging.src\services\NewsService\NewsHost\obj\Debug\netcoreapp2.2\Ne
 D:\Microliu\surging.src\services\NewsService\NewsHost\obj\Debug\netcoreapp2.2\NewsHost.csproj.CopyComplete
 D:\Microliu\surging.src\services\NewsService\NewsHost\obj\Debug\netcoreapp2.2\NewsHost.dll
 D:\Microliu\surging.src\services\NewsService\NewsHost\obj\Debug\netcoreapp2.2\NewsHost.pdb
+D:\Microliu\surging.src\services\NewsService\NewsHost\bin\Debug\netcoreapp2.2\News.Application.dll
+D:\Microliu\surging.src\services\NewsService\NewsHost\bin\Debug\netcoreapp2.2\News.Common.dll
+D:\Microliu\surging.src\services\NewsService\NewsHost\bin\Debug\netcoreapp2.2\News.Doamin.dll
+D:\Microliu\surging.src\services\NewsService\NewsHost\bin\Debug\netcoreapp2.2\News.IApplication.dll
+D:\Microliu\surging.src\services\NewsService\NewsHost\bin\Debug\netcoreapp2.2\Surging.Core.AutoMapper.dll
+D:\Microliu\surging.src\services\NewsService\NewsHost\bin\Debug\netcoreapp2.2\Surging.Core.Dapper.dll
+D:\Microliu\surging.src\services\NewsService\NewsHost\bin\Debug\netcoreapp2.2\Surging.Core.Domain.dll
+D:\Microliu\surging.src\services\NewsService\NewsHost\bin\Debug\netcoreapp2.2\Surging.Core.AutoMapper.pdb
+D:\Microliu\surging.src\services\NewsService\NewsHost\bin\Debug\netcoreapp2.2\Surging.Core.Dapper.pdb
+D:\Microliu\surging.src\services\NewsService\NewsHost\bin\Debug\netcoreapp2.2\Surging.Core.Domain.pdb
+D:\Microliu\surging.src\services\NewsService\NewsHost\bin\Debug\netcoreapp2.2\News.Application.pdb
+D:\Microliu\surging.src\services\NewsService\NewsHost\bin\Debug\netcoreapp2.2\News.Common.pdb
+D:\Microliu\surging.src\services\NewsService\NewsHost\bin\Debug\netcoreapp2.2\News.Doamin.pdb
+D:\Microliu\surging.src\services\NewsService\NewsHost\bin\Debug\netcoreapp2.2\News.IApplication.pdb

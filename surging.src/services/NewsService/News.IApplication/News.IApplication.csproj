@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\surging\src\Surging.Core\Surging.Core.CPlatform\Surging.Core.CPlatform.csproj" />
+    <ProjectReference Include="..\..\..\surging\src\Surging.Core\Surging.Core.Domain\Surging.Core.Domain.csproj" />
     <ProjectReference Include="..\News.Common\News.Common.csproj" />
   </ItemGroup>
 

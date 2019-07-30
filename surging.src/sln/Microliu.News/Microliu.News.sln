@@ -69,19 +69,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewsService", "NewsService"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewsHost", "..\..\services\NewsService\NewsHost\NewsHost.csproj", "{E4E80B02-5065-474F-9158-4385A2ECC880}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "News.Doamin", "..\..\services\NewsService\News.Doamin\News.Doamin.csproj", "{43B6C9FB-220D-4836-A5E8-131FA7531225}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "News.Doamin", "..\..\services\NewsService\News.Doamin\News.Doamin.csproj", "{43B6C9FB-220D-4836-A5E8-131FA7531225}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "News.Application", "..\..\services\NewsService\News.Application\News.Application.csproj", "{62F76672-2847-41E1-9A51-F0F7AC16A8FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "News.Application", "..\..\services\NewsService\News.Application\News.Application.csproj", "{62F76672-2847-41E1-9A51-F0F7AC16A8FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "News.IApplication", "..\..\services\NewsService\News.IApplication\News.IApplication.csproj", "{A634BFF9-F642-49F3-8AD9-96A3EF0CAE57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "News.IApplication", "..\..\services\NewsService\News.IApplication\News.IApplication.csproj", "{A634BFF9-F642-49F3-8AD9-96A3EF0CAE57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "News.Domain.Shared", "..\..\services\NewsService\News.Domain.Shared\News.Domain.Shared.csproj", "{7B85667B-236B-49E8-BA7C-99AE50F88495}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "News.Domain.Shared", "..\..\services\NewsService\News.Domain.Shared\News.Domain.Shared.csproj", "{7B85667B-236B-49E8-BA7C-99AE50F88495}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "News.Common", "..\..\services\NewsService\News.Common\News.Common.csproj", "{5AFEE8BC-4728-44EA-8383-AF1CD2DC93E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "News.Common", "..\..\services\NewsService\News.Common\News.Common.csproj", "{5AFEE8BC-4728-44EA-8383-AF1CD2DC93E6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Surging.Core.Dapper", "..\..\surging\src\Surging.Core\Surging.Core.Dapper\Surging.Core.Dapper.csproj", "{8361299C-6DDF-425C-A4EE-C5E8AE688D4F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Surging.Core.Domain", "..\..\surging\src\Surging.Core\Surging.Core.Domain\Surging.Core.Domain.csproj", "{0A5F7D03-0292-4466-A214-7065CB0FC404}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HomeService", "HomeService", "{CBDF2A7C-0B15-48D8-9451-51EABBFE52A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeHost", "..\..\services\HomeService\HomeHost\HomeHost.csproj", "{C2EE91DB-8F04-4CE0-9E32-8E6075F88775}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -233,6 +237,10 @@ Global
 		{0A5F7D03-0292-4466-A214-7065CB0FC404}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A5F7D03-0292-4466-A214-7065CB0FC404}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A5F7D03-0292-4466-A214-7065CB0FC404}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2EE91DB-8F04-4CE0-9E32-8E6075F88775}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2EE91DB-8F04-4CE0-9E32-8E6075F88775}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2EE91DB-8F04-4CE0-9E32-8E6075F88775}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2EE91DB-8F04-4CE0-9E32-8E6075F88775}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -276,6 +284,8 @@ Global
 		{5AFEE8BC-4728-44EA-8383-AF1CD2DC93E6} = {60426361-7A57-4276-B657-CA5BC773FE45}
 		{8361299C-6DDF-425C-A4EE-C5E8AE688D4F} = {5A292262-A397-40BE-A5B6-82988AAAF204}
 		{0A5F7D03-0292-4466-A214-7065CB0FC404} = {5A292262-A397-40BE-A5B6-82988AAAF204}
+		{CBDF2A7C-0B15-48D8-9451-51EABBFE52A0} = {7214128A-F996-4E35-8BA4-59A25C5C8778}
+		{C2EE91DB-8F04-4CE0-9E32-8E6075F88775} = {CBDF2A7C-0B15-48D8-9451-51EABBFE52A0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {30D726D9-529F-4E77-9EFA-D8E8058AA6B3}

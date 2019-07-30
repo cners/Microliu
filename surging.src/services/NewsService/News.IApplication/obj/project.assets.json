@@ -1979,6 +1979,19 @@
           "bin/placeholder/surging.dll": {}
         }
       },
+      "Surging.Core.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "surging": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Surging.Core.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Surging.Core.Domain.dll": {}
+        }
+      },
       "Surging.Core.ServiceHosting/1.1.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.2",
@@ -6307,6 +6320,11 @@
       "path": "../../../surging/src/Surging.Core/Surging.Core.CPlatform/Surging.Core.CPlatform.csproj",
       "msbuildProject": "../../../surging/src/Surging.Core/Surging.Core.CPlatform/Surging.Core.CPlatform.csproj"
     },
+    "Surging.Core.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../../surging/src/Surging.Core/Surging.Core.Domain/Surging.Core.Domain.csproj",
+      "msbuildProject": "../../../surging/src/Surging.Core/Surging.Core.Domain/Surging.Core.Domain.csproj"
+    },
     "Surging.Core.ServiceHosting/1.1.0": {
       "type": "project",
       "path": "../../../surging/src/Surging.Core/Surging.Core.ServiceHosting/Surging.Core.ServiceHosting.csproj",
@@ -6317,6 +6335,7 @@
     ".NETCoreApp,Version=v2.2": [
       "Microsoft.NETCore.App >= 2.2.0",
       "News.Common >= 1.0.0",
+      "Surging.Core.Domain >= 1.0.0",
       "surging >= 1.0.0"
     ]
   },
@@ -6355,6 +6374,9 @@
             },
             "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.CPlatform\\Surging.Core.CPlatform.csproj": {
               "projectPath": "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.CPlatform\\Surging.Core.CPlatform.csproj"
+            },
+            "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.Domain\\Surging.Core.Domain.csproj": {
+              "projectPath": "D:\\Microliu\\surging.src\\surging\\src\\Surging.Core\\Surging.Core.Domain\\Surging.Core.Domain.csproj"
             }
           }
         }
