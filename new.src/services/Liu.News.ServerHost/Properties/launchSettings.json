@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Liu.News.ServerHost": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

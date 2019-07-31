@@ -1,0 +1,96 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Microliu\\new.src\\services\\Liu.News.ServerHost\\Liu.News.ServerHost.csproj": {}
+  },
+  "projects": {
+    "D:\\Microliu\\new.src\\services\\Liu.News.ServerHost\\Liu.News.ServerHost.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Microliu\\new.src\\services\\Liu.News.ServerHost\\Liu.News.ServerHost.csproj",
+        "projectName": "Liu.News.ServerHost",
+        "projectPath": "D:\\Microliu\\new.src\\services\\Liu.News.ServerHost\\Liu.News.ServerHost.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\new.src\\services\\Liu.News.ServerHost\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.7.9, )"
+            },
+            "Surging.Core.Caching": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Surging.Core.Codec.MessagePack": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Surging.Core.Consul": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Surging.Core.DotNetty": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Surging.Core.EventBusRabbitMQ": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Surging.Core.KestrelHttpServer": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Surging.Core.Log4net": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
+            "Surging.Core.Swagger": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

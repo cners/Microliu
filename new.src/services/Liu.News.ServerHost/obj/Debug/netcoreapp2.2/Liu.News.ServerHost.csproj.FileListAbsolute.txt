@@ -1,0 +1,8 @@
+D:\Microliu\new.src\services\Liu.News.ServerHost\bin\Debug\netcoreapp2.2\Liu.News.ServerHost.deps.json
+D:\Microliu\new.src\services\Liu.News.ServerHost\bin\Debug\netcoreapp2.2\Liu.News.ServerHost.runtimeconfig.json
+D:\Microliu\new.src\services\Liu.News.ServerHost\bin\Debug\netcoreapp2.2\Liu.News.ServerHost.runtimeconfig.dev.json
+D:\Microliu\new.src\services\Liu.News.ServerHost\bin\Debug\netcoreapp2.2\Liu.News.ServerHost.dll
+D:\Microliu\new.src\services\Liu.News.ServerHost\obj\Debug\netcoreapp2.2\Liu.News.ServerHost.csprojAssemblyReference.cache
+D:\Microliu\new.src\services\Liu.News.ServerHost\obj\Debug\netcoreapp2.2\Liu.News.ServerHost.csproj.CoreCompileInputs.cache
+D:\Microliu\new.src\services\Liu.News.ServerHost\obj\Debug\netcoreapp2.2\Liu.News.ServerHost.AssemblyInfoInputs.cache
+D:\Microliu\new.src\services\Liu.News.ServerHost\obj\Debug\netcoreapp2.2\Liu.News.ServerHost.AssemblyInfo.cs
