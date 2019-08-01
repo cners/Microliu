@@ -17,5 +17,6 @@ namespace News.IApplication
 
         Task<IPagedResult<GetNewsOutput>> Query(QueryNewsInput input);
 
+        Task<string> Query();
     }
 }

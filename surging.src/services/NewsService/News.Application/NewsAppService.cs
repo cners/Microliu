@@ -2,6 +2,7 @@
 using News.IApplication;
 using News.IApplication.Dtos;
 using Surging.Core.AutoMapper;
+using Surging.Core.CPlatform.Ioc;
 using Surging.Core.Dapper.Repositories;
 using Surging.Core.Domain.PagedAndSorted;
 using Surging.Core.Domain.PagedAndSorted.Extensions;
@@ -13,6 +14,7 @@ using System.Threading.Tasks;
 
 namespace News.Application
 {
+    [ModuleName("news")]
     public class NewsAppService : ProxyServiceBase, INewsAppService
     {
         private readonly INewsDomainService _newsDomainService;
@@ -44,6 +46,11 @@ namespace News.Application
             var queryResult = await _newsRepository.GetPageAsync(p => p.Title.Contains(query.SearchTitle)
                         || p.Id.Equals(query.SearchKey), query.PageIndex, query.PageCount);
             return queryResult.Item1.MapTo<IEnumerable<GetNewsOutput>>().GetPagedResult(queryResult.Item2);
+        }
+
+        public async Task<string> Query()
+        {
+            return "ok";
         }
     }
 }

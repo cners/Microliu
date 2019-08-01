@@ -1,7 +1,7 @@
 {
   "EventBusConnection": "${EventBusConnection}|192.168.10.214",
-  "EventBusUserName": "${EventBusUserName}|guest", //用户名
-  "EventBusPassword": "${EventBusPassword}|guest", //密码
+  "EventBusUserName": "${EventBusUserName}|admin", //用户名
+  "EventBusPassword": "${EventBusPassword}|admin", //密码
   "VirtualHost": "${VirtualHost}|/",
   "MessageTTL": "${MessageTTL}|30000", //消息过期时间，比如过期时间是30分钟就是1800000
   "RetryCount": "${RetryCount}|1", //重试次数，这里设置的延迟队列，只能设置为1

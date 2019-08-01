@@ -69,6 +69,11 @@ namespace NewsHost
                 {
                     logger.LogInformation(result);
                 }
+
+                ////模拟客户端
+                //var path = "v1/api/news/query";
+                //var serviceKey = "news";
+                //var newsProxy =  serviceProxyProvider.Invoke<object>(null, path, serviceKey);
             }
             catch (Exception ex)
             {

@@ -6,3 +6,4 @@ D:\Microliu\surging.src\services\NewsService\News.Common\bin\Debug\netcoreapp2.2
 D:\Microliu\surging.src\services\NewsService\News.Common\bin\Debug\netcoreapp2.2\News.Common.pdb
 D:\Microliu\surging.src\services\NewsService\News.Common\obj\Debug\netcoreapp2.2\News.Common.dll
 D:\Microliu\surging.src\services\NewsService\News.Common\obj\Debug\netcoreapp2.2\News.Common.pdb
+D:\Microliu\surging.src\services\NewsService\News.Common\obj\Debug\netcoreapp2.2\News.Common.csprojAssemblyReference.cache

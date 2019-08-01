@@ -1,0 +1,103 @@
+﻿using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Surging.Core.CPlatform.Runtime.Server;
+using Surging.Core.CPlatform.Utilities;
+using Surging.Core.ProxyGenerator;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace NewsHost
+{
+    public class Startup
+    {
+        private readonly IConfigurationBuilder _configurationBuilder;
+        private const string updateHostActionRoute = "v1/api/action/initactions";
+        private const int hostNameSegmentLength = 3;
+
+        public Startup(IConfigurationBuilder config)
+        {
+            _configurationBuilder = config;
+        }
+
+        public IContainer ConfigureServices(ContainerBuilder builder)
+        {
+            var services = new ServiceCollection();
+            builder.Populate(services);
+            ServiceLocator.Current = builder.Build();
+            return ServiceLocator.Current;
+        }
+
+        public void Configure(IContainer app)
+        {
+        }
+
+
+        internal static void InitActions()
+        {
+            var serviceProxyProvider = ServiceLocator.GetService<IServiceProxyProvider>();
+            var serviceEntryProvider = ServiceLocator.GetService<IServiceEntryProvider>();
+            var entries = serviceEntryProvider.GetEntries();
+            var logger = ServiceLocator.GetService<ILogger<Startup>>();
+            var actions = entries.Select(p => new
+            {
+                ServiceId = p.Descriptor.Id,
+                ServiceHost = GetServiceHost(p.Type.FullName),
+                Application = GetApplication(p.Type.FullName),
+                WebApi = p.RoutePath,
+                Name = p.Descriptor.GetMetadata<string>("GroupName"),
+                DisableNetwork = p.Descriptor.GetMetadata<bool>("DisableNetwork"),
+                EnableAuthorization = p.Descriptor.GetMetadata<bool>("EnableAuthorization"),
+                AllowPermission = p.Descriptor.GetMetadata<bool>("AllowPermission"),
+                Developer = p.Descriptor.GetMetadata<string>("Director"),
+                Date = GetDevDate(p.Descriptor.GetMetadata<string>("Date"))
+            }).ToList();
+
+            var rpcParams = new Dictionary<string, object>() { { "actions", actions } };
+            try
+            {
+                var result = serviceProxyProvider.Invoke<string>(rpcParams, updateHostActionRoute).Result;
+                if (string.IsNullOrEmpty(result))
+                {
+                    logger.LogInformation("初始化action失败");
+                }
+                else
+                {
+                    logger.LogInformation(result);
+                }
+
+                //模拟客户端
+                var path = "v1/api/news/query";
+                var serviceKey = "news";
+                var newsProxy =  serviceProxyProvider.Invoke<object>(null, path, serviceKey);
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex.Message);
+            }
+        }
+
+        private static DateTime? GetDevDate(string dateStr)
+        {
+            if (string.IsNullOrEmpty(dateStr))
+            {
+                return null;
+            }
+            return Convert.ToDateTime(dateStr);
+        }
+
+        private static string GetApplication(string serviceFullName)
+        {
+            return serviceFullName.Split(".").Last();
+        }
+
+        private static string GetServiceHost(string serviceFullName)
+        {
+            return string.Join('.', serviceFullName.Split(".").Take(hostNameSegmentLength));
+        }
+    }
+}
