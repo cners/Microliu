@@ -10,14 +10,14 @@
         "projectUniqueName": "D:\\Microliu\\src\\Services\\Microliu.IdentityServer\\Microliu.IdentityServer\\Microliu.IdentityServer.csproj",
         "projectName": "Microliu.IdentityServer",
         "projectPath": "D:\\Microliu\\src\\Services\\Microliu.IdentityServer\\Microliu.IdentityServer\\Microliu.IdentityServer.csproj",
-        "packagesPath": "C:\\Users\\liuzh\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
         "outputPath": "D:\\Microliu\\src\\Services\\Microliu.IdentityServer\\Microliu.IdentityServer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\liuzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

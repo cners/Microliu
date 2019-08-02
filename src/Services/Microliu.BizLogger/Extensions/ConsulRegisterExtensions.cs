@@ -30,7 +30,7 @@ public static class ConsulDiscoveryExtensions
     /// <param name="app">IApplicationBuilder</param>
     /// <param name="lifetime">IApplicationLifetime</param>
     /// <returns>IApplicationBuilder</returns>
-    public static IApplicationBuilder RegisterWithConsul(this IApplicationBuilder app,
+    public static IApplicationBuilder RegisterConsul(this IApplicationBuilder app,
                                                          IApplicationLifetime lifetime,
                                                          IConfiguration configuration)
     {
@@ -41,7 +41,7 @@ public static class ConsulDiscoveryExtensions
         }
 
 
-        var consulClient = new ConsulClient(x => x.Address = new Uri($"http://{consulOptions.IP}:{consulOptions.Port}"));//请求注册Consul的地址
+        var client = new ConsulClient(x => x.Address = new Uri($"http://{consulOptions.IP}:{consulOptions.Port}"));//请求注册Consul的地址
         var httpCheck = new AgentServiceCheck
         {
             DeregisterCriticalServiceAfter = TimeSpan.FromSeconds(5),// 服务启动多久后注册
@@ -54,17 +54,17 @@ public static class ConsulDiscoveryExtensions
         var registration = new AgentServiceRegistration
         {
             Checks = new[] { httpCheck },
-            ID = Guid.NewGuid().ToString(),
+            ID = Guid.NewGuid().ToString(),//不能重复
             Name = consulOptions.ServiceName,
             Address = consulOptions.IP,
             Port = consulOptions.Port,
-            Tags = consulOptions.Tags  // 添加urlprefix-/servicename 格式的 tag 标签，
+            Tags = consulOptions.Tags 
         };
 
-        consulClient.Agent.ServiceRegister(registration).Wait();// 服务启动注册，内部实现其实就是使用 Consul API 进行注册（HttpClient发起）
+        client.Agent.ServiceRegister(registration).Wait();// 服务启动注册，内部实现其实就是使用 Consul API 进行注册（HttpClient发起）
         lifetime.ApplicationStopping.Register(() =>
         {
-            consulClient.Agent.ServiceDeregister(registration.ID).Wait();// 服务停止后，自动取消注册
+            client.Agent.ServiceDeregister(registration.ID).Wait();// 服务停止后，自动取消注册
         });
         return app;
     }

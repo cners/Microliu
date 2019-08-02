@@ -15,89 +15,137 @@ namespace NewsHost
 {
     public class Startup
     {
-        private readonly IConfigurationBuilder _configurationBuilder;
-        private const string updateHostActionRoute = "v1/api/action/initactions";
-        private const int hostNameSegmentLength = 3;
-
+        private ContainerBuilder _builder;
         public Startup(IConfigurationBuilder config)
         {
-            _configurationBuilder = config;
+            ConfigureEventBus(config);
+            ConfigureCache(config);
         }
 
         public IContainer ConfigureServices(ContainerBuilder builder)
         {
             var services = new ServiceCollection();
+            ConfigureLogging(services);
             builder.Populate(services);
+            _builder = builder;
             ServiceLocator.Current = builder.Build();
             return ServiceLocator.Current;
         }
 
         public void Configure(IContainer app)
         {
+
         }
 
-
-        internal static void InitActions()
+        #region 私有方法
+        /// <summary>
+        /// 配置日志服务
+        /// </summary>
+        /// <param name="services"></param>
+        private void ConfigureLogging(IServiceCollection services)
         {
-            var serviceProxyProvider = ServiceLocator.GetService<IServiceProxyProvider>();
-            var serviceEntryProvider = ServiceLocator.GetService<IServiceEntryProvider>();
-            var entries = serviceEntryProvider.GetEntries();
-            var logger = ServiceLocator.GetService<ILogger<Startup>>();
-            var actions = entries.Select(p => new
-            {
-                ServiceId = p.Descriptor.Id,
-                ServiceHost = GetServiceHost(p.Type.FullName),
-                Application = GetApplication(p.Type.FullName),
-                WebApi = p.RoutePath,
-                Name = p.Descriptor.GetMetadata<string>("GroupName"),
-                DisableNetwork = p.Descriptor.GetMetadata<bool>("DisableNetwork"),
-                EnableAuthorization = p.Descriptor.GetMetadata<bool>("EnableAuthorization"),
-                AllowPermission = p.Descriptor.GetMetadata<bool>("AllowPermission"),
-                Developer = p.Descriptor.GetMetadata<string>("Director"),
-                Date = GetDevDate(p.Descriptor.GetMetadata<string>("Date"))
-            }).ToList();
+            services.AddLogging();
+        }
 
-            var rpcParams = new Dictionary<string, object>() { { "actions", actions } };
-            try
+        private static void ConfigureEventBus(IConfigurationBuilder build)
+        {
+            build
+            .AddEventBusFile("eventBusSettings.json", optional: false);
+        }
+
+        /// <summary>
+        /// 配置缓存服务
+        /// </summary>
+        private void ConfigureCache(IConfigurationBuilder build)
+        {
+            build
+              .AddCacheFile("cacheSettings.json", optional: false);
+        }
+
+        /// <summary>
+        /// 测试
+        /// </summary>
+        /// <param name="serviceProxyFactory"></param>
+        public static void Test(IServiceProxyFactory serviceProxyFactory)
+        {
+            Task.Run(async () =>
             {
-                var result = serviceProxyProvider.Invoke<string>(rpcParams, updateHostActionRoute).Result;
-                if (string.IsNullOrEmpty(result))
+                RpcContext.GetContext().SetAttachment("xid", 124);
+                var userProxy = serviceProxyFactory.CreateProxy<IUserService>("User");
+                var e = userProxy.SetSex(Sex.Woman).GetAwaiter().GetResult();
+                var v = userProxy.GetUserId("fanly").GetAwaiter().GetResult();
+                var fa = userProxy.GetUserName(1).GetAwaiter().GetResult();
+                userProxy.Try().GetAwaiter().GetResult();
+                var v1 = userProxy.GetUserLastSignInTime(1).Result;
+                var things = userProxy.GetAllThings().Result;
+                var apiResult = userProxy.GetApiResult().GetAwaiter().GetResult();
+                userProxy.PublishThroughEventBusAsync(new UserEvent
                 {
-                    logger.LogInformation("初始化action失败");
-                }
-                else
+                    UserId = 1,
+                    Name = "fanly"
+                }).Wait();
+
+                userProxy.PublishThroughEventBusAsync(new UserEvent
                 {
-                    logger.LogInformation(result);
-                }
+                    UserId = 1,
+                    Name = "fanly"
+                }).Wait();
 
-                //模拟客户端
-                var path = "v1/api/news/query";
-                var serviceKey = "news";
-                var newsProxy =  serviceProxyProvider.Invoke<object>(null, path, serviceKey);
-            }
-            catch (Exception ex)
+                var r = await userProxy.GetDictionary();
+                var serviceProxyProvider = ServiceLocator.GetService<IServiceProxyProvider>();
+
+                do
+                {
+                    Console.WriteLine("正在循环 1w次调用 GetUser.....");
+
+                    //1w次调用
+                    var watch = Stopwatch.StartNew();
+                    for (var i = 0; i < 10000; i++)
+                    {
+                        //var a = userProxy.GetDictionary().Result;
+                        var a = await userProxy.GetDictionary();
+                        //var result = serviceProxyProvider.Invoke<object>(new Dictionary<string, object>(), "api/user/GetDictionary", "User").Result;
+                    }
+                    watch.Stop();
+                    Console.WriteLine($"1w次调用结束，执行时间：{watch.ElapsedMilliseconds}ms");
+                    Console.WriteLine("Press any key to continue, q to exit the loop...");
+                    var key = Console.ReadLine();
+                    if (key.ToLower() == "q")
+                        break;
+                } while (true);
+            }).Wait();
+        }
+
+        public static void TestRabbitMq(IServiceProxyFactory serviceProxyFactory)
+        {
+            serviceProxyFactory.CreateProxy<IUserService>("User").PublishThroughEventBusAsync(new UserEvent()
             {
-                logger.LogError(ex.Message);
-            }
+                Age = 18,
+                Name = "fanly",
+                UserId = 1
+            });
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadLine();
         }
 
-        private static DateTime? GetDevDate(string dateStr)
+        public static void TestForRoutePath(IServiceProxyProvider serviceProxyProvider)
         {
-            if (string.IsNullOrEmpty(dateStr))
+            Dictionary<string, object> model = new Dictionary<string, object>();
+            model.Add("user", JsonConvert.SerializeObject(new
             {
-                return null;
-            }
-            return Convert.ToDateTime(dateStr);
-        }
+                Name = "fanly",
+                Age = 18,
+                UserId = 1,
+                Sex = "Man"
+            }));
+            string path = "api/user/getuser";
+            string serviceKey = "User";
 
-        private static string GetApplication(string serviceFullName)
-        {
-            return serviceFullName.Split(".").Last();
+            var userProxy = serviceProxyProvider.Invoke<object>(model, path, serviceKey);
+            var s = userProxy.Result;
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadLine();
         }
-
-        private static string GetServiceHost(string serviceFullName)
-        {
-            return string.Join('.', serviceFullName.Split(".").Take(hostNameSegmentLength));
-        }
+        #endregion
     }
 }

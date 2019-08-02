@@ -1,19 +1,53 @@
 {
   "ReRoutes": [
     {
-      "UpstreamPathTemplate": "/{url}",
-      //"UpstreamHttpMethod": [ "Get" ],
-      "DownstreamPathTemplate": "/{url}",
+      "DownstreamPathTemplate": "/{everything}",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "192.168.10.214",
-          "Port": 10000
-        }
-      ]
+<<<<<<< HEAD:src/Services/Microliu.ApiGateway/ocelot.json
+
+=======
+>>>>>>> parent of eef5af6... 璋冩暣缁撴瀯:src/Microliu.Ocelet/Ocelet/ocelot.json
+      "UpstreamPathTemplate": "/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ],
+      "ServiceName": "emailService", //consul 服务中 ServiceA 的名称
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+<<<<<<< HEAD:src/Services/Microliu.ApiGateway/ocelot.json
+
+      "UpstreamPathTemplate": "/sms/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ],
+      "ServiceName": "SMS",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/{everything}",
+      "DownstreamScheme": "http",
+
+      "UpstreamPathTemplate": "/biz/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ],
+      "ServiceName": "BizLogger",
+=======
+      "UpstreamPathTemplate": "/sms/{everything}",
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ],
+      "ServiceName": "SMS", //consul 服务中 ServiceB 的名称
+>>>>>>> parent of eef5af6... 璋冩暣缁撴瀯:src/Microliu.Ocelet/Ocelet/ocelot.json
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
     }
   ],
   "GlobalConfiguration": {
-    "BaseUrl": "http://localhost:15937"
+    "ServiceDiscoveryProvider": { // Consul 服务发现配置
+      "Host": "localhost", // Consul 地址
+      "Port": 8500,
+      "Type": "Consul"
+    }
   }
 }

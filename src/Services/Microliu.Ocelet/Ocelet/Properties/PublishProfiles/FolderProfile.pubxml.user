@@ -6,6 +6,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>D:\01、工作协作\5、平头i修哥-svn\00源代码\Api Gateways\Api Gateways\bin\Release\netcoreapp2.2\publish\</_PublishTargetUrl>
+    <_PublishTargetUrl>D:\Microliu\src\Services\Microliu.Ocelet\Ocelet\bin\Release\netcoreapp2.2\publish\</_PublishTargetUrl>
   </PropertyGroup>
 </Project>

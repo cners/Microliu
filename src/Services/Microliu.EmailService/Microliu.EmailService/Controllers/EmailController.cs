@@ -14,17 +14,20 @@ namespace Microliu.EmailService.Controllers
         [HttpGet("send")]
         public string Send()
         {
-            string result = "["+
-                            HttpContext.Connection.LocalIpAddress.MapToIPv4() + ":"+
-                            HttpContext.Connection.LocalPort.ToString() +"] "+
+            string result = "[" +
+                            HttpContext.Connection.LocalIpAddress.MapToIPv4() + ":" +
+                            HttpContext.Connection.LocalPort.ToString() + "] " +
                             DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + "发送邮件";
             return result;
         }
 
-        [HttpGet("Get")]
-        public string Get()
+        [HttpGet(nameof(GetEmail))]
+        public string GetEmail()
         {
-            return "Get";
+            var emails = "This is a emails";
+            return emails;
         }
+
+
     }
 }

@@ -10,14 +10,14 @@
         "projectUniqueName": "D:\\Microliu\\src\\Microliu.Modules\\Microliu.ApiGateway.SwaggerIntegration\\Microliu.ApiGateway.SwaggerIntegration.csproj",
         "projectName": "Microliu.ApiGateway.SwaggerIntegration",
         "projectPath": "D:\\Microliu\\src\\Microliu.Modules\\Microliu.ApiGateway.SwaggerIntegration\\Microliu.ApiGateway.SwaggerIntegration.csproj",
-        "packagesPath": "C:\\Users\\liuzh\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
         "outputPath": "D:\\Microliu\\src\\Microliu.Modules\\Microliu.ApiGateway.SwaggerIntegration\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\liuzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

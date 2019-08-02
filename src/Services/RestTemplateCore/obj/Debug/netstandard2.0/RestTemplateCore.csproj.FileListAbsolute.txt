@@ -1,0 +1,9 @@
+D:\Microliu\src\Services\RestTemplateCore\bin\Debug\netstandard2.0\RestTemplateCore.deps.json
+D:\Microliu\src\Services\RestTemplateCore\bin\Debug\netstandard2.0\RestTemplateCore.dll
+D:\Microliu\src\Services\RestTemplateCore\obj\Debug\netstandard2.0\RestTemplateCore.csproj.CoreCompileInputs.cache
+D:\Microliu\src\Services\RestTemplateCore\obj\Debug\netstandard2.0\RestTemplateCore.AssemblyInfoInputs.cache
+D:\Microliu\src\Services\RestTemplateCore\obj\Debug\netstandard2.0\RestTemplateCore.AssemblyInfo.cs
+D:\Microliu\src\Services\RestTemplateCore\obj\Debug\netstandard2.0\RestTemplateCore.csprojAssemblyReference.cache
+D:\Microliu\src\Services\RestTemplateCore\bin\Debug\netstandard2.0\RestTemplateCore.pdb
+D:\Microliu\src\Services\RestTemplateCore\obj\Debug\netstandard2.0\RestTemplateCore.dll
+D:\Microliu\src\Services\RestTemplateCore\obj\Debug\netstandard2.0\RestTemplateCore.pdb
