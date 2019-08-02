@@ -42,3 +42,5 @@ alive: n1 127.0.0.1:8301
 event-clock: 21
 alive: n1 127.0.0.1:8301
 event-clock: 22
+alive: n1 127.0.0.1:8301
+event-clock: 23
