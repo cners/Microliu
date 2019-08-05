@@ -1,0 +1,78 @@
+{
+  "encrypt": "7TnJPB4lKtjEcCWWjN6jSA==",
+  "services": [
+    {
+      "id": "emailService",
+      "name": "emailService",
+      "tags": [ "emailService" ],
+      "address": "localhost",
+      "port": 10001,
+      "checks": [
+        {
+          "id": "email1Check",
+          "name": "邮件服务",
+          "http": "http://localhost:10001/home/index",
+          "interval": "10s",
+          "tls_skip_verify": false,
+          "method": "GET",
+          "timeout": "1s"
+        }
+      ]
+    },
+	{
+      "id": "emailService2",
+      "name": "emailService",
+      "tags": [ "emailService" ],
+      "address": "localhost",
+      "port": 10002,
+      "checks": [
+        {
+          "id": "email2Check",
+          "name": "邮件服务",
+          "http": "http://localhost:10002/home/index",
+          "interval": "10s",
+          "tls_skip_verify": false,
+          "method": "GET",
+          "timeout": "1s"
+        }
+      ]
+    }
+	,
+	{
+      "id": "sms",
+      "name": "SMS",
+      "tags": [ "SMS" ],
+      "address": "localhost",
+      "port": 10010,
+      "checks": [
+        {
+          "id": "smsCheck",
+          "name": "短信服务-10010",
+          "http": "http://localhost:10010/api/healthcheck",
+          "interval": "10s",
+          "tls_skip_verify": false,
+          "method": "GET",
+          "timeout": "1s"
+        }
+      ]
+    },
+    {
+      "id": "wqewoqdfapjsdpfjpsda",
+      "name": "SMS",
+      "tags": [ "SMS" ],
+      "address": "localhost",
+      "port": 10011,
+      "checks": [
+        {
+          "id": "smsCheck2",
+          "name": "短信服务-10011",
+          "http": "http://localhost:10011/api/healthcheck",
+          "interval": "1ms",
+          "tls_skip_verify": false,
+          "method": "GET",
+          "timeout": "1s"
+        }
+      ]
+    }
+  ]
+}

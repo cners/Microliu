@@ -2,10 +2,12 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -61,6 +63,31 @@ namespace RestTemplateCore
             return uri.Scheme + "://" + realRootUrl + uri.PathAndQuery;
         }
 
+        /// <summary>
+        /// 发出Get请求
+        /// </summary>
+        /// <typeparam name="T">响应报文反序列类型</typeparam>
+        /// <param name="url">请求路径</param>
+        /// <param name="requestHeaders">请求额外的报文头信息</param>
+        /// <returns></returns>
+        public async Task<RestResponseWithBody<string>> GetForEntityAsync(String url, HttpRequestHeaders requestHeaders = null)
+        {
+            using (HttpRequestMessage requestMsg = new HttpRequestMessage())
+            {
+                if (requestHeaders != null)
+                {
+                    foreach (var header in requestHeaders)
+                    {
+                        requestMsg.Headers.Add(header.Key, header.Value);
+                    }
+                }
+                requestMsg.Method = System.Net.Http.HttpMethod.Get;
+                //http://apiservice1/api/values转换为http://192.168.1.1:5000/api/values
+                requestMsg.RequestUri = new Uri(await ResolveUrlAsync(url));
+                RestResponseWithBody<string> respEntity = await SendForEntityAsync(requestMsg);
+                return respEntity;
+            }
+        }
         /// <summary>
         /// 发出Get请求
         /// </summary>
@@ -271,6 +298,27 @@ namespace RestTemplateCore
             if (!string.IsNullOrWhiteSpace(bodyStr))
             {
                 respEntity.Body = JsonConvert.DeserializeObject<T>(bodyStr);
+            }
+
+            return respEntity;
+        }
+
+        /// <summary>
+        /// 发出Http请求
+        /// </summary>
+        /// <typeparam name="T">响应报文反序列类型</typeparam>
+        /// <param name="requestMsg">请求数据</param>
+        /// <returns></returns>
+        public async Task<RestResponseWithBody<string>> SendForEntityAsync(HttpRequestMessage requestMsg)
+        {
+            var result = await httpClient.SendAsync(requestMsg);
+            RestResponseWithBody<string> respEntity = new RestResponseWithBody<string>();
+            respEntity.StatusCode = result.StatusCode;
+            respEntity.Headers = respEntity.Headers;
+            String bodyStr = await result.Content.ReadAsStringAsync();
+            if (!string.IsNullOrWhiteSpace(bodyStr))
+            {
+                respEntity.Body = bodyStr;
             }
 
             return respEntity;

@@ -18,7 +18,7 @@
     "IsModulePerLifetimeScope": false,
     "ReloadOnChange": false,
     "Ports": {
-      "HttpPort": "${HttpPort}|8089",
+      "HttpPort": "${HttpPort}|8080",
       "WSPort": "${WSPort}|96",
       "MQTTPort": "${MQTTPort}|97"
     },
@@ -37,7 +37,7 @@
     "ConnectionString": "${ConnectionString}|Server=mysql;Database=surging_demo;Uid=root;Port=3306;Pwd=Surging!P4ss"
   },
   "Automapper": {
-    "Assemblies": "NewsHost;News.Application;News.Common;"
+    "Assemblies": "Surging.Hero.*.Application;Surging.Hero.Common;Surging.*.Common;"
   },
   "Stage": {
     "EnableHttps": true, // ≤ª…Ë÷√ports£¨ƒ¨»œhttpsPort:443
@@ -58,8 +58,8 @@
       "Description": "${SwaggerDes}||Surging.Hero",
       "Contact": {
         "Name": "API Support",
-        "Url": "",
-        "Email": "liuzhuang@6iuu.com"
+        "Url": "https://github.com/surging-cloud/Surging.Hero",
+        "Email": "1029765111@qq.com"
       },
       "License": {
         "Name": "MIT",

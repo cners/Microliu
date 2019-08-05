@@ -11,7 +11,7 @@ namespace Microliu.BizLogger.Controllers
     [ApiController]
     public class BizLoggerController : ControllerBase
     {
-
+        // api/bizlogger/list
         [Route("list")]
         [HttpGet]
         public IActionResult List()
@@ -22,6 +22,13 @@ namespace Microliu.BizLogger.Controllers
                 "log2"
             };
             return Ok(list);
+        }
+
+        [HttpGet]
+        [Route(nameof(GetLogs))]
+        public IActionResult GetLogs()
+        {
+            return Ok("你好，恭喜你迈出了RPC的第一步");
         }
     }
 }

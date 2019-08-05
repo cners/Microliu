@@ -56,8 +56,8 @@ public static class ConsulDiscoveryExtensions
             Checks = new[] { httpCheck },
             ID = Guid.NewGuid().ToString(),//不能重复
             Name = consulOptions.ServiceName,
-            Address = consulOptions.IP,
-            Port = consulOptions.Port,
+            Address = consulOptions.LocalhostIp,
+            Port = consulOptions.LocalhostPort,
             Tags = consulOptions.Tags 
         };
 
