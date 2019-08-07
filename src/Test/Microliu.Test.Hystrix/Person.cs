@@ -7,20 +7,29 @@ namespace Microliu.Test.Hystrix
 {
     public class Person
     {
-        [HystrixCommand(nameof(HelloFallBackAsync))]
+        [HystrixCommand(nameof(Hello1FallBackAsync), MaxRetryTimes = 3, EnableCircuitBreater = true)]
         public virtual async Task<string> HelloAsync(string name)
         {
-            Console.WriteLine($"hello {name}");
+            Console.WriteLine($"正常执行： {name}");
 
             string s = null;
             s.ToString();
             return "ok";
         }
 
-        public async Task<string> HelloFallBackAsync(string name)
+        [HystrixCommand(nameof(Hello2FallBackAsync))]
+        public virtual async Task<string> Hello1FallBackAsync(string name)
         {
-            Console.WriteLine($"执行失败：" + name);
-            return "fail";
+            Console.WriteLine($"Hello降级1:" + name);
+            string s = null;
+            s.ToString();
+            return "fail_1";
+        }
+
+        public virtual async Task<string> Hello2FallBackAsync(string name)
+        {
+            Console.WriteLine($"Hello降级2:" + name);
+            return "fail_2";
         }
 
         [HystrixCommand(nameof(AddFall))]
@@ -35,6 +44,17 @@ namespace Microliu.Test.Hystrix
         public int AddFall(int a, int b)
         {
             return 0;
+        }
+
+        [HystrixCommand(nameof(TestFallBack),CacheTTLMilliseconds =3000)]
+        public virtual void Test(int i)
+        {
+            Console.WriteLine("test" + i);
+        }
+
+        public virtual void TestFallBack(int i)
+        {
+            Console.WriteLine("Test" + i);
         }
     }
 }

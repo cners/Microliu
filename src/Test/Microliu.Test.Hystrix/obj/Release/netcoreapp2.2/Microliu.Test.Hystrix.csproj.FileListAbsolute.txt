@@ -1,0 +1,11 @@
+D:\Microliu\src\Test\Microliu.Test.Hystrix\bin\Release\netcoreapp2.2\Microliu.Test.Hystrix.deps.json
+D:\Microliu\src\Test\Microliu.Test.Hystrix\bin\Release\netcoreapp2.2\Microliu.Test.Hystrix.runtimeconfig.json
+D:\Microliu\src\Test\Microliu.Test.Hystrix\bin\Release\netcoreapp2.2\Microliu.Test.Hystrix.runtimeconfig.dev.json
+D:\Microliu\src\Test\Microliu.Test.Hystrix\bin\Release\netcoreapp2.2\Microliu.Test.Hystrix.dll
+D:\Microliu\src\Test\Microliu.Test.Hystrix\bin\Release\netcoreapp2.2\Microliu.Test.Hystrix.pdb
+D:\Microliu\src\Test\Microliu.Test.Hystrix\obj\Release\netcoreapp2.2\Microliu.Test.Hystrix.csprojAssemblyReference.cache
+D:\Microliu\src\Test\Microliu.Test.Hystrix\obj\Release\netcoreapp2.2\Microliu.Test.Hystrix.csproj.CoreCompileInputs.cache
+D:\Microliu\src\Test\Microliu.Test.Hystrix\obj\Release\netcoreapp2.2\Microliu.Test.Hystrix.AssemblyInfoInputs.cache
+D:\Microliu\src\Test\Microliu.Test.Hystrix\obj\Release\netcoreapp2.2\Microliu.Test.Hystrix.AssemblyInfo.cs
+D:\Microliu\src\Test\Microliu.Test.Hystrix\obj\Release\netcoreapp2.2\Microliu.Test.Hystrix.dll
+D:\Microliu\src\Test\Microliu.Test.Hystrix\obj\Release\netcoreapp2.2\Microliu.Test.Hystrix.pdb

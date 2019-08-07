@@ -43,6 +43,45 @@
           "lib/netstandard2.0/AspectCore.Extensions.Reflection.dll": {}
         }
       },
+      "FluentCache/4.0.0.2": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1"
+        },
+        "compile": {
+          "lib/netstandard1.1/FluentCache.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/FluentCache.dll": {}
+        }
+      },
+      "FluentCache.Microsoft.Extensions.Caching.Abstractions/4.0.0.2": {
+        "type": "package",
+        "dependencies": {
+          "FluentCache": "4.0.0.2",
+          "Microsoft.Extensions.Caching.Abstractions": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentCache.Microsoft.Extensions.Caching.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentCache.Microsoft.Extensions.Caching.Abstractions.dll": {}
+        }
+      },
+      "FluentCache.Microsoft.Extensions.Caching.Memory/4.0.0.2": {
+        "type": "package",
+        "dependencies": {
+          "FluentCache": "4.0.0.2",
+          "FluentCache.Microsoft.Extensions.Caching.Abstractions": "4.0.0.2",
+          "Microsoft.Extensions.Caching.Memory": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentCache.Microsoft.Extensions.Caching.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentCache.Microsoft.Extensions.Caching.Memory.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.5.0": {
         "type": "package",
         "compile": {
@@ -50,6 +89,66 @@
         },
         "runtime": {
           "lib/netcoreapp2.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Caching.Abstractions/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Caching.Memory/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Caching.Abstractions": "2.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Options": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll": {}
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/2.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Options/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Primitives": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Options.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Primitives/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.4.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {}
         }
       },
       "Microsoft.NETCore.App/2.2.0": {
@@ -359,6 +458,15 @@
           "ref/netstandard1.5/System.Runtime.dll": {}
         }
       },
+      "System.Runtime.CompilerServices.Unsafe/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
+        }
+      },
       "System.Text.Encoding/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -432,6 +540,45 @@
         "lib/netstandard2.0/AspectCore.Extensions.Reflection.dll"
       ]
     },
+    "FluentCache/4.0.0.2": {
+      "sha512": "myjGxR5+lFpSeN5UvGfGOSTmmh6OU/PNIJSCM8y3WZaAHD49nqBgEq9yyjy1quC/wORXL9Cbhio3fHlHMi4GWw==",
+      "type": "package",
+      "path": "fluentcache/4.0.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentcache.4.0.0.2.nupkg.sha512",
+        "fluentcache.nuspec",
+        "lib/netstandard1.1/FluentCache.dll",
+        "lib/netstandard1.1/FluentCache.xml"
+      ]
+    },
+    "FluentCache.Microsoft.Extensions.Caching.Abstractions/4.0.0.2": {
+      "sha512": "HOw3qjq0PR0VdZPkLClETHKN1EyMiQYK1yqMH3k+5QxS3n7s9FXs3pNLXHNfuWM8FUfqBNrAJd71Mu6iWzO8mA==",
+      "type": "package",
+      "path": "fluentcache.microsoft.extensions.caching.abstractions/4.0.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentcache.microsoft.extensions.caching.abstractions.4.0.0.2.nupkg.sha512",
+        "fluentcache.microsoft.extensions.caching.abstractions.nuspec",
+        "lib/netstandard2.0/FluentCache.Microsoft.Extensions.Caching.Abstractions.dll",
+        "lib/netstandard2.0/FluentCache.Microsoft.Extensions.Caching.xml"
+      ]
+    },
+    "FluentCache.Microsoft.Extensions.Caching.Memory/4.0.0.2": {
+      "sha512": "VI6A8BRs/xozf2P3VkfPNVwirL1RocrnyNNzSKhl2UtcFBJi0r/MbTXuYkLAb5bSic6YDh9D7dQeJ+YIiU88PQ==",
+      "type": "package",
+      "path": "fluentcache.microsoft.extensions.caching.memory/4.0.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentcache.microsoft.extensions.caching.memory.4.0.0.2.nupkg.sha512",
+        "fluentcache.microsoft.extensions.caching.memory.nuspec",
+        "lib/netstandard2.0/FluentCache.Microsoft.Extensions.Caching.Memory.dll",
+        "lib/netstandard2.0/FluentCache.Microsoft.Extensions.Caching.Memory.xml"
+      ]
+    },
     "Microsoft.CSharp/4.5.0": {
       "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
       "type": "package",
@@ -498,6 +645,68 @@
         "ref/xamarinwatchos10/_._",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Microsoft.Extensions.Caching.Abstractions/2.0.0": {
+      "sha512": "kGMEV53Od1ES0BDh7OOKbTW9Zu5dbbQ72yI936dvvbHlde3puuq/WRKAccFgcB2PuRjox1HFhA9+t53RYqfuEA==",
+      "type": "package",
+      "path": "microsoft.extensions.caching.abstractions/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.xml",
+        "microsoft.extensions.caching.abstractions.2.0.0.nupkg.sha512",
+        "microsoft.extensions.caching.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Caching.Memory/2.0.0": {
+      "sha512": "NqvVdYLbX7N2J2Wz9y3zjhE66JRdROiZZsGhA2u4a9IcIq/jzINC/cLM96BHA+TSOZFPxVdWneqB6/yt9u846A==",
+      "type": "package",
+      "path": "microsoft.extensions.caching.memory/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.xml",
+        "microsoft.extensions.caching.memory.2.0.0.nupkg.sha512",
+        "microsoft.extensions.caching.memory.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/2.0.0": {
+      "sha512": "P4dK3DZQFsp7fFzkBu9H9jesBj0KB3O9c50n9FeAOIF+A8aQKBRj63luC9gPqvcedNdMfYQoEUe5dLps1sqvuA==",
+      "type": "package",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Options/2.0.0": {
+      "sha512": "sAKBgjl2gWsECBLLR9K54T7/uZaP2n9GhMYHay/oOLfvpvX0+iNAlQ2NJgVE352C9Fs5CDV3VbNTK8T2aNKQFA==",
+      "type": "package",
+      "path": "microsoft.extensions.options/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Options.xml",
+        "microsoft.extensions.options.2.0.0.nupkg.sha512",
+        "microsoft.extensions.options.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Primitives/2.0.0": {
+      "sha512": "AMyFwlYdEY4GjjCFGQhUr1/0ZZyYyNjjpCx8Vwfy+Ylxv8pn649uaX5J2L7aknEtQY5+XA+TSfxRSBCgy68yvQ==",
+      "type": "package",
+      "path": "microsoft.extensions.primitives/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
+        "microsoft.extensions.primitives.2.0.0.nupkg.sha512",
+        "microsoft.extensions.primitives.nuspec"
       ]
     },
     "Microsoft.NETCore.App/2.2.0": {
@@ -1413,6 +1622,29 @@
         "system.runtime.nuspec"
       ]
     },
+    "System.Runtime.CompilerServices.Unsafe/4.4.0": {
+      "sha512": "oXzVVwwsT4sfWRzOEKaHn6GLleNZ7gGTjk+gHgLuXj3M61p3TjoAvWmZDJDeDuf0WX8UW4ew0MTJbJOmCSZrVA==",
+      "type": "package",
+      "path": "system.runtime.compilerservices.unsafe/4.4.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
+        "system.runtime.compilerservices.unsafe.4.4.0.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Text.Encoding/4.3.0": {
       "sha512": "BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
       "type": "package",
@@ -1590,6 +1822,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "AspectCore.Core >= 1.2.0",
+      "FluentCache.Microsoft.Extensions.Caching.Memory >= 4.0.0.2",
       "Microsoft.NETCore.App >= 2.2.0",
       "Polly >= 7.1.0"
     ]
@@ -1638,6 +1871,10 @@
           "AspectCore.Core": {
             "target": "Package",
             "version": "[1.2.0, )"
+          },
+          "FluentCache.Microsoft.Extensions.Caching.Memory": {
+            "target": "Package",
+            "version": "[4.0.0.2, )"
           },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
