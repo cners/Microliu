@@ -16,5 +16,12 @@ namespace Microliu.SMS.Controllers
         {
             return "You send one sms!";
         }
+
+        [HttpGet(nameof(Send))]
+        public string Send(string message)
+        {
+            Console.WriteLine(message);
+            return "发送了：" + message;
+        }
     }
 }

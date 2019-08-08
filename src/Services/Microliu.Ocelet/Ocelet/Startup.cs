@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 using Ocelot.Provider.Consul;
+using System.Linq;
 
 namespace Api_Gateways
 {
@@ -27,13 +28,20 @@ namespace Api_Gateways
                 app.UseDeveloperExceptionPage();
             }
 
+            // Ocelot 给后端服务器传数据
+            var configuration = new OcelotPipelineConfiguration
+            {
+                PreErrorResponderMiddleware = async (ctx, next) =>
+                {
+                    var token = ctx.HttpContext.Request.Headers["token"].FirstOrDefault();
+                    ctx.HttpContext.Request.Headers.Add("X-Hello", token);
+                    await next.Invoke();
+                }
+            };
+
             app.UseOcelot().Wait();
 
 
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
         }
     }
 }
