@@ -11,17 +11,26 @@ namespace Microliu.SMS.Controllers
     [ApiController]
     public class SMSController : ControllerBase
     {
+        private readonly SMS _sms;
+
+        public SMSController(SMS sms)
+        {
+            _sms = sms;
+        }
+
         [HttpGet(nameof(Send))]
         public string Send()
         {
             return "You send one sms!";
         }
 
-        [HttpGet(nameof(Send))]
-        public string Send(string message)
+        [HttpGet(nameof(SendMessage))]
+        public string SendMessage(string message)
         {
-            Console.WriteLine(message);
-            return "发送了：" + message;
+            //Console.WriteLine(message);
+            //return "发送了：" + message;
+            return _sms.SendAsync(message).Result;
         }
+
     }
 }

@@ -9,13 +9,13 @@ namespace Microliu.SMS.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class HealthCheckController : ControllerBase
+    public class HealthController : ControllerBase
     {
 
-        [HttpGet]
-        public string Get()
+        [HttpGet(nameof(Check))]
+        public IActionResult Check()
         {
-            return "ok";
+            return Ok();
         }
     }
 }

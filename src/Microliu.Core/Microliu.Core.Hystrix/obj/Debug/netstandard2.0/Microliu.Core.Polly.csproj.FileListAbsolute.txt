@@ -1,0 +1,5 @@
+D:\Microliu\src\Microliu.Core\Microliu.Core.Polly\bin\Debug\netstandard2.0\Microliu.Core.Polly.deps.json
+D:\Microliu\src\Microliu.Core\Microliu.Core.Polly\bin\Debug\netstandard2.0\Microliu.Core.Polly.dll
+D:\Microliu\src\Microliu.Core\Microliu.Core.Polly\obj\Debug\netstandard2.0\Microliu.Core.Polly.csproj.CoreCompileInputs.cache
+D:\Microliu\src\Microliu.Core\Microliu.Core.Polly\obj\Debug\netstandard2.0\Microliu.Core.Polly.AssemblyInfoInputs.cache
+D:\Microliu\src\Microliu.Core\Microliu.Core.Polly\obj\Debug\netstandard2.0\Microliu.Core.Polly.AssemblyInfo.cs

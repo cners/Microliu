@@ -1,1 +1,0 @@
-﻿docker run -d -p 7030:80 --name=sms sms

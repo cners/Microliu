@@ -4810,6 +4810,20 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "Microliu.Core.Consul/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Consul": "0.7.2.6",
+          "Microsoft.AspNetCore": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/Microliu.Core.Consul.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Microliu.Core.Consul.dll": {}
+        }
       }
     }
   },
@@ -13171,12 +13185,17 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "Microliu.Core.Consul/1.0.0": {
+      "type": "project",
+      "path": "../../../Microliu.Core/Microliu.Core.Consul/Microliu.Core.Consul.csproj",
+      "msbuildProject": "../../../Microliu.Core/Microliu.Core.Consul/Microliu.Core.Consul.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
-      "Consul >= 0.7.2.6",
       "IdentityModel >= 3.10.10",
+      "Microliu.Core.Consul >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
@@ -13213,7 +13232,11 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj": {
+              "projectPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -13225,10 +13248,6 @@
     "frameworks": {
       "netcoreapp2.2": {
         "dependencies": {
-          "Consul": {
-            "target": "Package",
-            "version": "[0.7.2.6, )"
-          },
           "IdentityModel": {
             "target": "Package",
             "version": "[3.10.10, )"
