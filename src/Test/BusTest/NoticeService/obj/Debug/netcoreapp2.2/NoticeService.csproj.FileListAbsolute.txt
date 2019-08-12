@@ -1,0 +1,17 @@
+D:\Microliu\src\Test\BusTest\NoticeService\bin\Debug\netcoreapp2.2\NoticeService.deps.json
+D:\Microliu\src\Test\BusTest\NoticeService\bin\Debug\netcoreapp2.2\NoticeService.runtimeconfig.json
+D:\Microliu\src\Test\BusTest\NoticeService\bin\Debug\netcoreapp2.2\NoticeService.runtimeconfig.dev.json
+D:\Microliu\src\Test\BusTest\NoticeService\bin\Debug\netcoreapp2.2\NoticeService.dll
+D:\Microliu\src\Test\BusTest\NoticeService\obj\Debug\netcoreapp2.2\NoticeService.csproj.CoreCompileInputs.cache
+D:\Microliu\src\Test\BusTest\NoticeService\obj\Debug\netcoreapp2.2\NoticeService.RazorAssemblyInfo.cache
+D:\Microliu\src\Test\BusTest\NoticeService\obj\Debug\netcoreapp2.2\NoticeService.RazorAssemblyInfo.cs
+D:\Microliu\src\Test\BusTest\NoticeService\obj\Debug\netcoreapp2.2\NoticeService.AssemblyInfoInputs.cache
+D:\Microliu\src\Test\BusTest\NoticeService\obj\Debug\netcoreapp2.2\NoticeService.AssemblyInfo.cs
+D:\Microliu\src\Test\BusTest\NoticeService\obj\Debug\netcoreapp2.2\NoticeService.RazorTargetAssemblyInfo.cache
+D:\Microliu\src\Test\BusTest\NoticeService\bin\Debug\netcoreapp2.2\NoticeService.pdb
+D:\Microliu\src\Test\BusTest\NoticeService\obj\Debug\netcoreapp2.2\NoticeService.csprojAssemblyReference.cache
+D:\Microliu\src\Test\BusTest\NoticeService\obj\Debug\netcoreapp2.2\NoticeService.dll
+D:\Microliu\src\Test\BusTest\NoticeService\obj\Debug\netcoreapp2.2\NoticeService.pdb
+D:\Microliu\src\Test\BusTest\NoticeService\bin\Debug\netcoreapp2.2\Microliu.Core.EventBusRabbitMQ.dll
+D:\Microliu\src\Test\BusTest\NoticeService\bin\Debug\netcoreapp2.2\Microliu.Core.EventBusRabbitMQ.pdb
+D:\Microliu\src\Test\BusTest\NoticeService\obj\Debug\netcoreapp2.2\NoticeService.csproj.CopyComplete

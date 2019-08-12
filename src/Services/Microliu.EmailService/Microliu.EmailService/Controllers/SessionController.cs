@@ -30,8 +30,8 @@ namespace Microliu.EmailService.Controllers
             TokenResponse tokenResponse = await client.RequestPasswordTokenAsync(new PasswordTokenRequest
             {
                 Address = disc.TokenEndpoint,
-                ClientId = "emailServiceClient",
-                ClientSecret = "emailServiceSecret",
+                ClientId = "smsServiceClientId",
+                ClientSecret = "123456",
                 UserName = userRequestModel.Name,
                 Password = userRequestModel.Password
             });

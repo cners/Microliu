@@ -1,5 +1,15 @@
 {
   "ReRoutes": [
+    {// 授权验证服务器
+      "UpstreamPathTemplate": "/auth/token",
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ],
+      "DownstreamPathTemplate": "/connect/token",
+      "DownstreamScheme": "http",
+      "ServiceName": "Auth",
+      "LoadBalancerOptions": {
+        "Type": "LeastConnection"
+      }
+    },
     {
       "DownstreamPathTemplate": "/{everything}",
       "DownstreamScheme": "http",

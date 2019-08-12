@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="IdentityModel" Version="3.10.10" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.7.9" />
@@ -17,6 +18,7 @@
     <ProjectReference Include="..\..\Microliu.Core\Microliu.Core.Consul\Microliu.Core.Consul.csproj" />
     <ProjectReference Include="..\..\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\Microliu.Core.Hystrix.Extensions.DI.csproj" />
     <ProjectReference Include="..\..\Microliu.Core\Microliu.Core.Hystrix\Microliu.Core.Hystrix.csproj" />
+    <ProjectReference Include="..\..\Microliu.Core\Microliu.Core.Logger\Microliu.Core.Logger.csproj" />
   </ItemGroup>
 
   <ItemGroup>

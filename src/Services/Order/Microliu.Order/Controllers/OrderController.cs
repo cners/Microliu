@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
-using Microliu.Core.Consul.REST;
-using Microsoft.AspNetCore.Http;
+﻿using Microliu.Core.Consul.REST;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Net.Http;
 
 namespace Microliu.Order.Controllers
 {

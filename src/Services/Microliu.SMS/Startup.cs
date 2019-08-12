@@ -1,7 +1,9 @@
 ﻿using Microliu.Core.Consul;
 using Microliu.Core.Hystrix.Extensions.DI;
+using Microliu.Core.Logger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,7 +25,23 @@ namespace Microliu.SMS
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                options.CheckConsentNeeded = context => true;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
+            });
+            services.AddAuthentication(options =>
+            {
+                options.DefaultScheme = "Bearer";
+            }).AddJwtBearer("Bearer", options =>
+            {
+                options.Authority = "http://localhost:10111";
+                options.RequireHttpsMetadata = false;
+                options.Audience = "smsApi";
 
+            });
+
+            services.AddTransient<ILogger, ConsoleLogger>();
             return services.UseHystrix(Assembly.GetEntryAssembly());
         }
 
@@ -34,8 +52,12 @@ namespace Microliu.SMS
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCookiePolicy();
+            app.UseAuthentication();
             app.RegisterConsul(lifetime, Configuration);
-            app.UseMvc(); 
+            app.UseStaticFiles();
+            app.UseMvc();
         }
     }
 }

@@ -34,3 +34,5 @@ D:\Microliu\src\Services\Microliu.SMS\bin\Debug\netcoreapp2.2\Microliu.Core.Hyst
 D:\Microliu\src\Services\Microliu.SMS\bin\Debug\netcoreapp2.2\Microliu.Core.Hystrix.Extensions.DI.dll
 D:\Microliu\src\Services\Microliu.SMS\bin\Debug\netcoreapp2.2\Microliu.Core.Hystrix.Extensions.DI.pdb
 D:\Microliu\src\Services\Microliu.SMS\bin\Debug\netcoreapp2.2\Microliu.Core.Hystrix.pdb
+D:\Microliu\src\Services\Microliu.SMS\bin\Debug\netcoreapp2.2\Microliu.Core.Logger.dll
+D:\Microliu\src\Services\Microliu.SMS\bin\Debug\netcoreapp2.2\Microliu.Core.Logger.pdb

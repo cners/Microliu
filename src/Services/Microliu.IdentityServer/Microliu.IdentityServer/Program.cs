@@ -28,9 +28,9 @@ namespace Microliu.IdentityServer
                 .Configure(app =>
                 {
                     app.UseIdentityServer();
-
                     app.UseStaticFiles();
                     app.UseMvcWithDefaultRoute();
-                });
+                })
+            .UseStartup<Startup>();
     }
 }

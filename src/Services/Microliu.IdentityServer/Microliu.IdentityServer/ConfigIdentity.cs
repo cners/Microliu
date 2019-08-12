@@ -3,62 +3,79 @@ using IdentityServer4.Models;
 using IdentityServer4.Test;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Security.Claims;
-using System.Threading.Tasks;
 
 namespace Microliu.IdentityServer
 {
     public sealed class ConfigIdentity
     {
+        /// <summary>
+        /// 返回应用列表
+        /// </summary>
+        /// <returns></returns>
         public static IEnumerable<ApiResource> GetApiResources()
         {
             return new List<ApiResource>
             {
                 new ApiResource
                 {
-                    Name ="emailService",
+                    Name ="emailApi",
                     DisplayName="Email Service API",
                     Description="邮件服务接口",
                     UserClaims = new List<string>{JwtClaimTypes.Role},
                     ApiSecrets = new List<Secret>{new Secret("emailServiceSecret".Sha256())},
                     Scopes = new List<Scope>
                     {
-                        new Scope("emailService.read"),
-                        new Scope("emailService.write")
+                        new Scope("emailApi")
                     }
                 },
-                new ApiResource("smsService","SMS Service API")
+                 new ApiResource
+                {
+                    Name ="smsApi",
+                    DisplayName="SMS Service API",
+                    Description="短信服务接口",
+                    UserClaims = new List<string>{JwtClaimTypes.Role},
+                    ApiSecrets = new List<Secret>{new Secret("smsServiceSecret".Sha256())},
+                    Scopes = new List<Scope>
+                    {
+                        new Scope("smsApi")
+                    }
+                }
             };
         }
 
+        /// <summary>
+        /// 返回账号列表
+        /// （可存入数据库）
+        /// </summary>
+        /// <returns></returns>
         public static IEnumerable<Client> GetClients()
         {
             return new List<Client>
             {
                 new Client
                 {
-                    ClientId = "emailServiceClient",
+                    ClientId = "emailServiceClientId",
                     ClientName="邮件服务",
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
                     ClientSecrets =
                     {
-                        new Secret("emailServiceSecret".Sha256())
+                        new Secret("123456".Sha256())//秘钥
                     },
-                    AllowedScopes =new List<string>{ "emailService.read"},
+                    AllowedScopes ={ "emailApi", "smsApi"},//这个账号支持访问哪些应用
                     AccessTokenLifetime = 60*60*1,
                     RedirectUris = new List<string> {"https://localhost:10111/signin-oidc"},
                     PostLogoutRedirectUris = new List<string> { "https://localhost:10111" }
                 },
                 new Client
                 {
-                    ClientId = "smsServiceClient",
-                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
+                    ClientId = "smsServiceClientId",
+                    AllowedGrantTypes = GrantTypes.ResourceOwnerPassword, 
                     ClientSecrets =
                     {
-                        new Secret("smsServiceClient".Sha256())
+                        new Secret("123456".Sha256())//秘钥
                     },
-                    AllowedScopes =new List<string>{ "smsService" },
+                    AllowedScopes ={ "smsApi"},
                     AccessTokenLifetime = 60*60*1
                 }
             };

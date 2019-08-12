@@ -1,0 +1,14 @@
+D:\Microliu\src\Test\BusTest\ClientService\bin\Debug\netcoreapp2.2\ClientService.deps.json
+D:\Microliu\src\Test\BusTest\ClientService\bin\Debug\netcoreapp2.2\ClientService.runtimeconfig.json
+D:\Microliu\src\Test\BusTest\ClientService\bin\Debug\netcoreapp2.2\ClientService.runtimeconfig.dev.json
+D:\Microliu\src\Test\BusTest\ClientService\bin\Debug\netcoreapp2.2\ClientService.dll
+D:\Microliu\src\Test\BusTest\ClientService\bin\Debug\netcoreapp2.2\ClientService.pdb
+D:\Microliu\src\Test\BusTest\ClientService\obj\Debug\netcoreapp2.2\ClientService.csproj.CoreCompileInputs.cache
+D:\Microliu\src\Test\BusTest\ClientService\obj\Debug\netcoreapp2.2\ClientService.RazorAssemblyInfo.cache
+D:\Microliu\src\Test\BusTest\ClientService\obj\Debug\netcoreapp2.2\ClientService.RazorAssemblyInfo.cs
+D:\Microliu\src\Test\BusTest\ClientService\obj\Debug\netcoreapp2.2\ClientService.AssemblyInfoInputs.cache
+D:\Microliu\src\Test\BusTest\ClientService\obj\Debug\netcoreapp2.2\ClientService.AssemblyInfo.cs
+D:\Microliu\src\Test\BusTest\ClientService\obj\Debug\netcoreapp2.2\ClientService.RazorTargetAssemblyInfo.cache
+D:\Microliu\src\Test\BusTest\ClientService\obj\Debug\netcoreapp2.2\ClientService.dll
+D:\Microliu\src\Test\BusTest\ClientService\obj\Debug\netcoreapp2.2\ClientService.pdb
+D:\Microliu\src\Test\BusTest\ClientService\obj\Debug\netcoreapp2.2\ClientService.csprojAssemblyReference.cache

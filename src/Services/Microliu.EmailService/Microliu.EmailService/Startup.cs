@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microliu.Core.Consul;
+﻿using Microliu.Core.Consul;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -36,12 +31,11 @@ namespace Microliu.EmailService
             services.AddAuthentication(options =>
             {
                 options.DefaultScheme = "Bearer";
-            })
-            .AddJwtBearer("Bearer", options =>
+            }).AddJwtBearer("Bearer", options =>
             {
                 options.Authority = "http://localhost:10111";
                 options.RequireHttpsMetadata = false;
-                options.Audience = "emailService";
+                options.Audience = "emailApi";
             });
 
         }

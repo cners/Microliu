@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "8015c93911467cb47f47d189bdf64ba20708932c"
+    "signature": "0f54acd86e87224bed204f7fedc84a25eb9bbca0"
   },
   "compilationOptions": {
     "defines": [
@@ -24,9 +24,11 @@
     ".NETCoreApp,Version=v2.2": {
       "Microliu.SMS/1.0.0": {
         "dependencies": {
+          "IdentityModel": "3.10.10",
           "Microliu.Core.Consul": "1.0.0",
           "Microliu.Core.Hystrix": "1.0.0",
           "Microliu.Core.Hystrix.Extensions.DI": "1.0.0",
+          "Microliu.Core.Logger": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
@@ -124,6 +126,21 @@
         },
         "compile": {
           "lib/netstandard1.3/Consul.dll": {}
+        }
+      },
+      "IdentityModel/3.10.10": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2",
+          "System.Text.Encodings.Web": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityModel.dll": {
+            "assemblyVersion": "3.10.10.0",
+            "fileVersion": "3.10.10.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityModel.dll": {}
         }
       },
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
@@ -527,6 +544,14 @@
         },
         "compile": {
           "Microliu.Core.Hystrix.Extensions.DI.dll": {}
+        }
+      },
+      "Microliu.Core.Logger/1.0.0": {
+        "runtime": {
+          "Microliu.Core.Logger.dll": {}
+        },
+        "compile": {
+          "Microliu.Core.Logger.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3766,6 +3791,13 @@
       "path": "consul/0.7.2.6",
       "hashPath": "consul.0.7.2.6.nupkg.sha512"
     },
+    "IdentityModel/3.10.10": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1CZDkFEZC5hU615GrTXLoamLlLlZVNURnjbdjELw3keSRcPufSIwP5NI0f8quUBV/beuKy9yIqYemmMIDIY87w==",
+      "path": "identitymodel/3.10.10",
+      "hashPath": "identitymodel.3.10.10.nupkg.sha512"
+    },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
       "type": "package",
       "serviceable": true,
@@ -3931,6 +3963,11 @@
       "sha512": ""
     },
     "Microliu.Core.Hystrix.Extensions.DI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microliu.Core.Logger/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

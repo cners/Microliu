@@ -42,17 +42,27 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Test.Hystrix", "Te
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Test.WebApiHystrix", "Test\Microliu.Test.WebApiHystrix\Microliu.Test.WebApiHystrix.csproj", "{368B5250-C304-48AA-846A-38FC697341A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.Core.Consul", "Microliu.Core\Microliu.Core.Consul\Microliu.Core.Consul.csproj", "{ED86C498-A7CB-4C09-B637-4A638707F1B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Core.Consul", "Microliu.Core\Microliu.Core.Consul\Microliu.Core.Consul.csproj", "{ED86C498-A7CB-4C09-B637-4A638707F1B3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microliu.Core", "Microliu.Core", "{39F95D1B-AAE4-4FE1-9E1D-CCB59767A3F1}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Core.Hystrix", "Microliu.Core\Microliu.Core.Hystrix\Microliu.Core.Hystrix.csproj", "{292B1EE8-58B7-4BFF-8EB2-0AFA08D2A234}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.Core.Hystrix.Extensions.DI", "Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\Microliu.Core.Hystrix.Extensions.DI.csproj", "{582BF1EF-FFE1-4CBF-A621-12009838990D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Core.Hystrix.Extensions.DI", "Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\Microliu.Core.Hystrix.Extensions.DI.csproj", "{582BF1EF-FFE1-4CBF-A621-12009838990D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Order", "Order", "{363C13F2-E5C0-4CBB-B125-234B1286323F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.Order", "Services\Order\Microliu.Order\Microliu.Order.csproj", "{A724B969-B94C-4B07-8AC2-D57B509BF39A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Order", "Services\Order\Microliu.Order\Microliu.Order.csproj", "{A724B969-B94C-4B07-8AC2-D57B509BF39A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Core.Logger", "Microliu.Core\Microliu.Core.Logger\Microliu.Core.Logger.csproj", "{2933BEBB-A125-4C75-9AA9-5CFC2BF43F75}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusTest", "BusTest", "{4423308F-8A60-4C9C-A05A-BBD32B6A3B06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientService", "Test\BusTest\ClientService\ClientService.csproj", "{6F1E1CEF-6269-466F-9B14-5B90EA61A196}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoticeService", "Test\BusTest\NoticeService\NoticeService.csproj", "{64C3B0B6-304E-422C-9085-7EBDA239E575}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.Core.EventBusRabbitMQ", "Microliu.Core\Microliu.Core.EventBusRabbitMQ\Microliu.Core.EventBusRabbitMQ.csproj", "{D24F7D18-F409-4FBF-B23F-DA6A89272A15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -132,6 +142,22 @@ Global
 		{A724B969-B94C-4B07-8AC2-D57B509BF39A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A724B969-B94C-4B07-8AC2-D57B509BF39A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A724B969-B94C-4B07-8AC2-D57B509BF39A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2933BEBB-A125-4C75-9AA9-5CFC2BF43F75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2933BEBB-A125-4C75-9AA9-5CFC2BF43F75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2933BEBB-A125-4C75-9AA9-5CFC2BF43F75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2933BEBB-A125-4C75-9AA9-5CFC2BF43F75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F1E1CEF-6269-466F-9B14-5B90EA61A196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F1E1CEF-6269-466F-9B14-5B90EA61A196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F1E1CEF-6269-466F-9B14-5B90EA61A196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F1E1CEF-6269-466F-9B14-5B90EA61A196}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64C3B0B6-304E-422C-9085-7EBDA239E575}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64C3B0B6-304E-422C-9085-7EBDA239E575}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64C3B0B6-304E-422C-9085-7EBDA239E575}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64C3B0B6-304E-422C-9085-7EBDA239E575}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D24F7D18-F409-4FBF-B23F-DA6A89272A15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D24F7D18-F409-4FBF-B23F-DA6A89272A15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D24F7D18-F409-4FBF-B23F-DA6A89272A15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D24F7D18-F409-4FBF-B23F-DA6A89272A15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -155,6 +181,11 @@ Global
 		{582BF1EF-FFE1-4CBF-A621-12009838990D} = {39F95D1B-AAE4-4FE1-9E1D-CCB59767A3F1}
 		{363C13F2-E5C0-4CBB-B125-234B1286323F} = {052D9C23-996F-430C-8E5A-316BB053407E}
 		{A724B969-B94C-4B07-8AC2-D57B509BF39A} = {363C13F2-E5C0-4CBB-B125-234B1286323F}
+		{2933BEBB-A125-4C75-9AA9-5CFC2BF43F75} = {39F95D1B-AAE4-4FE1-9E1D-CCB59767A3F1}
+		{4423308F-8A60-4C9C-A05A-BBD32B6A3B06} = {3030D236-A055-419B-B3E6-367500621BC3}
+		{6F1E1CEF-6269-466F-9B14-5B90EA61A196} = {4423308F-8A60-4C9C-A05A-BBD32B6A3B06}
+		{64C3B0B6-304E-422C-9085-7EBDA239E575} = {4423308F-8A60-4C9C-A05A-BBD32B6A3B06}
+		{D24F7D18-F409-4FBF-B23F-DA6A89272A15} = {39F95D1B-AAE4-4FE1-9E1D-CCB59767A3F1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2F32ECF0-6010-4F59-AC16-6FFA191BC558}

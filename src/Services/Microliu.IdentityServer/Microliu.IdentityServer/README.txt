@@ -1,6 +1,8 @@
 关于identityServer4的介绍和基本使用，可以参考CSDN文档：https://blog.csdn.net/qq_42606051/article/details/81583705
 或者看原文：https://www.scottbrady91.com/Identity-Server/Getting-Started-with-IdentityServer-4
 
+补充：https://www.cnblogs.com/qhbm/p/9238179.html
+
 配置好之后，可访问
 http://localhost:10111/.well-known/openid-configuration
 
@@ -17,3 +19,6 @@ http://localhost:10111/.well-known/openid-configuration
 		 app.UseStaticFiles();
          app.UseMvcWithDefaultRoute();
 
+
+访问：
+localhost:10111/connect/token
