@@ -25,6 +25,7 @@
       "ClientService/1.0.0": {
         "dependencies": {
           "EasyNetQ": "3.6.0",
+          "Microliu.Core.EventBusRabbitMQ": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
@@ -493,6 +494,18 @@
           "Microsoft.NETCore.Platforms": "2.2.0",
           "Microsoft.NETCore.Targets": "2.0.0",
           "System.Runtime": "4.3.0"
+        }
+      },
+      "Microliu.Core.EventBusRabbitMQ/1.0.0": {
+        "dependencies": {
+          "EasyNetQ": "3.6.0",
+          "Microsoft.AspNetCore": "2.2.0"
+        },
+        "runtime": {
+          "Microliu.Core.EventBusRabbitMQ.dll": {}
+        },
+        "compile": {
+          "Microliu.Core.EventBusRabbitMQ.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3885,6 +3898,11 @@
       "sha512": "sha512-Z6YfyYTCg7lOZjJzBjONJTFKGN9/NIYKSxhU5GRd+DTwHSZyvWp1xuI5aR+dLg+ayyC5Xv57KiY4oJ0tMO89fQ==",
       "path": "system.threading.timer/4.3.0",
       "hashPath": "system.threading.timer.4.3.0.nupkg.sha512"
+    },
+    "Microliu.Core.EventBusRabbitMQ/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",

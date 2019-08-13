@@ -12,3 +12,6 @@ D:\Microliu\src\Test\BusTest\ClientService\obj\Debug\netcoreapp2.2\ClientService
 D:\Microliu\src\Test\BusTest\ClientService\obj\Debug\netcoreapp2.2\ClientService.dll
 D:\Microliu\src\Test\BusTest\ClientService\obj\Debug\netcoreapp2.2\ClientService.pdb
 D:\Microliu\src\Test\BusTest\ClientService\obj\Debug\netcoreapp2.2\ClientService.csprojAssemblyReference.cache
+D:\Microliu\src\Test\BusTest\ClientService\bin\Debug\netcoreapp2.2\Microliu.Core.EventBusRabbitMQ.dll
+D:\Microliu\src\Test\BusTest\ClientService\bin\Debug\netcoreapp2.2\Microliu.Core.EventBusRabbitMQ.pdb
+D:\Microliu\src\Test\BusTest\ClientService\obj\Debug\netcoreapp2.2\ClientService.csproj.CopyComplete

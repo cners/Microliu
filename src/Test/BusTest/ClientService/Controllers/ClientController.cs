@@ -24,7 +24,7 @@ namespace ClientService.Controllers
         {
             ClientMessage message = new ClientMessage
             {
-                ClientId = clientDto.Id.Value,
+                ClientId = clientDto.Id,
                 ClientName = clientDto.Name,
                 Sex = clientDto.Sex,
                 Age = 29,

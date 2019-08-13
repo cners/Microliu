@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Threading.Tasks;
-using EasyNetQ;
+﻿using Microliu.Core.EventBusRabbitMQ;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+using System.Reflection;
+using Microliu.Core.EventBusRabbitMQ;
 
 namespace NoticeService
 {
@@ -28,8 +23,7 @@ namespace NoticeService
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            // IoC - EventBus
-            services.AddSingleton(RabbitHutch.CreateBus(Configuration["MQ:Dev"]));
+            services.AddEasyNetQ(Configuration);
             // IoC - Logger
             //services.AddSingleton<ILogger, ExceptionlessLogger>();
             // IoC - Service & Repository

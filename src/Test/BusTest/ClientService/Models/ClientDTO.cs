@@ -8,7 +8,7 @@ namespace ClientService.Models
 {
     public class ClientDTO
     {
-        public Nullable<System.Int32> Id { get; set; }
+        public string Id { get; set; }
 
         [Required(ErrorMessage = "Client name cannot be null!")]
         [MaxLength(20, ErrorMessage = "Client name is too long!")]
