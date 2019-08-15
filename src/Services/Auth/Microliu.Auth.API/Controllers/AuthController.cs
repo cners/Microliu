@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Microliu.Auth.API.Controllers
 {
-    [Route("api/[controller]")]
+    [ApiVersion("1.0")]
+    [ApiVersion("2.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     [Produces("application/json")]
     public class AuthController : ControllerBase
@@ -19,6 +21,7 @@ namespace Microliu.Auth.API.Controllers
         }
 
         // POST: api/auth/createrole
+        [MapToApiVersion("1.0")]
         [HttpGet(nameof(CreateRole))]
         public async Task<IActionResult> CreateRole()
         {
@@ -34,6 +37,13 @@ namespace Microliu.Auth.API.Controllers
             };
             await _authAppService.CreateRole(role);
             return Ok("CreateRole");
+        }
+
+        [MapToApiVersion("2.0")]
+        [HttpGet(nameof(Query))]
+        public IActionResult Query()
+        {
+            return Ok("query");
         }
     }
 }

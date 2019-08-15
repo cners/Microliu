@@ -30,32 +30,48 @@ namespace Microliu.Auth.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc(c => c.Conventions.Add(new ApiExplorerGroupPerVersionConvention())).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services
+                //.AddMvc()
+                .AddMvc(c => c.Conventions.Add(new ApiExplorerGroupPerVersionConvention()))
+                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddAuthService(Configuration);// 权限服务
 
-            //services.AddApiVersioning(options =>
-            //{
-            //    options.AssumeDefaultVersionWhenUnspecified = true;
-            //    options.DefaultApiVersion = new ApiVersion(1, 0);
-            //});
+            services.AddApiVersioning(options =>
+            {
+                options.AssumeDefaultVersionWhenUnspecified = true;
+                options.DefaultApiVersion = new ApiVersion(1, 0);
+            });
 
             // Swagger
+
+
             services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v1.0", new Info
                 {
-                    Title = "DFS 接口文档",
-                    Description = "力众华援（开发部）-分布式文件系统API",
+                    Title = "API Online Document",
+                    Description = "Call API Online Testing",
                     Version = "v1.0",
                     Contact = new Contact
                     {
-                        Name = "Liu Zhuang",
-                        Email = "liu.zhuang@lzassist.com"
+                        Name = "Liuzhuang",
+                        Email = "liuzhuang@6iuu.com"
+                    }
+                });
+                options.SwaggerDoc("v2.0", new Info
+                {
+                    Title = "API Online Document",
+                    Description = "Call API Online Testing",
+                    Version = "v2.0",
+                    Contact = new Contact
+                    {
+                        Name = "Liuzhuang",
+                        Email = "liuzhuang@6iuu.com"
                     }
                 });
 
-                options.SwaggerDoc("v2.0", new Info { Title = "DFS API -v2", Version = "V2" });
+                //options.SwaggerDoc("v2.0", new Info { Title = "DFS API -v2", Version = "V2" });
 
                 options.OperationFilter<RemoveVersionFromParameter>();
                 options.DocumentFilter<ReplaceVersionWithExactValueInPath>();
@@ -89,13 +105,13 @@ namespace Microliu.Auth.API
                 options.IgnoreObsoleteActions();
             });
 
-            services.ConfigureSwaggerGen(c =>
-            {
-                // 配置生成的 xml 注释文档路径
-                var rootPath = AppContext.BaseDirectory;
-                c.IncludeXmlComments(Path.Combine(rootPath, "Microliu.Auth.API.xml"));
-                //c.IncludeXmlComments(Path.Combine(rootPath, "AuthApi.xml"));
-            });
+            //services.ConfigureSwaggerGen(c =>
+            //{
+            //    // 配置生成的 xml 注释文档路径
+            //    var rootPath = AppContext.BaseDirectory;
+            //    c.IncludeXmlComments(Path.Combine(rootPath, "Microliu.Auth.API.xml"));
+            //    //c.IncludeXmlComments(Path.Combine(rootPath, "AuthApi.xml"));
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -120,12 +136,13 @@ namespace Microliu.Auth.API
 
             // Swagger
             app.UseSwagger();
+
             app.UseSwaggerUI(c =>
             {
                 c.DocumentTitle = "权限服务接口";
 
                 c.SwaggerEndpoint($"/swagger/v1.0/swagger.json", "V1.0 Docs");
-                //c.SwaggerEndpoint($"/swagger/v2.0/swagger.json", "V2.0 Docs");
+                c.SwaggerEndpoint($"/swagger/v2.0/swagger.json", "V2.0 Docs");
 
                 //c.DefaultModelExpandDepth(4);
                 c.DefaultModelRendering(ModelRendering.Model);
