@@ -13,9 +13,9 @@ namespace Microliu.Auth.API.Controllers
     [Produces("application/json")]
     public class AuthController : ControllerBase
     {
-        private readonly IAuthAppService _authAppService;
+        private readonly IRoleAppService _authAppService;
 
-        public AuthController(IAuthAppService authAppService)
+        public AuthController(IRoleAppService authAppService)
         {
             _authAppService = authAppService;
         }

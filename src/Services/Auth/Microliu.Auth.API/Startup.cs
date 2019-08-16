@@ -1,4 +1,5 @@
-﻿using Microliu.Auth.API.Filters;
+﻿using Microliu.Auth.API.Extensions;
+using Microliu.Auth.API.Filters;
 using Microliu.Auth.Application;
 using Microliu.Core.Consul;
 using Microsoft.AspNetCore.Builder;
@@ -122,17 +123,18 @@ namespace Microliu.Auth.API
                 app.UseDeveloperExceptionPage();
             }
 
-            //app.UseMiddleware(typeof(ExceptionHandlerExtensions));// 异常处理中间件
-            app.UseExceptionHandler(errorApp =>
-            {
-                errorApp.Run(async context =>
-                {
-                    context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
-                    context.Response.ContentType = "application/json";
-                    var result = new ReturnResult(context.Response.StatusCode, "权限服务异常，请稍后再试");
-                    await context.Response.WriteAsync(JsonConvert.SerializeObject(result)).ConfigureAwait(false);
-                });
-            });
+            app.UseMiddleware(typeof(ExceptionHandlerMiddleWare));// 异常处理中间件
+            //app.UseExceptionHandler(errorApp =>
+            //{
+            //    errorApp.Run(async context =>
+            //    {
+            //        context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+            //        context.Response.ContentType = "application/json";
+            //        var result = new ReturnResult(context.Response.StatusCode, "权限服务异常，请稍后再试");
+            //        await context.Response.WriteAsync(JsonConvert.SerializeObject(result)).ConfigureAwait(false);
+            //    });
+            //});
+
 
             // Swagger
             app.UseSwagger();

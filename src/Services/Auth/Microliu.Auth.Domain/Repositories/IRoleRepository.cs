@@ -1,7 +1,9 @@
-﻿namespace Microliu.Auth.Domain
+﻿using System.Threading.Tasks;
+
+namespace Microliu.Auth.Domain
 {
     public interface IRoleRepository : IBaseRepository<Role>
     {
-
+         Task SaveChangesAsync();
     }
 }

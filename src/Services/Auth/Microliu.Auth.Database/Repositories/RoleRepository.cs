@@ -37,5 +37,10 @@ namespace Microliu.Auth.Database
                 _conn.Dispose();
             }
         }
+
+        public Task SaveChangesAsync()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

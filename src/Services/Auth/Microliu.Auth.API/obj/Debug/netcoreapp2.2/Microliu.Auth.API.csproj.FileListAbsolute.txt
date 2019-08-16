@@ -19,6 +19,8 @@ D:\Microliu\src\Services\Auth\Microliu.Auth.API\obj\Debug\netcoreapp2.2\Microliu
 D:\Microliu\src\Services\Auth\Microliu.Auth.API\obj\Debug\netcoreapp2.2\Microliu.Auth.API.pdb
 D:\Microliu\src\Services\Auth\Microliu.Auth.API\bin\Debug\netcoreapp2.2\Microliu.Core.Consul.dll
 D:\Microliu\src\Services\Auth\Microliu.Auth.API\bin\Debug\netcoreapp2.2\Microliu.Core.Consul.pdb
+D:\Microliu\src\Services\Auth\Microliu.Auth.API\bin\Debug\netcoreapp2.2\Microliu.Auth.API.xml
+D:\Microliu\src\Services\Auth\Microliu.Auth.API\bin\Debug\netcoreapp2.2\Microliu.Auth.DataMySQL.dll
+D:\Microliu\src\Services\Auth\Microliu.Auth.API\bin\Debug\netcoreapp2.2\Microliu.Auth.DataMySQL.pdb
 D:\Microliu\src\Services\Auth\Microliu.Auth.API\bin\Debug\netcoreapp2.2\Microliu.Auth.DataMSSQL.dll
 D:\Microliu\src\Services\Auth\Microliu.Auth.API\bin\Debug\netcoreapp2.2\Microliu.Auth.DataMSSQL.pdb
-D:\Microliu\src\Services\Auth\Microliu.Auth.API\bin\Debug\netcoreapp2.2\Microliu.Auth.API.xml

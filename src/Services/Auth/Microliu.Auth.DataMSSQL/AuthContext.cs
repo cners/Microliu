@@ -1,5 +1,4 @@
-﻿using Microliu.Auth.DataMSSQL.Configurations;
-using Microliu.Auth.Domain;
+﻿using Microliu.Auth.Domain;
 using Microsoft.EntityFrameworkCore;
 using System.Threading;
 

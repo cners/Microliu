@@ -4,5 +4,12 @@
         <name>Microliu.Auth.API</name>
     </assembly>
     <members>
+        <member name="M:Microliu.Auth.API.Extensions.ExceptionHandlerMiddleWare.Object2XmlString(System.Object)">
+            <summary>
+            对象转为Xml
+            </summary>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

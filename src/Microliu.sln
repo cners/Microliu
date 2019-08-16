@@ -12,6 +12,9 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.EventBus.MasstransitIntegration", "Microliu.Modules\Microliu.EventBus.MasstransitIntegration\Microliu.EventBus.MasstransitIntegration.csproj", "{CD2A1835-2E13-4FE4-88C2-7AC980FBEB40}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microliu.Services", "Microliu.Services", "{052D9C23-996F-430C-8E5A-316BB053407E}"
+	ProjectSection(SolutionItems) = preProject
+		README.txt = README.txt
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.ApiGateway.SwaggerIntegration", "Microliu.Modules\Microliu.ApiGateway.SwaggerIntegration\Microliu.ApiGateway.SwaggerIntegration.csproj", "{88CCAFA5-04EE-42C3-B3A6-BF28DFCCC016}"
 EndProject
@@ -29,7 +32,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.EmailService", "Se
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{A379F5E1-443C-4A2C-AFB2-558BAD623490}"
 	ProjectSection(SolutionItems) = preProject
-		README.txt = README.txt
+		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Test.Consumer", "Test\Microliu.Test.Consumer\Microliu.Test.Consumer.csproj", "{8CD8EE32-E1B2-4C9D-8D90-1E6AD55F6EED}"
@@ -65,18 +68,25 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Core.EventBusRabbitMQ", "Microliu.Core\Microliu.Core.EventBusRabbitMQ\Microliu.Core.EventBusRabbitMQ.csproj", "{D24F7D18-F409-4FBF-B23F-DA6A89272A15}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Auth", "Auth", "{6593CB91-43D8-4CAA-AEFE-F3A234B077FA}"
+	ProjectSection(SolutionItems) = preProject
+		Services\Auth\README.txt = Services\Auth\README.txt
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.Auth.Domain", "Services\Auth\Microliu.Auth.Domain\Microliu.Auth.Domain.csproj", "{819D4DAF-76DB-4D40-A0D7-DF9847B92EAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Auth.Domain", "Services\Auth\Microliu.Auth.Domain\Microliu.Auth.Domain.csproj", "{819D4DAF-76DB-4D40-A0D7-DF9847B92EAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.Auth.Database", "Services\Auth\Microliu.Auth.Database\Microliu.Auth.Database.csproj", "{2D5EBA20-B672-4BFE-A30B-48554C5DE981}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Auth.DataDapper", "Services\Auth\Microliu.Auth.Database\Microliu.Auth.DataDapper.csproj", "{2D5EBA20-B672-4BFE-A30B-48554C5DE981}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.Auth.Application", "Services\Auth\Microliu.Auth.Application\Microliu.Auth.Application.csproj", "{C40C5A23-8B93-46B9-A874-838F91B31438}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Auth.Application", "Services\Auth\Microliu.Auth.Application\Microliu.Auth.Application.csproj", "{C40C5A23-8B93-46B9-A874-838F91B31438}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.Auth.Infrastructure", "Services\Auth\Microliu.Auth.Infrastructure\Microliu.Auth.Infrastructure.csproj", "{CB892A46-0E95-4EE5-BE2E-9E5474ED585C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Auth.Infrastructure", "Services\Auth\Microliu.Auth.Infrastructure\Microliu.Auth.Infrastructure.csproj", "{CB892A46-0E95-4EE5-BE2E-9E5474ED585C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.Auth.API", "Services\Auth\Microliu.Auth.API\Microliu.Auth.API.csproj", "{2CC7283D-1C3A-471A-B882-86A04CC28ED3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Auth.API", "Services\Auth\Microliu.Auth.API\Microliu.Auth.API.csproj", "{2CC7283D-1C3A-471A-B882-86A04CC28ED3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.Auth.DataMSSQL", "Services\Auth\Microliu.Auth.DataMSSQL\Microliu.Auth.DataMSSQL.csproj", "{23702F97-9B3D-44B0-972F-4F04EDB3A8F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Auth.DataMSSQL", "Services\Auth\Microliu.Auth.DataMSSQL\Microliu.Auth.DataMSSQL.csproj", "{23702F97-9B3D-44B0-972F-4F04EDB3A8F0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Auth.DataMySQL", "Services\Auth\Microliu.Auth.DataMySQL\Microliu.Auth.DataMySQL.csproj", "{FDE87311-2A7B-4E54-809B-D7BB7EA1B158}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.Auth.DataOracle", "Services\Auth\Microliu.Auth.DataOracle\Microliu.Auth.DataOracle.csproj", "{114BB128-F4F6-40CC-B0E0-F5DF587F8BBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -196,6 +206,14 @@ Global
 		{23702F97-9B3D-44B0-972F-4F04EDB3A8F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23702F97-9B3D-44B0-972F-4F04EDB3A8F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23702F97-9B3D-44B0-972F-4F04EDB3A8F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDE87311-2A7B-4E54-809B-D7BB7EA1B158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDE87311-2A7B-4E54-809B-D7BB7EA1B158}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDE87311-2A7B-4E54-809B-D7BB7EA1B158}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDE87311-2A7B-4E54-809B-D7BB7EA1B158}.Release|Any CPU.Build.0 = Release|Any CPU
+		{114BB128-F4F6-40CC-B0E0-F5DF587F8BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{114BB128-F4F6-40CC-B0E0-F5DF587F8BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{114BB128-F4F6-40CC-B0E0-F5DF587F8BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{114BB128-F4F6-40CC-B0E0-F5DF587F8BBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -231,6 +249,8 @@ Global
 		{CB892A46-0E95-4EE5-BE2E-9E5474ED585C} = {6593CB91-43D8-4CAA-AEFE-F3A234B077FA}
 		{2CC7283D-1C3A-471A-B882-86A04CC28ED3} = {6593CB91-43D8-4CAA-AEFE-F3A234B077FA}
 		{23702F97-9B3D-44B0-972F-4F04EDB3A8F0} = {6593CB91-43D8-4CAA-AEFE-F3A234B077FA}
+		{FDE87311-2A7B-4E54-809B-D7BB7EA1B158} = {6593CB91-43D8-4CAA-AEFE-F3A234B077FA}
+		{114BB128-F4F6-40CC-B0E0-F5DF587F8BBD} = {6593CB91-43D8-4CAA-AEFE-F3A234B077FA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2F32ECF0-6010-4F59-AC16-6FFA191BC558}

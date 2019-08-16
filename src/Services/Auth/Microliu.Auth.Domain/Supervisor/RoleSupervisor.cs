@@ -10,7 +10,12 @@ namespace Microliu.Auth.Domain
     {
         public async Task CreateRole(Role role, CancellationToken ct = default(CancellationToken))
         {
-            await _roleRepository.AddAsync(role, ct);
+            foreach (var rs in _roleRepository)
+            {
+                await rs.AddAsync(role, ct);
+                await rs.SaveChangesAsync();
+            }
+           
         }
     }
 }
