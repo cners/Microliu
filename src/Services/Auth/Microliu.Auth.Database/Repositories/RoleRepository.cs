@@ -38,6 +38,11 @@ namespace Microliu.Auth.Database
             }
         }
 
+        public Domain.DbType GetDbType()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public Task SaveChangesAsync()
         {
             throw new System.NotImplementedException();

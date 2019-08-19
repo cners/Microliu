@@ -1,0 +1,12 @@
+D:\Microliu\src\Microliu.Modules\Microliu.Modules.ORM.DapperIntegration\bin\Debug\netstandard2.0\Microliu.ORM.DapperIntegration.deps.json
+D:\Microliu\src\Microliu.Modules\Microliu.Modules.ORM.DapperIntegration\bin\Debug\netstandard2.0\Microliu.ORM.DapperIntegration.dll
+D:\Microliu\src\Microliu.Modules\Microliu.Modules.ORM.DapperIntegration\bin\Debug\netstandard2.0\Microliu.ORM.DapperIntegration.pdb
+D:\Microliu\src\Microliu.Modules\Microliu.Modules.ORM.DapperIntegration\bin\Debug\netstandard2.0\Microliu.Utils.dll
+D:\Microliu\src\Microliu.Modules\Microliu.Modules.ORM.DapperIntegration\bin\Debug\netstandard2.0\Microliu.Utils.pdb
+D:\Microliu\src\Microliu.Modules\Microliu.Modules.ORM.DapperIntegration\obj\Debug\netstandard2.0\Microliu.ORM.DapperIntegration.csprojAssemblyReference.cache
+D:\Microliu\src\Microliu.Modules\Microliu.Modules.ORM.DapperIntegration\obj\Debug\netstandard2.0\Microliu.ORM.DapperIntegration.csproj.CoreCompileInputs.cache
+D:\Microliu\src\Microliu.Modules\Microliu.Modules.ORM.DapperIntegration\obj\Debug\netstandard2.0\Microliu.ORM.DapperIntegration.AssemblyInfoInputs.cache
+D:\Microliu\src\Microliu.Modules\Microliu.Modules.ORM.DapperIntegration\obj\Debug\netstandard2.0\Microliu.ORM.DapperIntegration.AssemblyInfo.cs
+D:\Microliu\src\Microliu.Modules\Microliu.Modules.ORM.DapperIntegration\obj\Debug\netstandard2.0\Microliu.ORM.DapperIntegration.csproj.CopyComplete
+D:\Microliu\src\Microliu.Modules\Microliu.Modules.ORM.DapperIntegration\obj\Debug\netstandard2.0\Microliu.ORM.DapperIntegration.dll
+D:\Microliu\src\Microliu.Modules\Microliu.Modules.ORM.DapperIntegration\obj\Debug\netstandard2.0\Microliu.ORM.DapperIntegration.pdb

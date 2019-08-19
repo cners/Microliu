@@ -1,12 +1,12 @@
 D:\Microliu\src\Services\Auth\Microliu.Auth.DataMSSQL\bin\Debug\netstandard2.0\Microliu.Auth.DataMSSQL.deps.json
 D:\Microliu\src\Services\Auth\Microliu.Auth.DataMSSQL\bin\Debug\netstandard2.0\Microliu.Auth.DataMSSQL.dll
-D:\Microliu\src\Services\Auth\Microliu.Auth.DataMSSQL\obj\Debug\netstandard2.0\Microliu.Auth.DataMSSQL.csproj.CoreCompileInputs.cache
-D:\Microliu\src\Services\Auth\Microliu.Auth.DataMSSQL\obj\Debug\netstandard2.0\Microliu.Auth.DataMSSQL.AssemblyInfoInputs.cache
-D:\Microliu\src\Services\Auth\Microliu.Auth.DataMSSQL\obj\Debug\netstandard2.0\Microliu.Auth.DataMSSQL.AssemblyInfo.cs
+D:\Microliu\src\Services\Auth\Microliu.Auth.DataMSSQL\bin\Debug\netstandard2.0\Microliu.Auth.DataMSSQL.pdb
 D:\Microliu\src\Services\Auth\Microliu.Auth.DataMSSQL\bin\Debug\netstandard2.0\Microliu.Auth.Domain.dll
 D:\Microliu\src\Services\Auth\Microliu.Auth.DataMSSQL\bin\Debug\netstandard2.0\Microliu.Auth.Domain.pdb
 D:\Microliu\src\Services\Auth\Microliu.Auth.DataMSSQL\obj\Debug\netstandard2.0\Microliu.Auth.DataMSSQL.csprojAssemblyReference.cache
+D:\Microliu\src\Services\Auth\Microliu.Auth.DataMSSQL\obj\Debug\netstandard2.0\Microliu.Auth.DataMSSQL.csproj.CoreCompileInputs.cache
+D:\Microliu\src\Services\Auth\Microliu.Auth.DataMSSQL\obj\Debug\netstandard2.0\Microliu.Auth.DataMSSQL.AssemblyInfoInputs.cache
+D:\Microliu\src\Services\Auth\Microliu.Auth.DataMSSQL\obj\Debug\netstandard2.0\Microliu.Auth.DataMSSQL.AssemblyInfo.cs
 D:\Microliu\src\Services\Auth\Microliu.Auth.DataMSSQL\obj\Debug\netstandard2.0\Microliu.Auth.DataMSSQL.csproj.CopyComplete
-D:\Microliu\src\Services\Auth\Microliu.Auth.DataMSSQL\bin\Debug\netstandard2.0\Microliu.Auth.DataMSSQL.pdb
 D:\Microliu\src\Services\Auth\Microliu.Auth.DataMSSQL\obj\Debug\netstandard2.0\Microliu.Auth.DataMSSQL.dll
 D:\Microliu\src\Services\Auth\Microliu.Auth.DataMSSQL\obj\Debug\netstandard2.0\Microliu.Auth.DataMSSQL.pdb

@@ -4,6 +4,38 @@
         <name>Microliu.Auth.API</name>
     </assembly>
     <members>
+        <member name="M:Microliu.Auth.API.Controllers.AuthController.CreateRole">
+            <summary>
+            创建角色
+            </summary>
+            <remarks>
+            POST /api/v1.0/auth/createRole
+            {
+                "RoleName":"",
+                "CreatorId":"",
+                "Sort":10
+            }
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:Microliu.Auth.API.Controllers.AuthController.Delete(System.String)">
+            <summary>
+            删除一个角色
+            </summary>
+            <param name="id">角色主键</param>
+            <returns>已删除的角色主键</returns>
+        </member>
+        <member name="T:Microliu.Auth.API.Controllers.HealthController">
+            <summary>
+            健康检查
+            </summary>
+        </member>
+        <member name="M:Microliu.Auth.API.Controllers.HealthController.Check">
+            <summary>
+            健康检查方法
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:Microliu.Auth.API.Extensions.ExceptionHandlerMiddleWare.Object2XmlString(System.Object)">
             <summary>
             对象转为Xml

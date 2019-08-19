@@ -103,6 +103,8 @@ D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\bin\Deb
 D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\bin\Debug\netcoreapp2.2\Microliu.IdentityServer.pdb
 D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\bin\Debug\netcoreapp2.2\Microliu.IdentityServer.Views.dll
 D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\bin\Debug\netcoreapp2.2\Microliu.IdentityServer.Views.pdb
+D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\bin\Debug\netcoreapp2.2\Microliu.Core.Consul.dll
+D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\bin\Debug\netcoreapp2.2\Microliu.Core.Consul.pdb
 D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\obj\Debug\netcoreapp2.2\Microliu.IdentityServer.csprojAssemblyReference.cache
 D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\obj\Debug\netcoreapp2.2\Microliu.IdentityServer.csproj.CoreCompileInputs.cache
 D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\obj\Debug\netcoreapp2.2\Microliu.IdentityServer.RazorAssemblyInfo.cache
@@ -133,8 +135,6 @@ D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\obj\Deb
 D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\obj\Debug\netcoreapp2.2\Microliu.IdentityServer.RazorTargetAssemblyInfo.cache
 D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\obj\Debug\netcoreapp2.2\Microliu.IdentityServer.RazorTargetAssemblyInfo.cs
 D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\obj\Debug\netcoreapp2.2\Microliu.IdentityServer.Views.pdb
+D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\obj\Debug\netcoreapp2.2\Microliu.IdentityServer.csproj.CopyComplete
 D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\obj\Debug\netcoreapp2.2\Microliu.IdentityServer.dll
 D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\obj\Debug\netcoreapp2.2\Microliu.IdentityServer.pdb
-D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\obj\Debug\netcoreapp2.2\Microliu.IdentityServer.csproj.CopyComplete
-D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\bin\Debug\netcoreapp2.2\Microliu.Core.Consul.dll
-D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\bin\Debug\netcoreapp2.2\Microliu.Core.Consul.pdb

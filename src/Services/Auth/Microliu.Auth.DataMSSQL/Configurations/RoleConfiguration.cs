@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Microliu.Auth.DataMSSQL.Configurations
+namespace Microliu.Auth.DataMSSQL
 {
     public class RoleConfiguration
     {

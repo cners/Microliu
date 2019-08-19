@@ -2,10 +2,10 @@ D:\Microliu\src\Services\Microliu.Test.AOP\bin\Debug\netcoreapp2.2\Microliu.Test
 D:\Microliu\src\Services\Microliu.Test.AOP\bin\Debug\netcoreapp2.2\Microliu.Test.AOP.runtimeconfig.json
 D:\Microliu\src\Services\Microliu.Test.AOP\bin\Debug\netcoreapp2.2\Microliu.Test.AOP.runtimeconfig.dev.json
 D:\Microliu\src\Services\Microliu.Test.AOP\bin\Debug\netcoreapp2.2\Microliu.Test.AOP.dll
+D:\Microliu\src\Services\Microliu.Test.AOP\bin\Debug\netcoreapp2.2\Microliu.Test.AOP.pdb
 D:\Microliu\src\Services\Microliu.Test.AOP\obj\Debug\netcoreapp2.2\Microliu.Test.AOP.csprojAssemblyReference.cache
 D:\Microliu\src\Services\Microliu.Test.AOP\obj\Debug\netcoreapp2.2\Microliu.Test.AOP.csproj.CoreCompileInputs.cache
 D:\Microliu\src\Services\Microliu.Test.AOP\obj\Debug\netcoreapp2.2\Microliu.Test.AOP.AssemblyInfoInputs.cache
 D:\Microliu\src\Services\Microliu.Test.AOP\obj\Debug\netcoreapp2.2\Microliu.Test.AOP.AssemblyInfo.cs
-D:\Microliu\src\Services\Microliu.Test.AOP\bin\Debug\netcoreapp2.2\Microliu.Test.AOP.pdb
 D:\Microliu\src\Services\Microliu.Test.AOP\obj\Debug\netcoreapp2.2\Microliu.Test.AOP.dll
 D:\Microliu\src\Services\Microliu.Test.AOP\obj\Debug\netcoreapp2.2\Microliu.Test.AOP.pdb

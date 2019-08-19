@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
 using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerGen;
@@ -16,6 +17,7 @@ using System;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Reflection;
 
 namespace Microliu.Auth.API
 {
@@ -32,8 +34,8 @@ namespace Microliu.Auth.API
         public void ConfigureServices(IServiceCollection services)
         {
             services
-                //.AddMvc()
-                .AddMvc(c => c.Conventions.Add(new ApiExplorerGroupPerVersionConvention()))
+                .AddMvc()
+                //.AddMvc(c => c.Conventions.Add(new ApiExplorerGroupPerVersionConvention()))
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddAuthService(Configuration);// 权限服务
@@ -49,61 +51,54 @@ namespace Microliu.Auth.API
 
             services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("v1.0", new Info
+                options.SwaggerDoc("v1.0", new OpenApiInfo
                 {
                     Title = "API Online Document",
-                    Description = "Call API Online Testing",
                     Version = "v1.0",
-                    Contact = new Contact
-                    {
-                        Name = "Liuzhuang",
-                        Email = "liuzhuang@6iuu.com"
-                    }
+                    Contact = new OpenApiContact { Name = "Liu Zhuang", Email = "liuzhuang@6iuu.com" }
                 });
-                options.SwaggerDoc("v2.0", new Info
+                options.SwaggerDoc("v2.0", new OpenApiInfo
                 {
                     Title = "API Online Document",
-                    Description = "Call API Online Testing",
                     Version = "v2.0",
-                    Contact = new Contact
-                    {
-                        Name = "Liuzhuang",
-                        Email = "liuzhuang@6iuu.com"
-                    }
+                    Contact = new OpenApiContact { Name = "Liu Zhuang", Email = "liuzhuang@6iuu.com" }
                 });
 
-                //options.SwaggerDoc("v2.0", new Info { Title = "DFS API -v2", Version = "V2" });
+                // Set the comments path for the Swagger JSON and UI.
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                options.IncludeXmlComments(xmlPath);
 
-                options.OperationFilter<RemoveVersionFromParameter>();
-                options.DocumentFilter<ReplaceVersionWithExactValueInPath>();
-                options.OperationFilter<SwaggerFileUploadFilter>();
+                //options.OperationFilter<RemoveVersionFromParameter>();
+                //options.DocumentFilter<ReplaceVersionWithExactValueInPath>();
+                //options.OperationFilter<SwaggerFileUploadFilter>();
                 //options.DocInclusionPredicate((docName, description) => true);
-                options.DocInclusionPredicate((version, desc) =>
-                {
-                    var versions = desc.ControllerAttributes()
-                                    .OfType<ApiVersionAttribute>()
-                                    .SelectMany(attr => attr.Versions);
+                //options.DocInclusionPredicate((version, desc) =>
+                //{
+                //    var versions = desc.ControllerAttributes()
+                //                    .OfType<ApiVersionAttribute>()
+                //                    .SelectMany(attr => attr.Versions);
 
-                    var maps = desc.ActionAttributes()
-                                .OfType<MapToApiVersionAttribute>()
-                                .SelectMany(attr => attr.Versions)
-                                .ToArray();
+                //    var maps = desc.ActionAttributes()
+                //                .OfType<MapToApiVersionAttribute>()
+                //                .SelectMany(attr => attr.Versions)
+                //                .ToArray();
 
-                    return versions.Any(v => $"v{v.ToString()}" == version) && (maps.Length == 0 || maps.Any(v => $"v{v.ToString()}" == version));
-                });
-                options.OperationFilter<AddHeaderParameter>();
+                //    return versions.Any(v => $"v{v.ToString()}" == version) && (maps.Length == 0 || maps.Any(v => $"v{v.ToString()}" == version));
+                //});
+                //options.OperationFilter<AddHeaderParameter>();
 
                 // api界面新增authorize按钮，在弹出文本中输入 Bearer +token即可
-                options.AddSecurityDefinition("Bearer", new ApiKeyScheme
-                {
-                    Description = "Authorization format : Bearer {toekn}",
-                    Name = "Authorization",
-                    In = "header",
-                    Type = "apiKey"
-                });
+                //options.AddSecurityDefinition("Bearer", new ApiKeyScheme
+                //{
+                //    Description = "Authorization format : Bearer {toekn}",
+                //    Name = "Authorization",
+                //    In = "header",
+                //    Type = "apiKey"
+                //});
 
 
-                options.IgnoreObsoleteActions();
+                //options.IgnoreObsoleteActions();
             });
 
             //services.ConfigureSwaggerGen(c =>
@@ -145,24 +140,25 @@ namespace Microliu.Auth.API
 
                 c.SwaggerEndpoint($"/swagger/v1.0/swagger.json", "V1.0 Docs");
                 c.SwaggerEndpoint($"/swagger/v2.0/swagger.json", "V2.0 Docs");
+                c.RoutePrefix = string.Empty;
 
                 //c.DefaultModelExpandDepth(4);
-                c.DefaultModelRendering(ModelRendering.Model);
-                //c.DefaultModelsExpandDepth(-1);                   // 隐藏展示前端实体
-                //c.DisplayOperationId();
-                c.DisplayRequestDuration();
-                c.DocExpansion(DocExpansion.None);
-                c.EnableDeepLinking();
-                c.EnableFilter();
-                c.MaxDisplayedTags(5);
-                c.ShowExtensions();
-                c.EnableValidator();
-                c.SupportedSubmitMethods(SubmitMethod.Get,
-                                        SubmitMethod.Head,
-                                        SubmitMethod.Post,
-                                        SubmitMethod.Patch,
-                                        SubmitMethod.Delete,
-                                        SubmitMethod.Put);
+                //c.DefaultModelRendering(ModelRendering.Model);
+                ////c.DefaultModelsExpandDepth(-1);                   // 隐藏展示前端实体
+                ////c.DisplayOperationId();
+                //c.DisplayRequestDuration();
+                //c.DocExpansion(DocExpansion.None);
+                //c.EnableDeepLinking();
+                //c.EnableFilter();
+                //c.MaxDisplayedTags(5);
+                //c.ShowExtensions();
+                //c.EnableValidator();
+                //c.SupportedSubmitMethods(SubmitMethod.Get,
+                //                        SubmitMethod.Head,
+                //                        SubmitMethod.Post,
+                //                        SubmitMethod.Patch,
+                //                        SubmitMethod.Delete,
+                //                        SubmitMethod.Put);
             });
             app.RegisterConsul(lifetime, Configuration);
             app.UseMvc();

@@ -16,22 +16,24 @@ namespace Microliu.Auth.Domain
         /// <summary>
         /// 角色名称
         /// </summary>
+        [MaxLength(40),Required]
         public string RoleName { get; set; }
 
         /// <summary>
         /// 添加时间
         /// </summary>
+        
         public DateTimeOffset CreateTime { get; set; }
 
         /// <summary>
         /// 创建者
         /// </summary>
-        //public string Creator { get; set; }
+        public string Creator { get; set; }
 
         /// <summary>
         /// 创建人主键
         /// </summary>
-      // public string CreatorId { get; set; }
+        //public string CreatorId { get; set; }
 
         /// <summary>
         /// 状态：1正常、-1禁用

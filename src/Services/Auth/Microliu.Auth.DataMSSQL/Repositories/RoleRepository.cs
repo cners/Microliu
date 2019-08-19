@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace Microliu.Auth.DataMSSQL
 {
-    public class RoleRepository : IRoleRepository
+    public class RoleRepository : BaseRepository, IRoleRepository
     {
         private readonly AuthContext _context;
 
@@ -32,6 +32,11 @@ namespace Microliu.Auth.DataMSSQL
             {
                 _context.Dispose();
             }
+        }
+
+        public Task RemoveAsync(string id, CancellationToken ct = default)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

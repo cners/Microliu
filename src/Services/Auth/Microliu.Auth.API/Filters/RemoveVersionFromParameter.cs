@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 
 namespace Microliu.Auth.API.Filters
 {
-    public class RemoveVersionFromParameter : IOperationFilter
-    {
-        public void Apply(Operation operation, OperationFilterContext context)
-        {
-            try
-            {
-                var versionParameter = operation.Parameters.Single(p => p.Name == "version");
-                operation.Parameters.Remove(versionParameter);
-            }
-            catch (Exception ex)
-            {
-                ;
-            }
-        }
-    }
+    //public class RemoveVersionFromParameter : IOperationFilter
+    //{
+    //    public void Apply(Operation operation, OperationFilterContext context)
+    //    {
+    //        try
+    //        {
+    //            var versionParameter = operation.Parameters.Single(p => p.Name == "version");
+    //            operation.Parameters.Remove(versionParameter);
+    //        }
+    //        catch (Exception ex)
+    //        {
+    //            ;
+    //        }
+    //    }
+    //}
 }

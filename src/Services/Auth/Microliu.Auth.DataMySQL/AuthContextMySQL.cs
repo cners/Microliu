@@ -10,7 +10,11 @@ namespace Microliu.Auth.DataMySQL
 
         public static long InstanceCount;
 
-        public AuthContextMySQL(DbContextOptions options) : base(options) =>
+        public AuthContextMySQL(DbContextOptions options)
+            : base(options)
+        {
+
             Interlocked.Increment(ref InstanceCount);
+        }
     }
 }

@@ -1,5 +1,6 @@
 D:\Microliu\src\Microliu.Modules\Microliu.EventBus.MasstransitIntegration\bin\Debug\netstandard2.0\Microliu.EventBus.MasstransitIntegration.deps.json
 D:\Microliu\src\Microliu.Modules\Microliu.EventBus.MasstransitIntegration\bin\Debug\netstandard2.0\Microliu.EventBus.MasstransitIntegration.dll
+D:\Microliu\src\Microliu.Modules\Microliu.EventBus.MasstransitIntegration\bin\Debug\netstandard2.0\Microliu.EventBus.MasstransitIntegration.pdb
 D:\Microliu\src\Microliu.Modules\Microliu.EventBus.MasstransitIntegration\bin\Debug\netstandard2.0\Microliu.Utils.dll
 D:\Microliu\src\Microliu.Modules\Microliu.EventBus.MasstransitIntegration\bin\Debug\netstandard2.0\Microliu.Utils.pdb
 D:\Microliu\src\Microliu.Modules\Microliu.EventBus.MasstransitIntegration\obj\Debug\netstandard2.0\Microliu.EventBus.MasstransitIntegration.csprojAssemblyReference.cache
@@ -7,6 +8,5 @@ D:\Microliu\src\Microliu.Modules\Microliu.EventBus.MasstransitIntegration\obj\De
 D:\Microliu\src\Microliu.Modules\Microliu.EventBus.MasstransitIntegration\obj\Debug\netstandard2.0\Microliu.EventBus.MasstransitIntegration.AssemblyInfoInputs.cache
 D:\Microliu\src\Microliu.Modules\Microliu.EventBus.MasstransitIntegration\obj\Debug\netstandard2.0\Microliu.EventBus.MasstransitIntegration.AssemblyInfo.cs
 D:\Microliu\src\Microliu.Modules\Microliu.EventBus.MasstransitIntegration\obj\Debug\netstandard2.0\Microliu.EventBus.MasstransitIntegration.csproj.CopyComplete
-D:\Microliu\src\Microliu.Modules\Microliu.EventBus.MasstransitIntegration\bin\Debug\netstandard2.0\Microliu.EventBus.MasstransitIntegration.pdb
 D:\Microliu\src\Microliu.Modules\Microliu.EventBus.MasstransitIntegration\obj\Debug\netstandard2.0\Microliu.EventBus.MasstransitIntegration.dll
 D:\Microliu\src\Microliu.Modules\Microliu.EventBus.MasstransitIntegration\obj\Debug\netstandard2.0\Microliu.EventBus.MasstransitIntegration.pdb

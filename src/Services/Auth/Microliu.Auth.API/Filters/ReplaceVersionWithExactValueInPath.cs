@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace Microliu.Auth.API.Filters
 {
-    public class ReplaceVersionWithExactValueInPath : IDocumentFilter
-    {
-        public void Apply(SwaggerDocument swaggerDoc, DocumentFilterContext context)
-        {
-            swaggerDoc.Paths = swaggerDoc.Paths
-                .ToDictionary(
-                path => path.Key.Replace("v{version}", swaggerDoc.Info.Version),
-                path => path.Value
-                );
-        }
-    }
+    //public class ReplaceVersionWithExactValueInPath : IDocumentFilter
+    //{
+    //    public void Apply(SwaggerDocument swaggerDoc, DocumentFilterContext context)
+    //    {
+    //        swaggerDoc.Paths = swaggerDoc.Paths
+    //            .ToDictionary(
+    //            path => path.Key.Replace("v{version}", swaggerDoc.Info.Version),
+    //            path => path.Value
+    //            );
+    //    }
+    //}
 }

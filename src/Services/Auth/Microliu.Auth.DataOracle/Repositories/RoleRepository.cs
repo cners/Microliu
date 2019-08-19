@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Microliu.Auth.DataOracle
 {
-    public class RoleRepository : IRoleRepository
+    public class RoleRepository :BaseRepository, IRoleRepository
     {
         private readonly AuthContext _context;
 

@@ -1,0 +1,9 @@
+D:\Microliu\src\Test\Microliu.Test.EFCoreCodeFirst\bin\Debug\netstandard2.0\Microliu.Test.EFCoreCodeFirst.deps.json
+D:\Microliu\src\Test\Microliu.Test.EFCoreCodeFirst\bin\Debug\netstandard2.0\Microliu.Test.EFCoreCodeFirst.dll
+D:\Microliu\src\Test\Microliu.Test.EFCoreCodeFirst\bin\Debug\netstandard2.0\Microliu.Test.EFCoreCodeFirst.pdb
+D:\Microliu\src\Test\Microliu.Test.EFCoreCodeFirst\obj\Debug\netstandard2.0\Microliu.Test.EFCoreCodeFirst.csprojAssemblyReference.cache
+D:\Microliu\src\Test\Microliu.Test.EFCoreCodeFirst\obj\Debug\netstandard2.0\Microliu.Test.EFCoreCodeFirst.csproj.CoreCompileInputs.cache
+D:\Microliu\src\Test\Microliu.Test.EFCoreCodeFirst\obj\Debug\netstandard2.0\Microliu.Test.EFCoreCodeFirst.AssemblyInfoInputs.cache
+D:\Microliu\src\Test\Microliu.Test.EFCoreCodeFirst\obj\Debug\netstandard2.0\Microliu.Test.EFCoreCodeFirst.AssemblyInfo.cs
+D:\Microliu\src\Test\Microliu.Test.EFCoreCodeFirst\obj\Debug\netstandard2.0\Microliu.Test.EFCoreCodeFirst.dll
+D:\Microliu\src\Test\Microliu.Test.EFCoreCodeFirst\obj\Debug\netstandard2.0\Microliu.Test.EFCoreCodeFirst.pdb
