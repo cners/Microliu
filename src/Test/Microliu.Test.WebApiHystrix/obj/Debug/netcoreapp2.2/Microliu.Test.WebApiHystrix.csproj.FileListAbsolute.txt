@@ -2,13 +2,13 @@ D:\Microliu\src\Test\Microliu.Test.WebApiHystrix\bin\Debug\netcoreapp2.2\Microli
 D:\Microliu\src\Test\Microliu.Test.WebApiHystrix\bin\Debug\netcoreapp2.2\Microliu.Test.WebApiHystrix.runtimeconfig.json
 D:\Microliu\src\Test\Microliu.Test.WebApiHystrix\bin\Debug\netcoreapp2.2\Microliu.Test.WebApiHystrix.runtimeconfig.dev.json
 D:\Microliu\src\Test\Microliu.Test.WebApiHystrix\bin\Debug\netcoreapp2.2\Microliu.Test.WebApiHystrix.dll
+D:\Microliu\src\Test\Microliu.Test.WebApiHystrix\bin\Debug\netcoreapp2.2\Microliu.Test.WebApiHystrix.pdb
+D:\Microliu\src\Test\Microliu.Test.WebApiHystrix\obj\Debug\netcoreapp2.2\Microliu.Test.WebApiHystrix.csprojAssemblyReference.cache
 D:\Microliu\src\Test\Microliu.Test.WebApiHystrix\obj\Debug\netcoreapp2.2\Microliu.Test.WebApiHystrix.csproj.CoreCompileInputs.cache
 D:\Microliu\src\Test\Microliu.Test.WebApiHystrix\obj\Debug\netcoreapp2.2\Microliu.Test.WebApiHystrix.RazorAssemblyInfo.cache
 D:\Microliu\src\Test\Microliu.Test.WebApiHystrix\obj\Debug\netcoreapp2.2\Microliu.Test.WebApiHystrix.RazorAssemblyInfo.cs
 D:\Microliu\src\Test\Microliu.Test.WebApiHystrix\obj\Debug\netcoreapp2.2\Microliu.Test.WebApiHystrix.AssemblyInfoInputs.cache
 D:\Microliu\src\Test\Microliu.Test.WebApiHystrix\obj\Debug\netcoreapp2.2\Microliu.Test.WebApiHystrix.AssemblyInfo.cs
 D:\Microliu\src\Test\Microliu.Test.WebApiHystrix\obj\Debug\netcoreapp2.2\Microliu.Test.WebApiHystrix.RazorTargetAssemblyInfo.cache
-D:\Microliu\src\Test\Microliu.Test.WebApiHystrix\obj\Debug\netcoreapp2.2\Microliu.Test.WebApiHystrix.csprojAssemblyReference.cache
-D:\Microliu\src\Test\Microliu.Test.WebApiHystrix\bin\Debug\netcoreapp2.2\Microliu.Test.WebApiHystrix.pdb
 D:\Microliu\src\Test\Microliu.Test.WebApiHystrix\obj\Debug\netcoreapp2.2\Microliu.Test.WebApiHystrix.dll
 D:\Microliu\src\Test\Microliu.Test.WebApiHystrix\obj\Debug\netcoreapp2.2\Microliu.Test.WebApiHystrix.pdb

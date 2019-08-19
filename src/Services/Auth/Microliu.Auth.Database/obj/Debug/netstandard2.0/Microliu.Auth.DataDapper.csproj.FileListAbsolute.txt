@@ -1,0 +1,12 @@
+D:\Microliu\src\Services\Auth\Microliu.Auth.Database\bin\Debug\netstandard2.0\Microliu.Auth.DataDapper.deps.json
+D:\Microliu\src\Services\Auth\Microliu.Auth.Database\bin\Debug\netstandard2.0\Microliu.Auth.DataDapper.dll
+D:\Microliu\src\Services\Auth\Microliu.Auth.Database\bin\Debug\netstandard2.0\Microliu.Auth.DataDapper.pdb
+D:\Microliu\src\Services\Auth\Microliu.Auth.Database\bin\Debug\netstandard2.0\Microliu.Auth.Domain.dll
+D:\Microliu\src\Services\Auth\Microliu.Auth.Database\bin\Debug\netstandard2.0\Microliu.Auth.Domain.pdb
+D:\Microliu\src\Services\Auth\Microliu.Auth.Database\obj\Debug\netstandard2.0\Microliu.Auth.DataDapper.csprojAssemblyReference.cache
+D:\Microliu\src\Services\Auth\Microliu.Auth.Database\obj\Debug\netstandard2.0\Microliu.Auth.DataDapper.csproj.CoreCompileInputs.cache
+D:\Microliu\src\Services\Auth\Microliu.Auth.Database\obj\Debug\netstandard2.0\Microliu.Auth.DataDapper.AssemblyInfoInputs.cache
+D:\Microliu\src\Services\Auth\Microliu.Auth.Database\obj\Debug\netstandard2.0\Microliu.Auth.DataDapper.AssemblyInfo.cs
+D:\Microliu\src\Services\Auth\Microliu.Auth.Database\obj\Debug\netstandard2.0\Microliu.Auth.DataDapper.csproj.CopyComplete
+D:\Microliu\src\Services\Auth\Microliu.Auth.Database\obj\Debug\netstandard2.0\Microliu.Auth.DataDapper.dll
+D:\Microliu\src\Services\Auth\Microliu.Auth.Database\obj\Debug\netstandard2.0\Microliu.Auth.DataDapper.pdb

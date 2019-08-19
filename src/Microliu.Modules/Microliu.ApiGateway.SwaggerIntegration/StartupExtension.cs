@@ -21,11 +21,11 @@ namespace Microliu.ApiGateway.SwaggerIntegration
 
         public static IServiceCollection UseMicroliuSwagger(this IServiceCollection services, MicroliuSwaggerOptions options)
         {
-            services.AddSwaggerGen(c =>
-            {
-                c.DocumentFilter<Nullable>();
-                c.SwaggerDoc(options.Version, new Info { Title = options.Title, Version = options.Version });
-            });
+            //services.AddSwaggerGen(c =>
+            //{
+            //    c.DocumentFilter<Nullable>();
+            //    c.SwaggerDoc(options.Version, new Info { Title = options.Title, Version = options.Version });
+            //});
             return services;
         }
     }

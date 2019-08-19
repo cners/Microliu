@@ -1,0 +1,8 @@
+D:\Microliu\src\Services\Auth\Microliu.Auth.Infrastructure\bin\Debug\netstandard2.0\Microliu.Auth.Infrastructure.deps.json
+D:\Microliu\src\Services\Auth\Microliu.Auth.Infrastructure\bin\Debug\netstandard2.0\Microliu.Auth.Infrastructure.dll
+D:\Microliu\src\Services\Auth\Microliu.Auth.Infrastructure\bin\Debug\netstandard2.0\Microliu.Auth.Infrastructure.pdb
+D:\Microliu\src\Services\Auth\Microliu.Auth.Infrastructure\obj\Debug\netstandard2.0\Microliu.Auth.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Microliu\src\Services\Auth\Microliu.Auth.Infrastructure\obj\Debug\netstandard2.0\Microliu.Auth.Infrastructure.AssemblyInfoInputs.cache
+D:\Microliu\src\Services\Auth\Microliu.Auth.Infrastructure\obj\Debug\netstandard2.0\Microliu.Auth.Infrastructure.AssemblyInfo.cs
+D:\Microliu\src\Services\Auth\Microliu.Auth.Infrastructure\obj\Debug\netstandard2.0\Microliu.Auth.Infrastructure.dll
+D:\Microliu\src\Services\Auth\Microliu.Auth.Infrastructure\obj\Debug\netstandard2.0\Microliu.Auth.Infrastructure.pdb

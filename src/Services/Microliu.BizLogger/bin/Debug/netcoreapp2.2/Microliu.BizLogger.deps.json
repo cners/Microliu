@@ -24,7 +24,7 @@
     ".NETCoreApp,Version=v2.2": {
       "Microliu.BizLogger/1.0.0": {
         "dependencies": {
-          "Consul": "0.7.2.6",
+          "Microliu.Core.Consul": "1.0.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
@@ -412,6 +412,18 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Net.Http.WinHttpHandler.dll": {}
+        }
+      },
+      "Microliu.Core.Consul/1.0.0": {
+        "dependencies": {
+          "Consul": "0.7.2.6",
+          "Microsoft.AspNetCore": "2.2.0"
+        },
+        "runtime": {
+          "Microliu.Core.Consul.dll": {}
+        },
+        "compile": {
+          "Microliu.Core.Consul.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3762,6 +3774,11 @@
       "sha512": "sha512-86HNmRaoJZRtu2Yrd3ZVC3kd8tvdYphuXhBlW+QFP5nuHzuCMThVLDWjSXRA4PIoiTPhxYggtKAjmBt6CAZGaw==",
       "path": "system.net.http.winhttphandler/4.0.0",
       "hashPath": "system.net.http.winhttphandler.4.0.0.nupkg.sha512"
+    },
+    "Microliu.Core.Consul/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",

@@ -47,7 +47,14 @@ namespace Microliu.Core.Consul
                 Tags = consulOptions.Tags
             };
 
-            client.Agent.ServiceRegister(registration).Wait();// 服务启动注册，内部实现其实就是使用 Consul API 进行注册（HttpClient发起）
+            try
+            {
+                client.Agent.ServiceRegister(registration).Wait();// 服务启动注册，内部实现其实就是使用 Consul API 进行注册（HttpClient发起）
+            }
+            catch (Exception)
+            {
+                ;
+            }
             lifetime.ApplicationStopping.Register(() =>
             {
                 client.Agent.ServiceDeregister(registration.ID).Wait();// 服务停止后，自动取消注册

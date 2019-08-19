@@ -65,6 +65,8 @@ D:\Microliu\src\Services\Microliu.EmailService\Microliu.EmailService\bin\Debug\n
 D:\Microliu\src\Services\Microliu.EmailService\Microliu.EmailService\bin\Debug\netcoreapp2.2\Microliu.EmailService.pdb
 D:\Microliu\src\Services\Microliu.EmailService\Microliu.EmailService\bin\Debug\netcoreapp2.2\Microliu.EmailService.Views.dll
 D:\Microliu\src\Services\Microliu.EmailService\Microliu.EmailService\bin\Debug\netcoreapp2.2\Microliu.EmailService.Views.pdb
+D:\Microliu\src\Services\Microliu.EmailService\Microliu.EmailService\bin\Debug\netcoreapp2.2\Microliu.Core.Consul.dll
+D:\Microliu\src\Services\Microliu.EmailService\Microliu.EmailService\bin\Debug\netcoreapp2.2\Microliu.Core.Consul.pdb
 D:\Microliu\src\Services\Microliu.EmailService\Microliu.EmailService\obj\Debug\netcoreapp2.2\Microliu.EmailService.csprojAssemblyReference.cache
 D:\Microliu\src\Services\Microliu.EmailService\Microliu.EmailService\obj\Debug\netcoreapp2.2\Microliu.EmailService.csproj.CoreCompileInputs.cache
 D:\Microliu\src\Services\Microliu.EmailService\Microliu.EmailService\obj\Debug\netcoreapp2.2\Microliu.EmailService.RazorAssemblyInfo.cache
@@ -85,8 +87,6 @@ D:\Microliu\src\Services\Microliu.EmailService\Microliu.EmailService\obj\Debug\n
 D:\Microliu\src\Services\Microliu.EmailService\Microliu.EmailService\obj\Debug\netcoreapp2.2\Microliu.EmailService.RazorTargetAssemblyInfo.cache
 D:\Microliu\src\Services\Microliu.EmailService\Microliu.EmailService\obj\Debug\netcoreapp2.2\Microliu.EmailService.RazorTargetAssemblyInfo.cs
 D:\Microliu\src\Services\Microliu.EmailService\Microliu.EmailService\obj\Debug\netcoreapp2.2\Microliu.EmailService.Views.pdb
+D:\Microliu\src\Services\Microliu.EmailService\Microliu.EmailService\obj\Debug\netcoreapp2.2\Microliu.EmailService.csproj.CopyComplete
 D:\Microliu\src\Services\Microliu.EmailService\Microliu.EmailService\obj\Debug\netcoreapp2.2\Microliu.EmailService.dll
 D:\Microliu\src\Services\Microliu.EmailService\Microliu.EmailService\obj\Debug\netcoreapp2.2\Microliu.EmailService.pdb
-D:\Microliu\src\Services\Microliu.EmailService\Microliu.EmailService\obj\Debug\netcoreapp2.2\Microliu.EmailService.csproj.CopyComplete
-D:\Microliu\src\Services\Microliu.EmailService\Microliu.EmailService\bin\Debug\netcoreapp2.2\Microliu.Core.Consul.dll
-D:\Microliu\src\Services\Microliu.EmailService\Microliu.EmailService\bin\Debug\netcoreapp2.2\Microliu.Core.Consul.pdb
