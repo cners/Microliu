@@ -12,7 +12,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "swagger", //api/values
+      "launchUrl": "apiDoc", //api/values
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -20,7 +20,7 @@
     "Microliu.Auth.API": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "swagger",
+      "launchUrl": "apiDoc",
       "applicationUrl": "http://localhost:9431",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

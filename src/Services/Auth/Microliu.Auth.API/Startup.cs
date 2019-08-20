@@ -119,17 +119,6 @@ namespace Microliu.Auth.API
             }
 
             app.UseMiddleware(typeof(ExceptionHandlerMiddleWare));// 异常处理中间件
-            //app.UseExceptionHandler(errorApp =>
-            //{
-            //    errorApp.Run(async context =>
-            //    {
-            //        context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
-            //        context.Response.ContentType = "application/json";
-            //        var result = new ReturnResult(context.Response.StatusCode, "权限服务异常，请稍后再试");
-            //        await context.Response.WriteAsync(JsonConvert.SerializeObject(result)).ConfigureAwait(false);
-            //    });
-            //});
-
 
             // Swagger
             app.UseSwagger();
@@ -137,10 +126,9 @@ namespace Microliu.Auth.API
             app.UseSwaggerUI(c =>
             {
                 c.DocumentTitle = "权限服务接口";
-
                 c.SwaggerEndpoint($"/swagger/v1.0/swagger.json", "V1.0 Docs");
                 c.SwaggerEndpoint($"/swagger/v2.0/swagger.json", "V2.0 Docs");
-                c.RoutePrefix = string.Empty;
+                c.RoutePrefix = "apiDoc";
 
                 //c.DefaultModelExpandDepth(4);
                 //c.DefaultModelRendering(ModelRendering.Model);
@@ -162,6 +150,13 @@ namespace Microliu.Auth.API
             });
             app.RegisterConsul(lifetime, Configuration);
             app.UseMvc();
+        }
+    }
+
+    public static class SwaggerNet
+    {
+        public static void PreStart()
+        {
         }
     }
 }

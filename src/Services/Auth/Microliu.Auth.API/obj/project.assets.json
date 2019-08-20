@@ -3003,6 +3003,28 @@
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
         }
       },
+      "Oracle.EntityFrameworkCore/2.19.30": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "[2.2.4, 3.0.0)",
+          "Oracle.ManagedDataAccess.Core": "[2.19.31, 2.20.0)"
+        },
+        "compile": {
+          "lib/netstandard2.0/Oracle.EntityFrameworkCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Oracle.EntityFrameworkCore.dll": {}
+        }
+      },
+      "Oracle.ManagedDataAccess.Core/2.19.31": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Oracle.ManagedDataAccess.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Oracle.ManagedDataAccess.dll": {}
+        }
+      },
       "Remotion.Linq/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -5122,7 +5144,6 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Microliu.Auth.DataMSSQL": "1.0.0",
           "Microliu.Auth.DataMySQL": "1.0.0",
           "Microliu.Auth.Domain": "1.0.0",
           "Microsoft.AspNetCore": "2.2.0",
@@ -5135,29 +5156,14 @@
           "bin/placeholder/Microliu.Auth.Application.dll": {}
         }
       },
-      "Microliu.Auth.DataMSSQL/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Microliu.Auth.Domain": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "2.2.6",
-          "Microsoft.EntityFrameworkCore.Design": "2.2.6",
-          "Microsoft.EntityFrameworkCore.Relational": "2.2.6",
-          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.6"
-        },
-        "compile": {
-          "bin/placeholder/Microliu.Auth.DataMSSQL.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Microliu.Auth.DataMSSQL.dll": {}
-        }
-      },
       "Microliu.Auth.DataMySQL/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "Microliu.Auth.Domain": "1.0.0",
-          "MySql.Data.EntityFrameworkCore": "8.0.17"
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.6",
+          "MySql.Data.EntityFrameworkCore": "8.0.17",
+          "Oracle.EntityFrameworkCore": "2.19.30"
         },
         "compile": {
           "bin/placeholder/Microliu.Auth.DataMySQL.dll": {}
@@ -5170,6 +5176,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Microliu.Auth.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore": "2.2.0"
         },
         "compile": {
@@ -5177,6 +5184,19 @@
         },
         "runtime": {
           "bin/placeholder/Microliu.Auth.Domain.dll": {}
+        }
+      },
+      "Microliu.Auth.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.AspNetCore": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/Microliu.Auth.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Microliu.Auth.Infrastructure.dll": {}
         }
       },
       "Microliu.Core.Consul/1.0.0": {
@@ -8729,6 +8749,37 @@
         "lib/netstandard1.6/NuGet.Frameworks.xml",
         "nuget.frameworks.4.7.0.nupkg.sha512",
         "nuget.frameworks.nuspec"
+      ]
+    },
+    "Oracle.EntityFrameworkCore/2.19.30": {
+      "sha512": "MVhdP4Nm8RpY1yUytVOemRSdOQD265CDd/zSOUASiZYhqdRAcyCQGEzJZuRQ9NG3weaUAu/nPKEFkjuL+2kqlg==",
+      "type": "package",
+      "path": "oracle.entityframeworkcore/2.19.30",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "info.txt",
+        "lib/netstandard2.0/Oracle.EntityFrameworkCore.dll",
+        "oracle.entityframeworkcore.2.19.30.nupkg.sha512",
+        "oracle.entityframeworkcore.nuspec",
+        "readme.txt"
+      ]
+    },
+    "Oracle.ManagedDataAccess.Core/2.19.31": {
+      "sha512": "JTt7i9z3A5StZvYWzVz9IIjzSy8Lzxp1LV04TKAQkx5XMPx+WSi91MShrUHpeQNWZqL9osFe4LJPkDCNigCdCQ==",
+      "type": "package",
+      "path": "oracle.manageddataaccess.core/2.19.31",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "PerfCounters/register_odpc_perfmon_counters.ps1",
+        "PerfCounters/unregister_odpc_perfmon_counters.ps1",
+        "info.txt",
+        "lib/netstandard2.0/Oracle.ManagedDataAccess.dll",
+        "oracle.manageddataaccess.core.2.19.31.nupkg.sha512",
+        "oracle.manageddataaccess.core.nuspec",
+        "readme.txt",
+        "recursive"
       ]
     },
     "Remotion.Linq/2.2.0": {
@@ -14009,11 +14060,6 @@
       "path": "../Microliu.Auth.Application/Microliu.Auth.Application.csproj",
       "msbuildProject": "../Microliu.Auth.Application/Microliu.Auth.Application.csproj"
     },
-    "Microliu.Auth.DataMSSQL/1.0.0": {
-      "type": "project",
-      "path": "../Microliu.Auth.DataMSSQL/Microliu.Auth.DataMSSQL.csproj",
-      "msbuildProject": "../Microliu.Auth.DataMSSQL/Microliu.Auth.DataMSSQL.csproj"
-    },
     "Microliu.Auth.DataMySQL/1.0.0": {
       "type": "project",
       "path": "../Microliu.Auth.DataMySQL/Microliu.Auth.DataMySQL.csproj",
@@ -14023,6 +14069,11 @@
       "type": "project",
       "path": "../Microliu.Auth.Domain/Microliu.Auth.Domain.csproj",
       "msbuildProject": "../Microliu.Auth.Domain/Microliu.Auth.Domain.csproj"
+    },
+    "Microliu.Auth.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Microliu.Auth.Infrastructure/Microliu.Auth.Infrastructure.csproj",
+      "msbuildProject": "../Microliu.Auth.Infrastructure/Microliu.Auth.Infrastructure.csproj"
     },
     "Microliu.Core.Consul/1.0.0": {
       "type": "project",

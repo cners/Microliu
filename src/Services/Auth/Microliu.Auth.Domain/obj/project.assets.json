@@ -892,6 +892,19 @@
         "runtime": {
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
+      },
+      "Microliu.Auth.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.AspNetCore": "2.2.0"
+        },
+        "compile": {
+          "bin/placeholder/Microliu.Auth.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Microliu.Auth.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -2204,10 +2217,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Microliu.Auth.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Microliu.Auth.Infrastructure/Microliu.Auth.Infrastructure.csproj",
+      "msbuildProject": "../Microliu.Auth.Infrastructure/Microliu.Auth.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "Microliu.Auth.Infrastructure >= 1.0.0",
       "Microsoft.AspNetCore >= 2.2.0",
       "NETStandard.Library >= 2.0.3"
     ]
@@ -2241,7 +2260,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Infrastructure\\Microliu.Auth.Infrastructure.csproj": {
+              "projectPath": "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Infrastructure\\Microliu.Auth.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

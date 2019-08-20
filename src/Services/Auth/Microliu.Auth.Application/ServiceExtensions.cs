@@ -1,5 +1,8 @@
 ﻿using Microliu.Auth.DataMySQL;
+using Microliu.Auth.DataMySQL.Interfaces;
 using Microliu.Auth.Domain;
+using Microliu.Auth.Domain.Repositories;
+using Microliu.Auth.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -13,21 +16,21 @@ namespace Microliu.Auth.Application
     {
         public static IServiceCollection AddAuthService(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddTransient<IRoleAppService, RoleAppService>();// 权限服务
+            services.AddTransient<IAuthApplication, AuthApplication>();// 权限服务
 
-            services.AddTransient<IAuthSuperVisor, AuthSupervisor>();// 权限
+            //services.AddTransient<IAuthSuperVisor, AuthSupervisor>();// 权限
 
-            services.AddTransient<IRoleRepository, Microliu.Auth.DataMySQL.RoleRepository>();// 角色
-            //services.AddTransient<IRoleRepository, Microliu.Auth.DataMSSQL.RoleRepository>();// 角色
+            services.AddTransient<IRoleRepository, RoleRepository>();// 角色
+            services.AddTransient<IUserRepository, UserRepository>();// 员工
+            services.AddTransient<IPositionRepository, PositionRepository>();// 岗位
 
+            services.AddDbContextPool<AuthDbContext>(options =>
+                        options.UseMySQL(GetConnectionString(configuration, DatabaseType.SQLServer)));
 
-            //services.AddSingleton<IDbInfo>(new DbInfo(GetConnectionString(configuration))); // 数据库连接
-            //services.AddDbContextPool<AuthContext>(options => options.UseSqlServer(connectionString));//Dapper使用
+            services.AddTransient<IDbContext, AuthDbContext>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
 
-            services.AddDbContextPool<Microliu.Auth.DataMySQL.AuthContextMySQL>(options =>
-                        options.UseMySQL(GetConnectionString(configuration, DatabaseType.MySQL)));
-
-            //services.AddDbContextPool<Microliu.Auth.DataMSSQL.AuthContext>(options =>
+            //services.AddDbContextPool<AuthDbContext>(options =>
             //            options.UseSqlServer(GetConnectionString(configuration, DatabaseType.SQLServer)));
 
 
@@ -74,6 +77,18 @@ namespace Microliu.Auth.Application
             return connection;
         }
 
-
+        /// <summary>
+        /// 扩展满足获取不同数据库源的服务接口
+        /// 需要实现GetDbType方法
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="provider"></param>
+        /// <param name="dbType"></param>
+        /// <returns></returns>
+        public static T GetServices<T>(this IServiceProvider provider, DbType dbType)
+        {
+            var services = provider.GetServices<T>();
+            return services.Where(r => (DbType)r.GetType().GetMethod("GetDbType").Invoke(r, null) == dbType).FirstOrDefault();
+        }
     }
 }

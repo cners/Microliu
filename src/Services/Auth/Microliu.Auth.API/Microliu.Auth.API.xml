@@ -4,7 +4,56 @@
         <name>Microliu.Auth.API</name>
     </assembly>
     <members>
-        <member name="M:Microliu.Auth.API.Controllers.AuthController.CreateRole">
+        <member name="T:Microliu.Auth.API.Controllers.HealthController">
+            <summary>
+            健康检查
+            </summary>
+        </member>
+        <member name="M:Microliu.Auth.API.Controllers.HealthController.Check">
+            <summary>
+            健康检查方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microliu.Auth.API.Controllers.PositionController">
+            <summary>
+            岗位
+            </summary>
+        </member>
+        <member name="M:Microliu.Auth.API.Controllers.PositionController.CreatePosition">
+            <summary>
+            创建岗位
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microliu.Auth.API.Controllers.PositionController.SetUserPosition(System.String,System.String)">
+            <summary>
+            给员工分配岗位
+            </summary>
+            <param name="userId">员工主键</param>
+            <param name="positionId">岗位主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microliu.Auth.API.Controllers.PositionController.GetUsers(System.String)">
+            <summary>
+            当前岗位的员工集合
+            </summary>
+            <param name="positionId">岗位主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microliu.Auth.API.Controllers.PositionController.GetPosition(System.String)">
+            <summary>
+            获取岗位信息
+            </summary>
+            <param name="id">岗位主键</param>
+            <returns></returns>
+        </member>
+        <member name="T:Microliu.Auth.API.Controllers.RoleController">
+            <summary>
+            角色
+            </summary>
+        </member>
+        <member name="M:Microliu.Auth.API.Controllers.RoleController.CreateRole(Microliu.Auth.Domain.ViewModels.CreateRoleModel)">
             <summary>
             创建角色
             </summary>
@@ -18,22 +67,38 @@
             </remarks>
             <returns></returns>
         </member>
-        <member name="M:Microliu.Auth.API.Controllers.AuthController.Delete(System.String)">
+        <member name="M:Microliu.Auth.API.Controllers.RoleController.Delete(System.String)">
             <summary>
             删除一个角色
             </summary>
             <param name="id">角色主键</param>
             <returns>已删除的角色主键</returns>
         </member>
-        <member name="T:Microliu.Auth.API.Controllers.HealthController">
+        <member name="M:Microliu.Auth.API.Controllers.RoleController.UpdateRoleName(System.String,System.String)">
             <summary>
-            健康检查
+            修改角色名称
+            </summary>
+            <param name="id">角色主键</param>
+            <param name="newRoleName">新角色名称</param>
+            <returns></returns>
+        </member>
+        <member name="T:Microliu.Auth.API.Controllers.UserController">
+            <summary>
+            用户
             </summary>
         </member>
-        <member name="M:Microliu.Auth.API.Controllers.HealthController.Check">
+        <member name="M:Microliu.Auth.API.Controllers.UserController.GetUser(System.String)">
             <summary>
-            健康检查方法
+            获取用户信息
             </summary>
+            <param name="id">用户主键</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microliu.Auth.API.Controllers.UserController.CreateUser(Microliu.Auth.Domain.ViewModels.CreateUserModel)">
+            <summary>
+            创建用户
+            </summary>
+            <param name="createUserModel"></param>
             <returns></returns>
         </member>
         <member name="M:Microliu.Auth.API.Extensions.ExceptionHandlerMiddleWare.Object2XmlString(System.Object)">

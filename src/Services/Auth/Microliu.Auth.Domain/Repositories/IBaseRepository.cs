@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microliu.Auth.Infrastructure;
+using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -8,10 +10,6 @@ namespace Microliu.Auth.Domain
     {
         DbType GetDbType();
 
-        Task<T> AddAsync(T newEntity, CancellationToken ct = default(CancellationToken));
-
-        Task SaveChangesAsync();
-
-        Task RemoveAsync(string id, CancellationToken ct = default(CancellationToken));
+        IQueryable<T> Get(string id);
     }
 }

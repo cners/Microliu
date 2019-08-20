@@ -1,45 +1,36 @@
-﻿using Microliu.Auth.Domain;
+﻿using Microliu.Auth.DataMySQL.Interfaces;
+using Microliu.Auth.Domain;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Microliu.Auth.DataMySQL
 {
-    public class RoleRepository : BaseRepository, IRoleRepository
+    public class RoleRepository : BaseRepository<Role>, IRoleRepository
     {
-        private readonly AuthContextMySQL _context;
+        //private readonly AuthDbContext _context;
 
-        public RoleRepository(AuthContextMySQL context)
+        public RoleRepository(IDbContext context, IUnitOfWork unitOfWork, AuthDbContext authDbContext) 
+            : base(context,unitOfWork,authDbContext)
         {
-            _context = context;
+        }
+
+     
+
+        public IQueryable<Role> Get(string id)
+        {
+            return _entities.Where(x => x.Id == id && x.IsDeleted == 1);
         }
 
 
-        public async Task<Role> AddAsync(Role newEntity, CancellationToken ct = default)
+        public IQueryable<Role> GetByName(string roleName)
         {
-            await _context.role.AddAsync(newEntity);
-            //await _context.SaveChangesAsync();
-            return newEntity;
+            return _entities.Where(e => e.RoleName == roleName);
         }
 
-        public async Task SaveChangesAsync()
+        public void UpdateRoleName(string id, string newRoleName)
         {
-            await _context.SaveChangesAsync();
-        }
-
-        public void Dispose()
-        {
-            if (_context != null)
-            {
-                _context.Dispose();
-            }
-        }
-
-        public async Task RemoveAsync(string id, CancellationToken ct = default)
-        {
-            var role = _context.role.FirstOrDefault(e => e.Id == id && e.IsDeleted == 1);
-            role.IsDeleted = -1;
-            _context.role.Update(role);
+            throw new System.NotImplementedException();
         }
     }
 }

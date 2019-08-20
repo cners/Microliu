@@ -1,5 +1,15 @@
 # Microliu.Auth.API （微服务之 - 权限服务）
 
+已经实现了Oralce、SQLserver、Mysql的选用切换，因此为了后面统一数据库，我这里采用了MySQL，故将Oracle、SQLserver的引用类先去掉了。
+
+Microliu.Auth.API的依赖关系是：API -> Application -> (Domain/DataMySQL) -> Infrastructure
+
+API: 接口层，提供HTTP REST接口供其他服务调用
+Application: 应用层，提供业务流程整合
+Domain：领域层，提供领域模型设计
+Data: 数据层，提供灵活的数据支持可满足插拔式切换Oracle、MySQL、SQLserver
+Infrastructure: 基础设施层，提供公共的基础服务类
+
 
 
 ## 恢复数据库(Code First)

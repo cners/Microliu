@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "adf2556d6ade1f40b34db4823c485447f78f8ff9"
+    "signature": "b454aae4f3914ce57c00e27843bff885ac8bae6a"
   },
   "compilationOptions": {
     "defines": [
@@ -413,6 +413,32 @@
         },
         "compile": {
           "lib/netstandard1.6/NuGet.Frameworks.dll": {}
+        }
+      },
+      "Oracle.EntityFrameworkCore/2.19.30": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Relational": "2.2.6",
+          "Oracle.ManagedDataAccess.Core": "2.19.31"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Oracle.EntityFrameworkCore.dll": {
+            "assemblyVersion": "2.0.19.1",
+            "fileVersion": "2.0.19.1"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Oracle.EntityFrameworkCore.dll": {}
+        }
+      },
+      "Oracle.ManagedDataAccess.Core/2.19.31": {
+        "runtime": {
+          "lib/netstandard2.0/Oracle.ManagedDataAccess.dll": {
+            "assemblyVersion": "2.0.19.1",
+            "fileVersion": "2.0.19.1"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Oracle.ManagedDataAccess.dll": {}
         }
       },
       "Remotion.Linq/2.2.0": {
@@ -974,7 +1000,6 @@
       },
       "Microliu.Auth.Application/1.0.0": {
         "dependencies": {
-          "Microliu.Auth.DataMSSQL": "1.0.0",
           "Microliu.Auth.DataMySQL": "1.0.0",
           "Microliu.Auth.Domain": "1.0.0",
           "Microsoft.AspNetCore": "2.2.0",
@@ -987,25 +1012,12 @@
           "Microliu.Auth.Application.dll": {}
         }
       },
-      "Microliu.Auth.DataMSSQL/1.0.0": {
-        "dependencies": {
-          "Microliu.Auth.Domain": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "2.2.6",
-          "Microsoft.EntityFrameworkCore.Design": "2.2.6",
-          "Microsoft.EntityFrameworkCore.Relational": "2.2.6",
-          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.6"
-        },
-        "runtime": {
-          "Microliu.Auth.DataMSSQL.dll": {}
-        },
-        "compile": {
-          "Microliu.Auth.DataMSSQL.dll": {}
-        }
-      },
       "Microliu.Auth.DataMySQL/1.0.0": {
         "dependencies": {
           "Microliu.Auth.Domain": "1.0.0",
-          "MySql.Data.EntityFrameworkCore": "8.0.17"
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.2.6",
+          "MySql.Data.EntityFrameworkCore": "8.0.17",
+          "Oracle.EntityFrameworkCore": "2.19.30"
         },
         "runtime": {
           "Microliu.Auth.DataMySQL.dll": {}
@@ -1016,6 +1028,7 @@
       },
       "Microliu.Auth.Domain/1.0.0": {
         "dependencies": {
+          "Microliu.Auth.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore": "2.2.0"
         },
         "runtime": {
@@ -1023,6 +1036,17 @@
         },
         "compile": {
           "Microliu.Auth.Domain.dll": {}
+        }
+      },
+      "Microliu.Auth.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore": "2.2.0"
+        },
+        "runtime": {
+          "Microliu.Auth.Infrastructure.dll": {}
+        },
+        "compile": {
+          "Microliu.Auth.Infrastructure.dll": {}
         }
       },
       "Microliu.Core.Consul/1.0.0": {
@@ -4282,6 +4306,20 @@
       "path": "nuget.frameworks/4.7.0",
       "hashPath": "nuget.frameworks.4.7.0.nupkg.sha512"
     },
+    "Oracle.EntityFrameworkCore/2.19.30": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MVhdP4Nm8RpY1yUytVOemRSdOQD265CDd/zSOUASiZYhqdRAcyCQGEzJZuRQ9NG3weaUAu/nPKEFkjuL+2kqlg==",
+      "path": "oracle.entityframeworkcore/2.19.30",
+      "hashPath": "oracle.entityframeworkcore.2.19.30.nupkg.sha512"
+    },
+    "Oracle.ManagedDataAccess.Core/2.19.31": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JTt7i9z3A5StZvYWzVz9IIjzSy8Lzxp1LV04TKAQkx5XMPx+WSi91MShrUHpeQNWZqL9osFe4LJPkDCNigCdCQ==",
+      "path": "oracle.manageddataaccess.core/2.19.31",
+      "hashPath": "oracle.manageddataaccess.core.2.19.31.nupkg.sha512"
+    },
     "Remotion.Linq/2.2.0": {
       "type": "package",
       "serviceable": true,
@@ -4511,17 +4549,17 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microliu.Auth.DataMSSQL/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Microliu.Auth.DataMySQL/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "Microliu.Auth.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microliu.Auth.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

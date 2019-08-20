@@ -10,3 +10,5 @@ D:\Microliu\src\Services\Auth\Microliu.Auth.DataMySQL\obj\Debug\netstandard2.0\M
 D:\Microliu\src\Services\Auth\Microliu.Auth.DataMySQL\obj\Debug\netstandard2.0\Microliu.Auth.DataMySQL.csproj.CopyComplete
 D:\Microliu\src\Services\Auth\Microliu.Auth.DataMySQL\obj\Debug\netstandard2.0\Microliu.Auth.DataMySQL.dll
 D:\Microliu\src\Services\Auth\Microliu.Auth.DataMySQL\obj\Debug\netstandard2.0\Microliu.Auth.DataMySQL.pdb
+D:\Microliu\src\Services\Auth\Microliu.Auth.DataMySQL\bin\Debug\netstandard2.0\Microliu.Auth.Infrastructure.dll
+D:\Microliu\src\Services\Auth\Microliu.Auth.DataMySQL\bin\Debug\netstandard2.0\Microliu.Auth.Infrastructure.pdb
