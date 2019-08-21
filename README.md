@@ -1,6 +1,8 @@
 # Microliu
  
- 尝试写的微服务架构，基于.Net core 2.2和Standard 2.0实现。
+
+ 本着试试看的态度，尝试写的微服务架构，基于.Net core 2.2和Standard 2.0实现。望各路大神可毫不犹豫的批评指出，我会悉心采纳和改进。
+ 本人自认为技术平平，无奈有一颗向往技术的心，深知只有不断的尝试、实践从挫折中方能踏出光明大道。我也一直在努力着...
 
  目前已经初步实现网关、服务发现、服务自动注册、消息中间件RabbitMQ、熔断、限流、失败重试、身份验证。
 
@@ -12,4 +14,5 @@
  
  关于微服务的实现，可参考src目录
  
- 关于DDD的实现，可参考src/services/Auth的实现
+ 关于DDD的实现，可参考src/services/Auth的实现，关于xUnit对应的测试案例可参考：/src/test/Microliu.Test.AuthApplication
+

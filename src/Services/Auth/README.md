@@ -11,6 +11,9 @@ Domain：领域层，提供领域模型设计
 Data: 数据层，提供灵活的数据支持可满足插拔式切换Oracle、MySQL、SQLserver
 Infrastructure: 基础设施层，提供公共的基础服务类
 
+关于xUnit对应的测试案例可参考：/src/test/Microliu.Test.AuthApplication
+
+### 一些介绍
 
 
 ## 恢复数据库(Code First)

@@ -24,7 +24,7 @@ namespace Microliu.Auth.Application
 
             services.AddDbContextPool<AuthDbContext>(options =>
             {
-                options.UseMySQL(GetConnectionString(configuration, DatabaseType.MySQL));
+                options.UseMySQL(GetConnectionString(configuration, DatabaseType.MySQL));// 可切换数据库源UseOracle,UseSqlserver
             }, poolSize: 64);
 
             services.AddTransient<IDbContext, AuthDbContext>();

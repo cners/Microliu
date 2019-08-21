@@ -18,16 +18,13 @@ namespace Microliu.Test.AuthApplication
         [Fact]
         public void CreatePosition()
         {
-            for (int i = 0; i < 1000; i++)
+            var craetePosition = new CreatePositionModel
             {
-                var craetePosition = new CreatePositionModel
-                {
-                    Name = Guid.NewGuid().ToString("N").Substring(1, 5),
-                    Sort = 100,
-                    IsEnable = 1
-                };
-                _authApplication.CreatePosition(craetePosition);
-            }
+                Name = Guid.NewGuid().ToString("N").Substring(1, 5),
+                Sort = 100,
+                IsEnable = 1
+            };
+            _authApplication.CreatePosition(craetePosition);
         }
     }
 }
