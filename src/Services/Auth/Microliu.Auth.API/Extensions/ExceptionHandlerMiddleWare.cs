@@ -1,15 +1,16 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 namespace Microliu.Auth.API.Extensions
 {
+    /// <summary>
+    /// 全局异常中间件
+    /// </summary>
     public class ExceptionHandlerMiddleWare
     {
         private readonly RequestDelegate next;
@@ -43,14 +44,14 @@ namespace Microliu.Auth.API.Extensions
 
         private static async Task WriteExceptionAsync(HttpContext context, Exception exception)
         {
-            //返回友好的提示
+            // 返回友好的提示
             HttpResponse response = context.Response;
 
             response.StatusCode = (int)HttpStatusCode.BadRequest;
             response.ContentType = "application/json";
             response.ContentType = context.Request.Headers["Accept"];
 
-            var result = new ReturnResult(response.StatusCode, "权限服务异常，请稍后再试");
+            var result = new ReturnResult(response.StatusCode, "AuthService异常，请稍后再试");
             result.Data = exception.Message;
             await response.WriteAsync(JsonConvert.SerializeObject(result)).ConfigureAwait(false);
         }

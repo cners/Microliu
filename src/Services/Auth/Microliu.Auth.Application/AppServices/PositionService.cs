@@ -1,4 +1,6 @@
-﻿using Microliu.Auth.Domain.Entities;
+﻿using Microliu.Auth.Domain;
+using Microliu.Auth.Domain.Converters;
+using Microliu.Auth.Domain.Entities;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -7,17 +9,10 @@ namespace Microliu.Auth.Application
 {
     public partial class AuthApplication
     {
-        public async Task CreatePosition(CancellationToken ct = default)
+        public async Task CreatePosition(CreatePositionModel input, CancellationToken ct = default)
         {
-            await _unitOfWork.RegisterNew<Position>(new Position
-            {
-                Id = Guid.NewGuid().ToString("N"),
-                CreateTime = DateTimeOffset.Now,
-                Name = ".NET工程师",
-                IsDelete = 1,
-                IsEnable = 1,
-                Sort = 100
-            });
+            var createPosition = PositionConverter.ToPosition(input);
+            await _unitOfWork.RegisterNew<Position>(createPosition);
 
             await _unitOfWork.CommitAsync();
         }

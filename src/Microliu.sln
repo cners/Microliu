@@ -80,11 +80,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Auth.Infrastructur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Auth.API", "Services\Auth\Microliu.Auth.API\Microliu.Auth.API.csproj", "{2CC7283D-1C3A-471A-B882-86A04CC28ED3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Auth.DataMySQL", "Services\Auth\Microliu.Auth.DataMySQL\Microliu.Auth.DataMySQL.csproj", "{FDE87311-2A7B-4E54-809B-D7BB7EA1B158}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Test.EFCoreCodeFirst", "Test\Microliu.Test.EFCoreCodeFirst\Microliu.Test.EFCoreCodeFirst.csproj", "{CB4F4497-20EF-470B-BDD9-EE59274DA9B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.Test.AuthApplication", "Test\Microliu.Test.AuthApplication\Microliu.Test.AuthApplication.csproj", "{6097D46E-AD6F-497D-B30D-A429BBA1ECAE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Test.AuthApplication", "Test\Microliu.Test.AuthApplication\Microliu.Test.AuthApplication.csproj", "{6097D46E-AD6F-497D-B30D-A429BBA1ECAE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Auth.Data", "Services\Auth\Microliu.Auth.Data\Microliu.Auth.Data.csproj", "{FBCBD757-1D2D-4D60-84DC-37C93FD24C42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -196,10 +196,6 @@ Global
 		{2CC7283D-1C3A-471A-B882-86A04CC28ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CC7283D-1C3A-471A-B882-86A04CC28ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CC7283D-1C3A-471A-B882-86A04CC28ED3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FDE87311-2A7B-4E54-809B-D7BB7EA1B158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FDE87311-2A7B-4E54-809B-D7BB7EA1B158}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FDE87311-2A7B-4E54-809B-D7BB7EA1B158}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FDE87311-2A7B-4E54-809B-D7BB7EA1B158}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CB4F4497-20EF-470B-BDD9-EE59274DA9B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CB4F4497-20EF-470B-BDD9-EE59274DA9B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB4F4497-20EF-470B-BDD9-EE59274DA9B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -208,6 +204,10 @@ Global
 		{6097D46E-AD6F-497D-B30D-A429BBA1ECAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6097D46E-AD6F-497D-B30D-A429BBA1ECAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6097D46E-AD6F-497D-B30D-A429BBA1ECAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBCBD757-1D2D-4D60-84DC-37C93FD24C42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBCBD757-1D2D-4D60-84DC-37C93FD24C42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBCBD757-1D2D-4D60-84DC-37C93FD24C42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBCBD757-1D2D-4D60-84DC-37C93FD24C42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -241,9 +241,9 @@ Global
 		{C40C5A23-8B93-46B9-A874-838F91B31438} = {6593CB91-43D8-4CAA-AEFE-F3A234B077FA}
 		{CB892A46-0E95-4EE5-BE2E-9E5474ED585C} = {6593CB91-43D8-4CAA-AEFE-F3A234B077FA}
 		{2CC7283D-1C3A-471A-B882-86A04CC28ED3} = {6593CB91-43D8-4CAA-AEFE-F3A234B077FA}
-		{FDE87311-2A7B-4E54-809B-D7BB7EA1B158} = {6593CB91-43D8-4CAA-AEFE-F3A234B077FA}
 		{CB4F4497-20EF-470B-BDD9-EE59274DA9B6} = {3030D236-A055-419B-B3E6-367500621BC3}
 		{6097D46E-AD6F-497D-B30D-A429BBA1ECAE} = {3030D236-A055-419B-B3E6-367500621BC3}
+		{FBCBD757-1D2D-4D60-84DC-37C93FD24C42} = {6593CB91-43D8-4CAA-AEFE-F3A234B077FA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2F32ECF0-6010-4F59-AC16-6FFA191BC558}

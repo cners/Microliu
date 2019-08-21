@@ -1000,7 +1000,7 @@
       },
       "Microliu.Auth.Application/1.0.0": {
         "dependencies": {
-          "Microliu.Auth.DataMySQL": "1.0.0",
+          "Microliu.Auth.Data": "1.0.0",
           "Microliu.Auth.Domain": "1.0.0",
           "Microsoft.AspNetCore": "2.2.0",
           "Microsoft.EntityFrameworkCore": "2.2.6"
@@ -1012,7 +1012,7 @@
           "Microliu.Auth.Application.dll": {}
         }
       },
-      "Microliu.Auth.DataMySQL/1.0.0": {
+      "Microliu.Auth.Data/1.0.0": {
         "dependencies": {
           "Microliu.Auth.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.2.6",
@@ -1020,10 +1020,10 @@
           "Oracle.EntityFrameworkCore": "2.19.30"
         },
         "runtime": {
-          "Microliu.Auth.DataMySQL.dll": {}
+          "Microliu.Auth.Data.dll": {}
         },
         "compile": {
-          "Microliu.Auth.DataMySQL.dll": {}
+          "Microliu.Auth.Data.dll": {}
         }
       },
       "Microliu.Auth.Domain/1.0.0": {
@@ -4549,7 +4549,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Microliu.Auth.DataMySQL/1.0.0": {
+    "Microliu.Auth.Data/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

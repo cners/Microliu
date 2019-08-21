@@ -6,4 +6,3 @@ D:\Microliu\src\Services\Auth\Microliu.Auth.Infrastructure\obj\Debug\netstandard
 D:\Microliu\src\Services\Auth\Microliu.Auth.Infrastructure\obj\Debug\netstandard2.0\Microliu.Auth.Infrastructure.AssemblyInfo.cs
 D:\Microliu\src\Services\Auth\Microliu.Auth.Infrastructure\obj\Debug\netstandard2.0\Microliu.Auth.Infrastructure.dll
 D:\Microliu\src\Services\Auth\Microliu.Auth.Infrastructure\obj\Debug\netstandard2.0\Microliu.Auth.Infrastructure.pdb
-D:\Microliu\src\Services\Auth\Microliu.Auth.Infrastructure\obj\Debug\netstandard2.0\Microliu.Auth.Infrastructure.csprojAssemblyReference.cache

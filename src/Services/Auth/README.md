@@ -1,6 +1,7 @@
 # Microliu.Auth.API （微服务之 - 权限服务）
 
-已经实现了Oralce、SQLserver、Mysql的选用切换，因此为了后面统一数据库，我这里采用了MySQL，故将Oracle、SQLserver的引用类先去掉了。
+已经实现了Oralce、SQLserver、Mysql的选用切换，因此为了后面统一数据库，我这里采用了MySQL，故将Oracle、SQLserver的引用类先去掉了。若你想使用Oracle或SQLServer只需要改一行代码就可以切换；
+ services.AddDbContextPool<AuthDbContext>(options => options.UseMySQL(GetConnectionString(configuration, DatabaseType.SQLServer))); //位于Application层：ServiceExtensions.cs中
 
 Microliu.Auth.API的依赖关系是：API -> Application -> (Domain/DataMySQL) -> Infrastructure
 

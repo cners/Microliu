@@ -2378,7 +2378,7 @@
           "ref/netstandard1.5/System.Runtime.dll": {}
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
+      "System.Runtime.CompilerServices.Unsafe/4.5.1": {
         "type": "package",
         "compile": {
           "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
@@ -2919,20 +2919,6 @@
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
       },
-      "Unity/5.11.1": {
-        "type": "package",
-        "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
-        },
-        "compile": {
-          "lib/netcoreapp2.0/Unity.Abstractions.dll": {},
-          "lib/netcoreapp2.0/Unity.Container.dll": {}
-        },
-        "runtime": {
-          "lib/netcoreapp2.0/Unity.Abstractions.dll": {},
-          "lib/netcoreapp2.0/Unity.Container.dll": {}
-        }
-      },
       "xunit/2.4.0": {
         "type": "package",
         "dependencies": {
@@ -3014,7 +3000,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Microliu.Auth.DataMySQL": "1.0.0",
+          "Microliu.Auth.Data": "1.0.0",
           "Microliu.Auth.Domain": "1.0.0",
           "Microsoft.AspNetCore": "2.2.0",
           "Microsoft.EntityFrameworkCore": "2.2.6"
@@ -3026,7 +3012,7 @@
           "bin/placeholder/Microliu.Auth.Application.dll": {}
         }
       },
-      "Microliu.Auth.DataMySQL/1.0.0": {
+      "Microliu.Auth.Data/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -3036,10 +3022,10 @@
           "Oracle.EntityFrameworkCore": "2.19.30"
         },
         "compile": {
-          "bin/placeholder/Microliu.Auth.DataMySQL.dll": {}
+          "bin/placeholder/Microliu.Auth.Data.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Microliu.Auth.DataMySQL.dll": {}
+          "bin/placeholder/Microliu.Auth.Data.dll": {}
         }
       },
       "Microliu.Auth.Domain/1.0.0": {
@@ -7535,10 +7521,10 @@
         "system.runtime.nuspec"
       ]
     },
-    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
-      "sha512": "hMkdWxksypQlFXB7JamQegDscxEAQO4FHd/lw/zlSZU9dZgAij65xjCrXer183wvoNAzJic5zzjj2oc9/dloWg==",
+    "System.Runtime.CompilerServices.Unsafe/4.5.1": {
+      "sha512": "Zh8t8oqolRaFa9vmOZfdQm/qKejdqz0J9kr7o2Fu0vPeoH3BL1EOXipKWwkWtLT1JPzjByrF19fGuFlNbmPpiw==",
       "type": "package",
-      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "path": "system.runtime.compilerservices.unsafe/4.5.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7554,7 +7540,7 @@
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -9167,49 +9153,6 @@
         "system.xml.xpath.xmldocument.nuspec"
       ]
     },
-    "Unity/5.11.1": {
-      "sha512": "4LroMtZWLwc2krUsH8IX62fxNoOKb1463wHdtu617iVAOkMaFZ4e4kp6VR7tBi20jxvezlRbknWoeCXWg903yg==",
-      "type": "package",
-      "path": "unity/5.11.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/net40/Unity.Abstractions.dll",
-        "lib/net40/Unity.Abstractions.pdb",
-        "lib/net40/Unity.Container.dll",
-        "lib/net40/Unity.Container.pdb",
-        "lib/net45/Unity.Abstractions.dll",
-        "lib/net45/Unity.Abstractions.pdb",
-        "lib/net45/Unity.Container.dll",
-        "lib/net45/Unity.Container.pdb",
-        "lib/net46/Unity.Abstractions.dll",
-        "lib/net46/Unity.Abstractions.pdb",
-        "lib/net46/Unity.Container.dll",
-        "lib/net46/Unity.Container.pdb",
-        "lib/net47/Unity.Abstractions.dll",
-        "lib/net47/Unity.Abstractions.pdb",
-        "lib/net47/Unity.Container.dll",
-        "lib/net47/Unity.Container.pdb",
-        "lib/netcoreapp1.0/Unity.Abstractions.dll",
-        "lib/netcoreapp1.0/Unity.Abstractions.pdb",
-        "lib/netcoreapp1.0/Unity.Container.dll",
-        "lib/netcoreapp1.0/Unity.Container.pdb",
-        "lib/netcoreapp2.0/Unity.Abstractions.dll",
-        "lib/netcoreapp2.0/Unity.Abstractions.pdb",
-        "lib/netcoreapp2.0/Unity.Container.dll",
-        "lib/netcoreapp2.0/Unity.Container.pdb",
-        "lib/netstandard1.0/Unity.Abstractions.dll",
-        "lib/netstandard1.0/Unity.Abstractions.pdb",
-        "lib/netstandard1.0/Unity.Container.dll",
-        "lib/netstandard1.0/Unity.Container.pdb",
-        "lib/netstandard2.0/Unity.Abstractions.dll",
-        "lib/netstandard2.0/Unity.Abstractions.pdb",
-        "lib/netstandard2.0/Unity.Container.dll",
-        "lib/netstandard2.0/Unity.Container.pdb",
-        "unity.5.11.1.nupkg.sha512",
-        "unity.nuspec"
-      ]
-    },
     "xunit/2.4.0": {
       "sha512": "qR8BQB8EVkKI+fPpVvLLDdc5Ef/GfHUrsQFYXeOaCNqA1ijhZJCXllFVuZfIf0R/WpZ1UJtoNhjrHB8xC8fPJg==",
       "type": "package",
@@ -9355,10 +9298,10 @@
       "path": "../../Services/Auth/Microliu.Auth.Application/Microliu.Auth.Application.csproj",
       "msbuildProject": "../../Services/Auth/Microliu.Auth.Application/Microliu.Auth.Application.csproj"
     },
-    "Microliu.Auth.DataMySQL/1.0.0": {
+    "Microliu.Auth.Data/1.0.0": {
       "type": "project",
-      "path": "../../Services/Auth/Microliu.Auth.DataMySQL/Microliu.Auth.DataMySQL.csproj",
-      "msbuildProject": "../../Services/Auth/Microliu.Auth.DataMySQL/Microliu.Auth.DataMySQL.csproj"
+      "path": "../../Services/Auth/Microliu.Auth.Data/Microliu.Auth.Data.csproj",
+      "msbuildProject": "../../Services/Auth/Microliu.Auth.Data/Microliu.Auth.Data.csproj"
     },
     "Microliu.Auth.Domain/1.0.0": {
       "type": "project",
@@ -9376,7 +9319,6 @@
       "Microliu.Auth.Application >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 16.0.1",
       "Microsoft.NETCore.App >= 2.2.0",
-      "Unity >= 5.11.1",
       "xunit >= 2.4.0",
       "xunit.runner.visualstudio >= 2.4.0"
     ]
@@ -9435,10 +9377,6 @@
             "target": "Package",
             "version": "[2.2.0, )",
             "autoReferenced": true
-          },
-          "Unity": {
-            "target": "Package",
-            "version": "[5.11.1, )"
           },
           "xunit": {
             "target": "Package",

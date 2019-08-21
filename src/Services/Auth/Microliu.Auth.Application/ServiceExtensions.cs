@@ -18,23 +18,17 @@ namespace Microliu.Auth.Application
         {
             services.AddTransient<IAuthApplication, AuthApplication>();// 权限服务
 
-            //services.AddTransient<IAuthSuperVisor, AuthSupervisor>();// 权限
-
             services.AddTransient<IRoleRepository, RoleRepository>();// 角色
             services.AddTransient<IUserRepository, UserRepository>();// 员工
             services.AddTransient<IPositionRepository, PositionRepository>();// 岗位
 
             services.AddDbContextPool<AuthDbContext>(options =>
-                        options.UseMySQL(GetConnectionString(configuration, DatabaseType.SQLServer)));
+            {
+                options.UseMySQL(GetConnectionString(configuration, DatabaseType.MySQL));
+            }, poolSize: 64);
 
             services.AddTransient<IDbContext, AuthDbContext>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
-
-            //services.AddDbContextPool<AuthDbContext>(options =>
-            //            options.UseSqlServer(GetConnectionString(configuration, DatabaseType.SQLServer)));
-
-
-            //services.AddDbContextPool<Microliu.Auth.DataOracle.AuthContext>(options => options.UseOracle(GetConnectionString(configuration, DatabaseType.Oracle)));
 
             return services;
         }

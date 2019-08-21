@@ -18,5 +18,21 @@ namespace Microliu.Auth.Domain.Converters
             qpm.CreateTime = position.CreateTime.ToString("yyyy-MM-dd HH:mm:ss");
             return qpm;
         }
+
+        public static Position ToPosition(CreatePositionModel input)
+        {
+            if (input == null)
+                throw  new NullReferenceException();
+
+            return new Position
+            {
+                Id = Guid.NewGuid().ToString("N"),
+                CreateTime = DateTimeOffset.Now,
+                Name =input.Name,
+                IsDelete = 1,
+                IsEnable = input.IsEnable,
+                Sort = input.Sort
+            };
+        }
     }
 }

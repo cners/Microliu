@@ -1,10 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microliu.Auth.Application;
-using Microsoft.AspNetCore.Http;
+﻿using Microliu.Auth.Application;
+using Microliu.Auth.Domain;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
+
+/*
+ * 模块描述：岗位
+ * 模块功能：
+ *           CreatePosition     创建岗位
+ *           SetUserPosition    给员工分配岗位
+ *           GetUsers           当前岗位的员工集合
+ *           GetPosition        获取岗位信息
+ *           
+ */
 
 namespace Microliu.Auth.API.Controllers
 {
@@ -26,13 +33,12 @@ namespace Microliu.Auth.API.Controllers
         /// 创建岗位
         /// </summary>
         /// <returns></returns>
-        [HttpGet(nameof(CreatePosition))]
-        public async Task<IActionResult> CreatePosition()
+        [HttpPost(nameof(CreatePosition))]
+        public async Task<IActionResult> CreatePosition([FromBody]CreatePositionModel input)
         {
-            await _authApplication.CreatePosition();
+            await _authApplication.CreatePosition(input);
             return Ok();
         }
-
 
         /// <summary>
         /// 给员工分配岗位
@@ -68,7 +74,7 @@ namespace Microliu.Auth.API.Controllers
         [HttpGet(nameof(GetPosition))]
         public IActionResult GetPosition(string id)
         {
-            var positions = _authApplication.GetPosition(id);
+            dynamic positions = _authApplication.GetPosition(id);
             return Ok(positions);
         }
     }

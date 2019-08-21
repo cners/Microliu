@@ -1,5 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
+/*
+ * 模块描述：健康检查
+ * 模块功能：
+ *           Check     健康检查方法
+ *           
+ */
 namespace Microliu.Auth.API.Controllers
 {
     /// <summary>

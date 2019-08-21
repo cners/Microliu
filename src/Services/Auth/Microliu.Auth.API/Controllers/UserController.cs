@@ -7,6 +7,14 @@ using Microliu.Auth.Domain.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
+/*
+ * 模块描述：员工
+ * 模块功能：
+ *           GetUser        获取用户信息
+ *           CreateUser     新增员工
+ *           
+ */
+
 namespace Microliu.Auth.API.Controllers
 {
     /// <summary>

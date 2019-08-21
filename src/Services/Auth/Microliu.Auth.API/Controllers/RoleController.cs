@@ -5,6 +5,15 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
 
+/*
+ * 模块描述：角色
+ * 模块功能：
+ *           CreateRole     创建角色
+ *           Delete         删除角色
+ *           UpdateRoleName 修改角色名称
+ *           
+ */
+
 namespace Microliu.Auth.API.Controllers
 {
     /// <summary>

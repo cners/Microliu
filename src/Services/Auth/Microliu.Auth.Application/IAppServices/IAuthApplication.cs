@@ -1,4 +1,6 @@
-﻿using Microliu.Auth.Domain.ViewModels;
+﻿using Microliu.Auth.Domain;
+using Microliu.Auth.Domain.Entities;
+using Microliu.Auth.Domain.ViewModels;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -6,7 +8,7 @@ namespace Microliu.Auth.Application
 {
     public interface IAuthApplication
     {
-
+        // 角色
         Task CreateRole(CreateRoleModel input, CancellationToken ct = default(CancellationToken));
 
         Task<string> RemoveRole(string id, CancellationToken ct = default(CancellationToken));
@@ -15,7 +17,7 @@ namespace Microliu.Auth.Application
 
 
         // 岗位
-        Task CreatePosition(CancellationToken ct = default(CancellationToken));
+        Task CreatePosition(CreatePositionModel input,CancellationToken ct = default(CancellationToken));
         dynamic GetPosition(string id);
         // 用户岗位
         Task SetUserPosition(string userId,string positionId,CancellationToken ct = default(CancellationToken));

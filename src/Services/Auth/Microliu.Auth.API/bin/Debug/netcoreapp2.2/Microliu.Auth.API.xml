@@ -101,6 +101,11 @@
             <param name="createUserModel"></param>
             <returns></returns>
         </member>
+        <member name="T:Microliu.Auth.API.Extensions.ExceptionHandlerMiddleWare">
+            <summary>
+            全局异常中间件
+            </summary>
+        </member>
         <member name="M:Microliu.Auth.API.Extensions.ExceptionHandlerMiddleWare.Object2XmlString(System.Object)">
             <summary>
             对象转为Xml
