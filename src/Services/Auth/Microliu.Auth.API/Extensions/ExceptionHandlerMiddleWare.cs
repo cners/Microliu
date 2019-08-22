@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microliu.Auth.Application;
+using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using System;
 using System.IO;
@@ -22,40 +23,39 @@ namespace Microliu.Auth.API.Extensions
 
         public async Task Invoke(HttpContext context)
         {
-            try
-            {
-                await next(context);
-            }
-            catch (Exception ex)
-            {
-                await HandleExceptionAsync(context, ex);
-            }
-        }
-
-        private static async Task HandleExceptionAsync(HttpContext context, Exception exception)
-        {
-            if (exception == null)
-            {
-                return;
-            }
-
-            await WriteExceptionAsync(context, exception).ConfigureAwait(false);
-        }
-
-        private static async Task WriteExceptionAsync(HttpContext context, Exception exception)
-        {
             // 返回友好的提示
             HttpResponse response = context.Response;
 
-            response.StatusCode = (int)HttpStatusCode.BadRequest;
-            response.ContentType = "application/json";
-            response.ContentType = context.Request.Headers["Accept"];
-
-            var result = new ReturnResult(response.StatusCode, "AuthService异常，请稍后再试");
-            result.Data = exception.Message;
-            await response.WriteAsync(JsonConvert.SerializeObject(result)).ConfigureAwait(false);
+            try
+            {
+                
+                await next(context);
+            }
+            catch (AuthException aex)
+            {
+                response.StatusCode = (int)HttpStatusCode.BadRequest;
+                response.ContentType = "application/json";
+                response.ContentType = context.Request.Headers["Accept"];
+                var result = new ReturnResult(response.StatusCode, aex.Message);
+                result.Data = string.Empty;
+                await HandleExceptionAsync(response, result);
+            }
+            catch (Exception ex)
+            {
+                response.StatusCode = (int)HttpStatusCode.BadRequest;
+                response.ContentType = "application/json";
+                response.ContentType = context.Request.Headers["Accept"];
+                var result = new ReturnResult(response.StatusCode, "AuthService异常，请稍后再试");
+                result.Data = ex.Message;
+                await HandleExceptionAsync(response, result);
+            }
         }
 
+        private static async Task HandleExceptionAsync(HttpResponse response, ReturnResult result)
+        {
+
+            await response.WriteAsync(JsonConvert.SerializeObject(result)).ConfigureAwait(false);
+        }
         /// <summary>
         /// 对象转为Xml
         /// </summary>

@@ -19,8 +19,8 @@ namespace Microliu.Auth.Application
 
         public async Task<string> RemoveRole(string id, CancellationToken ct = default)
         {
-            var role = (_roleRepos.Get(id).FirstOrDefault());
-            role.IsDeleted = -1;
+            var role = _roleRepos.GetEntity(id);
+            role.IsDelete =  IsDelete.Deleted;
             await _unitOfWork.RegisterUpdate<Role>(role);
             await _unitOfWork.CommitAsync();
             return role.Id;
@@ -28,10 +28,15 @@ namespace Microliu.Auth.Application
 
         public async Task<bool> UpdateRoleName(string id, string newRoleName)
         {
-            var role = _roleRepos.Get(id).FirstOrDefault<Role>();
+            var role = _roleRepos.GetEntity(id);
             role.RoleName = newRoleName;
             await _unitOfWork.RegisterUpdate<Role>(role);
             return await _unitOfWork.CommitAsync();
+        }
+
+        public dynamic GetRoles(SearchRoleModel input)
+        {
+            return _roleRepos.GetRoles(input);
         }
     }
 }

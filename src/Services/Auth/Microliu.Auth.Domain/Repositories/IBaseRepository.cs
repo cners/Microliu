@@ -10,6 +10,8 @@ namespace Microliu.Auth.Domain
     {
         DbType GetDbType();
 
-        IQueryable<T> Get(string id);
+        T GetEntity(string id);
+
+        IQueryable<T> GetAll();
     }
 }

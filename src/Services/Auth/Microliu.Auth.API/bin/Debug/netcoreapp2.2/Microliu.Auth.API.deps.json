@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "b454aae4f3914ce57c00e27843bff885ac8bae6a"
+    "signature": "3ce03d54dfc99ead50f54bceb84e8775715ac4a4"
   },
   "compilationOptions": {
     "defines": [
@@ -40,6 +40,21 @@
         },
         "compile": {
           "Microliu.Auth.API.dll": {}
+        }
+      },
+      "AutoMapper/9.0.0": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "System.Reflection.Emit": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.dll": {}
         }
       },
       "BouncyCastle.NetCore/1.8.3": {
@@ -1028,6 +1043,7 @@
       },
       "Microliu.Auth.Domain/1.0.0": {
         "dependencies": {
+          "AutoMapper": "9.0.0",
           "Microliu.Auth.Infrastructure": "1.0.0",
           "Microsoft.AspNetCore": "2.2.0"
         },
@@ -4123,6 +4139,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AutoMapper/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xCqvoxT4HIrNY/xlXG9W+BA/awdrhWvMTKTK/igkGSRbhOhpl3Q8O8Gxlhzjc9JsYqE7sS6AxgyuUUvZ6R5/Bw==",
+      "path": "automapper/9.0.0",
+      "hashPath": "automapper.9.0.0.nupkg.sha512"
     },
     "BouncyCastle.NetCore/1.8.3": {
       "type": "package",

@@ -3,7 +3,6 @@ using System;
 using Microliu.Auth.DataMySQL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Microliu.Auth.DataMySQL.Migrations
@@ -15,9 +14,7 @@ namespace Microliu.Auth.DataMySQL.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.2.6-servicing-10079")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .HasAnnotation("ProductVersion", "2.2.6-servicing-10079");
 
             modelBuilder.Entity("Microliu.Auth.Domain.Entities.Position", b =>
                 {
@@ -28,7 +25,7 @@ namespace Microliu.Auth.DataMySQL.Migrations
 
                     b.Property<int>("IsDelete");
 
-                    b.Property<int>("IsEnable");
+                    b.Property<int>("IsEnabled");
 
                     b.Property<string>("Name");
 
@@ -45,6 +42,13 @@ namespace Microliu.Auth.DataMySQL.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<DateTimeOffset>("CreateTime");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(40);
+
+                    b.Property<int>("IsDelete");
+
+                    b.Property<int>("IsEnabled");
 
                     b.Property<string>("NickName")
                         .HasMaxLength(100);
@@ -69,6 +73,10 @@ namespace Microliu.Auth.DataMySQL.Migrations
 
                     b.Property<DateTimeOffset>("CreateTime");
 
+                    b.Property<int>("IsDelete");
+
+                    b.Property<int>("IsEnabled");
+
                     b.Property<string>("PositionId");
 
                     b.Property<string>("UserId");
@@ -87,9 +95,7 @@ namespace Microliu.Auth.DataMySQL.Migrations
 
                     b.Property<DateTimeOffset>("CreateTime");
 
-                    b.Property<string>("Creator");
-
-                    b.Property<int>("IsDeleted");
+                    b.Property<int>("IsDelete");
 
                     b.Property<int>("IsEnabled");
 

@@ -7,7 +7,7 @@ using System.Text;
 namespace Microliu.Auth.Domain.Entities
 {
     [Table("UserPosition")]
-    public class UserPosition
+    public class UserPosition : BaseEntity
     {
 
         [Key]
@@ -17,9 +17,6 @@ namespace Microliu.Auth.Domain.Entities
 
         public string PositionId { get; set; }
 
-        public DateTimeOffset CreateTime { get; set; }
-
         public User User { get; set; }
-
     }
 }

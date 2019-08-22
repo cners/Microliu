@@ -10,7 +10,6 @@ namespace Microliu.Auth.Domain.ViewModels
 
         public int Sort { get; set; }
 
-
         public string CreatorId { get; set; }
     }
 }

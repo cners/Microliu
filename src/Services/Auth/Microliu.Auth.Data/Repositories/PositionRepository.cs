@@ -2,6 +2,7 @@
 using Microliu.Auth.Domain;
 using Microliu.Auth.Domain.Entities;
 using Microliu.Auth.Domain.Repositories;
+using Microliu.Auth.Domain.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +17,20 @@ namespace Microliu.Auth.DataMySQL
         {
         }
 
-        public IQueryable<Position> Get(string id)
+        public IQueryable<Position> GetPositions(SearchPositionModel input)
         {
-            return _entities.Where(e => e.Id == id);
+            int count = (input.PageIndex - 1) * input.PageSize;
+            if (!string.IsNullOrEmpty(input.Name))
+            {
+                _entities = _entities.Where(e => e.Name == input.Name);
+            }
+            return _entities.OrderByDescending(e => e.CreateTime)
+                .Skip(count).Take(input.PageSize);
         }
+
+        //public Position GetEntity(string id)
+        //{
+        //    return _entities.Where(e => e.Id == id).FirstOrDefault();
+        //}
     }
 }

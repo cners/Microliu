@@ -13,7 +13,7 @@ namespace Microliu.Auth.Domain.Converters
         {
             if (input == null)
                 throw new NullReferenceException();
-
+            
             var u = new User();
             u.Id = Guid.NewGuid().ToString("N");
             u.CreateTime = DateTimeOffset.Now;

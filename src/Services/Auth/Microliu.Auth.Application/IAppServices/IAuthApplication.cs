@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Microliu.Auth.Application
 {
-    public interface IAuthApplication
+    public partial interface IAuthApplication
     {
         // 角色
         Task CreateRole(CreateRoleModel input, CancellationToken ct = default(CancellationToken));
@@ -17,16 +17,18 @@ namespace Microliu.Auth.Application
 
 
         // 岗位
-        Task CreatePosition(CreatePositionModel input,CancellationToken ct = default(CancellationToken));
+        Task CreatePosition(CreatePositionModel input, CancellationToken ct = default(CancellationToken));
         dynamic GetPosition(string id);
+
+        dynamic GetPositions();
+
+        dynamic GetPositions(SearchPositionModel input, CancellationToken ct = default(CancellationToken));
         // 用户岗位
-        Task SetUserPosition(string userId,string positionId,CancellationToken ct = default(CancellationToken));
+        Task SetUserPosition(string userId, string positionId, CancellationToken ct = default(CancellationToken));
 
-        // 用户
-        dynamic GetUser(string id);
+      
 
-        dynamic GetUsers(string positionId);
-
-        Task<string> CreateUser(CreateUserModel input);
+        // 角色
+        dynamic GetRoles(SearchRoleModel input);
     }
 }

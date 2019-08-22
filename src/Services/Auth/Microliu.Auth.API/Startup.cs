@@ -1,6 +1,8 @@
 ﻿using Microliu.Auth.API.Extensions;
 using Microliu.Auth.API.Filters;
 using Microliu.Auth.Application;
+using Microliu.Auth.Domain.Entities;
+using Microliu.Auth.Domain.ViewModels;
 using Microliu.Core.Consul;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -100,7 +102,7 @@ namespace Microliu.Auth.API
 
                 //options.IgnoreObsoleteActions();
             });
-
+            services.AddAutoMapper();
             //services.ConfigureSwaggerGen(c =>
             //{
             //    // 配置生成的 xml 注释文档路径
@@ -149,14 +151,12 @@ namespace Microliu.Auth.API
                 //                        SubmitMethod.Put);
             });
             app.RegisterConsul(lifetime, Configuration);
+
+            var expression = app.UseAutoMapper();
+            expression.CreateMap<User, CreateUserModel>();
+            app.UseStateAutoMapper();
             app.UseMvc();
         }
     }
 
-    public static class SwaggerNet
-    {
-        public static void PreStart()
-        {
-        }
-    }
 }

@@ -11,7 +11,7 @@ namespace Microliu.Auth.DataMySQL
             return DbType.MySQL;//需要优化
         }
 
-        public readonly IQueryable<T> _entities;
+        public IQueryable<T> _entities;
 
         public readonly IUnitOfWork _unitOfWork;
 
@@ -25,6 +25,17 @@ namespace Microliu.Auth.DataMySQL
             _entities = dbContext.Set<T>();
             _unitOfWork = unitOfWork;
             _authDbContext = authDbContext;
+        }
+
+        public IQueryable<T> GetAll()
+        {
+            return _entities;
+        }
+
+        public T GetEntity(string id)
+        {
+            var p = typeof(T).GetProperty("Id");
+            return _entities.Where(e => (p.GetValue(e).ToString()) == id).FirstOrDefault();
         }
 
         public void Dispose()

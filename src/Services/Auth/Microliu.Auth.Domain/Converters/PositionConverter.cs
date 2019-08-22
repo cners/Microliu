@@ -1,4 +1,5 @@
-﻿using Microliu.Auth.Domain.Entities;
+﻿using AutoMapper;
+using Microliu.Auth.Domain.Entities;
 using Microliu.Auth.Domain.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -10,12 +11,15 @@ namespace Microliu.Auth.Domain.Converters
     {
         public static QueryPositionModel ToQueryPositionModel(Position position)
         {
+
+
             var qpm = new QueryPositionModel();
             qpm.Id = position.Id;
-            qpm.IsEnable = position.IsEnable;
+            qpm.IsEnable = (int)position.IsEnabled;
             qpm.Name = position.Name;
             qpm.Sort = position.Sort;
             qpm.CreateTime = position.CreateTime.ToString("yyyy-MM-dd HH:mm:ss");
+
             return qpm;
         }
 
@@ -29,8 +33,8 @@ namespace Microliu.Auth.Domain.Converters
                 Id = Guid.NewGuid().ToString("N"),
                 CreateTime = DateTimeOffset.Now,
                 Name =input.Name,
-                IsDelete = 1,
-                IsEnable = input.IsEnable,
+                IsDelete =  IsDelete.NotDelete,
+                IsEnabled =  IsEnabled.Enabled,
                 Sort = input.Sort
             };
         }

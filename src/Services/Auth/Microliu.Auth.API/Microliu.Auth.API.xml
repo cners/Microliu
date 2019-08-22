@@ -20,7 +20,7 @@
             岗位
             </summary>
         </member>
-        <member name="M:Microliu.Auth.API.Controllers.PositionController.CreatePosition">
+        <member name="M:Microliu.Auth.API.Controllers.PositionController.CreatePosition(Microliu.Auth.Domain.CreatePositionModel)">
             <summary>
             创建岗位
             </summary>

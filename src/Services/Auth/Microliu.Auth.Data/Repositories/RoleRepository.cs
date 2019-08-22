@@ -8,18 +8,10 @@ namespace Microliu.Auth.DataMySQL
 {
     public class RoleRepository : BaseRepository<Role>, IRoleRepository
     {
-        //private readonly AuthDbContext _context;
 
-        public RoleRepository(IDbContext context, IUnitOfWork unitOfWork, AuthDbContext authDbContext) 
-            : base(context,unitOfWork,authDbContext)
+        public RoleRepository(IDbContext context, IUnitOfWork unitOfWork, AuthDbContext authDbContext)
+            : base(context, unitOfWork, authDbContext)
         {
-        }
-
-     
-
-        public IQueryable<Role> Get(string id)
-        {
-            return _entities.Where(x => x.Id == id && x.IsDeleted == 1);
         }
 
 
@@ -27,10 +19,14 @@ namespace Microliu.Auth.DataMySQL
         {
             return _entities.Where(e => e.RoleName == roleName);
         }
-
-        public void UpdateRoleName(string id, string newRoleName)
+        public IQueryable<Role> GetRoles(SearchRoleModel input)
         {
-            throw new System.NotImplementedException();
+            if (!string.IsNullOrEmpty(input.RoleName))
+            {
+                _entities = _entities.Where(e => e.RoleName == input.RoleName);
+            }
+            return _entities.OrderByDescending(e => e.CreateTime)
+                .Skip(input.GetSkipValue()).Take(input.PageSize);
         }
     }
 }

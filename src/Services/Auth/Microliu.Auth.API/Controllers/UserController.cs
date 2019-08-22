@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microliu.Auth.Application;
 using Microliu.Auth.Domain.ViewModels;
 using Microsoft.AspNetCore.Http;
@@ -25,9 +26,11 @@ namespace Microliu.Auth.API.Controllers
     public class UserController : ControllerBase
     {
         private readonly IAuthApplication _authApplication;
-        public UserController(IAuthApplication authApplication)
+        private  IMapper _mapper { get; }
+        public UserController(IAuthApplication authApplication,IMapper mapper)
         {
             _authApplication = authApplication;
+            _mapper = mapper;
         }
 
         /// <summary>
@@ -49,8 +52,10 @@ namespace Microliu.Auth.API.Controllers
         /// <param name="createUserModel"></param>
         /// <returns></returns>
         [HttpPost(nameof(CreateUser))]
+        [Produces("application/json")]
         public async Task<IActionResult> CreateUser([FromBody]CreateUserModel createUserModel)
         {
+            
             var createdUserId = await _authApplication.CreateUser(createUserModel);
             return Ok(createdUserId);
         }
