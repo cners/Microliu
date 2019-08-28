@@ -1,0 +1,8 @@
+D:\Microliu\src\Services\FileService\Microliu.FileService.Data\bin\Debug\netstandard2.0\Microliu.FileService.Data.deps.json
+D:\Microliu\src\Services\FileService\Microliu.FileService.Data\bin\Debug\netstandard2.0\Microliu.FileService.Data.dll
+D:\Microliu\src\Services\FileService\Microliu.FileService.Data\obj\Debug\netstandard2.0\Microliu.FileService.Data.csproj.CoreCompileInputs.cache
+D:\Microliu\src\Services\FileService\Microliu.FileService.Data\obj\Debug\netstandard2.0\Microliu.FileService.Data.AssemblyInfoInputs.cache
+D:\Microliu\src\Services\FileService\Microliu.FileService.Data\obj\Debug\netstandard2.0\Microliu.FileService.Data.AssemblyInfo.cs
+D:\Microliu\src\Services\FileService\Microliu.FileService.Data\bin\Debug\netstandard2.0\Microliu.FileService.Data.pdb
+D:\Microliu\src\Services\FileService\Microliu.FileService.Data\obj\Debug\netstandard2.0\Microliu.FileService.Data.dll
+D:\Microliu\src\Services\FileService\Microliu.FileService.Data\obj\Debug\netstandard2.0\Microliu.FileService.Data.pdb

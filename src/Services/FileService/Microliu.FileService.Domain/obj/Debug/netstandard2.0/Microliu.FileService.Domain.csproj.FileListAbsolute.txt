@@ -1,0 +1,14 @@
+D:\Microliu\src\Services\FileService\Microliu.FileService.Domain\bin\Debug\netstandard2.0\Microliu.FileService.Domain.deps.json
+D:\Microliu\src\Services\FileService\Microliu.FileService.Domain\bin\Debug\netstandard2.0\Microliu.FileService.Domain.dll
+D:\Microliu\src\Services\FileService\Microliu.FileService.Domain\bin\Debug\netstandard2.0\Microliu.FileService.Domain.pdb
+D:\Microliu\src\Services\FileService\Microliu.FileService.Domain\bin\Debug\netstandard2.0\Microliu.FileService.Infrastructure.dll
+D:\Microliu\src\Services\FileService\Microliu.FileService.Domain\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.dll
+D:\Microliu\src\Services\FileService\Microliu.FileService.Domain\bin\Debug\netstandard2.0\Microliu.FileService.Infrastructure.pdb
+D:\Microliu\src\Services\FileService\Microliu.FileService.Domain\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.xml
+D:\Microliu\src\Services\FileService\Microliu.FileService.Domain\obj\Debug\netstandard2.0\Microliu.FileService.Domain.csprojAssemblyReference.cache
+D:\Microliu\src\Services\FileService\Microliu.FileService.Domain\obj\Debug\netstandard2.0\Microliu.FileService.Domain.csproj.CoreCompileInputs.cache
+D:\Microliu\src\Services\FileService\Microliu.FileService.Domain\obj\Debug\netstandard2.0\Microliu.FileService.Domain.AssemblyInfoInputs.cache
+D:\Microliu\src\Services\FileService\Microliu.FileService.Domain\obj\Debug\netstandard2.0\Microliu.FileService.Domain.AssemblyInfo.cs
+D:\Microliu\src\Services\FileService\Microliu.FileService.Domain\obj\Debug\netstandard2.0\Microliu.FileService.Domain.csproj.CopyComplete
+D:\Microliu\src\Services\FileService\Microliu.FileService.Domain\obj\Debug\netstandard2.0\Microliu.FileService.Domain.dll
+D:\Microliu\src\Services\FileService\Microliu.FileService.Domain\obj\Debug\netstandard2.0\Microliu.FileService.Domain.pdb
