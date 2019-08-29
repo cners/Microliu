@@ -13647,9 +13647,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Microliu\\src\\Services\\Microliu.Ocelet\\Ocelet\\Microliu.ApiGetway.csproj",
-      "projectName": "Microliu.ApiGetway",
-      "projectPath": "D:\\Microliu\\src\\Services\\Microliu.Ocelet\\Ocelet\\Microliu.ApiGetway.csproj",
+      "projectUniqueName": "D:\\Microliu\\src\\Services\\Microliu.Ocelet\\Ocelet\\Microliu.ApiGeteway.csproj",
+      "projectName": "Microliu.ApiGeteway",
+      "projectPath": "D:\\Microliu\\src\\Services\\Microliu.Ocelet\\Ocelet\\Microliu.ApiGeteway.csproj",
       "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
       "outputPath": "D:\\Microliu\\src\\Services\\Microliu.Ocelet\\Ocelet\\obj\\",
       "projectStyle": "PackageReference",

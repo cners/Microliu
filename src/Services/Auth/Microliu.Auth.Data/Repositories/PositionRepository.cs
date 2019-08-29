@@ -1,8 +1,9 @@
-﻿using Microliu.Auth.DataMySQL.Interfaces;
-using Microliu.Auth.Domain;
+﻿using Microliu.Auth.Domain;
 using Microliu.Auth.Domain.Entities;
 using Microliu.Auth.Domain.Repositories;
+using Microliu.Auth.Domain.SeedWork;
 using Microliu.Auth.Domain.ViewModels;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,25 +13,29 @@ namespace Microliu.Auth.DataMySQL
 {
     public class PositionRepository : BaseRepository<Position>, IPositionRepository
     {
-        public PositionRepository(IDbContext dbContext, IUnitOfWork unitOfWork, AuthDbContext authDbContext)
-            : base(dbContext, unitOfWork, authDbContext)
+        public PositionRepository(AuthDbContext ctx)
+            : base(ctx) { }
+
+        public Position Add(Position position)
         {
+            return _context.position.Add(position).Entity;
+        }
+
+        public void Update(Position position)
+        {
+            _context.Entry(position).State = EntityState.Modified;
         }
 
         public IQueryable<Position> GetPositions(SearchPositionModel input)
         {
+            var positions = GetAll();
             int count = (input.PageIndex - 1) * input.PageSize;
             if (!string.IsNullOrEmpty(input.Name))
             {
-                _entities = _entities.Where(e => e.Name == input.Name);
+                positions = positions.Where(e => e.Name == input.Name);
             }
-            return _entities.OrderByDescending(e => e.CreateTime)
+            return positions.OrderByDescending(e => e.CreateTime)
                 .Skip(count).Take(input.PageSize);
         }
-
-        //public Position GetEntity(string id)
-        //{
-        //    return _entities.Where(e => e.Id == id).FirstOrDefault();
-        //}
     }
 }

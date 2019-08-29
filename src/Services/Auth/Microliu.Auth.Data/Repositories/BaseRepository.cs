@@ -1,48 +1,37 @@
-﻿using Microliu.Auth.DataMySQL.Interfaces;
-using Microliu.Auth.Infrastructure;
+﻿using Microliu.Auth.Domain.SeedWork;
+using System;
 using System.Linq;
 
 namespace Microliu.Auth.DataMySQL
 {
     public partial class BaseRepository<T> where T : class
     {
-        public DbType GetDbType()
+
+        public AuthDbContext _context;
+
+        //public IUnitOfWork UnitOfWork;
+
+        public BaseRepository(AuthDbContext ctx)
         {
-            return DbType.MySQL;//需要优化
-        }
-
-        public IQueryable<T> _entities;
-
-        public readonly IUnitOfWork _unitOfWork;
-
-        public readonly IDbContext _dbContext;
-
-        public AuthDbContext _authDbContext;
-
-        public BaseRepository(IDbContext dbContext, IUnitOfWork unitOfWork, AuthDbContext authDbContext)
-        {
-            _dbContext = dbContext;
-            _entities = dbContext.Set<T>();
-            _unitOfWork = unitOfWork;
-            _authDbContext = authDbContext;
+            _context = ctx ?? throw new ArgumentNullException(nameof(ctx));
         }
 
         public IQueryable<T> GetAll()
         {
-            return _entities;
+            return _context.Set<T>();
         }
 
         public T GetEntity(string id)
         {
             var p = typeof(T).GetProperty("Id");
-            return _entities.Where(e => (p.GetValue(e).ToString()) == id).FirstOrDefault();
+            return GetAll().Where(e => (p.GetValue(e).ToString()) == id).FirstOrDefault();
         }
 
         public void Dispose()
         {
-            if (_authDbContext != null)
+            if (_context != null)
             {
-                _authDbContext.Dispose();
+                _context.Dispose();
             }
         }
 

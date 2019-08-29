@@ -20,3 +20,9 @@ D:\Microliu\src\Services\FileService\Microliu.FileService.API\bin\Debug\netcorea
 D:\Microliu\src\Services\FileService\Microliu.FileService.API\bin\Debug\netcoreapp2.2\Microliu.FileService.Domain.pdb
 D:\Microliu\src\Services\FileService\Microliu.FileService.API\bin\Debug\netcoreapp2.2\Microliu.FileService.Infrastructure.pdb
 D:\Microliu\src\Services\FileService\Microliu.FileService.API\obj\Debug\netcoreapp2.2\Microliu.FileService.API.csproj.CopyComplete
+D:\Microliu\src\Services\FileService\Microliu.FileService.API\bin\Debug\netcoreapp2.2\Microliu.FileService.API.pdb
+D:\Microliu\src\Services\FileService\Microliu.FileService.API\obj\Debug\netcoreapp2.2\Microliu.FileService.API.dll
+D:\Microliu\src\Services\FileService\Microliu.FileService.API\obj\Debug\netcoreapp2.2\Microliu.FileService.API.pdb
+D:\Microliu\src\Services\FileService\Microliu.FileService.API\bin\Debug\netcoreapp2.2\FastDFS.dll
+D:\Microliu\src\Services\FileService\Microliu.FileService.API\bin\Debug\netcoreapp2.2\FastDFS.pdb
+D:\Microliu\src\Services\FileService\Microliu.FileService.API\bin\Debug\netcoreapp2.2\Microliu.FileService.API.xml

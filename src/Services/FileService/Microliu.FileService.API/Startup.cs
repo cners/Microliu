@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Threading.Tasks;
-using Microliu.Core.Consul;
+﻿using Microliu.Core.Consul;
+using Microliu.FileService.API.Configurations;
 using Microliu.FileService.Application;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
+using System;
+using System.IO;
+using System.Reflection;
 
 namespace Microliu.FileService.API
 {
@@ -31,12 +29,36 @@ namespace Microliu.FileService.API
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
+            // 文件上传大小限制
+            services.Configure<FormOptions>(options =>
+            {
+                options.ValueLengthLimit = int.MaxValue;
+                options.MultipartBodyLengthLimit = int.MaxValue;
+            });
+
             services.AddFileService(Configuration);// 分布式文件服务
 
+            services.AddAppSettings(Configuration);
+
+            //services.AddMvcCore().AddApiExplorer();
+
+            // 版本控制
+            //services.AddApiVersioning(options =>
+            //{
+            //    options.AssumeDefaultVersionWhenUnspecified = true;
+            //    options.DefaultApiVersion = new ApiVersion(1, 0);
+            //});
             services.AddApiVersioning(options =>
             {
                 options.AssumeDefaultVersionWhenUnspecified = true;
-                options.DefaultApiVersion = new ApiVersion(1, 0);
+                options.ReportApiVersions = false;
+            });
+            services.AddMvcCore();
+            services.AddVersionedApiExplorer(option =>
+            {
+                option.GroupNameFormat = "'v'VVV";
+                option.AssumeDefaultVersionWhenUnspecified = true;
+                option.DefaultApiVersion = new ApiVersion(1, 0);
             });
 
             // Swagger
@@ -44,31 +66,30 @@ namespace Microliu.FileService.API
 
             services.AddSwaggerGen(options =>
             {
-                options.SwaggerDoc("v1.0", new OpenApiInfo
+                var provider = services.BuildServiceProvider().GetRequiredService<IApiVersionDescriptionProvider>();
+                foreach (var description in provider.ApiVersionDescriptions)
                 {
-                    Title = "API Online Document",
-                    Version = "v1.0",
-                    Contact = new OpenApiContact { Name = "Liu Zhuang", Email = "liuzhuang@6iuu.com" }
-                });
-                options.SwaggerDoc("v2.0", new OpenApiInfo
-                {
-                    Title = "API Online Document",
-                    Version = "v2.0",
-                    Contact = new OpenApiContact { Name = "Liu Zhuang", Email = "liuzhuang@6iuu.com" }
-                });
+                    options.SwaggerDoc(description.GroupName, new OpenApiInfo
+                    {
+                        Title = $"API Online Document (v{description.ApiVersion})",
+                        Version = description.ApiVersion.ToString(),
+                        Description = "切换版本请点右上角版本切换",
+                        Contact = new OpenApiContact { Name = "刘壮", Email = "liuzhuang@6iuu.com" }
+                    });
+                }
 
                 // Set the comments path for the Swagger JSON and UI.
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 options.IncludeXmlComments(xmlPath);
 
-      
+
             });
             services.AddAutoMapper();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env,IApplicationLifetime lifetime)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IApplicationLifetime lifetime)
         {
             if (env.IsDevelopment())
             {
@@ -78,12 +99,15 @@ namespace Microliu.FileService.API
 
             // Swagger
             app.UseSwagger();
-
             app.UseSwaggerUI(c =>
             {
-                c.DocumentTitle = "权限服务接口";
-                c.SwaggerEndpoint($"/swagger/v1.0/swagger.json", "V1.0 Docs");
-                c.SwaggerEndpoint($"/swagger/v2.0/swagger.json", "V2.0 Docs");
+                c.DocumentTitle = "文件服务接口";
+                //foreach (var description in c)
+                {
+                    c.SwaggerEndpoint($"/swagger/v{1}/swagger.json", "v1");
+                    c.SwaggerEndpoint($"/swagger/v{2}/swagger.json", "v2");
+                }
+                //c.SwaggerEndpoint($"/swagger/v1.0/swagger.json", "HTTP接口");
                 c.RoutePrefix = "apiDoc";
 
             });
@@ -92,7 +116,6 @@ namespace Microliu.FileService.API
             var expression = app.UseAutoMapper();
             //expression.CreateMap<User, CreateUserModel>();
             app.UseStateAutoMapper();
-
             app.UseMvc();
         }
     }

@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Microliu.FastDFS\FastDFS.csproj" />
     <ProjectReference Include="..\Microliu.FileService.Data\Microliu.FileService.Data.csproj" />
     <ProjectReference Include="..\Microliu.FileService.Domain\Microliu.FileService.Domain.csproj" />
   </ItemGroup>

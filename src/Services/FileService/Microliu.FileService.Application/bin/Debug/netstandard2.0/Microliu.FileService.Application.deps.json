@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "69285f25bcc96c3febbe7065658acaeaf9af456d"
+    "signature": "53486600600402b919b51456a022f33e68389f89"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,6 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "Microliu.FileService.Application/1.0.0": {
         "dependencies": {
+          "FastDFSNetCore": "1.1.8",
           "Microliu.FileService.Data": "1.0.0",
           "Microliu.FileService.Domain": "1.0.0",
           "Microsoft.AspNetCore": "2.2.0",
@@ -327,9 +328,9 @@
           "Microsoft.Extensions.Options": "2.2.0",
           "System.Buffers": "4.5.0",
           "System.IO.Pipelines": "4.5.2",
-          "System.Memory": "4.5.1",
+          "System.Memory": "4.5.2",
           "System.Numerics.Vectors": "4.5.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.5.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2",
           "System.Security.Principal.Windows": "4.5.0"
         },
         "runtime": {
@@ -363,9 +364,9 @@
           "Microsoft.Extensions.Logging.Abstractions": "2.2.0",
           "Microsoft.Extensions.Options": "2.2.0",
           "Microsoft.Net.Http.Headers": "2.2.0",
-          "System.Memory": "4.5.1",
+          "System.Memory": "4.5.2",
           "System.Numerics.Vectors": "4.5.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.5.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2",
           "System.Security.Cryptography.Cng": "4.5.0",
           "System.Threading.Tasks.Extensions": "4.5.1"
         },
@@ -770,8 +771,8 @@
       },
       "Microsoft.Extensions.Primitives/2.2.0": {
         "dependencies": {
-          "System.Memory": "4.5.1",
-          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
+          "System.Memory": "4.5.2",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {
@@ -797,7 +798,7 @@
       "Microsoft.Win32.Registry/4.5.0": {
         "dependencies": {
           "System.Buffers": "4.5.0",
-          "System.Memory": "4.5.1",
+          "System.Memory": "4.5.2",
           "System.Security.AccessControl": "4.5.0",
           "System.Security.Principal.Windows": "4.5.0"
         },
@@ -1023,7 +1024,7 @@
           "Microsoft.Win32.Registry": "4.5.0",
           "System.Buffers": "4.5.0",
           "System.Diagnostics.DiagnosticSource": "4.5.0",
-          "System.Memory": "4.5.1",
+          "System.Memory": "4.5.2",
           "System.Security.Principal.Windows": "4.5.0",
           "System.Text.Encoding.CodePages": "4.5.0",
           "runtime.native.System.Data.SqlClient.sni": "4.5.0"
@@ -1127,7 +1128,7 @@
       "System.IO.Pipelines/4.5.2": {
         "dependencies": {
           "System.Buffers": "4.5.0",
-          "System.Memory": "4.5.1",
+          "System.Memory": "4.5.2",
           "System.Threading.Tasks.Extensions": "4.5.1"
         },
         "runtime": {
@@ -1197,16 +1198,16 @@
           }
         }
       },
-      "System.Memory/4.5.1": {
+      "System.Memory/4.5.2": {
         "dependencies": {
           "System.Buffers": "4.5.0",
           "System.Numerics.Vectors": "4.5.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
         },
         "runtime": {
           "lib/netstandard2.0/System.Memory.dll": {
             "assemblyVersion": "4.0.1.0",
-            "fileVersion": "4.6.26606.5"
+            "fileVersion": "4.6.27129.4"
           }
         }
       },
@@ -1373,11 +1374,11 @@
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/4.5.1": {
+      "System.Runtime.CompilerServices.Unsafe/4.5.2": {
         "runtime": {
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {
-            "assemblyVersion": "4.0.4.0",
-            "fileVersion": "0.0.0.0"
+            "assemblyVersion": "4.0.4.1",
+            "fileVersion": "4.6.26919.2"
           }
         }
       },
@@ -1524,7 +1525,7 @@
       },
       "System.Text.Encoding.CodePages/4.5.0": {
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
         },
         "runtime": {
           "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {
@@ -1586,7 +1587,7 @@
       },
       "System.Threading.Tasks.Extensions/4.5.1": {
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
         },
         "runtime": {
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {
@@ -1707,6 +1708,14 @@
             "assemblyVersion": "4.0.1.0",
             "fileVersion": "1.0.24212.1"
           }
+        }
+      },
+      "FastDFSNetCore/1.1.8": {
+        "dependencies": {
+          "System.Memory": "4.5.2"
+        },
+        "runtime": {
+          "FastDFS.dll": {}
         }
       },
       "Microliu.FileService.Data/1.0.0": {
@@ -2443,12 +2452,12 @@
       "path": "system.linq.queryable/4.0.1",
       "hashPath": "system.linq.queryable.4.0.1.nupkg.sha512"
     },
-    "System.Memory/4.5.1": {
+    "System.Memory/4.5.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-sDJYJpGtTgx+23Ayu5euxG5mAXWdkDb4+b0rD0Cab0M1oQS9H0HXGPriKcqpXuiJDTV7fTp/d+fMDJmnr6sNvA==",
-      "path": "system.memory/4.5.1",
-      "hashPath": "system.memory.4.5.1.nupkg.sha512"
+      "sha512": "sha512-Ohf9h6em5CjPaAzupGtW/TWMzX6aVfIGPh7bq5KQmfvYJr+DqvOa0cRS9ggFKGIuvKTModCQEacGC/CwE8j7cg==",
+      "path": "system.memory/4.5.2",
+      "hashPath": "system.memory.4.5.2.nupkg.sha512"
     },
     "System.Net.NameResolution/4.0.0": {
       "type": "package",
@@ -2555,12 +2564,12 @@
       "path": "system.runtime/4.3.0",
       "hashPath": "system.runtime.4.3.0.nupkg.sha512"
     },
-    "System.Runtime.CompilerServices.Unsafe/4.5.1": {
+    "System.Runtime.CompilerServices.Unsafe/4.5.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Zh8t8oqolRaFa9vmOZfdQm/qKejdqz0J9kr7o2Fu0vPeoH3BL1EOXipKWwkWtLT1JPzjByrF19fGuFlNbmPpiw==",
-      "path": "system.runtime.compilerservices.unsafe/4.5.1",
-      "hashPath": "system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512"
+      "sha512": "sha512-hMkdWxksypQlFXB7JamQegDscxEAQO4FHd/lw/zlSZU9dZgAij65xjCrXer183wvoNAzJic5zzjj2oc9/dloWg==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.2",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
     },
     "System.Runtime.Extensions/4.1.0": {
       "type": "package",
@@ -2750,6 +2759,11 @@
       "sha512": "sha512-Zm2BdeanuncYs3NhCj4c9e1x3EXFzFBVv2wPEc/Dj4ZbI9R8ecLSR5frAsx4zJCPBtKQreQ7Q/KxJEohJZbfzA==",
       "path": "system.xml.xpath.xmldocument/4.0.1",
       "hashPath": "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512"
+    },
+    "FastDFSNetCore/1.1.8": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microliu.FileService.Data/1.0.0": {
       "type": "project",

@@ -2,9 +2,7 @@ D:\Microliu\src\Services\Auth\Microliu.Auth.Data\bin\Debug\netstandard2.0\Microl
 D:\Microliu\src\Services\Auth\Microliu.Auth.Data\bin\Debug\netstandard2.0\Microliu.Auth.Data.dll
 D:\Microliu\src\Services\Auth\Microliu.Auth.Data\bin\Debug\netstandard2.0\Microliu.Auth.Data.pdb
 D:\Microliu\src\Services\Auth\Microliu.Auth.Data\bin\Debug\netstandard2.0\Microliu.Auth.Domain.dll
-D:\Microliu\src\Services\Auth\Microliu.Auth.Data\bin\Debug\netstandard2.0\Microliu.Auth.Infrastructure.dll
 D:\Microliu\src\Services\Auth\Microliu.Auth.Data\bin\Debug\netstandard2.0\Microliu.Auth.Domain.pdb
-D:\Microliu\src\Services\Auth\Microliu.Auth.Data\bin\Debug\netstandard2.0\Microliu.Auth.Infrastructure.pdb
 D:\Microliu\src\Services\Auth\Microliu.Auth.Data\obj\Debug\netstandard2.0\Microliu.Auth.Data.csprojAssemblyReference.cache
 D:\Microliu\src\Services\Auth\Microliu.Auth.Data\obj\Debug\netstandard2.0\Microliu.Auth.Data.csproj.CoreCompileInputs.cache
 D:\Microliu\src\Services\Auth\Microliu.Auth.Data\obj\Debug\netstandard2.0\Microliu.Auth.Data.AssemblyInfoInputs.cache

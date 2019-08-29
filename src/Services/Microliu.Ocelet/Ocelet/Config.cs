@@ -64,13 +64,4 @@ namespace Api_Gateways
             return new List<IdentityResource>();
         }
     }
-
-    //public class TestUser
-    //{
-    //    public string Username { get; set; }
-
-    //    public string Password { get; set; }
-
-    //    public string SubjectId { get; set; }
-    //}
 }

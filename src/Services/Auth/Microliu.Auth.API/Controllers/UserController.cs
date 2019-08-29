@@ -25,9 +25,9 @@ namespace Microliu.Auth.API.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-        private readonly IAuthApplication _authApplication;
+        private readonly IAuthService _authApplication;
         private  IMapper _mapper { get; }
-        public UserController(IAuthApplication authApplication,IMapper mapper)
+        public UserController(IAuthService authApplication,IMapper mapper)
         {
             _authApplication = authApplication;
             _mapper = mapper;
@@ -55,7 +55,6 @@ namespace Microliu.Auth.API.Controllers
         [Produces("application/json")]
         public async Task<IActionResult> CreateUser([FromBody]CreateUserModel createUserModel)
         {
-            
             var createdUserId = await _authApplication.CreateUser(createUserModel);
             return Ok(createdUserId);
         }

@@ -27,9 +27,9 @@ namespace Microliu.Auth.API.Controllers
     [Route("api/[controller]")]
     public class RoleController : ControllerBase
     {
-        private readonly IAuthApplication _authApplication;
+        private readonly IAuthService _authApplication;
 
-        public RoleController(IAuthApplication authApplication)
+        public RoleController(IAuthService authApplication)
         {
             _authApplication = authApplication;
         }

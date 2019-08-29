@@ -1,9 +1,8 @@
 ﻿using AutoMapper;
 using Microliu.Auth.DataMySQL;
-using Microliu.Auth.DataMySQL.Interfaces;
 using Microliu.Auth.Domain;
 using Microliu.Auth.Domain.Repositories;
-using Microliu.Auth.Infrastructure;
+using Microliu.Auth.Domain.SeedWork;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -19,7 +18,7 @@ namespace Microliu.Auth.Application
     {
         public static IServiceCollection AddAuthService(this IServiceCollection services, Microsoft.Extensions.Configuration.IConfiguration configuration)
         {
-            services.AddTransient<IAuthApplication, AuthApplication>();// 权限服务
+            services.AddTransient<IAuthService, AuthApplication>();// 权限服务
 
             services.AddTransient<IRoleRepository, RoleRepository>();// 角色
             services.AddTransient<IUserRepository, UserRepository>();// 员工
@@ -30,7 +29,6 @@ namespace Microliu.Auth.Application
                 options.UseMySQL(GetConnectionString(configuration, DatabaseType.MySQL));// 可切换数据库源UseOracle,UseSqlserver
             }, poolSize: 64);
 
-            services.AddTransient<IDbContext, AuthDbContext>();
             services.AddTransient<IUnitOfWork, UnitOfWork>();
 
             return services;
@@ -82,11 +80,11 @@ namespace Microliu.Auth.Application
         /// <param name="provider"></param>
         /// <param name="dbType"></param>
         /// <returns></returns>
-        public static T GetServices<T>(this IServiceProvider provider, DbType dbType)
-        {
-            var services = provider.GetServices<T>();
-            return services.Where(r => (DbType)r.GetType().GetMethod("GetDbType").Invoke(r, null) == dbType).FirstOrDefault();
-        }
+        //public static T GetServices<T>(this IServiceProvider provider, DbType dbType)
+        //{
+        //    var services = provider.GetServices<T>();
+        //    return services.Where(r => (DbType)r.GetType().GetMethod("GetDbType").Invoke(r, null) == dbType).FirstOrDefault();
+        //}
     }
 
     public static class AutoMapperExtension

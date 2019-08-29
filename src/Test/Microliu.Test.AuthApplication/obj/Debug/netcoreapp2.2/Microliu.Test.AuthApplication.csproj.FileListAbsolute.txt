@@ -7,10 +7,8 @@ D:\Microliu\src\Test\Microliu.Test.AuthApplication\bin\Debug\netcoreapp2.2\Micro
 D:\Microliu\src\Test\Microliu.Test.AuthApplication\bin\Debug\netcoreapp2.2\Microliu.Test.AuthApplication.dll
 D:\Microliu\src\Test\Microliu.Test.AuthApplication\bin\Debug\netcoreapp2.2\Microliu.Auth.Application.dll
 D:\Microliu\src\Test\Microliu.Test.AuthApplication\bin\Debug\netcoreapp2.2\Microliu.Auth.Domain.dll
-D:\Microliu\src\Test\Microliu.Test.AuthApplication\bin\Debug\netcoreapp2.2\Microliu.Auth.Infrastructure.dll
 D:\Microliu\src\Test\Microliu.Test.AuthApplication\bin\Debug\netcoreapp2.2\Microliu.Auth.Application.pdb
 D:\Microliu\src\Test\Microliu.Test.AuthApplication\bin\Debug\netcoreapp2.2\Microliu.Auth.Domain.pdb
-D:\Microliu\src\Test\Microliu.Test.AuthApplication\bin\Debug\netcoreapp2.2\Microliu.Auth.Infrastructure.pdb
 D:\Microliu\src\Test\Microliu.Test.AuthApplication\obj\Debug\netcoreapp2.2\Microliu.Test.AuthApplication.csprojAssemblyReference.cache
 D:\Microliu\src\Test\Microliu.Test.AuthApplication\obj\Debug\netcoreapp2.2\Microliu.Test.AuthApplication.csproj.CoreCompileInputs.cache
 D:\Microliu\src\Test\Microliu.Test.AuthApplication\obj\Debug\netcoreapp2.2\Microliu.Test.AuthApplication.AssemblyInfoInputs.cache

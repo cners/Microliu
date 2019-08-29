@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "69285f25bcc96c3febbe7065658acaeaf9af456d"
+    "signature": "633e78231d9ecd6279e09c1a37333a55c73a9096"
   },
   "compilationOptions": {},
   "targets": {
@@ -52,6 +52,14 @@
           "lib/netstandard1.0/Google.Protobuf.dll": {
             "assemblyVersion": "3.6.1.0",
             "fileVersion": "3.6.1.0"
+          }
+        }
+      },
+      "MediatR/7.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/MediatR.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.0.0"
           }
         }
       },
@@ -1723,19 +1731,11 @@
       "Microliu.Auth.Domain/1.0.0": {
         "dependencies": {
           "AutoMapper": "9.0.0",
-          "Microliu.Auth.Infrastructure": "1.0.0",
+          "MediatR": "7.0.0",
           "Microsoft.AspNetCore": "2.2.0"
         },
         "runtime": {
           "Microliu.Auth.Domain.dll": {}
-        }
-      },
-      "Microliu.Auth.Infrastructure/1.0.0": {
-        "dependencies": {
-          "Microsoft.AspNetCore": "2.2.0"
-        },
-        "runtime": {
-          "Microliu.Auth.Infrastructure.dll": {}
         }
       }
     }
@@ -1766,6 +1766,13 @@
       "sha512": "sha512-741fGeDQjixBJaU2j+0CbrmZXsNJkTn/hWbOh4fLVXndHsCclJmWznCPWrJmPoZKvajBvAz3e8ECJOUvRtwjNQ==",
       "path": "google.protobuf/3.6.1",
       "hashPath": "google.protobuf.3.6.1.nupkg.sha512"
+    },
+    "MediatR/7.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sgfHxkBsmMlHOD564SnLqTvSbAuGlFiZfc6ybxBSI1wYV/2u+Y5TXtFoIhCISFg5/s/6aMvB338QC2JseHsjTA==",
+      "path": "mediatr/7.0.0",
+      "hashPath": "mediatr.7.0.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore/2.2.0": {
       "type": "package",
@@ -2760,11 +2767,6 @@
       "sha512": ""
     },
     "Microliu.Auth.Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Microliu.Auth.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -14,3 +14,5 @@ D:\Microliu\src\Services\FileService\Microliu.FileService.Application\bin\Debug\
 D:\Microliu\src\Services\FileService\Microliu.FileService.Application\obj\Debug\netstandard2.0\Microliu.FileService.Application.csproj.CopyComplete
 D:\Microliu\src\Services\FileService\Microliu.FileService.Application\obj\Debug\netstandard2.0\Microliu.FileService.Application.dll
 D:\Microliu\src\Services\FileService\Microliu.FileService.Application\obj\Debug\netstandard2.0\Microliu.FileService.Application.pdb
+D:\Microliu\src\Services\FileService\Microliu.FileService.Application\bin\Debug\netstandard2.0\FastDFS.dll
+D:\Microliu\src\Services\FileService\Microliu.FileService.Application\bin\Debug\netstandard2.0\FastDFS.pdb

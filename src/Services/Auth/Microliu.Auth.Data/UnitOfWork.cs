@@ -1,4 +1,4 @@
-﻿using Microliu.Auth.DataMySQL.Interfaces;
+﻿using Microliu.Auth.Domain.SeedWork;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 using Remotion.Linq;
@@ -12,17 +12,17 @@ namespace Microliu.Auth.DataMySQL
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private IDbContext _dbContext;
+        private AuthDbContext _context;
         private IDbContextTransaction _dbTransaction;
 
-        public UnitOfWork(IDbContext dbContext)
+        public UnitOfWork(AuthDbContext ctx)
         {
-            _dbContext = dbContext;
+            _context = ctx;
         }
 
         public void BeginTransaction()
         {
-            _dbTransaction = _dbContext.Database.BeginTransaction();
+            _dbTransaction = _context.Database.BeginTransaction();
         }
 
         public async Task<bool> CommitAsync()
@@ -34,41 +34,38 @@ namespace Microliu.Auth.DataMySQL
             }
             else
             {
-                return await _dbContext.SaveChangesAsync() > 0;
+                return await _context.SaveChangesAsync() > 0;
             }
         }
 
         public async Task<int> ExecuteSqlCommandAsync(string sql, params object[] parameters)
         {
-            return await _dbContext.Database.ExecuteSqlCommandAsync(sql, parameters);
+            return await _context.Database.ExecuteSqlCommandAsync(sql, parameters);
         }
 
-        public Task<bool> RegisterClean<TEntity>(TEntity entity) where TEntity : class
-        {
-            throw new NotImplementedException();
-        }
 
-        public async Task<bool> RegisterDeleted<TEntity>(TEntity entity) where TEntity : class
+
+        public async Task<bool> Remove<TEntity>(TEntity entity) where TEntity : class
         {
-            _dbContext.Set<TEntity>().Remove(entity);
+            _context.Set<TEntity>().Remove(entity);
             if (_dbTransaction != null)
-                return await _dbContext.SaveChangesAsync() > 0;
+                return await _context.SaveChangesAsync() > 0;
             return true;
         }
 
-        public async Task<bool> RegisterUpdate<TEntity>(TEntity entity) where TEntity : class
+        public async Task<bool> Modify<TEntity>(TEntity entity) where TEntity : class
         {
-            _dbContext.Set<TEntity>().Update(entity);
+            _context.Set<TEntity>().Update(entity);
             if (_dbTransaction != null)
-                return await _dbContext.SaveChangesAsync() > 0;
+                return await _context.SaveChangesAsync() > 0;
             return true;
         }
 
-        public async Task<bool> RegisterNew<TEntity>(TEntity entity) where TEntity : class
+        public async Task<bool> Add<TEntity>(TEntity entity) where TEntity : class
         {
-            _dbContext.Set<TEntity>().Add(entity);
+            _context.Set<TEntity>().Add(entity);
             if (_dbTransaction != null)
-                return await _dbContext.SaveChangesAsync() > 0;
+                return await _context.SaveChangesAsync() > 0;
             return true;
         }
 
@@ -76,6 +73,12 @@ namespace Microliu.Auth.DataMySQL
         {
             if (_dbTransaction != null)
                 _dbTransaction.Rollback();
+        }
+
+        public void Dispose()
+        {
+            if (_context != null)
+                _context.Dispose();
         }
     }
 }

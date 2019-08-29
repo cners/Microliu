@@ -20,7 +20,5 @@ D:\Microliu\src\Services\Auth\Microliu.Auth.API\obj\Debug\netcoreapp2.2\Microliu
 D:\Microliu\src\Services\Auth\Microliu.Auth.API\obj\Debug\netcoreapp2.2\Microliu.Auth.API.csproj.CopyComplete
 D:\Microliu\src\Services\Auth\Microliu.Auth.API\obj\Debug\netcoreapp2.2\Microliu.Auth.API.dll
 D:\Microliu\src\Services\Auth\Microliu.Auth.API\obj\Debug\netcoreapp2.2\Microliu.Auth.API.pdb
-D:\Microliu\src\Services\Auth\Microliu.Auth.API\bin\Debug\netcoreapp2.2\Microliu.Auth.Infrastructure.dll
-D:\Microliu\src\Services\Auth\Microliu.Auth.API\bin\Debug\netcoreapp2.2\Microliu.Auth.Infrastructure.pdb
 D:\Microliu\src\Services\Auth\Microliu.Auth.API\bin\Debug\netcoreapp2.2\Microliu.Auth.Data.dll
 D:\Microliu\src\Services\Auth\Microliu.Auth.API\bin\Debug\netcoreapp2.2\Microliu.Auth.Data.pdb

@@ -1,5 +1,4 @@
-﻿using Microliu.Auth.DataMySQL.Interfaces;
-using Microliu.Auth.Domain.Entities;
+﻿using Microliu.Auth.Domain.Entities;
 using Microliu.Auth.Domain.Repositories;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,23 +7,25 @@ namespace Microliu.Auth.DataMySQL
 {
     public class UserRepository : BaseRepository<User>, IUserRepository
     {
-        public UserRepository(IDbContext dbContext, IUnitOfWork unitOfWork, AuthDbContext authDbContext)
-            : base(dbContext, unitOfWork, authDbContext)
-        {
-        }
+        public UserRepository(AuthDbContext ctx) : base(ctx) { }
 
         public IQueryable<User> Query(string id, string positionId)
         {
-            return _authDbContext.user.Where(e => e.UserPositions.Where(up => up.PositionId == positionId).Any());
+            return _context.user.Where(e => e.UserPositions.Where(up => up.PositionId == positionId).Any());
         }
         public new User GetEntity(string id)
         {
-            return _entities.Where(e => e.Id == id).FirstOrDefault();
+            return GetAll().Where(e => e.Id == id).FirstOrDefault();
         }
 
         public bool Exists(string userName)
         {
-            return _entities.Where(e => e.UserName.ToLower() == userName.ToLower()).Count() > 0;
+            return GetAll().Where(e => e.UserName.ToLower() == userName.ToLower()).Count() > 0;
+        }
+
+        public User Add(User user)
+        {
+            return _context.user.Add(user).Entity;
         }
     }
 }

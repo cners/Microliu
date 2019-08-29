@@ -24,7 +24,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.IdentityServer", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.BizLogger", "Services\Microliu.BizLogger\Microliu.BizLogger.csproj", "{E0077250-682B-492B-B251-588DE132A6E2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.ApiGetway", "Services\Microliu.Ocelet\Ocelet\Microliu.ApiGetway.csproj", "{F7346BFE-CAA4-4705-A4F9-215361AFBDF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.ApiGeteway", "Services\Microliu.Ocelet\Ocelet\Microliu.ApiGeteway.csproj", "{F7346BFE-CAA4-4705-A4F9-215361AFBDF9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.SMS", "Services\Microliu.SMS\Microliu.SMS.csproj", "{42EBFCCA-5D12-4F19-BAD2-3E108FDFE443}"
 EndProject
@@ -88,15 +88,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Auth.Data", "Servi
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FileService", "FileService", "{E59F4682-D35C-464A-B99B-87E6C32E67A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.FileService.Domain", "Services\FileService\Microliu.FileService.Domain\Microliu.FileService.Domain.csproj", "{4E4A0BDE-7D53-4106-983C-F2FD70913BC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.FileService.Domain", "Services\FileService\Microliu.FileService.Domain\Microliu.FileService.Domain.csproj", "{4E4A0BDE-7D53-4106-983C-F2FD70913BC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.FileService.Data", "Services\FileService\Microliu.FileService.Data\Microliu.FileService.Data.csproj", "{40F9AD74-62D2-4F30-9C9B-398D76C1336D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.FileService.Data", "Services\FileService\Microliu.FileService.Data\Microliu.FileService.Data.csproj", "{40F9AD74-62D2-4F30-9C9B-398D76C1336D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.FileService.Infrastructure", "Services\FileService\Microliu.FileService.Infrastructure\Microliu.FileService.Infrastructure.csproj", "{15CE47F7-518E-4AB6-BD03-C5815B83E74C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.FileService.Infrastructure", "Services\FileService\Microliu.FileService.Infrastructure\Microliu.FileService.Infrastructure.csproj", "{15CE47F7-518E-4AB6-BD03-C5815B83E74C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.FileService.Application", "Services\FileService\Microliu.FileService.Application\Microliu.FileService.Application.csproj", "{6BFFC008-F453-49D4-9097-2E15CF4AFC37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.FileService.Application", "Services\FileService\Microliu.FileService.Application\Microliu.FileService.Application.csproj", "{6BFFC008-F453-49D4-9097-2E15CF4AFC37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.FileService.API", "Services\FileService\Microliu.FileService.API\Microliu.FileService.API.csproj", "{66899FB6-9A3F-4907-9729-52D4D47CD8B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.FileService.API", "Services\FileService\Microliu.FileService.API\Microliu.FileService.API.csproj", "{66899FB6-9A3F-4907-9729-52D4D47CD8B8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastDFS", "Services\FileService\Microliu.FastDFS\FastDFS.csproj", "{BBF1D4EA-836A-4569-838E-4B8F5FEB4BB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -240,6 +242,10 @@ Global
 		{66899FB6-9A3F-4907-9729-52D4D47CD8B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66899FB6-9A3F-4907-9729-52D4D47CD8B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66899FB6-9A3F-4907-9729-52D4D47CD8B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBF1D4EA-836A-4569-838E-4B8F5FEB4BB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBF1D4EA-836A-4569-838E-4B8F5FEB4BB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBF1D4EA-836A-4569-838E-4B8F5FEB4BB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBF1D4EA-836A-4569-838E-4B8F5FEB4BB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -250,7 +256,6 @@ Global
 		{88CCAFA5-04EE-42C3-B3A6-BF28DFCCC016} = {66A2F15D-C891-49C4-A7CE-8C614B8BD44E}
 		{277096F5-68EB-4B6D-99AA-220D938E8855} = {052D9C23-996F-430C-8E5A-316BB053407E}
 		{E0077250-682B-492B-B251-588DE132A6E2} = {052D9C23-996F-430C-8E5A-316BB053407E}
-		{F7346BFE-CAA4-4705-A4F9-215361AFBDF9} = {052D9C23-996F-430C-8E5A-316BB053407E}
 		{42EBFCCA-5D12-4F19-BAD2-3E108FDFE443} = {052D9C23-996F-430C-8E5A-316BB053407E}
 		{D62858F6-5CC7-4730-8465-B17E4E1D4520} = {052D9C23-996F-430C-8E5A-316BB053407E}
 		{8CD8EE32-E1B2-4C9D-8D90-1E6AD55F6EED} = {3030D236-A055-419B-B3E6-367500621BC3}
@@ -282,6 +287,7 @@ Global
 		{15CE47F7-518E-4AB6-BD03-C5815B83E74C} = {E59F4682-D35C-464A-B99B-87E6C32E67A8}
 		{6BFFC008-F453-49D4-9097-2E15CF4AFC37} = {E59F4682-D35C-464A-B99B-87E6C32E67A8}
 		{66899FB6-9A3F-4907-9729-52D4D47CD8B8} = {E59F4682-D35C-464A-B99B-87E6C32E67A8}
+		{BBF1D4EA-836A-4569-838E-4B8F5FEB4BB2} = {E59F4682-D35C-464A-B99B-87E6C32E67A8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2F32ECF0-6010-4F59-AC16-6FFA191BC558}

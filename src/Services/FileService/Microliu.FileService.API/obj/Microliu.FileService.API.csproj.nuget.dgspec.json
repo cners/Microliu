@@ -64,6 +64,98 @@
         }
       }
     },
+    "D:\\Microliu\\src\\Services\\FileService\\Microliu.FastDFS\\FastDFS.csproj": {
+      "version": "1.1.8",
+      "restore": {
+        "projectUniqueName": "D:\\Microliu\\src\\Services\\FileService\\Microliu.FastDFS\\FastDFS.csproj",
+        "projectName": "FastDFSNetCore",
+        "projectPath": "D:\\Microliu\\src\\Services\\FileService\\Microliu.FastDFS\\FastDFS.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\src\\Services\\FileService\\Microliu.FastDFS\\obj\\",
+        "projectStyle": "PackageReference",
+        "crossTargeting": true,
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net451",
+          "netcoreapp2.1",
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          },
+          "net451": {
+            "projectReferences": {}
+          },
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            },
+            "System.Memory": {
+              "target": "Package",
+              "version": "[4.5.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        },
+        "net451": {
+          "dependencies": {
+            "System.Memory": {
+              "target": "Package",
+              "version": "[4.5.2, )"
+            }
+          }
+        },
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "System.Memory": {
+              "target": "Package",
+              "version": "[4.5.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
     "D:\\Microliu\\src\\Services\\FileService\\Microliu.FileService.API\\Microliu.FileService.API.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -114,6 +206,14 @@
               "version": "[2.2.0, )",
               "autoReferenced": true
             },
+            "Microsoft.AspNetCore.Mvc.Versioning": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer": {
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
             "Microsoft.AspNetCore.Razor.Design": {
               "suppressParent": "All",
               "target": "Package",
@@ -129,7 +229,15 @@
               "version": "[2.2.0, )",
               "autoReferenced": true
             },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
             "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0-rc2, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",
               "version": "[5.0.0-rc2, )"
             }
@@ -168,6 +276,9 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
+              "D:\\Microliu\\src\\Services\\FileService\\Microliu.FastDFS\\FastDFS.csproj": {
+                "projectPath": "D:\\Microliu\\src\\Services\\FileService\\Microliu.FastDFS\\FastDFS.csproj"
+              },
               "D:\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Data\\Microliu.FileService.Data.csproj": {
                 "projectPath": "D:\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Data\\Microliu.FileService.Data.csproj"
               },

@@ -13,7 +13,7 @@ namespace Microliu.Test.AuthApplication
 {
     public class PositionTest
     {
-        private IAuthApplication _authApplication;
+        private IAuthService _authApplication;
         private ITestOutputHelper _output;
         public PositionTest(ITestOutputHelper testOutputHelper)
         {

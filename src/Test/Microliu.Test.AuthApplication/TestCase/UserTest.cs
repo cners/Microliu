@@ -8,7 +8,7 @@ namespace Microliu.Test.AuthApplication.TestCase
 {
     public class UserTest
     {
-        private IAuthApplication _authApplication;
+        private IAuthService _authApplication;
 
         public UserTest()
         {

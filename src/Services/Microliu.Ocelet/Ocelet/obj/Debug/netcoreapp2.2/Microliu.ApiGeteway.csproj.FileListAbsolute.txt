@@ -1,0 +1,14 @@
+D:\Microliu\src\Services\Microliu.Ocelet\Ocelet\bin\Debug\netcoreapp2.2\Microliu.ApiGeteway.deps.json
+D:\Microliu\src\Services\Microliu.Ocelet\Ocelet\bin\Debug\netcoreapp2.2\Microliu.ApiGeteway.runtimeconfig.json
+D:\Microliu\src\Services\Microliu.Ocelet\Ocelet\bin\Debug\netcoreapp2.2\Microliu.ApiGeteway.runtimeconfig.dev.json
+D:\Microliu\src\Services\Microliu.Ocelet\Ocelet\bin\Debug\netcoreapp2.2\Microliu.ApiGeteway.dll
+D:\Microliu\src\Services\Microliu.Ocelet\Ocelet\bin\Debug\netcoreapp2.2\Microliu.ApiGeteway.pdb
+D:\Microliu\src\Services\Microliu.Ocelet\Ocelet\obj\Debug\netcoreapp2.2\Microliu.ApiGeteway.csprojAssemblyReference.cache
+D:\Microliu\src\Services\Microliu.Ocelet\Ocelet\obj\Debug\netcoreapp2.2\Microliu.ApiGeteway.csproj.CoreCompileInputs.cache
+D:\Microliu\src\Services\Microliu.Ocelet\Ocelet\obj\Debug\netcoreapp2.2\Microliu.ApiGeteway.RazorAssemblyInfo.cache
+D:\Microliu\src\Services\Microliu.Ocelet\Ocelet\obj\Debug\netcoreapp2.2\Microliu.ApiGeteway.RazorAssemblyInfo.cs
+D:\Microliu\src\Services\Microliu.Ocelet\Ocelet\obj\Debug\netcoreapp2.2\Microliu.ApiGeteway.AssemblyInfoInputs.cache
+D:\Microliu\src\Services\Microliu.Ocelet\Ocelet\obj\Debug\netcoreapp2.2\Microliu.ApiGeteway.AssemblyInfo.cs
+D:\Microliu\src\Services\Microliu.Ocelet\Ocelet\obj\Debug\netcoreapp2.2\Microliu.ApiGeteway.RazorTargetAssemblyInfo.cache
+D:\Microliu\src\Services\Microliu.Ocelet\Ocelet\obj\Debug\netcoreapp2.2\Microliu.ApiGeteway.dll
+D:\Microliu\src\Services\Microliu.Ocelet\Ocelet\obj\Debug\netcoreapp2.2\Microliu.ApiGeteway.pdb

@@ -11,7 +11,7 @@ namespace Microliu.Test
 {
     public class ApplicationFactory
     {
-        private static IAuthApplication _authApplication;
+        private static IAuthService _authApplication;
 
         private static IServiceProvider _services;
         private static void InitIoc()
@@ -33,10 +33,10 @@ namespace Microliu.Test
 
         }
 
-        public static IAuthApplication GetIAuthApplication()
+        public static IAuthService GetIAuthApplication()
         {
             InitIoc();
-            return _services.GetService<IAuthApplication>();
+            return _services.GetService<IAuthService>();
         }
     }
 }

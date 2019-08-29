@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microliu.Auth.Domain.SeedWork;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -16,7 +17,7 @@ namespace Microliu.Auth.Domain
         NotDelete = 1
     }
 
-    public class BaseEntity
+    public class BaseEntity: IAggregateRoot
     {
         public virtual IsEnabled IsEnabled { get; set; }
 

@@ -22,9 +22,9 @@ namespace Microliu.Auth.API.Controllers
     [ApiController]
     public class PositionController : ControllerBase
     {
-        private readonly IAuthApplication _authApplication;
+        private readonly IAuthService _authApplication;
 
-        public PositionController(IAuthApplication authApplication)
+        public PositionController(IAuthService authApplication)
         {
             _authApplication = authApplication;
         }

@@ -1,26 +1,27 @@
-﻿using Microliu.Auth.DataMySQL.Interfaces;
+﻿using MediatR;
 using Microliu.Auth.Domain;
 using Microliu.Auth.Domain.Entities;
+using Microliu.Auth.Domain.SeedWork;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
+using System;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Microliu.Auth.DataMySQL
 {
-    public class AuthDbContext : DbContext, IDbContext
+    public  class AuthDbContext : DbContext //, IUnitOfWork
     {
         public virtual DbSet<Role> role { get; set; }
         public virtual DbSet<User> user { get; set; }
         public virtual DbSet<UserPosition> userPosition { get; set; }
         public virtual DbSet<Position> position { get; set; }
 
-        public static long InstanceCount;
+        private readonly IMediator _mediator;
 
-        public AuthDbContext(DbContextOptions options)
-            : base(options)
-        {
+        public AuthDbContext(DbContextOptions options) : base(options) { }
 
-            Interlocked.Increment(ref InstanceCount);
-        }
+
 
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         //{
