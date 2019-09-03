@@ -177,6 +177,18 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "DotNetCore.CAP": {
+              "target": "Package",
+              "version": "[2.6.0, )"
+            },
+            "DotNetCore.CAP.MySql": {
+              "target": "Package",
+              "version": "[2.6.0, )"
+            },
+            "DotNetCore.CAP.RabbitMQ": {
+              "target": "Package",
+              "version": "[2.6.0, )"
+            },
             "MediatR": {
               "target": "Package",
               "version": "[7.0.0, )"

@@ -96,7 +96,6 @@ namespace Microliu.FileService.API
                 app.UseDeveloperExceptionPage();
             }
             app.UseMiddleware(typeof(ExceptionHandlerMiddleWare));// 异常处理中间件
-
             // Swagger
             app.UseSwagger();
             app.UseSwaggerUI(c =>

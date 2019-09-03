@@ -1,4 +1,5 @@
-﻿using Microliu.Auth.API.Extensions;
+﻿using Microliu.Auth.API.Controllers;
+using Microliu.Auth.API.Extensions;
 using Microliu.Auth.API.Filters;
 using Microliu.Auth.Application;
 using Microliu.Auth.Domain.Entities;
@@ -35,10 +36,7 @@ namespace Microliu.Auth.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services
-                .AddMvc()
-                //.AddMvc(c => c.Conventions.Add(new ApiExplorerGroupPerVersionConvention()))
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddAuthService(Configuration);// 权限服务
 
@@ -49,8 +47,6 @@ namespace Microliu.Auth.API
             });
 
             // Swagger
-
-
             services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v1.0", new OpenApiInfo
@@ -103,13 +99,8 @@ namespace Microliu.Auth.API
                 //options.IgnoreObsoleteActions();
             });
             services.AddAutoMapper();
-            //services.ConfigureSwaggerGen(c =>
-            //{
-            //    // 配置生成的 xml 注释文档路径
-            //    var rootPath = AppContext.BaseDirectory;
-            //    c.IncludeXmlComments(Path.Combine(rootPath, "Microliu.Auth.API.xml"));
-            //    //c.IncludeXmlComments(Path.Combine(rootPath, "AuthApi.xml"));
-            //});
+
+            services.AddTransient<ISubscriberService, SubscriberService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -121,6 +112,7 @@ namespace Microliu.Auth.API
             }
 
             app.UseMiddleware(typeof(ExceptionHandlerMiddleWare));// 异常处理中间件
+            //app.UseAuthCap();
 
             // Swagger
             app.UseSwagger();

@@ -12,6 +12,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Microliu.Auth.Data\Microliu.Auth.Data.csproj" />
     <ProjectReference Include="..\Microliu.Auth.Domain\Microliu.Auth.Domain.csproj" />
+    <ProjectReference Include="..\Microliu.Auth.Infrastructure\Microliu.Auth.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

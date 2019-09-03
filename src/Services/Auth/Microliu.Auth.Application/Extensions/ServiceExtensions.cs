@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Newtonsoft.Json;
 using System;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -16,6 +17,7 @@ namespace Microliu.Auth.Application
 {
     public static class ServiceExtensions
     {
+
         public static IServiceCollection AddAuthService(this IServiceCollection services, Microsoft.Extensions.Configuration.IConfiguration configuration)
         {
             services.AddTransient<IAuthService, AuthApplication>();// 权限服务
@@ -30,6 +32,40 @@ namespace Microliu.Auth.Application
             }, poolSize: 64);
 
             services.AddTransient<IUnitOfWork, UnitOfWork>();
+
+            services.AddCap(x =>
+            {
+                // 使用CAP控制面板
+                x.UseDashboard();
+
+
+                // 如果你的 SqlServer 使用的 EF 进行数据操作，你需要添加如下配置：
+                // 注意: 你不需要再次配置 x.UseSqlServer(""")
+                //x.UseEntityFramework<AuthDbContext>();
+
+                x.UseMySql(GetConnectionString(configuration, DatabaseType.MySQL));
+
+                var eventBus = GetvEventBusCAP(configuration);
+                // 如果你使用的 RabbitMQ 作为MQ，你需要添加如下配置：
+                x.UseRabbitMQ(options =>
+                {
+                    options.HostName = eventBus.HostName ?? "192.168.10.214";
+                    options.UserName = eventBus.UserName ?? "microliu";
+                    options.Password = eventBus.Password ?? "microliu";
+                    options.Port = eventBus.Port;
+                    options.VirtualHost = eventBus.VirtualHost ?? "MICROLIU";
+                    options.ExchangeName = eventBus.ExchangeName ?? "Microliu";
+                });
+                //设置处理成功的数据在数据库中保存的时间（秒），为保证系统性能，数据会定期清理。
+                //x.SucceedMessageExpiredAfter = 24 * 3600;
+
+                //设置失败重试次数
+                x.FailedRetryCount = 5;
+
+                // 消费者线程数量
+                x.ConsumerThreadCount = 2;
+
+            });
 
             return services;
         }
@@ -55,11 +91,11 @@ namespace Microliu.Auth.Application
                 {
                     connection = configuration.GetConnectionString("authServiceWindowsMySQL") ?? "";
                 }
-                else if (databaseType == DatabaseType.Oracle)
+                else if (databaseType == DatabaseType.SQLServer)
                 {
                     connection = configuration.GetConnectionString("authServiceWindowsMSSQL") ?? "";
                 }
-                else if (databaseType == DatabaseType.SQLServer)
+                else if (databaseType == DatabaseType.Oracle)
                 {
                     connection = configuration.GetConnectionString("authServiceWindowsOracle") ?? "";
                 }
@@ -72,6 +108,33 @@ namespace Microliu.Auth.Application
             return connection;
         }
 
+        private static EventBusCAP GetvEventBusCAP(IConfiguration configuration)
+        {
+            return new EventBusCAP
+            {
+                HostName = configuration.GetSection("EventBusCAP:RabbitMQ:HostName").Value,
+                UserName = configuration.GetSection("EventBusCAP:RabbitMQ:UserName").Value,
+                Password = configuration.GetSection("EventBusCAP:RabbitMQ:Password").Value,
+                Port = int.Parse(configuration.GetSection("EventBusCAP:RabbitMQ:Port").Value),
+                VirtualHost = configuration.GetSection("EventBusCAP:RabbitMQ:VirtualHost").Value,
+                ExchangeName = configuration.GetSection("EventBusCAP:RabbitMQ:ExchangeName").Value,
+            };
+        }
+
+
+        class EventBusCAP
+        {
+            public string HostName { get; set; }
+            public string UserName { get; set; }
+
+            public string Password { get; set; }
+
+            public int Port { get; set; }
+
+            public string VirtualHost { get; set; }
+
+            public string ExchangeName { get; set; }
+        }
         /// <summary>
         /// 扩展满足获取不同数据库源的服务接口
         /// 需要实现GetDbType方法
