@@ -4,6 +4,16 @@
         <name>Microliu.Auth.API</name>
     </assembly>
     <members>
+        <member name="P:Microliu.Auth.API.Controllers.EventBusController.EmailSendDto.To">
+            <summary>
+            接收人
+            </summary>
+        </member>
+        <member name="P:Microliu.Auth.API.Controllers.EventBusController.EmailSendDto.CopyTo">
+            <summary>
+            抄送
+            </summary>
+        </member>
         <member name="T:Microliu.Auth.API.Controllers.HealthController">
             <summary>
             健康检查

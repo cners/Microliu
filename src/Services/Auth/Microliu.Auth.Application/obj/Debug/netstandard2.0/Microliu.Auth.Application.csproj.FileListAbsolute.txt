@@ -14,3 +14,5 @@ D:\Microliu\src\Services\Auth\Microliu.Auth.Application\bin\Debug\netstandard2.0
 D:\Microliu\src\Services\Auth\Microliu.Auth.Application\bin\Debug\netstandard2.0\Microliu.Auth.Data.pdb
 D:\Microliu\src\Services\Auth\Microliu.Auth.Application\bin\Debug\netstandard2.0\Microliu.Auth.Infrastructure.dll
 D:\Microliu\src\Services\Auth\Microliu.Auth.Application\bin\Debug\netstandard2.0\Microliu.Auth.Infrastructure.pdb
+D:\Microliu\src\Services\Auth\Microliu.Auth.Application\bin\Debug\netstandard2.0\Microliu.Core.Logger.dll
+D:\Microliu\src\Services\Auth\Microliu.Auth.Application\bin\Debug\netstandard2.0\Microliu.Core.Logger.pdb

@@ -3,6 +3,7 @@ using Microliu.Auth.DataMySQL;
 using Microliu.Auth.Domain;
 using Microliu.Auth.Domain.Repositories;
 using Microliu.Auth.Domain.SeedWork;
+using Microliu.Core.Logger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -20,6 +21,8 @@ namespace Microliu.Auth.Application
 
         public static IServiceCollection AddAuthService(this IServiceCollection services, Microsoft.Extensions.Configuration.IConfiguration configuration)
         {
+            services.AddTransient<ILogger, ConsoleLogger>();
+
             services.AddTransient<IAuthService, AuthApplication>();// 权限服务
 
             services.AddTransient<IRoleRepository, RoleRepository>();// 角色

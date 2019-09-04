@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Microliu\\src\\Services\\Microliu.EmailService\\Microliu.EmailService\\Microliu.EmailService.csproj": {}
+    "D:\\Microliu\\src\\Services\\Microliu.EmailService.Bak\\Microliu.EmailService\\Microliu.EmailService.csproj": {}
   },
   "projects": {
     "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj": {
@@ -64,14 +64,14 @@
         }
       }
     },
-    "D:\\Microliu\\src\\Services\\Microliu.EmailService\\Microliu.EmailService\\Microliu.EmailService.csproj": {
+    "D:\\Microliu\\src\\Services\\Microliu.EmailService.Bak\\Microliu.EmailService\\Microliu.EmailService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Microliu\\src\\Services\\Microliu.EmailService\\Microliu.EmailService\\Microliu.EmailService.csproj",
+        "projectUniqueName": "D:\\Microliu\\src\\Services\\Microliu.EmailService.Bak\\Microliu.EmailService\\Microliu.EmailService.csproj",
         "projectName": "Microliu.EmailService",
-        "projectPath": "D:\\Microliu\\src\\Services\\Microliu.EmailService\\Microliu.EmailService\\Microliu.EmailService.csproj",
+        "projectPath": "D:\\Microliu\\src\\Services\\Microliu.EmailService.Bak\\Microliu.EmailService\\Microliu.EmailService.csproj",
         "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
-        "outputPath": "D:\\Microliu\\src\\Services\\Microliu.EmailService\\Microliu.EmailService\\obj\\",
+        "outputPath": "D:\\Microliu\\src\\Services\\Microliu.EmailService.Bak\\Microliu.EmailService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

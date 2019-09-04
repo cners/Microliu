@@ -31,20 +31,46 @@ namespace Microliu.Auth.API.Controllers
             return Ok("发布完成");
         }
 
-
-        [CapSubscribe("auth.services.test.publish")]
-        public void ReceivedMessage(Person person)
+        [HttpPost(nameof(SendMail))]
+        public IActionResult SendMail([FromBody]EmailSendDto input)
         {
-            var defaultColor = Console.ForegroundColor;
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Controller:"+person.Name);
-            Console.ForegroundColor = defaultColor;
+            _publisher.Publish<EmailSendDto>("microliu.email.send", input);
+            return Ok("已发送");
+        }
+
+
+        //[CapSubscribe("auth.services.test.publish")]
+        //public void ReceivedMessage(Person person)
+        //{
+        //    var defaultColor = Console.ForegroundColor;
+        //    Console.ForegroundColor = ConsoleColor.Red;
+        //    Console.WriteLine("Controller:"+person.Name);
+        //    Console.ForegroundColor = defaultColor;
+        //}
+
+        public class EmailSendDto
+        {
+            public string Subject { get; set; }
+
+            public string Body { get; set; }
+
+            /// <summary>
+            /// 接收人
+            /// </summary>
+            public string To { get; set; }
+
+            /// <summary>
+            /// 抄送
+            /// </summary>
+            public string CopyTo { get; set; }
+
+            public string ProjectId { get; set; }
         }
 
     }
 
 
-    
+
     public interface ISubscriberService
     {
         void ReceivedMessage(Person person);
@@ -62,7 +88,7 @@ namespace Microliu.Auth.API.Controllers
         {
             var defaultColor = Console.ForegroundColor;
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Interface:"+person.Name);
+            Console.WriteLine("Interface:" + person.Name);
             Console.ForegroundColor = defaultColor;
         }
     }

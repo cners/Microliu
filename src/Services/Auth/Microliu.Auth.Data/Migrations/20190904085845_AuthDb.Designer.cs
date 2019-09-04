@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace Microliu.Auth.DataMySQL.Migrations
+namespace Microliu.Auth.Data.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20190822093900_AuthDb2")]
-    partial class AuthDb2
+    [Migration("20190904085845_AuthDb")]
+    partial class AuthDb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

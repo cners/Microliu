@@ -2652,6 +2652,7 @@
           "Microliu.Auth.Data": "1.0.0",
           "Microliu.Auth.Domain": "1.0.0",
           "Microliu.Auth.Infrastructure": "1.0.0",
+          "Microliu.Core.Logger": "1.0.0",
           "Microsoft.AspNetCore": "2.2.0",
           "Microsoft.EntityFrameworkCore": "2.2.6"
         },
@@ -2691,6 +2692,11 @@
         },
         "runtime": {
           "Microliu.Auth.Infrastructure.dll": {}
+        }
+      },
+      "Microliu.Core.Logger/1.0.0": {
+        "runtime": {
+          "Microliu.Core.Logger.dll": {}
         }
       }
     }
@@ -4166,6 +4172,11 @@
       "sha512": ""
     },
     "Microliu.Auth.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microliu.Core.Logger/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

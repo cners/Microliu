@@ -2766,6 +2766,16 @@
         "runtime": {
           "bin/placeholder/Microliu.Auth.Infrastructure.dll": {}
         }
+      },
+      "Microliu.Core.Logger/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Microliu.Core.Logger.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Microliu.Core.Logger.dll": {}
+        }
       }
     }
   },
@@ -8357,6 +8367,11 @@
       "type": "project",
       "path": "../Microliu.Auth.Infrastructure/Microliu.Auth.Infrastructure.csproj",
       "msbuildProject": "../Microliu.Auth.Infrastructure/Microliu.Auth.Infrastructure.csproj"
+    },
+    "Microliu.Core.Logger/1.0.0": {
+      "type": "project",
+      "path": "../../../Microliu.Core/Microliu.Core.Logger/Microliu.Core.Logger.csproj",
+      "msbuildProject": "../../../Microliu.Core/Microliu.Core.Logger/Microliu.Core.Logger.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8364,6 +8379,7 @@
       "Microliu.Auth.Data >= 1.0.0",
       "Microliu.Auth.Domain >= 1.0.0",
       "Microliu.Auth.Infrastructure >= 1.0.0",
+      "Microliu.Core.Logger >= 1.0.0",
       "Microsoft.AspNetCore >= 2.2.0",
       "Microsoft.EntityFrameworkCore >= 2.2.6",
       "NETStandard.Library >= 2.0.3"
@@ -8399,6 +8415,9 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
+            "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Logger\\Microliu.Core.Logger.csproj": {
+              "projectPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Logger\\Microliu.Core.Logger.csproj"
+            },
             "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Data\\Microliu.Auth.Data.csproj": {
               "projectPath": "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Data\\Microliu.Auth.Data.csproj"
             },

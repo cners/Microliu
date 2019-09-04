@@ -4,4 +4,15 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="DotNetCore.CAP" Version="2.6.0" />
+    <PackageReference Include="DotNetCore.CAP.MySql" Version="2.6.0" />
+    <PackageReference Include="DotNetCore.CAP.RabbitMQ" Version="2.6.0" />
+    <PackageReference Include="MailKit" Version="2.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Microliu.Core\Microliu.Core.Logger\Microliu.Core.Logger.csproj" />
+  </ItemGroup>
+
 </Project>

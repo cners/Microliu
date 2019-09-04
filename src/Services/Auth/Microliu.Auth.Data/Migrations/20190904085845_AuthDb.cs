@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace Microliu.Auth.DataMySQL.Migrations
+namespace Microliu.Auth.Data.Migrations
 {
     public partial class AuthDb : Migration
     {
@@ -12,10 +12,13 @@ namespace Microliu.Auth.DataMySQL.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
+                    IsEnabled = table.Column<int>(nullable: false),
+                    IsDelete = table.Column<int>(nullable: false),
+                    CreateTime = table.Column<DateTimeOffset>(nullable: false),
                     UserName = table.Column<string>(maxLength: 20, nullable: false),
                     Password = table.Column<string>(maxLength: 100, nullable: false),
                     NickName = table.Column<string>(maxLength: 100, nullable: true),
-                    CreateTime = table.Column<DateTimeOffset>(nullable: false)
+                    Email = table.Column<string>(maxLength: 40, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -27,11 +30,11 @@ namespace Microliu.Auth.DataMySQL.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
-                    Name = table.Column<string>(nullable: true),
-                    Sort = table.Column<int>(nullable: false),
+                    IsEnabled = table.Column<int>(nullable: false),
+                    IsDelete = table.Column<int>(nullable: false),
                     CreateTime = table.Column<DateTimeOffset>(nullable: false),
-                    IsEnable = table.Column<int>(nullable: false),
-                    IsDelete = table.Column<int>(nullable: false)
+                    Name = table.Column<string>(nullable: true),
+                    Sort = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -43,11 +46,10 @@ namespace Microliu.Auth.DataMySQL.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
-                    RoleName = table.Column<string>(maxLength: 40, nullable: false),
-                    CreateTime = table.Column<DateTimeOffset>(nullable: false),
-                    Creator = table.Column<string>(nullable: true),
                     IsEnabled = table.Column<int>(nullable: false),
-                    IsDeleted = table.Column<int>(nullable: false)
+                    IsDelete = table.Column<int>(nullable: false),
+                    CreateTime = table.Column<DateTimeOffset>(nullable: false),
+                    RoleName = table.Column<string>(maxLength: 40, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -59,9 +61,11 @@ namespace Microliu.Auth.DataMySQL.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
+                    IsEnabled = table.Column<int>(nullable: false),
+                    IsDelete = table.Column<int>(nullable: false),
+                    CreateTime = table.Column<DateTimeOffset>(nullable: false),
                     UserId = table.Column<string>(nullable: true),
-                    PositionId = table.Column<string>(nullable: true),
-                    CreateTime = table.Column<DateTimeOffset>(nullable: false)
+                    PositionId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

@@ -100,15 +100,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastDFS", "Services\FileSer
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EmailService", "EmailService", "{A170BC94-98F6-404E-8E08-D1C9CF0366A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.EmailService", "Services\EmailService\Microliu.EmailService\Microliu.EmailService.csproj", "{98E1753E-AD01-42C2-9641-08D6412E8E4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.EmailService.API", "Services\EmailService\Microliu.EmailService\Microliu.EmailService.API.csproj", "{98E1753E-AD01-42C2-9641-08D6412E8E4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.EmailService.Infrastructure", "Services\EmailService\Microliu.EmailService.Infrastructure\Microliu.EmailService.Infrastructure.csproj", "{2421D8CA-0D5E-430C-9048-DD49AEA8FA45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.EmailService.Infrastructure", "Services\EmailService\Microliu.EmailService.Infrastructure\Microliu.EmailService.Infrastructure.csproj", "{2421D8CA-0D5E-430C-9048-DD49AEA8FA45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.EmailService.Domain", "Services\EmailService\Microliu.EmailService.Domain\Microliu.EmailService.Domain.csproj", "{52C0AD11-10E8-40DE-A4FD-49DFA9AF3690}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.EmailService.Domain", "Services\EmailService\Microliu.EmailService.Domain\Microliu.EmailService.Domain.csproj", "{52C0AD11-10E8-40DE-A4FD-49DFA9AF3690}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.EmailService.Data", "Services\EmailService\Microliu.EmailService.Data\Microliu.EmailService.Data.csproj", "{4BB201F0-E9CA-47D0-A477-49F66DCE943E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.EmailService.Data", "Services\EmailService\Microliu.EmailService.Data\Microliu.EmailService.Data.csproj", "{4BB201F0-E9CA-47D0-A477-49F66DCE943E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.EmailService.Application", "Services\EmailService\Microliu.EmailService.Application\Microliu.EmailService.Application.csproj", "{948DB588-3269-47D8-812F-67CFF69CD00F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.EmailService.Application", "Services\EmailService\Microliu.EmailService.Application\Microliu.EmailService.Application.csproj", "{948DB588-3269-47D8-812F-67CFF69CD00F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.EmailService", "Services\Microliu.EmailService.Bak\Microliu.EmailService\Microliu.EmailService.csproj", "{6C281461-2823-4FFB-A279-C79559CDDDE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -272,6 +274,10 @@ Global
 		{948DB588-3269-47D8-812F-67CFF69CD00F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{948DB588-3269-47D8-812F-67CFF69CD00F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{948DB588-3269-47D8-812F-67CFF69CD00F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C281461-2823-4FFB-A279-C79559CDDDE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C281461-2823-4FFB-A279-C79559CDDDE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C281461-2823-4FFB-A279-C79559CDDDE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C281461-2823-4FFB-A279-C79559CDDDE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -319,6 +325,7 @@ Global
 		{52C0AD11-10E8-40DE-A4FD-49DFA9AF3690} = {A170BC94-98F6-404E-8E08-D1C9CF0366A0}
 		{4BB201F0-E9CA-47D0-A477-49F66DCE943E} = {A170BC94-98F6-404E-8E08-D1C9CF0366A0}
 		{948DB588-3269-47D8-812F-67CFF69CD00F} = {A170BC94-98F6-404E-8E08-D1C9CF0366A0}
+		{6C281461-2823-4FFB-A279-C79559CDDDE6} = {052D9C23-996F-430C-8E5A-316BB053407E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2F32ECF0-6010-4F59-AC16-6FFA191BC558}

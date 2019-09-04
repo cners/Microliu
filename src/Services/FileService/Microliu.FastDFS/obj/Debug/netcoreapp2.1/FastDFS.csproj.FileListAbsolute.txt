@@ -11,3 +11,4 @@ D:\Microliu\src\Services\FileService\Microliu.FastDFS\bin\Debug\netcoreapp2.1\Fa
 D:\Microliu\src\Services\FileService\Microliu.FastDFS\obj\Debug\netcoreapp2.1\FastDFS.csproj.CoreCompileInputs.cache
 D:\Microliu\src\Services\FileService\Microliu.FastDFS\obj\Debug\netcoreapp2.1\FastDFS.dll
 D:\Microliu\src\Services\FileService\Microliu.FastDFS\obj\Debug\netcoreapp2.1\FastDFS.pdb
+D:\Microliu\src\Services\FileService\Microliu.FastDFS\obj\Debug\netcoreapp2.1\FastDFS.csprojAssemblyReference.cache
