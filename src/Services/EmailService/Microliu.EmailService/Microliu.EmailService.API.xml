@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microliu.EmailService.API</name>
+    </assembly>
+    <members>
+        <member name="T:Microliu.EmailService.Controllers.HealthController">
+            <summary>
+            健康检查
+            </summary>
+        </member>
+        <member name="M:Microliu.EmailService.Controllers.HealthController.Check">
+            <summary>
+            健康检查方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microliu.EmailService.API.Controllers.EmailController">
+            <summary>
+            邮件服务
+            </summary>
+        </member>
+        <member name="M:Microliu.EmailService.API.Controllers.EmailController.Send(Microliu.EmailService.Domain.ViewModels.EmailSendDto)">
+            <summary>
+            发送邮件
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microliu.EmailService.API.Extensions.ExceptionHandlerMiddleWare">
+            <summary>
+            全局异常中间件
+            </summary>
+        </member>
+    </members>
+</doc>

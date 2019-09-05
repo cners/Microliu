@@ -6,13 +6,13 @@ namespace Microliu.EmailService.Domain.ViewModels
 {
     public class EmailSendDto
     {
-        public enum ContentTYPE
+        private enum ContentTYPE
         {
             HTML = 0,
             TEXT = 1
         }
 
-        public ContentTYPE ContentType { get; set; }
+        private ContentTYPE ContentType { get; set; }
         public string Subject { get; set; }
 
         public string Body { get; set; }

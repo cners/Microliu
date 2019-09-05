@@ -24,6 +24,7 @@ namespace Microliu.EmailService.API.Controllers
         /// <param name="input"></param>
         /// <returns></returns>
         [HttpPost(nameof(Send))]
+        [Produces(typeof(EmailSendDto))]
         public IActionResult Send([FromBody]EmailSendDto input)
         {
             _publisher.Publish<EmailSendDto>("microliu.email.send", input);

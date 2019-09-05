@@ -4,6 +4,66 @@
     "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService\\Microliu.EmailService.API.csproj": {}
   },
   "projects": {
+    "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj",
+        "projectName": "Microliu.Core.Consul",
+        "projectPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Consul": {
+              "target": "Package",
+              "version": "[0.7.2.6, )"
+            },
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
     "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Logger\\Microliu.Core.Logger.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -304,6 +364,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Pomelo.AspNetCore.TimedJob": {
+              "target": "Package",
+              "version": "[2.0.0-rtm-10046, )"
             }
           },
           "imports": [
@@ -340,6 +404,9 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
+              "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj": {
+                "projectPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj"
+              },
               "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Application\\Microliu.EmailService.Application.csproj": {
                 "projectPath": "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Application\\Microliu.EmailService.Application.csproj"
               }
@@ -361,6 +428,10 @@
               "version": "[2.2.0, )",
               "autoReferenced": true
             },
+            "Microsoft.AspNetCore.Mvc.Versioning": {
+              "target": "Package",
+              "version": "[3.1.6, )"
+            },
             "Microsoft.AspNetCore.Razor.Design": {
               "suppressParent": "All",
               "target": "Package",
@@ -375,6 +446,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[2.2.3, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0-rc2, )"
             }
           },
           "imports": [

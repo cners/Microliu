@@ -66,6 +66,8 @@ namespace Microliu.EmailService.Application.Extensions
 
             //services.AddSingleton<EmailServiceSettings>(GetEmailService(configuration));
             services.Configure<EmailServiceSettings>(_ => configuration.GetSection("EmailService").Bind(_));
+
+           
             return services;
         }
 

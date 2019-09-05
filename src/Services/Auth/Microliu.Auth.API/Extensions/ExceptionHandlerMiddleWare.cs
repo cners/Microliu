@@ -5,7 +5,6 @@ using System;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
-using System.Xml.Serialization;
 
 namespace Microliu.Auth.API.Extensions
 {
@@ -28,7 +27,6 @@ namespace Microliu.Auth.API.Extensions
 
             try
             {
-                
                 await next(context);
             }
             catch (AuthException aex)
@@ -53,31 +51,7 @@ namespace Microliu.Auth.API.Extensions
 
         private static async Task HandleExceptionAsync(HttpResponse response, ReturnResult result)
         {
-
             await response.WriteAsync(JsonConvert.SerializeObject(result)).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// 对象转为Xml
-        /// </summary>
-        /// <param name="o"></param>
-        /// <returns></returns>
-        private static string Object2XmlString(object o)
-        {
-            StringWriter sw = new StringWriter();
-            try
-            {
-                XmlSerializer serializer = new XmlSerializer(o.GetType());
-                serializer.Serialize(sw, o);
-            }
-            catch
-            {
-                //Handle Exception Code
-            }
-            finally
-            {
-                sw.Dispose();
-            }
-            return sw.ToString();
         }
     }
 }

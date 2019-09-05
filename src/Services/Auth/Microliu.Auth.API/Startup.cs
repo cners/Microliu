@@ -1,6 +1,5 @@
 ﻿using Microliu.Auth.API.Controllers;
 using Microliu.Auth.API.Extensions;
-using Microliu.Auth.API.Filters;
 using Microliu.Auth.Application;
 using Microliu.Auth.Domain.Entities;
 using Microliu.Auth.Domain.ViewModels;

@@ -7,6 +7,7 @@ using Microliu.EmailService.Domain.ViewModels;
 using MimeKit;
 using MimeKit.Text;
 using Newtonsoft.Json;
+using Pomelo.AspNetCore.TimedJob;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -38,16 +39,16 @@ namespace Microliu.EmailService.Application.Services
 
                 var multiPart = new Multipart("mixed");
 
-                if (input.ContentType == EmailSendDto.ContentTYPE.HTML)
+                //if (input.ContentType == EmailSendDto.ContentTYPE.HTML)
                 {
                     var textPart = new TextPart(TextFormat.Html) { Text = message.Body };
                     multiPart.Add(textPart);
                 }
-                else
-                {
-                    var textPart = new TextPart(TextFormat.Plain) { Text = message.Body };
-                    multiPart.Add(textPart);
-                }
+                //else
+                //{
+                //    var textPart = new TextPart(TextFormat.Plain) { Text = message.Body };
+                //    multiPart.Add(textPart);
+                //}
                 mime.Body = multiPart;
 
 
@@ -76,6 +77,16 @@ namespace Microliu.EmailService.Application.Services
             }
 
 
+        }
+
+
+        [Invoke(Begin = "2019-09-05 19:00", Interval = 100, SkipWhileExecuting = true)]
+        public void TickReSend()
+        {
+            var output = "我是随机的小job" + (new Random()).Next(100);
+            _logger.Debug(output);
+
+            GC.Collect();
         }
     }
 }
