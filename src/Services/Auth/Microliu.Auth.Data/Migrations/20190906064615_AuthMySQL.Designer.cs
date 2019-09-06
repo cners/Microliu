@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Microliu.Auth.Data.Migrations
 {
     [DbContext(typeof(AuthDbContext))]
-    [Migration("20190904085845_AuthDb")]
-    partial class AuthDb
+    [Migration("20190906064615_AuthMySQL")]
+    partial class AuthMySQL
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

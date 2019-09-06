@@ -2,28 +2,27 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Microliu.Core.Consul
 {
     public static class ConsulDiscoveryExtensions
     {
         /// <summary>
-        /// 服务注册到Consul
+        /// 基于客户端的服务发现
         /// </summary>
-        /// <param name="app">IApplicationBuilder</param>
-        /// <param name="lifetime">IApplicationLifetime</param>
         /// <returns>IApplicationBuilder</returns>
-        public static IApplicationBuilder RegisterConsul(this IApplicationBuilder app,
-                                                             IApplicationLifetime lifetime,
-                                                             IConfiguration configuration)
+        public static IApplicationBuilder UseMicroliuDiscovery(this IApplicationBuilder builder)
         {
+            var services = builder.ApplicationServices;
+            var lifetime = services.GetService<IApplicationLifetime>();
+            var configuration = services.GetService<IConfiguration>();
+
             var consulOptions = configuration.GetSection(typeof(ConsulOptions).Name).Get<ConsulOptions>();
             if (consulOptions == null)
             {
-                return app;
+                return builder;
             }
 
 
@@ -60,8 +59,8 @@ namespace Microliu.Core.Consul
             {
                 ;
             }
-           
-            return app;
+
+            return builder;
         }
     }
 }

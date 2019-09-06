@@ -38,17 +38,8 @@ namespace Microliu.EmailService.Application.Services
                 mime.Subject = message.Subject;
 
                 var multiPart = new Multipart("mixed");
-
-                //if (input.ContentType == EmailSendDto.ContentTYPE.HTML)
-                {
-                    var textPart = new TextPart(TextFormat.Html) { Text = message.Body };
-                    multiPart.Add(textPart);
-                }
-                //else
-                //{
-                //    var textPart = new TextPart(TextFormat.Plain) { Text = message.Body };
-                //    multiPart.Add(textPart);
-                //}
+                var textPart = new TextPart(TextFormat.Html) { Text = message.Body };
+                multiPart.Add(textPart);
                 mime.Body = multiPart;
 
 
@@ -75,18 +66,6 @@ namespace Microliu.EmailService.Application.Services
             {
                 _logger.Error(ex.Message);
             }
-
-
-        }
-
-
-        [Invoke(Begin = "2019-09-05 19:00", Interval = 100, SkipWhileExecuting = true)]
-        public void TickReSend()
-        {
-            var output = "我是随机的小job" + (new Random()).Next(100);
-            _logger.Debug(output);
-
-            GC.Collect();
         }
     }
 }

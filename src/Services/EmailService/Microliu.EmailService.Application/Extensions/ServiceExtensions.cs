@@ -1,25 +1,28 @@
-﻿using Microliu.Core.Logger;
+﻿using Exceptionless;
+using Hangfire;
+using Hangfire.SqlServer;
+using Microliu.Core.Logger;
 using Microliu.EmailService.Application.IServices;
 using Microliu.EmailService.Application.Services;
 using Microliu.EmailService.Data;
 using Microliu.EmailService.Data.Repositories;
 using Microliu.EmailService.Domain.Repositories;
 using Microliu.EmailService.Domain.SeedWork;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
 using System.Runtime.InteropServices;
-using System.Text;
 
 namespace Microliu.EmailService.Application.Extensions
 {
     public static class ServiceExtensions
     {
-        public static IServiceCollection AddEmailService(this IServiceCollection services, Microsoft.Extensions.Configuration.IConfiguration configuration)
+        public static IServiceCollection AddEmailService(this IServiceCollection services)
         {
-            services.AddTransient<ILogger, ConsoleLogger>();
+            var configuration = services.BuildServiceProvider().GetService<Microsoft.Extensions.Configuration.IConfiguration>();
+            services.AddTransient<ILogger, Logger>();
             services.AddTransient<IEmailService, EmailApplication>(); //邮件服务
 
             services.AddTransient<IEmailSendRepository, EmailSendRepository>();// 邮件发送
@@ -67,10 +70,45 @@ namespace Microliu.EmailService.Application.Extensions
             //services.AddSingleton<EmailServiceSettings>(GetEmailService(configuration));
             services.Configure<EmailServiceSettings>(_ => configuration.GetSection("EmailService").Bind(_));
 
+            // Add Hangfire services.
+            services.AddHangfire(c => c
+                .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
+                .UseSimpleAssemblyNameTypeSerializer()
+                .UseRecommendedSerializerSettings()
+                .UseSqlServerStorage(GetConnectionString(configuration, DatabaseType.SQLServer), new SqlServerStorageOptions
+                {
+                    CommandBatchMaxTimeout = TimeSpan.FromMinutes(5),
+                    SlidingInvisibilityTimeout = TimeSpan.FromMinutes(5),
+                    QueuePollInterval = TimeSpan.Zero,
+                    UseRecommendedIsolationLevel = true,
+                    UsePageLocksOnDequeue = true,
+                    DisableGlobalLocks = true
+                }));
+
+            // Add the processing server as IHostedService
+            services.AddHangfireServer();
+
            
             return services;
         }
 
+        public static IApplicationBuilder UseEmailService(this IApplicationBuilder builder)
+        {
+            var services = builder.ApplicationServices;
+
+            var configuration = services.GetService<Microsoft.Extensions.Configuration.IConfiguration>();
+            var backgroundJobs = services.GetService<IBackgroundJobClient>();
+            builder.UseHangfireDashboard();
+            builder.UseHangfireDashboard();
+            //backgroundJobs.Enqueue(() => Console.WriteLine("UseEmailService"));
+
+            //ExceptionlessClient.Default.Configuration.ApiKey = configuration.GetSection("Exceptionless:ApiKey").Value;
+            //ExceptionlessClient.Default.Configuration.ServerUrl = configuration.GetSection("Exceptionless:ServerUrl").Value;
+
+            builder.UseExceptionless(configuration);
+
+            return builder;
+        }
 
         private enum DatabaseType
         {
@@ -78,11 +116,7 @@ namespace Microliu.EmailService.Application.Extensions
             SQLServer = 2,
             Oracle = 4
         }
-        /// <summary>
-        /// 获取数据库连接字符串
-        /// </summary>
-        /// <param name="configuration"></param>
-        /// <returns></returns>
+
         private static string GetConnectionString(IConfiguration configuration, DatabaseType databaseType)
         {
             string connection = string.Empty;
@@ -148,7 +182,5 @@ namespace Microliu.EmailService.Application.Extensions
 
             public string ExchangeName { get; set; }
         }
-
-        
     }
 }

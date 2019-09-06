@@ -26,3 +26,4 @@ D:\Microliu\src\Services\EmailService\Microliu.EmailService\obj\Debug\netcoreapp
 D:\Microliu\src\Services\EmailService\Microliu.EmailService\bin\Debug\netcoreapp2.2\Microliu.EmailService.API.xml
 D:\Microliu\src\Services\EmailService\Microliu.EmailService\bin\Debug\netcoreapp2.2\Microliu.Core.Consul.dll
 D:\Microliu\src\Services\EmailService\Microliu.EmailService\bin\Debug\netcoreapp2.2\Microliu.Core.Consul.pdb
+D:\Microliu\src\Services\EmailService\Microliu.EmailService\bin\Debug\netcoreapp2.2\NLog.config

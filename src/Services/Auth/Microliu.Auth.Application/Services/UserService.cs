@@ -17,10 +17,10 @@ namespace Microliu.Auth.Application
 
         public async Task<bool> CreateUser(CreateUserModel input)
         {
-            //var user = UserConverter.ToUser(input);
+            var user = UserConverter.ToUser(input);
 
-            var user = AutoMapperHelper.Map<User>(input);
-            user.Id = Guid.NewGuid().ToString("N");
+            // var user = AutoMapperHelper.Map<User>(input);
+            //user.Id = Guid.NewGuid().ToString("N");
 
             if (_userRepository.Exists(input.UserName))
             {

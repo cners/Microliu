@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Microliu.Auth.Data.Migrations
 {
-    public partial class AuthDb : Migration
+    public partial class AuthMySQL : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

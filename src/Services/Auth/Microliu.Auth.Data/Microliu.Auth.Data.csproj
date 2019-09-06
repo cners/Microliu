@@ -5,18 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Migrations\20190819110732_authMySQL.cs" />
-    <Compile Remove="Migrations\20190819110732_authMySQL.Designer.cs" />
-    <Compile Remove="Migrations\20190820062510_AuthDb.cs" />
-    <Compile Remove="Migrations\20190820062510_AuthDb.Designer.cs" />
-    <Compile Remove="Migrations\20190820062659_AuthDb.cs" />
-    <Compile Remove="Migrations\20190820062659_AuthDb.Designer.cs" />
-    <Compile Remove="Migrations\20190820072638_AuthDb.cs" />
-    <Compile Remove="Migrations\20190820072638_AuthDb.Designer.cs" />
-    <Compile Remove="Migrations\20190820112804_AuthDb.cs" />
-    <Compile Remove="Migrations\20190820112804_AuthDb.Designer.cs" />
-    <Compile Remove="Migrations\20190822093900_AuthDb2.cs" />
-    <Compile Remove="Migrations\20190822093900_AuthDb2.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

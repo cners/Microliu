@@ -1,4 +1,5 @@
 ﻿using Microliu.Auth.Application;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using System;
@@ -8,41 +9,35 @@ using System.Threading.Tasks;
 
 namespace Microliu.Auth.API.Extensions
 {
-    /// <summary>
-    /// 全局异常中间件
-    /// </summary>
-    public class ExceptionHandlerMiddleWare
+    public class ErrorHandlingMiddleWare
     {
         private readonly RequestDelegate next;
 
-        public ExceptionHandlerMiddleWare(RequestDelegate next)
+        public ErrorHandlingMiddleWare(RequestDelegate next)
         {
             this.next = next;
         }
 
         public async Task Invoke(HttpContext context)
         {
-            // 返回友好的提示
             HttpResponse response = context.Response;
 
             try
             {
                 await next(context);
             }
-            catch (AuthException aex)
+            catch (AuthException authException)
             {
                 response.StatusCode = (int)HttpStatusCode.BadRequest;
-                response.ContentType = "application/json";
-                response.ContentType = context.Request.Headers["Accept"];
-                var result = new ReturnResult(response.StatusCode, aex.Message);
+                response.ContentType = "application/json;charset=utf-8";
+                var result = new ReturnResult(response.StatusCode, authException.Message);
                 result.Data = string.Empty;
                 await HandleExceptionAsync(response, result);
             }
             catch (Exception ex)
             {
-                response.StatusCode = (int)HttpStatusCode.BadRequest;
-                response.ContentType = "application/json";
-                response.ContentType = context.Request.Headers["Accept"];
+                response.StatusCode = (int)HttpStatusCode.InternalServerError;
+                response.ContentType = "application/json;charset=utf-8";
                 var result = new ReturnResult(response.StatusCode, "AuthService异常，请稍后再试");
                 result.Data = ex.Message;
                 await HandleExceptionAsync(response, result);
@@ -54,4 +49,13 @@ namespace Microliu.Auth.API.Extensions
             await response.WriteAsync(JsonConvert.SerializeObject(result)).ConfigureAwait(false);
         }
     }
+
+    public static class ErrorHandlingExtension
+    {
+        public static IApplicationBuilder UseErrorHandling(this IApplicationBuilder builder)
+        {
+            return builder.UseMiddleware<ErrorHandlingMiddleWare>();
+        }
+    }
+
 }

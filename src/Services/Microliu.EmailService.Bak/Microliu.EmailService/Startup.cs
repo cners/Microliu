@@ -59,7 +59,7 @@ namespace Microliu.EmailService
             app.UseCookiePolicy();
 
             app.UseAuthentication();
-            app.RegisterConsul(lifetime, Configuration);
+            app.UseMicroliuDiscovery();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

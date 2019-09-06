@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Threading.Tasks;
-using Microliu.Core.Consul;
+﻿using Microliu.Core.Consul;
 using Microliu.EmailService.API.Extensions;
 using Microliu.EmailService.Application.Extensions;
 using Microsoft.AspNetCore.Builder;
@@ -12,10 +6,11 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerUI;
+using System;
+using System.IO;
+using System.Reflection;
 
 namespace Microliu.EmailService
 {
@@ -33,15 +28,13 @@ namespace Microliu.EmailService
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddEmailService(Configuration);
 
+            // Swagger 接口文档
             services.AddApiVersioning(options =>
             {
                 options.AssumeDefaultVersionWhenUnspecified = true;
                 options.DefaultApiVersion = new ApiVersion(1, 0);
             });
-
-            // Swagger
             services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v1.0", new OpenApiInfo
@@ -64,7 +57,8 @@ namespace Microliu.EmailService
 
             });
 
-            services.AddTimedJob();
+            // 添加邮件服务
+            services.AddEmailService();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -74,11 +68,8 @@ namespace Microliu.EmailService
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseMiddleware(typeof(ExceptionHandlerMiddleWare));// 异常处理中间件
-
-            app.UseTimedJob();
-
+            // 接口方面
+            app.UseErrorHandling();
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
@@ -96,7 +87,12 @@ namespace Microliu.EmailService
                 c.EnableValidator();
 
             });
-            app.RegisterConsul(lifetime, Configuration);
+
+            // 微服务服务发现
+            app.UseMicroliuDiscovery();
+
+            // 启用邮件服务
+            app.UseEmailService();
 
             app.UseMvc();
         }

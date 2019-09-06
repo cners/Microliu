@@ -6,19 +6,12 @@ using Microliu.Auth.Domain.ViewModels;
 using Microliu.Core.Consul;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
-using Newtonsoft.Json;
-using Swashbuckle.AspNetCore.Swagger;
-using Swashbuckle.AspNetCore.SwaggerGen;
-using Swashbuckle.AspNetCore.SwaggerUI;
 using System;
 using System.IO;
-using System.Linq;
-using System.Net;
 using System.Reflection;
 
 namespace Microliu.Auth.API
@@ -37,15 +30,12 @@ namespace Microliu.Auth.API
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddAuthService(Configuration);// 权限服务
-
+            // Swagger 接口文档
             services.AddApiVersioning(options =>
             {
                 options.AssumeDefaultVersionWhenUnspecified = true;
                 options.DefaultApiVersion = new ApiVersion(1, 0);
             });
-
-            // Swagger
             services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v1.0", new OpenApiInfo
@@ -97,9 +87,10 @@ namespace Microliu.Auth.API
 
                 //options.IgnoreObsoleteActions();
             });
-            services.AddAutoMapper();
 
-            services.AddTransient<ISubscriberService, SubscriberService>();
+            // 添加权限服务
+            services.AddAuthService();
+            services.AddTransient<ISubscriberService, SubscriberService>();//测试临时使用
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -110,12 +101,9 @@ namespace Microliu.Auth.API
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMiddleware(typeof(ExceptionHandlerMiddleWare));// 异常处理中间件
-            //app.UseAuthCap();
-
-            // Swagger
+            // 接口方面
+            app.UseErrorHandling();
             app.UseSwagger();
-
             app.UseSwaggerUI(c =>
             {
                 c.DocumentTitle = "权限服务接口";
@@ -141,11 +129,9 @@ namespace Microliu.Auth.API
                 //                        SubmitMethod.Delete,
                 //                        SubmitMethod.Put);
             });
-            app.RegisterConsul(lifetime, Configuration);
 
-            var expression = app.UseAutoMapper();
-            expression.CreateMap<User, CreateUserModel>();
-            app.UseStateAutoMapper();
+            // 使用权限服务
+            app.UseAuthService();
             app.UseMvc();
         }
     }

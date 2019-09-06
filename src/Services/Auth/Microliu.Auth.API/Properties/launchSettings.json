@@ -20,7 +20,7 @@
     "Microliu.Auth.API": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "apiDoc",
+      "launchUrl": "api/default/welcome",
       "applicationUrl": "http://localhost:9431",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

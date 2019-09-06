@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "d13a744404054eae72ccd4b1db661a974779b5d8"
+    "signature": "a978a95e4f2a661de639589537043e2b46e2bd2a"
   },
   "compilationOptions": {},
   "targets": {
@@ -1247,6 +1247,14 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
             "assemblyVersion": "12.0.0.0",
             "fileVersion": "12.0.2.23222"
+          }
+        }
+      },
+      "NLog/4.6.7": {
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.7.10445"
           }
         }
       },
@@ -2695,6 +2703,9 @@
         }
       },
       "Microliu.Core.Logger/1.0.0": {
+        "dependencies": {
+          "NLog": "4.6.7"
+        },
         "runtime": {
           "Microliu.Core.Logger.dll": {}
         }
@@ -3259,6 +3270,13 @@
       "sha512": "sha512-rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
       "path": "newtonsoft.json/12.0.2",
       "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
+    },
+    "NLog/4.6.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xSIzXrIF89Ww6yoJPvyBcu4JLgNiDiEaTT4GyVltZEeVIvkgSm9J/srUy1Yz0EXwbTv502l8knoCFrgNc/MUMA==",
+      "path": "nlog/4.6.7",
+      "hashPath": "nlog.4.6.7.nupkg.sha512"
     },
     "Oracle.EntityFrameworkCore/2.19.30": {
       "type": "package",

@@ -40,7 +40,7 @@ namespace Microliu.Order
                 app.UseDeveloperExceptionPage();
             }
 
-            app.RegisterConsul(lifetime, Configuration);
+            app.UseMicroliuDiscovery();
 
             app.UseMvc();
         }

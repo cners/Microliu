@@ -10,6 +10,7 @@ using Microliu.Core.Logger;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Microliu.EmailService.Application.Extensions;
+using Pomelo.AspNetCore.TimedJob;
 
 namespace Microliu.EmailService.Application.Services
 {

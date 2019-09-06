@@ -26,3 +26,4 @@ D:\Microliu\src\Services\Auth\Microliu.Auth.API\bin\Debug\netcoreapp2.2\Microliu
 D:\Microliu\src\Services\Auth\Microliu.Auth.API\bin\Debug\netcoreapp2.2\Microliu.Auth.Infrastructure.pdb
 D:\Microliu\src\Services\Auth\Microliu.Auth.API\bin\Debug\netcoreapp2.2\Microliu.Core.Logger.dll
 D:\Microliu\src\Services\Auth\Microliu.Auth.API\bin\Debug\netcoreapp2.2\Microliu.Core.Logger.pdb
+D:\Microliu\src\Services\Auth\Microliu.Auth.API\bin\Debug\netcoreapp2.2\NLog.config

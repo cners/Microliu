@@ -110,7 +110,7 @@ namespace Microliu.FileService.API
                 c.RoutePrefix = "apiDoc";
 
             });
-            app.RegisterConsul(lifetime, Configuration);
+            app.UseMicroliuDiscovery();
 
             var expression = app.UseAutoMapper();
             //expression.CreateMap<User, CreateUserModel>();

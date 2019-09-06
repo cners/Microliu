@@ -41,7 +41,7 @@ namespace Microliu.SMS
 
             });
 
-            services.AddTransient<ILogger, ConsoleLogger>();
+            services.AddTransient<ILogger, Logger>();
             return services.UseHystrix(Assembly.GetEntryAssembly());
         }
 
@@ -55,7 +55,7 @@ namespace Microliu.SMS
 
             app.UseCookiePolicy();
             app.UseAuthentication();
-            app.RegisterConsul(lifetime, Configuration);
+            app.UseMicroliuDiscovery();
             app.UseStaticFiles();
             app.UseMvc();
         }

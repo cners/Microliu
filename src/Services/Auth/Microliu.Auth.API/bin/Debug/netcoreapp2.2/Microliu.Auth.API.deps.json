@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "ec11bf86a6627607377c68df89c7e97a7eeef233"
+    "signature": "72aa6b9d0b058c71eea42731f14da50cefff3314"
   },
   "compilationOptions": {
     "defines": [
@@ -519,6 +519,17 @@
         },
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
+      "NLog/4.6.7": {
+        "runtime": {
+          "lib/netstandard2.0/NLog.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.6.7.10445"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/NLog.dll": {}
         }
       },
       "NuGet.Frameworks/4.7.0": {
@@ -1275,6 +1286,9 @@
         }
       },
       "Microliu.Core.Logger/1.0.0": {
+        "dependencies": {
+          "NLog": "4.6.7"
+        },
         "runtime": {
           "Microliu.Core.Logger.dll": {}
         },
@@ -4558,6 +4572,13 @@
       "sha512": "sha512-rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
       "path": "newtonsoft.json/12.0.2",
       "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
+    },
+    "NLog/4.6.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xSIzXrIF89Ww6yoJPvyBcu4JLgNiDiEaTT4GyVltZEeVIvkgSm9J/srUy1Yz0EXwbTv502l8knoCFrgNc/MUMA==",
+      "path": "nlog/4.6.7",
+      "hashPath": "nlog.4.6.7.nupkg.sha512"
     },
     "NuGet.Frameworks/4.7.0": {
       "type": "package",

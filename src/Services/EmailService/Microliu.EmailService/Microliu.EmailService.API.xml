@@ -27,10 +27,5 @@
             <param name="input"></param>
             <returns></returns>
         </member>
-        <member name="T:Microliu.EmailService.API.Extensions.ExceptionHandlerMiddleWare">
-            <summary>
-            全局异常中间件
-            </summary>
-        </member>
     </members>
 </doc>
