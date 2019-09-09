@@ -7,7 +7,7 @@ namespace Microliu.EmailService.API.Controllers
     /// <summary>
     /// 邮件服务
     /// </summary>
-    [Route("api/[controller]")]
+    [Route("emailAPi/[controller]")]
     [ApiController]
     public class EmailController : ControllerBase
     {

@@ -6,7 +6,7 @@ using System;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
 using System.Text;
-using Microliu.Core.Logger;
+using Microliu.Core.Loggers;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Microliu.EmailService.Application.Extensions;

@@ -23,4 +23,10 @@
     <ProjectReference Include="..\Microliu.EmailService.Application\Microliu.EmailService.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Microliu.EmailService.API.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

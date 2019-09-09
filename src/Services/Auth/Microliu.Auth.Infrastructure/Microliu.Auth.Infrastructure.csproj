@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Microliu.Utils\Microliu.Utils\Microliu.Utils.csproj" />
     <ProjectReference Include="..\Microliu.Auth.Data\Microliu.Auth.Data.csproj" />
   </ItemGroup>
 

@@ -12,3 +12,5 @@ D:\Microliu\src\Services\Auth\Microliu.Auth.Infrastructure\bin\Debug\netstandard
 D:\Microliu\src\Services\Auth\Microliu.Auth.Infrastructure\bin\Debug\netstandard2.0\Microliu.Auth.Data.pdb
 D:\Microliu\src\Services\Auth\Microliu.Auth.Infrastructure\bin\Debug\netstandard2.0\Microliu.Auth.Domain.pdb
 D:\Microliu\src\Services\Auth\Microliu.Auth.Infrastructure\obj\Debug\netstandard2.0\Microliu.Auth.Infrastructure.csproj.CopyComplete
+D:\Microliu\src\Services\Auth\Microliu.Auth.Infrastructure\bin\Debug\netstandard2.0\Microliu.Utils.dll
+D:\Microliu\src\Services\Auth\Microliu.Auth.Infrastructure\bin\Debug\netstandard2.0\Microliu.Utils.pdb

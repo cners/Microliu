@@ -1,0 +1,16 @@
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Domain\obj\Release\netstandard2.0\Microliu.EmailService.Domain.csprojAssemblyReference.cache
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Domain\obj\Release\netstandard2.0\Microliu.EmailService.Domain.csproj.CoreCompileInputs.cache
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Domain\obj\Release\netstandard2.0\Microliu.EmailService.Domain.AssemblyInfoInputs.cache
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Domain\obj\Release\netstandard2.0\Microliu.EmailService.Domain.AssemblyInfo.cs
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Domain\bin\Release\netstandard2.0\Microliu.EmailService.Domain.deps.json
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Domain\bin\Release\netstandard2.0\Microliu.EmailService.Domain.dll
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Domain\bin\Release\netstandard2.0\Microliu.EmailService.Domain.pdb
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Domain\bin\Release\netstandard2.0\Microliu.Core.Logger.dll
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Domain\bin\Release\netstandard2.0\Microliu.EmailService.Infrastructure.dll
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Domain\bin\Release\netstandard2.0\Microliu.Utils.dll
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Domain\bin\Release\netstandard2.0\Microliu.EmailService.Infrastructure.pdb
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Domain\bin\Release\netstandard2.0\Microliu.Core.Logger.pdb
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Domain\bin\Release\netstandard2.0\Microliu.Utils.pdb
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Domain\obj\Release\netstandard2.0\Microliu.EmailService.Domain.csproj.CopyComplete
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Domain\obj\Release\netstandard2.0\Microliu.EmailService.Domain.dll
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Domain\obj\Release\netstandard2.0\Microliu.EmailService.Domain.pdb

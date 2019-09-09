@@ -95,3 +95,5 @@ D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\obj\Rel
 D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\obj\Release\netcoreapp2.2\Microliu.IdentityServer.dll
 D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\obj\Release\netcoreapp2.2\Microliu.IdentityServer.pdb
 D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\obj\Release\netcoreapp2.2\Microliu.IdentityServer.csproj.CopyComplete
+D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\bin\Release\netcoreapp2.2\Microliu.Core.Consul.dll
+D:\Microliu\src\Services\Microliu.IdentityServer\Microliu.IdentityServer\bin\Release\netcoreapp2.2\Microliu.Core.Consul.pdb

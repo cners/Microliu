@@ -1,5 +1,5 @@
 ﻿using Hangfire;
-using Microliu.Core.Logger;
+using Microliu.Core.Loggers;
 using Microsoft.Extensions.Options;
 using Pomelo.AspNetCore.TimedJob;
 using System;

@@ -16,3 +16,5 @@ D:\Microliu\src\Services\EmailService\Microliu.EmailService.Application\obj\Debu
 D:\Microliu\src\Services\EmailService\Microliu.EmailService.Application\obj\Debug\netstandard2.0\Microliu.EmailService.Application.pdb
 D:\Microliu\src\Services\EmailService\Microliu.EmailService.Application\bin\Debug\netstandard2.0\Microliu.Core.Logger.dll
 D:\Microliu\src\Services\EmailService\Microliu.EmailService.Application\bin\Debug\netstandard2.0\Microliu.Core.Logger.pdb
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Application\bin\Debug\netstandard2.0\Microliu.Utils.dll
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Application\bin\Debug\netstandard2.0\Microliu.Utils.pdb

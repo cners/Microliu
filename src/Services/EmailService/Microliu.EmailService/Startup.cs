@@ -59,6 +59,8 @@ namespace Microliu.EmailService
 
             // 添加邮件服务
             services.AddEmailService();
+
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -68,14 +70,18 @@ namespace Microliu.EmailService
             {
                 app.UseDeveloperExceptionPage();
             }
+
             // 接口方面
             app.UseErrorHandling();
-            app.UseSwagger();
+            app.UseSwagger(c =>
+            {
+                c.RouteTemplate = "emailApi/{documentName}/swagger.json";
+            });
             app.UseSwaggerUI(c =>
             {
                 c.DocumentTitle = "邮件服务接口";
-                c.SwaggerEndpoint($"/swagger/v1.0/swagger.json", "V1.0 Docs");
-                c.SwaggerEndpoint($"/swagger/v2.0/swagger.json", "V2.0 Docs");
+                c.SwaggerEndpoint($"/emailApi/v1.0/swagger.json", "V1.0 Docs");
+                c.SwaggerEndpoint($"/emailApi/v2.0/swagger.json", "V2.0 Docs");
                 c.RoutePrefix = "apiDoc";
                 c.DefaultModelExpandDepth(4);
                 c.DefaultModelRendering(ModelRendering.Model);
@@ -85,8 +91,8 @@ namespace Microliu.EmailService
                 c.MaxDisplayedTags(5);
                 c.ShowExtensions();
                 c.EnableValidator();
-
             });
+
 
             // 微服务服务发现
             app.UseMicroliuDiscovery();

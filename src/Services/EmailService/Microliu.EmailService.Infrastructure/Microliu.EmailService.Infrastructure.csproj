@@ -17,6 +17,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Microliu.Core\Microliu.Core.Logger\Microliu.Core.Logger.csproj" />
+    <ProjectReference Include="..\..\..\Microliu.Core\Microliu.Core.Redis\Microliu.Core.Redis.csproj" />
+    <ProjectReference Include="..\..\..\Microliu.Utils\Microliu.Utils\Microliu.Utils.csproj" />
   </ItemGroup>
 
 </Project>

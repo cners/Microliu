@@ -1,6 +1,6 @@
 ﻿using Microliu.Core.Consul;
 using Microliu.Core.Hystrix.Extensions.DI;
-using Microliu.Core.Logger;
+using Microliu.Core.Loggers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;

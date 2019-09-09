@@ -1,4 +1,5 @@
-﻿using Microliu.Auth.Domain;
+﻿using DotNetCore.CAP.Infrastructure;
+using Microliu.Auth.Domain;
 using Microliu.Auth.Domain.Converters;
 using Microliu.Auth.Domain.Entities;
 using Microliu.Auth.Domain.ViewModels;
@@ -27,7 +28,7 @@ namespace Microliu.Auth.Application
         {
             await _unitOfWork.Add<UserPosition>(new UserPosition
             {
-                Id = Guid.NewGuid().ToString("N"),
+                Id = SnowflakeId.Default().NextId().ToString(),
                 UserId = userId,
                 PositionId = positionId,
                 CreateTime = DateTimeOffset.Now

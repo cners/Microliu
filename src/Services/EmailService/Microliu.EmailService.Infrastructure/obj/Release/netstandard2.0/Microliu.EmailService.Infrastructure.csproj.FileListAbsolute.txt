@@ -1,0 +1,14 @@
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\obj\Release\netstandard2.0\Microliu.EmailService.Infrastructure.csprojAssemblyReference.cache
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\obj\Release\netstandard2.0\Microliu.EmailService.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\obj\Release\netstandard2.0\Microliu.EmailService.Infrastructure.AssemblyInfoInputs.cache
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\obj\Release\netstandard2.0\Microliu.EmailService.Infrastructure.AssemblyInfo.cs
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Release\netstandard2.0\Microliu.EmailService.Infrastructure.deps.json
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Release\netstandard2.0\Microliu.EmailService.Infrastructure.dll
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Release\netstandard2.0\Microliu.EmailService.Infrastructure.pdb
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Release\netstandard2.0\Microliu.Core.Logger.dll
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Release\netstandard2.0\Microliu.Utils.dll
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Release\netstandard2.0\Microliu.Core.Logger.pdb
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Release\netstandard2.0\Microliu.Utils.pdb
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\obj\Release\netstandard2.0\Microliu.EmailService.Infrastructure.csproj.CopyComplete
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\obj\Release\netstandard2.0\Microliu.EmailService.Infrastructure.dll
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\obj\Release\netstandard2.0\Microliu.EmailService.Infrastructure.pdb

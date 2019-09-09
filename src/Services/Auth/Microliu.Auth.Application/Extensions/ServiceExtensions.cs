@@ -5,7 +5,7 @@ using Microliu.Auth.Domain.Entities;
 using Microliu.Auth.Domain.Repositories;
 using Microliu.Auth.Domain.SeedWork;
 using Microliu.Auth.Domain.ViewModels;
-using Microliu.Core.Logger;
+using Microliu.Core.Loggers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;

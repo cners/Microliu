@@ -1,0 +1,9 @@
+D:\Microliu\src\Microliu.Core\Microliu.Core.Logger\bin\Release\netstandard2.0\Microliu.Core.Logger.deps.json
+D:\Microliu\src\Microliu.Core\Microliu.Core.Logger\bin\Release\netstandard2.0\Microliu.Core.Logger.dll
+D:\Microliu\src\Microliu.Core\Microliu.Core.Logger\bin\Release\netstandard2.0\Microliu.Core.Logger.pdb
+D:\Microliu\src\Microliu.Core\Microliu.Core.Logger\obj\Release\netstandard2.0\Microliu.Core.Logger.csprojAssemblyReference.cache
+D:\Microliu\src\Microliu.Core\Microliu.Core.Logger\obj\Release\netstandard2.0\Microliu.Core.Logger.csproj.CoreCompileInputs.cache
+D:\Microliu\src\Microliu.Core\Microliu.Core.Logger\obj\Release\netstandard2.0\Microliu.Core.Logger.AssemblyInfoInputs.cache
+D:\Microliu\src\Microliu.Core\Microliu.Core.Logger\obj\Release\netstandard2.0\Microliu.Core.Logger.AssemblyInfo.cs
+D:\Microliu\src\Microliu.Core\Microliu.Core.Logger\obj\Release\netstandard2.0\Microliu.Core.Logger.dll
+D:\Microliu\src\Microliu.Core\Microliu.Core.Logger\obj\Release\netstandard2.0\Microliu.Core.Logger.pdb

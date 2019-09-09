@@ -1,6 +1,7 @@
 ﻿using Consul;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -13,16 +14,17 @@ namespace Microliu.Core.Consul
         /// 基于客户端的服务发现
         /// </summary>
         /// <returns>IApplicationBuilder</returns>
-        public static IApplicationBuilder UseMicroliuDiscovery(this IApplicationBuilder builder)
+        public static IApplicationBuilder UseMicroliuDiscovery(this IApplicationBuilder app)
         {
-            var services = builder.ApplicationServices;
-            var lifetime = services.GetService<IApplicationLifetime>();
-            var configuration = services.GetService<IConfiguration>();
+            var s = app.ApplicationServices;
+
+            var lifetime = s.GetService<IApplicationLifetime>();
+            var configuration = s.GetService<IConfiguration>();
 
             var consulOptions = configuration.GetSection(typeof(ConsulOptions).Name).Get<ConsulOptions>();
             if (consulOptions == null)
             {
-                return builder;
+                return app;
             }
 
 
@@ -31,7 +33,7 @@ namespace Microliu.Core.Consul
             {
                 DeregisterCriticalServiceAfter = TimeSpan.FromSeconds(5),// 服务启动多久后注册
                 Interval = TimeSpan.FromSeconds(1), // 健康检查时间间隔，或心跳间隔
-                HTTP = $"http://{consulOptions.LocalhostIp}:{consulOptions.LocalhostPort}{consulOptions.HealthCheckPath ?? "/api/health/check"}",// 健康检查地址
+                HTTP = $"http://{consulOptions.LocalhostIp}:{consulOptions.LocalhostPort}{consulOptions.HealthCheckPath ?? ""}",// 健康检查地址
                 Timeout = TimeSpan.FromSeconds(5)
             };
 
@@ -48,19 +50,21 @@ namespace Microliu.Core.Consul
 
             try
             {
-                client.Agent.ServiceRegister(registration).Wait();// 服务启动注册，内部实现其实就是使用 Consul API 进行注册（HttpClient发起）
+                lifetime.ApplicationStarted.Register(() =>
+                {
+                    client.Agent.ServiceRegister(registration).GetAwaiter().GetResult();// 服务启动注册，内部实现其实就是使用 Consul API 进行注册（HttpClient发起）
+                });
 
                 lifetime.ApplicationStopping.Register(() =>
                 {
-                    client.Agent.ServiceDeregister(registration.ID).Wait();// 服务停止后，自动取消注册
+                    client.Agent.ServiceDeregister(registration.ID).GetAwaiter().GetResult();// 服务停止后，自动取消注册
                 });
             }
             catch (Exception)
             {
                 ;
             }
-
-            return builder;
+            return app;
         }
     }
 }

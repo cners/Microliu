@@ -9,7 +9,7 @@ using System.Linq;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace Microliu.Test.AuthApplication
+namespace Microliu.Test.AuthApplication.TestCase
 {
     public class PositionTest
     {

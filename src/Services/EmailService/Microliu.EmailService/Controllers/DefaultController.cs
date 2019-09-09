@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microliu.Core.Logger;
-using Microsoft.AspNetCore.Http;
+﻿using Microliu.Core.Loggers;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Microliu.EmailService.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("emailAPi/[controller]")]
     [ApiController]
     public class DefaultController : ControllerBase
     {

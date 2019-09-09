@@ -10,7 +10,7 @@ namespace Microliu.EmailService.Controllers
     /// <summary>
     /// 健康检查
     /// </summary>
-    [Route("api/[controller]")]
+    [Route("emailApi/[controller]")]
     [ApiController]
     public class HealthController : ControllerBase
     {

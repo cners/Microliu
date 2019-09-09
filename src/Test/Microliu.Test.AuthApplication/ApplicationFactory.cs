@@ -1,6 +1,4 @@
 ﻿using Microliu.Auth.Application;
-using Microliu.Auth.Domain.Entities;
-using Microliu.Auth.Domain.ViewModels;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Builder.Internal;
 using Microsoft.Extensions.Configuration;

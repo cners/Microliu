@@ -10,3 +10,5 @@ D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\obj\D
 D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Debug\netstandard2.0\Microliu.Core.Logger.dll
 D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Debug\netstandard2.0\Microliu.Core.Logger.pdb
 D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\obj\Debug\netstandard2.0\Microliu.EmailService.Infrastructure.csproj.CopyComplete
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Debug\netstandard2.0\Microliu.Utils.dll
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Debug\netstandard2.0\Microliu.Utils.pdb

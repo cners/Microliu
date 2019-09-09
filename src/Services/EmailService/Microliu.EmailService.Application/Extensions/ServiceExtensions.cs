@@ -1,7 +1,8 @@
 ﻿using Exceptionless;
 using Hangfire;
 using Hangfire.SqlServer;
-using Microliu.Core.Logger;
+using Microliu.Core.Loggers;
+using Microliu.Core.Redis;
 using Microliu.EmailService.Application.IServices;
 using Microliu.EmailService.Application.Services;
 using Microliu.EmailService.Data;
@@ -88,7 +89,14 @@ namespace Microliu.EmailService.Application.Extensions
             // Add the processing server as IHostedService
             services.AddHangfireServer();
 
-           
+            services.AddMicroliuRedis(options =>
+            {
+                options.HostName = "";
+                options.Password = "";
+                options.Startup = false;
+                options.StorageIndex = 7;
+            });
+
             return services;
         }
 

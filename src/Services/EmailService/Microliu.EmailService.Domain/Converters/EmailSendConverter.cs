@@ -1,6 +1,6 @@
 ﻿using Microliu.EmailService.Domain.Entities;
 using Microliu.EmailService.Domain.ViewModels;
-using Microliu.EmailService.Infrastructure;
+using Microliu.Utils;
 using System;
 using System.Collections.Generic;
 using System.Text;
