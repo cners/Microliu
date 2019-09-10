@@ -449,6 +449,10 @@
               "target": "Package",
               "version": "[1.7.6, )"
             },
+            "HangFire.Redis.StackExchange": {
+              "target": "Package",
+              "version": "[1.8.0, )"
+            },
             "HangFire.SqlServer": {
               "target": "Package",
               "version": "[1.7.6, )"
@@ -466,10 +470,6 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
-            },
-            "Pomelo.AspNetCore.TimedJob": {
-              "target": "Package",
-              "version": "[2.0.0-rtm-10046, )"
             }
           },
           "imports": [

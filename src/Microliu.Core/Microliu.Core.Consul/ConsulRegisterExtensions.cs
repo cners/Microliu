@@ -50,9 +50,9 @@ namespace Microliu.Core.Consul
 
             try
             {
+                client.Agent.ServiceRegister(registration).GetAwaiter().GetResult();
                 lifetime.ApplicationStarted.Register(() =>
                 {
-                    client.Agent.ServiceRegister(registration).GetAwaiter().GetResult();// 服务启动注册，内部实现其实就是使用 Consul API 进行注册（HttpClient发起）
                 });
 
                 lifetime.ApplicationStopping.Register(() =>

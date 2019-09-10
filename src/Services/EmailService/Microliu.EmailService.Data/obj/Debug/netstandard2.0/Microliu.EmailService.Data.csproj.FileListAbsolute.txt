@@ -16,3 +16,5 @@ D:\Microliu\src\Services\EmailService\Microliu.EmailService.Data\bin\Debug\netst
 D:\Microliu\src\Services\EmailService\Microliu.EmailService.Data\bin\Debug\netstandard2.0\Microliu.EmailService.Infrastructure.pdb
 D:\Microliu\src\Services\EmailService\Microliu.EmailService.Data\bin\Debug\netstandard2.0\Microliu.Utils.dll
 D:\Microliu\src\Services\EmailService\Microliu.EmailService.Data\bin\Debug\netstandard2.0\Microliu.Utils.pdb
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Data\bin\Debug\netstandard2.0\Microliu.Core.Redis.dll
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Data\bin\Debug\netstandard2.0\Microliu.Core.Redis.pdb

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Microliu.EmailService.Application.Extensions
 {
-    public class EmailServiceSettings
+    public class EmailServiceOptions
     {
         public EmailSender Sender { get; set; }
         public class EmailSender

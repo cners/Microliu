@@ -6,15 +6,22 @@ namespace Microliu.EmailService.Domain.ViewModels
 {
     public class EmailSendDto
     {
-        private enum ContentTYPE
-        {
-            HTML = 0,
-            TEXT = 1
-        }
+        //private enum ContentTYPE
+        //{
+        //    HTML = 0,
+        //    TEXT = 1
+        //}
 
-        private ContentTYPE ContentType { get; set; }
+        //private ContentTYPE ContentType { get; set; }
+
+        /// <summary>
+        /// 标题
+        /// </summary>
         public string Subject { get; set; }
 
+        /// <summary>
+        /// 正文
+        /// </summary>
         public string Body { get; set; }
 
         /// <summary>
@@ -27,11 +34,14 @@ namespace Microliu.EmailService.Domain.ViewModels
         /// </summary>
         public string CopyTo { get; set; }
 
+        /// <summary>
+        /// 项目（服务）主键
+        /// </summary>
         public string ProjectId { get; set; }
 
         public EmailSendDto()
         {
-            ContentType = ContentTYPE.HTML;
+            //ContentType = ContentTYPE.HTML;
         }
     }
 }

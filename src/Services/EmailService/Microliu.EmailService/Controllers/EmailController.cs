@@ -1,5 +1,6 @@
 ﻿using DotNetCore.CAP;
 using Microliu.EmailService.Domain.ViewModels;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Microliu.EmailService.API.Controllers
@@ -24,11 +25,11 @@ namespace Microliu.EmailService.API.Controllers
         /// <param name="input"></param>
         /// <returns></returns>
         [HttpPost(nameof(Send))]
-        [Produces(typeof(EmailSendDto))]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public IActionResult Send([FromBody]EmailSendDto input)
         {
             _publisher.Publish<EmailSendDto>("microliu.email.send", input);
-            return Ok("已发送");
+            return Ok();
         }
     }
 }

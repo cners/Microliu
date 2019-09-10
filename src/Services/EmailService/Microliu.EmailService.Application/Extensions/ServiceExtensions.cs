@@ -1,8 +1,10 @@
 ﻿using Exceptionless;
 using Hangfire;
+using Hangfire.Redis;
 using Hangfire.SqlServer;
 using Microliu.Core.Loggers;
 using Microliu.Core.Redis;
+using Microliu.Core.RedisCache;
 using Microliu.EmailService.Application.IServices;
 using Microliu.EmailService.Application.Services;
 using Microliu.EmailService.Data;
@@ -46,7 +48,8 @@ namespace Microliu.EmailService.Application.Extensions
 
                 x.UseMySql(GetConnectionString(configuration, DatabaseType.MySQL));
 
-                var eventBus = GetvEventBusCAP(configuration);
+                var eventBus = new EventBusCAP();
+                configuration.GetSection("EventBusCAP:RabbitMQ").Bind(eventBus);
                 // 如果你使用的 RabbitMQ 作为MQ，你需要添加如下配置：
                 x.UseRabbitMQ(options =>
                 {
@@ -68,54 +71,67 @@ namespace Microliu.EmailService.Application.Extensions
 
             });
 
-            //services.AddSingleton<EmailServiceSettings>(GetEmailService(configuration));
-            services.Configure<EmailServiceSettings>(_ => configuration.GetSection("EmailService").Bind(_));
+            services.Configure<EmailServiceOptions>(_ => configuration.GetSection("EmailService").Bind(_));
 
             // Add Hangfire services.
-            services.AddHangfire(c => c
+            services.AddHangfire(c =>
+            {
+                var prefix = configuration.GetSection("Hangfire:Prefix").Value;
+                var host = configuration.GetSection("Hangfire:Redis").Value;
+                var defualtDb = configuration.GetSection("Hangfire").GetValue<int>("DefaultDb");
+                var options = new RedisStorageOptions { Prefix = $"{prefix}:", ExpiryCheckInterval = TimeSpan.FromSeconds(60 * 5), Db = defualtDb, DeletedListSize = 2000, SucceededListSize = 2000 };
+                c
                 .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
                 .UseSimpleAssemblyNameTypeSerializer()
-                .UseRecommendedSerializerSettings()
-                .UseSqlServerStorage(GetConnectionString(configuration, DatabaseType.SQLServer), new SqlServerStorageOptions
-                {
-                    CommandBatchMaxTimeout = TimeSpan.FromMinutes(5),
-                    SlidingInvisibilityTimeout = TimeSpan.FromMinutes(5),
-                    QueuePollInterval = TimeSpan.Zero,
-                    UseRecommendedIsolationLevel = true,
-                    UsePageLocksOnDequeue = true,
-                    DisableGlobalLocks = true
-                }));
-
-            // Add the processing server as IHostedService
-            services.AddHangfireServer();
-
-            services.AddMicroliuRedis(options =>
-            {
-                options.HostName = "";
-                options.Password = "";
-                options.Startup = false;
-                options.StorageIndex = 7;
+                .UseRedisStorage(host, options)
+                .UseRecommendedSerializerSettings();
             });
+
+            #region hangfire的MSSQL持久化支持，暂时不需要，性能不太好，而且延迟任务不准时
+            //.UseSqlServerStorage(GetConnectionString(configuration, DatabaseType.SQLServer)));
+            //, new SqlServerStorageOptions
+            //  {
+            //      CommandBatchMaxTimeout = TimeSpan.FromMinutes(5),
+            //      SlidingInvisibilityTimeout = TimeSpan.FromMinutes(5),
+            //      QueuePollInterval = TimeSpan.Zero,
+            //      UseRecommendedIsolationLevel = true,
+            //      UsePageLocksOnDequeue = true,
+            //      DisableGlobalLocks = true
+            //  }
+            #endregion
+
+            // Redis Cache
+            var redisOptions = new RedisOptions();
+            configuration.GetSection("Redis").Bind(redisOptions);
+            services.AddMicroliuRedis(options => options = redisOptions);
 
             return services;
         }
 
-        public static IApplicationBuilder UseEmailService(this IApplicationBuilder builder)
+        public static IApplicationBuilder UseEmailService(this IApplicationBuilder app)
         {
-            var services = builder.ApplicationServices;
+            //var services = app.ApplicationServices;
 
-            var configuration = services.GetService<Microsoft.Extensions.Configuration.IConfiguration>();
-            var backgroundJobs = services.GetService<IBackgroundJobClient>();
-            builder.UseHangfireDashboard();
-            builder.UseHangfireDashboard();
+            //var configuration = services.GetService<Microsoft.Extensions.Configuration.IConfiguration>();
+            //var backgroundJobs = services.GetService<IBackgroundJobClient>();
+
+            // 设置Hangfire并发处理Job的个数，默认是 cpu个数*5
+            var options = new BackgroundJobServerOptions { WorkerCount = 10 };
+            // 启用HangfireServer这个中间件（它会自动释放）
+            app.UseHangfireServer(options);
+            // 启用Hangfire的仪表盘（可以看到任何的状态，进度等信息）
+            app.UseHangfireDashboard("/hangfire", new DashboardOptions
+            {
+
+            });
             //backgroundJobs.Enqueue(() => Console.WriteLine("UseEmailService"));
 
             //ExceptionlessClient.Default.Configuration.ApiKey = configuration.GetSection("Exceptionless:ApiKey").Value;
             //ExceptionlessClient.Default.Configuration.ServerUrl = configuration.GetSection("Exceptionless:ServerUrl").Value;
 
-            builder.UseExceptionless(configuration);
+            //builder.UseExceptionless(configuration);
 
-            return builder;
+            return app;
         }
 
         private enum DatabaseType
@@ -152,30 +168,7 @@ namespace Microliu.EmailService.Application.Extensions
             return connection;
         }
 
-        private static EventBusCAP GetvEventBusCAP(IConfiguration configuration)
-        {
-            return new EventBusCAP
-            {
-                HostName = configuration.GetSection("EventBusCAP:RabbitMQ:HostName").Value,
-                UserName = configuration.GetSection("EventBusCAP:RabbitMQ:UserName").Value,
-                Password = configuration.GetSection("EventBusCAP:RabbitMQ:Password").Value,
-                Port = int.Parse(configuration.GetSection("EventBusCAP:RabbitMQ:Port").Value),
-                VirtualHost = configuration.GetSection("EventBusCAP:RabbitMQ:VirtualHost").Value,
-                ExchangeName = configuration.GetSection("EventBusCAP:RabbitMQ:ExchangeName").Value,
-            };
-        }
-
-        private static EmailServiceSettings GetEmailService(IConfiguration configuration)
-        {
-            return new EmailServiceSettings
-            {
-                Sender = new EmailServiceSettings.EmailSender
-                {
-                    Name = configuration.GetSection("EmailService:Sender:Name").Value,
-                    Password = configuration.GetSection("EmailService:Sender:Password").Value
-                }
-            };
-        }
+     
 
         class EventBusCAP
         {

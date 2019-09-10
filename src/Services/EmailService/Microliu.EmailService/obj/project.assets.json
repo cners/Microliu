@@ -195,6 +195,20 @@
           }
         }
       },
+      "Hangfire.Redis.StackExchange/1.8.0": {
+        "type": "package",
+        "dependencies": {
+          "HangFire.Core": "1.6.21",
+          "Newtonsoft.Json": "9.0.1",
+          "StackExchange.Redis": "2.0.513"
+        },
+        "compile": {
+          "lib/netstandard2.0/Hangfire.Redis.StackExchange.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Hangfire.Redis.StackExchange.dll": {}
+        }
+      },
       "Hangfire.SqlServer/1.7.6": {
         "type": "package",
         "dependencies": {
@@ -3262,22 +3276,6 @@
           "lib/netcoreapp2.2/Pipelines.Sockets.Unofficial.dll": {}
         }
       },
-      "Pomelo.AspNetCore.TimedJob/2.0.0-rtm-10046": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Hosting": "2.0.0",
-          "Microsoft.EntityFrameworkCore": "2.0.0",
-          "Microsoft.Extensions.DependencyModel": "2.0.0",
-          "System.Threading": "4.3.0",
-          "System.Threading.Timer": "4.3.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Pomelo.AspNetCore.TimedJob.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Pomelo.AspNetCore.TimedJob.dll": {}
-        }
-      },
       "Portable.BouncyCastle/1.8.5": {
         "type": "package",
         "compile": {
@@ -5638,13 +5636,13 @@
           "DotNetCore.CAP.MySql": "2.6.0",
           "DotNetCore.CAP.RabbitMQ": "2.6.0",
           "HangFire.Core": "1.7.6",
+          "HangFire.Redis.StackExchange": "1.8.0",
           "HangFire.SqlServer": "1.7.6",
           "Hangfire.AspNetCore": "1.7.6",
           "MailKit": "2.3.0",
           "Microliu.Core.Logger": "1.0.0",
           "Microliu.Core.Redis": "1.0.0",
-          "Microliu.Utils": "1.0.0",
-          "Pomelo.AspNetCore.TimedJob": "2.0.0-rtm-10046"
+          "Microliu.Utils": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Microliu.EmailService.Infrastructure.dll": {}
@@ -5906,6 +5904,19 @@
         "lib/netstandard2.0/pt-BR/Hangfire.Core.resources.dll",
         "lib/netstandard2.0/zh-TW/Hangfire.Core.resources.dll",
         "lib/netstandard2.0/zh/Hangfire.Core.resources.dll"
+      ]
+    },
+    "Hangfire.Redis.StackExchange/1.8.0": {
+      "sha512": "y6EVg8caP2R4pulVJQlyioDzewCu57eItT1u5Iikw0fKoGoEacfg5OtgO593KZMVpQCYmc+lmfh/2cS3DGu5NQ==",
+      "type": "package",
+      "path": "hangfire.redis.stackexchange/1.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "hangfire.redis.stackexchange.1.8.0.nupkg.sha512",
+        "hangfire.redis.stackexchange.nuspec",
+        "lib/net461/Hangfire.Redis.StackExchange.dll",
+        "lib/netstandard2.0/Hangfire.Redis.StackExchange.dll"
       ]
     },
     "Hangfire.SqlServer/1.7.6": {
@@ -9583,18 +9594,6 @@
         "lib/netstandard2.0/Pipelines.Sockets.Unofficial.xml",
         "pipelines.sockets.unofficial.2.0.22.nupkg.sha512",
         "pipelines.sockets.unofficial.nuspec"
-      ]
-    },
-    "Pomelo.AspNetCore.TimedJob/2.0.0-rtm-10046": {
-      "sha512": "jr4IuHSqs8iXO1O3AenYhUL2UujV94II2PWA5tigChAUQqVuoGS5pA1vbwPch3WueA78PrTVTnclXx45HE+aQA==",
-      "type": "package",
-      "path": "pomelo.aspnetcore.timedjob/2.0.0-rtm-10046",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/netstandard2.0/Pomelo.AspNetCore.TimedJob.dll",
-        "pomelo.aspnetcore.timedjob.2.0.0-rtm-10046.nupkg.sha512",
-        "pomelo.aspnetcore.timedjob.nuspec"
       ]
     },
     "Portable.BouncyCastle/1.8.5": {

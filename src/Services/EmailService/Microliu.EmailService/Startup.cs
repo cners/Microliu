@@ -1,4 +1,5 @@
-﻿using Microliu.Core.Consul;
+﻿using Exceptionless;
+using Microliu.Core.Consul;
 using Microliu.EmailService.API.Extensions;
 using Microliu.EmailService.Application.Extensions;
 using Microsoft.AspNetCore.Builder;
@@ -59,18 +60,15 @@ namespace Microliu.EmailService
 
             // 添加邮件服务
             services.AddEmailService();
-
-           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, IApplicationLifetime lifetime)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-
             // 接口方面
             app.UseErrorHandling();
             app.UseSwagger(c =>
@@ -95,10 +93,11 @@ namespace Microliu.EmailService
 
 
             // 微服务服务发现
-            app.UseMicroliuDiscovery();
+            //app.UseMicroliuDiscovery();
 
             // 启用邮件服务
             app.UseEmailService();
+            app.UseExceptionless(Configuration);
 
             app.UseMvc();
         }

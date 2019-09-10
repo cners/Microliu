@@ -1,14 +1,14 @@
 ﻿using Hangfire;
 using Microliu.Core.Loggers;
 using Microsoft.Extensions.Options;
-using Pomelo.AspNetCore.TimedJob;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace Microliu.EmailService.Application.Jobs
 {
-    public class EmailReSendJob : Job
+    public class EmailReSendJob
     {
         private readonly ILogger _logger;
 
@@ -17,10 +17,13 @@ namespace Microliu.EmailService.Application.Jobs
             _logger = logger;
         }
 
-        //[Invoke(Begin = "2019-09-06 10:27", Interval = 100, SkipWhileExecuting = true)]
-        public void Run()
+        [AutomaticRetry(Attempts = 3)]
+        [DisplayName("retry send email")]
+        [Queue("jobs")]
+        public void RetrySend()
         {
-
+            _logger.Debug("重试发送邮件");
         }
+
     }
 }

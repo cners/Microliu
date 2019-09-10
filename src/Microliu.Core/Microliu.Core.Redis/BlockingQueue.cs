@@ -4,7 +4,7 @@ using System.Threading;
 
 namespace Microliu.Core.Redis
 {
-    public class BlockQueue<T>
+    public class BlockingQueue<T>
     {
         private Queue<T> _queue = null;
 
@@ -21,7 +21,7 @@ namespace Microliu.Core.Redis
         }
 
 
-        public BlockQueue(int capacity = -1)
+        public BlockingQueue(int capacity = -1)
         {
             _queue = (capacity == -1 ? new Queue<T>() : new Queue<T>(capacity));
             _dequeue_wait = new ManualResetEvent(false);

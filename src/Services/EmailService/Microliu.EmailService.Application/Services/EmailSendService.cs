@@ -1,25 +1,23 @@
 ﻿using DotNetCore.CAP;
+using Hangfire;
 using MailKit.Net.Smtp;
-using MailKit.Security;
 using Microliu.EmailService.Domain;
 using Microliu.EmailService.Domain.Entities;
 using Microliu.EmailService.Domain.ViewModels;
+using Microliu.Utils;
 using MimeKit;
 using MimeKit.Text;
 using Newtonsoft.Json;
-using Pomelo.AspNetCore.TimedJob;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Microliu.EmailService.Application.Services
 {
     public partial class EmailApplication
     {
-        [CapSubscribe("microliu.email.send")]
+        //[CapSubscribe("microliu.email.send")]
         public void SendAsync(EmailSendDto input)
         {
-            _logger.Trace("microliu.email.send[receive]: " + JsonConvert.SerializeObject(input));
+            _logger.Trace($"[{this.GetType().FullName}] [microliu.email.send] [receive] [data:{JsonConvert.SerializeObject(input)}]");
 
             var message = EmailSendConverter.ToEmailSend(input);
             message.From = _emailSettings.Value.Sender.Name ?? "liu.zhuang@lzassist.com";
@@ -60,12 +58,37 @@ namespace Microliu.EmailService.Application.Services
                 message.Enabled = Enabled.Enabled;
                 _unitOfWork.Modify<EmailSend>(message);
                 _unitOfWork.CommitAsync();
-                _logger.Trace("microliu.email.send[storage successed]");
+                _logger.Trace($"[{this.GetType().FullName}] [microliu.email.send] [send] [storage]  [data:{JsonConvert.SerializeObject(input)}]", new string[] { "microliu.email.send", "send", "storage", "email" });
+
+                _logger.Debug($"请在10秒后通知我");
+                SendRetry();
             }
             catch (Exception ex)
             {
-                _logger.Error(ex.Message);
+                _logger.ToException(ex).AddObject(input).AddTags("microliu.email.send", "exception");
+                _logger.Error(ex.Message, "microliu.email.send", "exception");
             }
+        }
+
+
+
+        public void SendRetry()
+        {
+            //_jobs.Schedule(() => _logger.Debug($"我是10s后触发的"), TimeSpan.FromSeconds(10));
+            BackgroundJob.Schedule(() => _logger.Debug($"我是10s后触发的"), TimeSpan.FromSeconds(10));
+        }
+
+        [CapSubscribe("microliu.email.send")]
+        public void Test(EmailSendDto input)
+        {
+            //_logger.Debug($"请在3秒后通知我");
+            //BackgroundJob.Schedule(() => _logger.Debug($"我是3s后触发的"), TimeSpan.FromSeconds(3));
+
+            _logger.Debug($"开始执行周期任务");
+            var jobId = "TestJob1";
+            RecurringJob.AddOrUpdate(jobId,() => _logger.Debug($"我1行了22222222"), Cron.Minutely);
+            //RecurringJob.RemoveIfExists(jobId);// 移除一个周期任务
+            RecurringJob.Trigger(jobId);// 立即执行周期任务
         }
     }
 }

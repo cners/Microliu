@@ -29,3 +29,6 @@ D:\Microliu\src\Services\EmailService\Microliu.EmailService\bin\Debug\netcoreapp
 D:\Microliu\src\Services\EmailService\Microliu.EmailService\bin\Debug\netcoreapp2.2\NLog.config
 D:\Microliu\src\Services\EmailService\Microliu.EmailService\bin\Debug\netcoreapp2.2\Microliu.Utils.dll
 D:\Microliu\src\Services\EmailService\Microliu.EmailService\bin\Debug\netcoreapp2.2\Microliu.Utils.pdb
+D:\Microliu\src\Services\EmailService\Microliu.EmailService\bin\Debug\netcoreapp2.2\Microliu.Core.Redis.dll
+D:\Microliu\src\Services\EmailService\Microliu.EmailService\bin\Debug\netcoreapp2.2\Microliu.Core.Redis.pdb
+D:\Microliu\src\Services\EmailService\Microliu.EmailService\bin\Debug\netcoreapp2.2\appsettings.json

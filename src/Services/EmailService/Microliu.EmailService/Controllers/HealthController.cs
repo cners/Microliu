@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Microliu.EmailService.Controllers
 {
@@ -14,6 +9,7 @@ namespace Microliu.EmailService.Controllers
     [ApiController]
     public class HealthController : ControllerBase
     {
+
         /// <summary>
         /// 健康检查方法
         /// </summary>
