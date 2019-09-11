@@ -101,10 +101,8 @@ namespace Microliu.EmailService.Application.Extensions
             #endregion
 
             // Redis Cache
-            var redisOptions = new RedisOptions();
-            configuration.GetSection("Redis").Bind(redisOptions);
+            var redisOptions = configuration.GetSection("Redis").Get<RedisOptions>();//.Bind(redisOptions);
             services.AddMicroliuRedis(options => options = redisOptions);
-
             return services;
         }
 
@@ -167,8 +165,6 @@ namespace Microliu.EmailService.Application.Extensions
 
             return connection;
         }
-
-     
 
         class EventBusCAP
         {

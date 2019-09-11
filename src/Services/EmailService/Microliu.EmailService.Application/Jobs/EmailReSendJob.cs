@@ -17,13 +17,5 @@ namespace Microliu.EmailService.Application.Jobs
             _logger = logger;
         }
 
-        [AutomaticRetry(Attempts = 3)]
-        [DisplayName("retry send email")]
-        [Queue("jobs")]
-        public void RetrySend()
-        {
-            _logger.Debug("重试发送邮件");
-        }
-
     }
 }
