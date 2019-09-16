@@ -38,4 +38,6 @@
     <ProjectReference Include="..\..\..\Services\EmailService\Microliu.EmailService.Application\Microliu.EmailService.Application.csproj" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="http://json.schemastore.org/bukkit-plugin" /></VisualStudio></ProjectExtensions>
+
 </Project>

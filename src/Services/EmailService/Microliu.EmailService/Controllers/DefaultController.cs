@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Microliu.EmailService.Controllers
 {
-    [Route("emailAPi/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class DefaultController : ControllerBase
     {

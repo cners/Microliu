@@ -27,7 +27,10 @@ namespace Microliu.EmailService
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc(opt => {
+                // 添加路由前缀
+                opt.UseCentralRoutePrefix(new RouteAttribute("emailapi"));
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
 
             // Swagger 接口文档
@@ -93,7 +96,7 @@ namespace Microliu.EmailService
 
 
             // 微服务服务发现
-            //app.UseMicroliuDiscovery();
+            app.UseMicroliuDiscovery();
 
             // 启用邮件服务
             app.UseEmailService();
