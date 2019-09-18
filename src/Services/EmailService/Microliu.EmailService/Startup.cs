@@ -74,6 +74,7 @@ namespace Microliu.EmailService
             }
             // 接口方面
             app.UseErrorHandling();
+            app.UseRequestResponseLogging();
             app.UseSwagger(c =>
             {
                 c.RouteTemplate = "emailApi/{documentName}/swagger.json";
