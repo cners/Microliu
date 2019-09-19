@@ -110,7 +110,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.EmailService.Appli
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.IdentityServer", "Microliu.IdentityServer\Microliu.IdentityServer\Microliu.IdentityServer.csproj", "{9C4AD0DE-9428-46AD-8537-D2DCC4DEDE35}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.ApiGeteway", "Microliu.ApiGateway\Ocelet\Microliu.ApiGeteway.csproj", "{B24A733C-584F-49F0-97E5-D7F1A42CA266}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.ApiGateway", "Microliu.ApiGateway\Ocelet\Microliu.ApiGateway.csproj", "{B24A733C-584F-49F0-97E5-D7F1A42CA266}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -279,6 +279,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{AEDEC798-51C9-4BE7-BEAD-9CBDC8D7163A} = {39F95D1B-AAE4-4FE1-9E1D-CCB59767A3F1}
 		{E0077250-682B-492B-B251-588DE132A6E2} = {052D9C23-996F-430C-8E5A-316BB053407E}
 		{42EBFCCA-5D12-4F19-BAD2-3E108FDFE443} = {052D9C23-996F-430C-8E5A-316BB053407E}
 		{8CD8EE32-E1B2-4C9D-8D90-1E6AD55F6EED} = {3B957BD8-8B6C-4F62-A267-EDEE890648A8}
