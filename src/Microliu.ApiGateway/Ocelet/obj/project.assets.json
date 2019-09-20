@@ -13788,9 +13788,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Microliu\\src\\Microliu.ApiGateway\\Ocelet\\Microliu.ApiGeteway.csproj",
-      "projectName": "Microliu.ApiGeteway",
-      "projectPath": "D:\\Microliu\\src\\Microliu.ApiGateway\\Ocelet\\Microliu.ApiGeteway.csproj",
+      "projectUniqueName": "D:\\Microliu\\src\\Microliu.ApiGateway\\Ocelet\\Microliu.ApiGateway.csproj",
+      "projectName": "Microliu.ApiGateway",
+      "projectPath": "D:\\Microliu\\src\\Microliu.ApiGateway\\Ocelet\\Microliu.ApiGateway.csproj",
       "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
       "outputPath": "D:\\Microliu\\src\\Microliu.ApiGateway\\Ocelet\\obj\\",
       "projectStyle": "PackageReference",
