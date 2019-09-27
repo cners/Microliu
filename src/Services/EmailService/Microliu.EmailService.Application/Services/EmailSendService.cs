@@ -4,7 +4,6 @@ using MailKit.Net.Smtp;
 using Microliu.EmailService.Domain;
 using Microliu.EmailService.Domain.Entities;
 using Microliu.EmailService.Domain.ViewModels;
-using Microliu.Utils;
 using MimeKit;
 using MimeKit.Text;
 using Newtonsoft.Json;
