@@ -1,9 +1,0 @@
-D:\Microliu\surging.src\services\NewsService\News.Domain.Shared\bin\Debug\netcoreapp2.2\News.Domain.Shared.deps.json
-D:\Microliu\surging.src\services\NewsService\News.Domain.Shared\bin\Debug\netcoreapp2.2\News.Domain.Shared.dll
-D:\Microliu\surging.src\services\NewsService\News.Domain.Shared\bin\Debug\netcoreapp2.2\News.Domain.Shared.pdb
-D:\Microliu\surging.src\services\NewsService\News.Domain.Shared\obj\Debug\netcoreapp2.2\News.Domain.Shared.csprojAssemblyReference.cache
-D:\Microliu\surging.src\services\NewsService\News.Domain.Shared\obj\Debug\netcoreapp2.2\News.Domain.Shared.csproj.CoreCompileInputs.cache
-D:\Microliu\surging.src\services\NewsService\News.Domain.Shared\obj\Debug\netcoreapp2.2\News.Domain.Shared.AssemblyInfoInputs.cache
-D:\Microliu\surging.src\services\NewsService\News.Domain.Shared\obj\Debug\netcoreapp2.2\News.Domain.Shared.AssemblyInfo.cs
-D:\Microliu\surging.src\services\NewsService\News.Domain.Shared\obj\Debug\netcoreapp2.2\News.Domain.Shared.dll
-D:\Microliu\surging.src\services\NewsService\News.Domain.Shared\obj\Debug\netcoreapp2.2\News.Domain.Shared.pdb
