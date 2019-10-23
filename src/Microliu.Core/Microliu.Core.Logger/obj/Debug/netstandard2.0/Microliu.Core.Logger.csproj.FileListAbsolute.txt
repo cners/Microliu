@@ -6,4 +6,3 @@ D:\Microliu\src\Microliu.Core\Microliu.Core.Logger\obj\Debug\netstandard2.0\Micr
 D:\Microliu\src\Microliu.Core\Microliu.Core.Logger\obj\Debug\netstandard2.0\Microliu.Core.Logger.AssemblyInfo.cs
 D:\Microliu\src\Microliu.Core\Microliu.Core.Logger\obj\Debug\netstandard2.0\Microliu.Core.Logger.dll
 D:\Microliu\src\Microliu.Core\Microliu.Core.Logger\obj\Debug\netstandard2.0\Microliu.Core.Logger.pdb
-D:\Microliu\src\Microliu.Core\Microliu.Core.Logger\obj\Debug\netstandard2.0\Microliu.Core.Logger.csprojAssemblyReference.cache

@@ -32,17 +32,25 @@ namespace Microliu.EmailService.API.Extensions
             {
                 response.StatusCode = (int)HttpStatusCode.OK;
                 response.ContentType = "application/json;charset=utf-8";
-                var result = new ReturnResult(false, emailException.Message);
-                result.Data = string.Empty;
+                var result = new
+                {
+                    success = false,
+                    message = emailException.Message,
+                    data = ""
+                };
                 await HandleExceptionAsync(response, result);
             }
             catch (Exception ex)
             {
                 response.StatusCode = (int)HttpStatusCode.OK;
                 response.ContentType = "application/json;charset=utf-8";
-                var result = new ReturnResult(false, "接口异常，请稍后再试");
-                result.Data = "";
-                _logger.ErrorBuilder($"[{DateTimeOffset.Now.ToString("yyyy-MM-dd HH:mm:ss.fff")}] [接口异常] [{ex.Message}]")
+                var result = new
+                {
+                    success = false,
+                    message = "接口异常，请稍后重试",
+                    data = ""
+                };
+                _logger.ErrorBuilder($"[接口异常] [{ex.Message}]")
                        .SetException(ex)
                        .AddTags("error", "exception")
                        .AddObject(result)
@@ -52,7 +60,7 @@ namespace Microliu.EmailService.API.Extensions
             }
         }
 
-        private static async Task HandleExceptionAsync(HttpResponse response, ReturnResult result)
+        private static async Task HandleExceptionAsync(HttpResponse response, object result)
         {
             await response.WriteAsync(JsonConvert.SerializeObject(result), Encoding.UTF8);//.ConfigureAwait(false);
         }

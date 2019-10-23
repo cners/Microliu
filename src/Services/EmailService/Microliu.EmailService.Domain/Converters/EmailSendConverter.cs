@@ -20,7 +20,7 @@ namespace Microliu.EmailService.Domain
 
             emailSend.Enabled = Enabled.Disabled;
             emailSend.Deleted = Deleted.NotDelete;
-            emailSend.CreateTime = DateTimeOffset.Now;
+            emailSend.CreateTime = DateTime.Now;
             return emailSend;
         }
     }

@@ -9,6 +9,7 @@ using Microliu.EmailService.Application.IServices;
 using Microliu.EmailService.Application.Services;
 using Microliu.EmailService.Data;
 using Microliu.EmailService.Data.Repositories;
+using Microliu.EmailService.Domain;
 using Microliu.EmailService.Domain.Repositories;
 using Microliu.EmailService.Domain.SeedWork;
 using Microsoft.AspNetCore.Builder;
@@ -29,6 +30,13 @@ namespace Microliu.EmailService.Application.Extensions
             services.AddTransient<IEmailService, EmailApplication>(); //邮件服务
 
             services.AddTransient<IEmailSendRepository, EmailSendRepository>();// 邮件发送
+            services.AddTransient<IUserService, EmailApplication>(); // 用户中心
+            services.AddTransient<IProjectService, EmailApplication>();// 项目中心
+            services.AddTransient<IBlacklistService, EmailApplication>();
+            services.AddTransient<IUserInfoRepository, UserInfoRepository>();
+            services.AddTransient<IProjectCategoryRepository, ProjectCategoryRepository>();
+            services.AddTransient<IProjectRepository, ProjectRepository>();
+            services.AddTransient<IBlackListRepository, BlackListRepository>();
 
             services.AddDbContextPool<EmailDbContext>(options =>
             {

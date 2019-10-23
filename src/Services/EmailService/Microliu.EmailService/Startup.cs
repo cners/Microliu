@@ -73,8 +73,11 @@ namespace Microliu.EmailService
                 app.UseDeveloperExceptionPage();
             }
             // 接口方面
-            app.UseErrorHandling();
+            app.UseExceptionless(Configuration);
             app.UseRequestResponseLogging();
+            app.UseErrorHandling();
+            app.UseStaticFiles();
+
             app.UseSwagger(c =>
             {
                 c.RouteTemplate = "emailApi/{documentName}/swagger.json";
@@ -95,13 +98,11 @@ namespace Microliu.EmailService
                 c.EnableValidator();
             });
 
-
             // 微服务服务发现
             app.UseMicroliuDiscovery();
 
             // 启用邮件服务
             app.UseEmailService();
-            app.UseExceptionless(Configuration);
 
             app.UseMvc();
         }

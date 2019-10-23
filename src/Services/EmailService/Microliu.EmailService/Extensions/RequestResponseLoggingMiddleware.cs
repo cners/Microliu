@@ -32,61 +32,91 @@ namespace Microliu.EmailService.API.Extensions
 
         public async Task Invoke(HttpContext context)
         {
-            _stopwatch.Restart();
-            _data = new SortedDictionary<string, object>();
-
-            HttpRequest request = context.Request;
-            _data.Add("request.url", request.Path.ToString());
-            _data.Add("request.headers", request.Headers.ToDictionary(x => x.Key, v => string.Join(";", v.Value.ToList())));
-            _data.Add("request.method", request.Method);
-            _data.Add("request.executeStartTime", DateTimeOffset.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
-
-            // 获取请求body内容
-            if (request.Method.ToLower().Equals("post"))
+            if (context.Request.Path.ToString().StartsWith("/hangfire") ||
+               context.Request.Path.ToString().StartsWith("/cap") ||
+               context.Request.Path.ToString().ToLower().StartsWith("/images"))
             {
-                // 启用倒带功能，就可以让 Request.Body 可以再次读取
-                request.EnableRewind();
-
-                Stream stream = request.Body;
-                byte[] buffer = new byte[request.ContentLength.Value];
-                stream.Read(buffer, 0, buffer.Length);
-                _data.Add("request.body", Encoding.UTF8.GetString(buffer));
-
-                request.Body.Position = 0;
-            }
-            else if (request.Method.ToLower().Equals("get"))
-            {
-                _data.Add("request.body", request.QueryString.Value);
-            }
-
-            // 获取Response.Body内容
-            var originalBodyStream = context.Response.Body;
-
-            using (var responseBody = new MemoryStream())
-            {
-                context.Response.Body = responseBody;
-
                 await _next(context);
-
-                _data.Add("response.body", await GetResponse(context.Response));
-                _data.Add("response.executeEndTime", DateTimeOffset.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
-
-                await responseBody.CopyToAsync(originalBodyStream);
             }
-
-            // 响应完成记录时间和存入日志
-            context.Response.OnCompleted(() =>
+            else
             {
-                _stopwatch.Stop();
-                _data.Add("elaspedTime", _stopwatch.ElapsedMilliseconds + "ms");
+                _stopwatch.Restart();
+                _data = new SortedDictionary<string, object>();
 
-                string tag = "page";
-                if (request.Path.ToString().StartsWith("/papi/v")) tag = "api";
-                var json = JsonConvert.SerializeObject(_data);
-                _logger.Debug(json, "http", tag, request.Method.ToUpper());
-                return Task.CompletedTask;
-            });
+                HttpRequest request = context.Request;
+                _data.Add("request.url", request.Path.ToString());
+                _data.Add("request.headers", request.Headers.ToDictionary(x => x.Key, v => string.Join(";", v.Value.ToList())));
+                _data.Add("request.method", request.Method);
+                _data.Add("request.executeStartTime", DateTimeOffset.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
 
+                // 获取请求body内容
+                if (request.Method.ToLower().Equals("post"))
+                {
+                    // 启用倒带功能，就可以让 Request.Body 可以再次读取
+                    request.EnableRewind();
+
+                    Stream stream = request.Body;
+                    byte[] buffer = new byte[request.ContentLength.Value];
+                    stream.Read(buffer, 0, buffer.Length);
+                    if (!_data.ContainsKey("request.body"))
+                        _data.Add("request.body", Encoding.UTF8.GetString(buffer));
+
+                    request.Body.Position = 0;
+                }
+                else if (request.Method.ToLower().Equals("get"))
+                {
+                    if (!_data.ContainsKey("request.body"))
+                        _data.Add("request.body", request.QueryString.Value);
+                }
+
+                // 获取Response.Body内容
+                var originalBodyStream = context.Response.Body;
+
+                using (var responseBody = new MemoryStream())
+                {
+                    context.Response.Body = responseBody;
+
+                    await _next(context);
+                    if (!_data.ContainsKey("response.body"))
+                        _data.Add("response.body", await GetResponse(context.Response));
+                    if (!_data.ContainsKey("response.executeEndTime"))
+                        _data.Add("response.executeEndTime", DateTimeOffset.Now.ToString("yyyy-MM-dd HH:mm:ss.fff"));
+
+                    await responseBody.CopyToAsync(originalBodyStream);
+                }
+
+                // 响应完成记录时间和存入日志
+                context.Response.OnCompleted(() =>
+                {
+                    _stopwatch.Stop();
+                    try
+                    {
+                        if (!_data.ContainsKey("elaspedTime"))
+                            _data.Add("elaspedTime", _stopwatch.ElapsedMilliseconds + "ms");
+
+                    }
+                    catch
+                    {
+                        if (!_data.ContainsKey("elaspedTime"))
+                            _data.Add("elaspedTime", "0ms");
+                    }
+
+                    string tag = "page";
+                    string json = "";
+                    if (request.Path.ToString().StartsWith("/papi/v"))
+                    {
+                        tag = "api";
+                        json = JsonConvert.SerializeObject(_data);
+                    }
+
+                    _logger.TraceBuilder(json)
+                            .AddTags("http", tag, request.Method.ToUpper())
+                            .AddObject(json)
+                            .Submit();
+                    return Task.CompletedTask;
+                });
+
+            }
         }
 
         /// <summary>

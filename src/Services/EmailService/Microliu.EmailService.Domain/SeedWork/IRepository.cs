@@ -8,7 +8,7 @@ namespace Microliu.EmailService.Domain.SeedWork
    public interface IRepository<T> where T:IAggregateRoot
     {
 
-        T GetEntity(string id);
+        //T GetEntity(string id);
 
         IQueryable<T> GetAll();
     }

@@ -22,6 +22,13 @@ namespace Microliu.EmailService.Domain.Entities
 
         public virtual Deleted Deleted { get; set; }
 
-        public DateTimeOffset CreateTime { get; set; }
+        public DateTime? CreateTime { get; set; }
+
+        public BaseEntity()
+        {
+            Enabled = Enabled.Enabled;
+            Deleted = Deleted.NotDelete;
+            CreateTime = DateTime.Now;
+        }
     }
 }
