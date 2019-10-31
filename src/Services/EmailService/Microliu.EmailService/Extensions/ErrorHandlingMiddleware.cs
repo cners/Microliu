@@ -47,7 +47,7 @@ namespace Microliu.EmailService.API.Extensions
                 var result = new
                 {
                     success = false,
-                    message = "接口异常，请稍后重试",
+                    message = $"接口异常，请稍后重试。[{ex.Message}]",
                     data = ""
                 };
                 _logger.ErrorBuilder($"[接口异常] [{ex.Message}]")

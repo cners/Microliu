@@ -16,7 +16,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "emailAPi/default/Welcome",
+      "launchUrl": "default/Welcome",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -24,11 +24,18 @@
     "Microliu.EmailService": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "emailAPi/default/Welcome",
+      "launchUrl": "default/Welcome",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "applicationUrl": "http://localhost:9010"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/default/Welcome",
+      "environmentVariables": {},
+      "httpPort": 10000
     }
   }
 }

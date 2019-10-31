@@ -29,3 +29,7 @@ D:\Microliu\src\Services\EmailService\Microliu.EmailService\obj\Release\netcorea
 D:\Microliu\src\Services\EmailService\Microliu.EmailService\obj\Release\netcoreapp2.2\Microliu.EmailService.API.dll
 D:\Microliu\src\Services\EmailService\Microliu.EmailService\obj\Release\netcoreapp2.2\Microliu.EmailService.API.pdb
 D:\Microliu\src\Services\EmailService\Microliu.EmailService\bin\Release\netcoreapp2.2\Microliu.EmailService.API.xml
+D:\Microliu\src\Services\EmailService\Microliu.EmailService\bin\Release\netcoreapp2.2\appsettings.json
+D:\Microliu\src\Services\EmailService\Microliu.EmailService\bin\Release\netcoreapp2.2\Microliu.Core.Redis.dll
+D:\Microliu\src\Services\EmailService\Microliu.EmailService\bin\Release\netcoreapp2.2\Microliu.Core.Redis.pdb
+D:\Microliu\src\Services\EmailService\Microliu.EmailService\bin\Release\netcoreapp2.2\Dockerfile

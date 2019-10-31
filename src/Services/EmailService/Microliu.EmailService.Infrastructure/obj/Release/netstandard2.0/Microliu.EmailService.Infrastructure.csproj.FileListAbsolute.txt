@@ -12,3 +12,11 @@ D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\R
 D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\obj\Release\netstandard2.0\Microliu.EmailService.Infrastructure.csproj.CopyComplete
 D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\obj\Release\netstandard2.0\Microliu.EmailService.Infrastructure.dll
 D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\obj\Release\netstandard2.0\Microliu.EmailService.Infrastructure.pdb
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Release\netstandard2.0\Microliu.Core.Redis.dll
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Release\netstandard2.0\Microsoft.IdentityModel.Tokens.dll
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Release\netstandard2.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Release\netstandard2.0\Microliu.Core.Redis.pdb
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Release\netstandard2.0\Microsoft.IdentityModel.Tokens.pdb
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Release\netstandard2.0\Microsoft.IdentityModel.Tokens.xml
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Release\netstandard2.0\System.IdentityModel.Tokens.Jwt.pdb
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Release\netstandard2.0\System.IdentityModel.Tokens.Jwt.xml

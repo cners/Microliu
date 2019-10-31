@@ -65,6 +65,11 @@
           "assetTargetFallback": true,
           "warn": true
         }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
+        }
       }
     }
   }

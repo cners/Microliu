@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 using Microliu.EmailService.Domain.SeedWork;
 using Microliu.Utils;
 
 namespace Microliu.EmailService.Domain
 {
+    [Table("blacklist")]
     public class BlackList : IAggregateRoot
     {
         [Key]
