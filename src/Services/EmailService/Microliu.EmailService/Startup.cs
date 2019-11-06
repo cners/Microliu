@@ -45,13 +45,13 @@ namespace Microliu.EmailService
             {
                 options.SwaggerDoc("v1.0", new OpenApiInfo
                 {
-                    Title = "API Online Document",
+                    Title = "邮件服务接口",
                     Version = "v1.0",
                     Contact = new OpenApiContact { Name = "Liu Zhuang", Email = "liuzhuang@6iuu.com" }
                 });
                 options.SwaggerDoc("v2.0", new OpenApiInfo
                 {
-                    Title = "API Online Document",
+                    Title = "邮件服务接口",
                     Version = "v2.0",
                     Contact = new OpenApiContact { Name = "Liu Zhuang", Email = "liuzhuang@6iuu.com" }
                 });

@@ -45,5 +45,14 @@
             Data = data;
             return this;
         }
+
+        public static ReturnResult Set(bool success = false, string message = "", object data = null)
+        {
+            var dto = new ReturnResult();
+            dto.Success = success;
+            dto.Message = message;
+            dto.Data = data;
+            return dto;
+        }
     }
 }

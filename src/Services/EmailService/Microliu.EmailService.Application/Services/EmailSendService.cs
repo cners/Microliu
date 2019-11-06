@@ -4,17 +4,19 @@ using MailKit.Net.Smtp;
 using Microliu.EmailService.Domain;
 using Microliu.EmailService.Domain.Entities;
 using Microliu.EmailService.Domain.ViewModels;
+using Microliu.Utils;
 using MimeKit;
 using MimeKit.Text;
 using Newtonsoft.Json;
 using System;
+using System.Threading;
 
 namespace Microliu.EmailService.Application.Services
 {
     public partial class EmailApplication
     {
         [CapSubscribe("microliu.email.send")]
-        public void SendAsync(EmailSendDto input)
+        public ReturnResult SendAsync(EmailSendDto input)
         {
             _logger.TraceBuilder($"[microliu.email.send] [receive] [data:{JsonConvert.SerializeObject(input)}]")
                    .AddObject(input)
@@ -30,7 +32,7 @@ namespace Microliu.EmailService.Application.Services
             var password = _emailSettings.Value.Sender.Password ?? "";
             var host = _emailSettings.Value.Sender.Host ?? "";
             var port = _emailSettings.Value.Sender.Port;
-            
+
             try
             {
                 // 构建发送信息
@@ -50,28 +52,64 @@ namespace Microliu.EmailService.Application.Services
                     mime.Cc.Add(new MailboxAddress(message.CopyTo));
                 }
 
-                using (var smtp = new SmtpClient())
+                using (var client = new SmtpClient())
                 {
-                    smtp.Connect(host, port, false);
-                    smtp.Authenticate(message.From, password);
-                    smtp.Send(mime);
-                    smtp.Disconnect(true);
+                    client.CheckCertificateRevocation = false;
+                    using (var cts = new CancellationTokenSource(60000))
+                    {
+                        client.Connect(host, port, false, cts.Token);
+                        client.Authenticate(message.From, password);
+                        try
+                        {
+                            client.Send(mime);
+                        }
+                        catch (SmtpCommandException ex)
+                        {
+                            if (ex.ErrorCode == SmtpErrorCode.MessageNotAccepted)
+                            {
+                                message.SetSendError("MessageNotAccepted");
+                            }
+                            else if (ex.ErrorCode == SmtpErrorCode.SenderNotAccepted)
+                            {
+                                message.SetSendError("MessageNotAccepted");//无此邮箱
+                            }
+                            else if (ex.ErrorCode == SmtpErrorCode.RecipientNotAccepted)
+                            {
+                                message.SetSendError("MessageNotAccepted");
+                            }
+                            else
+                            {
+                                message.SetSendError($"Send Unkonw Fail,{ex.Message}");
+                            }
+
+                            _unitOfWork.Modify<EmailSend>(message);
+                            _unitOfWork.CommitAsync();
+                            return ReturnResult.Set(false, $"{message.ErrorMessage}");
+                        }
+                        client.Disconnect(true);
+                    }
                 }
 
-                message.Enabled = Enabled.Enabled;
+                message.Status = "success";
                 _unitOfWork.Modify<EmailSend>(message);
                 _unitOfWork.CommitAsync();
+
                 _logger.TraceBuilder($"[{this.GetType().FullName}] [microliu.email.send] [send] [storage]  [data:{JsonConvert.SerializeObject(input)}]")
                        .AddObject(message)
                        .AddTags("microliu.email.send", "send", "storage", "email")
                        .Submit();
-
-                //SendRetry();
+                return ReturnResult.Set(true, "", message.Id);
             }
             catch (Exception ex)
             {
                 _logger.ToException(ex).AddObject(input).AddTags("microliu.email.send", "exception");
                 _logger.Error(ex.Message, "microliu.email.send", "exception");
+
+                message.SetSendError(ex.Message);
+                _unitOfWork.Modify<EmailSend>(message);
+                _unitOfWork.CommitAsync();
+
+                return ReturnResult.Set(false, $"发送失败：{message.ErrorMessage}");
             }
         }
 

@@ -69,11 +69,6 @@
           "assetTargetFallback": true,
           "warn": true
         }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
-        }
       }
     },
     "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Redis\\Microliu.Core.Redis.csproj": {
@@ -140,11 +135,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true
-        }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
         }
       }
     }

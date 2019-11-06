@@ -29,5 +29,24 @@ namespace Microliu.EmailService.Domain.Entities
         /// </summary>
         [MaxLength(500)]
         public string CopyTo { get; set; }
+
+
+        /// <summary>
+        /// 状态：success,fail,sending
+        /// </summary>
+        public string Status { get; set; }
+
+        /// <summary>
+        /// 错误原因
+        /// </summary>
+        public string ErrorMessage { get; set; }
+
+
+        public EmailSend SetSendError(string errorMessage)
+        {
+            this.Status = "fail";
+            this.ErrorMessage = (errorMessage ?? "").Length > 2000 ? errorMessage.Substring(0, 2000) : errorMessage;
+            return this;
+        }
     }
 }

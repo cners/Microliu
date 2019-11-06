@@ -10,7 +10,7 @@
     <WebStackScaffolding_LayoutPageFile />
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <ActiveDebugProfile>Microliu.EmailService</ActiveDebugProfile>
-    <NameOfLastUsedPublishProfile>本地IIS</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>HFF-TEST-CentOS7.6</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>

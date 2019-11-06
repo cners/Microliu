@@ -112,6 +112,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.IdentityServer", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.ApiGateway", "Microliu.ApiGateway\Ocelet\Microliu.ApiGateway.csproj", "{B24A733C-584F-49F0-97E5-D7F1A42CA266}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Db.Test.Connection", "Test\Db.Test.Connection\Db.Test.Connection.csproj", "{3B00275C-73AA-45CF-A2D9-646E13752D88}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -274,6 +276,10 @@ Global
 		{B24A733C-584F-49F0-97E5-D7F1A42CA266}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B24A733C-584F-49F0-97E5-D7F1A42CA266}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B24A733C-584F-49F0-97E5-D7F1A42CA266}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B00275C-73AA-45CF-A2D9-646E13752D88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B00275C-73AA-45CF-A2D9-646E13752D88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B00275C-73AA-45CF-A2D9-646E13752D88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B00275C-73AA-45CF-A2D9-646E13752D88}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -323,6 +329,7 @@ Global
 		{3B957BD8-8B6C-4F62-A267-EDEE890648A8} = {3030D236-A055-419B-B3E6-367500621BC3}
 		{12A6D686-3FE8-4D84-BC6C-BFF4343A6C63} = {39F95D1B-AAE4-4FE1-9E1D-CCB59767A3F1}
 		{A6EA906E-4C55-48A3-A168-04E845F93ACC} = {BEE03F33-DFD7-4520-8F32-631A94BAB339}
+		{3B00275C-73AA-45CF-A2D9-646E13752D88} = {3030D236-A055-419B-B3E6-367500621BC3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2F32ECF0-6010-4F59-AC16-6FFA191BC558}

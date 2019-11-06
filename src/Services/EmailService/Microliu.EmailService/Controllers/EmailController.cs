@@ -1,6 +1,6 @@
 ﻿using DotNetCore.CAP;
+using Microliu.EmailService.Application.IServices;
 using Microliu.EmailService.Domain.ViewModels;
-using Microliu.Utils;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,13 +14,13 @@ namespace Microliu.EmailService.API.Controllers
     [ApiController]
     public class EmailController : ControllerBase
     {
-        private readonly ICapPublisher _publisher;
-        private ReturnResult _return;
+        //private readonly ICapPublisher _publisher;
+        private readonly IEmailService _emailService;
 
-        public EmailController(ICapPublisher capPublisher)
+        public EmailController(ICapPublisher capPublisher, IEmailService emailService)
         {
-            _publisher = capPublisher;
-            _return = new ReturnResult();
+            //_publisher = capPublisher;
+            _emailService = emailService;
         }
 
         /// <summary>
@@ -36,14 +36,15 @@ namespace Microliu.EmailService.API.Controllers
         ///  "projectId": "归属项目标识"<br/>
         ///}<br/>
         /// </remarks>
-        /// <param name="input"></param>
+        /// <param name="dto"></param>
         /// <returns></returns>
         [HttpPost(nameof(Send))]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public IActionResult Send([FromBody]EmailSendDto input)
+        public IActionResult Send([FromBody]EmailSendDto dto)
         {
-            _publisher.Publish<EmailSendDto>("microliu.email.send", input);
-            return Ok(_return.SetSuccess(true));
+            //_publisher.Publish<EmailSendDto>("microliu.email.send", input);
+
+            return Ok(_emailService.SendAsync(dto));
         }
     }
 }

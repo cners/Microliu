@@ -44,7 +44,7 @@
               "projectId": "归属项目标识"<br/>
             }<br/>
              </remarks>
-             <param name="input"></param>
+             <param name="dto"></param>
              <returns></returns>
         </member>
         <member name="M:Microliu.EmailService.API.Controllers.ProjectController.CreateCategory(System.Int64,System.String)">

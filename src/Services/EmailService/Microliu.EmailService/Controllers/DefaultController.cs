@@ -1,5 +1,7 @@
-﻿using Microliu.Core.Loggers;
+﻿using System;
+using Microliu.Core.Loggers;
 using Microsoft.AspNetCore.Mvc;
+using MySql.Data.MySqlClient;
 
 namespace Microliu.EmailService.Controllers
 {

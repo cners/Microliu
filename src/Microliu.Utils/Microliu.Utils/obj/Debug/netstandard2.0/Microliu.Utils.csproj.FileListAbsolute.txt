@@ -21,4 +21,3 @@ D:\Microliu\src\Microliu.Utils\Microliu.Utils\bin\Debug\netstandard2.0\Microsoft
 D:\Microliu\src\Microliu.Utils\Microliu.Utils\bin\Debug\netstandard2.0\System.IdentityModel.Tokens.Jwt.pdb
 D:\Microliu\src\Microliu.Utils\Microliu.Utils\bin\Debug\netstandard2.0\System.IdentityModel.Tokens.Jwt.xml
 D:\Microliu\src\Microliu.Utils\Microliu.Utils\obj\Debug\netstandard2.0\Microliu.Utils.csproj.CopyComplete
-D:\Microliu\src\Microliu.Utils\Microliu.Utils\obj\Debug\netstandard2.0\Microliu.Utils.csprojAssemblyReference.cache

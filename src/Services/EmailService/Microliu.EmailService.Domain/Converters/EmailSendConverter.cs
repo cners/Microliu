@@ -11,17 +11,20 @@ namespace Microliu.EmailService.Domain
     {
         public static EmailSend ToEmailSend(EmailSendDto input)
         {
-            var emailSend = new EmailSend();
-            emailSend.Id = SnowflakeId.Default().NextId();
-            emailSend.Subject = input.Subject;
-            emailSend.To = input.To;
-            emailSend.CopyTo = input.CopyTo;
-            emailSend.Body = input.Body;
+            var send = new EmailSend();
+            send.Id = SnowflakeId.Default().NextId();
+            send.Subject = input.Subject;
+            send.To = input.To;
+            send.CopyTo = input.CopyTo;
+            send.Body = input.Body;
 
-            emailSend.Enabled = Enabled.Disabled;
-            emailSend.Deleted = Deleted.NotDelete;
-            emailSend.CreateTime = DateTime.Now;
-            return emailSend;
+            send.Enabled = Enabled.Enabled;
+            send.Deleted = Deleted.NotDelete;
+            send.CreateTime = DateTime.Now;
+
+            send.Status = "sending";
+            send.ErrorMessage = "";
+            return send;
         }
     }
 }

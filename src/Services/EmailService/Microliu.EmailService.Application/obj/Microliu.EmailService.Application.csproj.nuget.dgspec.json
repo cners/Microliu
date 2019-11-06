@@ -69,11 +69,6 @@
           "assetTargetFallback": true,
           "warn": true
         }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
-        }
       }
     },
     "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Redis\\Microliu.Core.Redis.csproj": {
@@ -140,11 +135,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true
-        }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
         }
       }
     },
@@ -221,11 +211,6 @@
           "assetTargetFallback": true,
           "warn": true
         }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
-        }
       }
     },
     "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Application\\Microliu.EmailService.Application.csproj": {
@@ -295,11 +280,6 @@
           "assetTargetFallback": true,
           "warn": true
         }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
-        }
       }
     },
     "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Data\\Microliu.EmailService.Data.csproj": {
@@ -367,11 +347,6 @@
           "assetTargetFallback": true,
           "warn": true
         }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
-        }
       }
     },
     "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Domain\\Microliu.EmailService.Domain.csproj": {
@@ -430,11 +405,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true
-        }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
         }
       }
     },
@@ -532,11 +502,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true
-        }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
         }
       }
     }
