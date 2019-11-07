@@ -64,6 +64,13 @@
             <param name="projectName">项目名称</param>
             <returns></returns>
         </member>
+        <member name="M:Microliu.EmailService.API.Controllers.ProjectController.GetProjects(Microliu.EmailService.Application.ProjectQueryDto)">
+            <summary>
+            获取项目列表
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
         <member name="M:Microliu.EmailService.API.Controllers.UserInfoController.Register(System.String,System.String)">
             <summary>
             注册用户

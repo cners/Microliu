@@ -50,5 +50,23 @@ namespace Microliu.EmailService.API.Models
             Data = data;
             return this;
         }
+
+        public static ReturnResult SetFail(string message = "", object data = null)
+        {
+            var r = new ReturnResult();
+            r.Success = false;
+            r.Message = message;
+            r.Data = data;
+            return r;
+        }
+
+        public static ReturnResult SetSuccess(string message = "", object data = null)
+        {
+            var r = new ReturnResult();
+            r.Success = true;
+            r.Message = message;
+            r.Data = data;
+            return r;
+        }
     }
 }

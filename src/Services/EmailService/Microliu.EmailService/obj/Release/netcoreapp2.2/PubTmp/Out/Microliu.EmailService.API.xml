@@ -44,7 +44,7 @@
               "projectId": "归属项目标识"<br/>
             }<br/>
              </remarks>
-             <param name="input"></param>
+             <param name="dto"></param>
              <returns></returns>
         </member>
         <member name="M:Microliu.EmailService.API.Controllers.ProjectController.CreateCategory(System.Int64,System.String)">
@@ -64,7 +64,14 @@
             <param name="projectName">项目名称</param>
             <returns></returns>
         </member>
-        <member name="M:Microliu.EmailService.API.Controllers.UserController.Register(System.String,System.String)">
+        <member name="M:Microliu.EmailService.API.Controllers.ProjectController.GetProjects(Microliu.EmailService.Application.ProjectQueryDto)">
+            <summary>
+            获取项目列表
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microliu.EmailService.API.Controllers.UserInfoController.Register(System.String,System.String)">
             <summary>
             注册用户
             </summary>
@@ -72,25 +79,40 @@
             <param name="password">登录密码</param>
             <returns></returns>
         </member>
-        <member name="M:Microliu.EmailService.API.Controllers.UserController.GetEntity(System.Int64)">
+        <member name="M:Microliu.EmailService.API.Controllers.UserInfoController.GetEntity(System.Int64)">
             <summary>
             获取用户信息
             </summary>
             <param name="uid">用户主键</param>
             <returns></returns>
         </member>
-        <member name="M:Microliu.EmailService.API.Controllers.UserController.Login(Microliu.EmailService.Application.UserLoginDto)">
+        <member name="M:Microliu.EmailService.API.Controllers.UserInfoController.Login(Microliu.EmailService.Application.UserLoginDto)">
             <summary>
             登录
             </summary>
             <param name="dto"></param>
             <returns></returns>
         </member>
-        <member name="M:Microliu.EmailService.API.Controllers.UserController.ChangeEmail(Microliu.EmailService.Application.ViewModel.ChangeEmailDto)">
+        <member name="M:Microliu.EmailService.API.Controllers.UserInfoController.ChangeEmail(Microliu.EmailService.Application.ViewModel.ChangeEmailDto)">
             <summary>
             更换邮箱
             </summary>
             <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microliu.EmailService.API.Controllers.UserInfoController.RedisTestAdd(System.String,System.String)">
+            <summary>
+            缓存测试添加
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microliu.EmailService.API.Controllers.UserInfoController.RedisTestAdd(System.String)">
+            <summary>
+            缓存测试删除
+            </summary>
+            <param name="key"></param>
             <returns></returns>
         </member>
         <member name="M:Microliu.EmailService.API.Extensions.RequestResponseLoggingMiddleware.GetResponse(Microsoft.AspNetCore.Http.HttpResponse)">

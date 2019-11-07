@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microliu.EmailService.Application.IServices;
 using Microliu.EmailService.Application.ViewModel;
@@ -51,6 +52,27 @@ namespace Microliu.EmailService.Application.Services
             await _unitOfWork.Remove(emailDbData);
             await _unitOfWork.CommitAsync();
             return _return.SetSuccess(true);
+        }
+
+        /// <summary>
+        /// 检查是否在黑名单内
+        /// </summary>
+        /// <param name="emails"></param>
+        /// <returns>返回属于黑名单的邮箱，为空字符串则无任何黑名限制</returns>
+        public string BlackEmailCheck(params string[] emails)
+        {
+            if (emails == null || emails.Length == 0)
+                return "";
+            List<string> blackEmails = new List<string>();
+            foreach (var email in emails)
+            {
+                if (_blackListRepository.GetEntityByEmail(email) != null &&
+                    !blackEmails.Contains(email))
+                {
+                    blackEmails.Add(email);
+                }
+            }
+            return string.Join(";", blackEmails.ToArray());
         }
     }
 }

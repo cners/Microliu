@@ -16,10 +16,12 @@ namespace Microliu.EmailService.Domain
 
 
         [ForeignKey("UID")]
-        public virtual UserInfo User { get; set; }
+        public UserInfo User { get; set; }
 
         [ForeignKey("categoryId")]
-        public virtual ProjectCategory Category { get; set; }
+        public ProjectCategory Category { get; set; }
+
+        public long CategoryId { get; set; }
 
         public Project()
         {

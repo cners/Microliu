@@ -6,6 +6,7 @@ using Microliu.Utils;
 
 namespace Microliu.EmailService.Domain.Entities
 {
+    [Table("userinfo")]
     public class UserInfo : BaseEntity
     {
         [Key]

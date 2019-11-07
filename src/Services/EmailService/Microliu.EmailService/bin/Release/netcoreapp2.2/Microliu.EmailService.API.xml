@@ -44,7 +44,7 @@
               "projectId": "归属项目标识"<br/>
             }<br/>
              </remarks>
-             <param name="input"></param>
+             <param name="dto"></param>
              <returns></returns>
         </member>
         <member name="M:Microliu.EmailService.API.Controllers.ProjectController.CreateCategory(System.Int64,System.String)">
@@ -62,6 +62,13 @@
             <param name="uid">用户标识</param>
             <param name="categoryId">分类标识</param>
             <param name="projectName">项目名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microliu.EmailService.API.Controllers.ProjectController.GetProjects(Microliu.EmailService.Application.ProjectQueryDto)">
+            <summary>
+            获取项目列表
+            </summary>
+            <param name="dto"></param>
             <returns></returns>
         </member>
         <member name="M:Microliu.EmailService.API.Controllers.UserInfoController.Register(System.String,System.String)">

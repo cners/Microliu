@@ -8,5 +8,8 @@ namespace Microliu.EmailService.Application
         Task<ReturnResult> CreateProject(long uid,long categoryId, string name);
 
         Task<ReturnResult> CreateProjectCategory(long uid, string name);
+
+
+        ProjectListDto GetProjects(ProjectQueryDto dto);
     }
 }

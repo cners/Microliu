@@ -23,115 +23,136 @@ namespace Microliu.EmailService.Application.Services
                    .AddTags("email", "send", "params")
                    .Submit();
 
-            var message = EmailSendConverter.ToEmailSend(input);
-            message.From = _emailSettings.Value.Sender.Name ?? "liu.zhuang@lzassist.com";
-            _unitOfWork.Add<EmailSend>(message);
+            var dto = EmailSendConverter.ToEmailSend(input);
+            dto.From = _emailSettings.Value.Sender.Name ?? "liu.zhuang@lzassist.com";
+            _unitOfWork.Add(dto);
             _unitOfWork.CommitAsync();
 
+            // 黑名单检查
+            var checkToEmails = BlackEmailCheck(dto.To.Split(';'));
+            if (!string.IsNullOrEmpty(checkToEmails))
+            {
+                dto.SetSendError($"收件人{checkToEmails}在黑名单，无法接收");
+                _unitOfWork.Modify<EmailSend>(dto);
+                _unitOfWork.CommitAsync();
+
+                return ReturnResult.Set(false, $"发送失败,{dto.ErrorMessage}");
+            }
+            var checkCopyEmails = BlackEmailCheck(dto.CopyTo.Split(';'));
+            if (!string.IsNullOrEmpty(checkCopyEmails))
+            {
+                dto.SetSendError($"抄送人{checkCopyEmails}在黑名单，无法接收");
+                _unitOfWork.Modify<EmailSend>(dto);
+                _unitOfWork.CommitAsync();
+
+                return ReturnResult.Set(false, $"发送失败,{dto.ErrorMessage}");
+            }
             // 发送人
             var password = _emailSettings.Value.Sender.Password ?? "";
-            var host = _emailSettings.Value.Sender.Host ?? "";
-            var port = _emailSettings.Value.Sender.Port;
+            var smtpHost = _emailSettings.Value.Sender.Host ?? "";
+            var smtpPort = _emailSettings.Value.Sender.Port;
 
             try
             {
                 // 构建发送信息
-                MimeMessage mime = new MimeMessage();
-                mime.From.Add(new MailboxAddress(message.From));
-                mime.Subject = message.Subject;
+                var message = new MimeMessage();
+                message.From.Add(new MailboxAddress(dto.From));
+                message.Subject = dto.Subject;
 
                 var multiPart = new Multipart("mixed");
-                var textPart = new TextPart(TextFormat.Html) { Text = message.Body };
+                var textPart = new TextPart(TextFormat.Html) { Text = dto.Body };
                 multiPart.Add(textPart);
-                mime.Body = multiPart;
+                message.Body = multiPart;
 
-
-                mime.To.Add(new MailboxAddress(message.To));
-                if (!string.IsNullOrEmpty(message.CopyTo))
+                message.To.Add(new MailboxAddress(dto.To));
+                if (!string.IsNullOrEmpty(dto.CopyTo))
                 {
-                    mime.Cc.Add(new MailboxAddress(message.CopyTo));
+                    message.Cc.Add(new MailboxAddress(dto.CopyTo));
                 }
 
-                using (var client = new SmtpClient())
+                using (var client = new MailKit.Net.Smtp.SmtpClient())
                 {
-                    client.CheckCertificateRevocation = false;
-                    using (var cts = new CancellationTokenSource(60000))
+                    using (var cts = new CancellationTokenSource(60000))//60s
                     {
-                        client.Connect(host, port, false, cts.Token);
-                        client.Authenticate(message.From, password);
+                        client.Connect(smtpHost, smtpPort, MailKit.Security.SecureSocketOptions.Auto, cts.Token);
+                        //client.AuthenticationMechanisms.Remove("XOAUTH2");
+
+                        // Note: only needed if the SMTP server requires authentication
+                        client.Authenticate(dto.From, password);
                         try
                         {
-                            client.Send(mime);
+                            client.Send(message);
                         }
                         catch (SmtpCommandException ex)
                         {
+                            // 发送失败，记录失败信息
                             if (ex.ErrorCode == SmtpErrorCode.MessageNotAccepted)
                             {
-                                message.SetSendError("MessageNotAccepted");
+                                dto.SetSendError("MessageNotAccepted");
                             }
                             else if (ex.ErrorCode == SmtpErrorCode.SenderNotAccepted)
                             {
-                                message.SetSendError("MessageNotAccepted");//无此邮箱
+                                dto.SetSendError("MessageNotAccepted");//无此邮箱
                             }
                             else if (ex.ErrorCode == SmtpErrorCode.RecipientNotAccepted)
                             {
-                                message.SetSendError("MessageNotAccepted");
+                                dto.SetSendError("MessageNotAccepted");
                             }
                             else
                             {
-                                message.SetSendError($"Send Unkonw Fail,{ex.Message}");
+                                dto.SetSendError($"Send Unkonw Fail,{ex.Message}");
                             }
 
-                            _unitOfWork.Modify<EmailSend>(message);
+                            _unitOfWork.Modify<EmailSend>(dto);
                             _unitOfWork.CommitAsync();
-                            return ReturnResult.Set(false, $"{message.ErrorMessage}");
+                            return ReturnResult.Set(false, $"{dto.ErrorMessage}");
                         }
                         client.Disconnect(true);
                     }
                 }
 
-                message.Status = "success";
-                _unitOfWork.Modify<EmailSend>(message);
+                // 发送成功，变更状态
+                dto.Status = "success";
+                _unitOfWork.Modify<EmailSend>(dto);
                 _unitOfWork.CommitAsync();
 
                 _logger.TraceBuilder($"[{this.GetType().FullName}] [microliu.email.send] [send] [storage]  [data:{JsonConvert.SerializeObject(input)}]")
-                       .AddObject(message)
+                       .AddObject(dto)
                        .AddTags("microliu.email.send", "send", "storage", "email")
                        .Submit();
-                return ReturnResult.Set(true, "", message.Id);
+                return ReturnResult.Set(true, "", dto.Id);
             }
             catch (Exception ex)
             {
+                // 连接失败，记录失败信息
                 _logger.ToException(ex).AddObject(input).AddTags("microliu.email.send", "exception");
                 _logger.Error(ex.Message, "microliu.email.send", "exception");
 
-                message.SetSendError(ex.Message);
-                _unitOfWork.Modify<EmailSend>(message);
+                dto.SetSendError(ex.Message);
+                _unitOfWork.Modify<EmailSend>(dto);
                 _unitOfWork.CommitAsync();
 
-                return ReturnResult.Set(false, $"发送失败：{message.ErrorMessage}");
+                return ReturnResult.Set(false, $"发送失败：{dto.ErrorMessage}");
             }
         }
 
+        //public void SendRetry()
+        //{
+        //    //_jobs.Schedule(() => _logger.Debug($"我是10s后触发的"), TimeSpan.FromSeconds(10));
+        //    BackgroundJob.Schedule(() => _logger.Debug($"我是10s后触发的"), TimeSpan.FromSeconds(10));
+        //}
 
+        //[CapSubscribe("microliu.email.send")]
+        //public void Test(EmailSendDto input)
+        //{
+        //    //_logger.Debug($"请在3秒后通知我");
+        //    //BackgroundJob.Schedule(() => _logger.Debug($"我是3s后触发的"), TimeSpan.FromSeconds(3));
 
-        public void SendRetry()
-        {
-            //_jobs.Schedule(() => _logger.Debug($"我是10s后触发的"), TimeSpan.FromSeconds(10));
-            BackgroundJob.Schedule(() => _logger.Debug($"我是10s后触发的"), TimeSpan.FromSeconds(10));
-        }
-
-        [CapSubscribe("microliu.email.send")]
-        public void Test(EmailSendDto input)
-        {
-            //_logger.Debug($"请在3秒后通知我");
-            //BackgroundJob.Schedule(() => _logger.Debug($"我是3s后触发的"), TimeSpan.FromSeconds(3));
-
-            _logger.Debug($"开始执行周期任务");
-            var jobId = "TestJob1";
-            RecurringJob.AddOrUpdate(jobId, () => _logger.Debug($"我1行了22222222"), Cron.Minutely);
-            //RecurringJob.RemoveIfExists(jobId);// 移除一个周期任务
-            RecurringJob.Trigger(jobId);// 立即执行周期任务
-        }
+        //    _logger.Debug($"开始执行周期任务");
+        //    var jobId = "TestJob1";
+        //    RecurringJob.AddOrUpdate(jobId, () => _logger.Debug($"我1行了22222222"), Cron.Minutely);
+        //    //RecurringJob.RemoveIfExists(jobId);// 移除一个周期任务
+        //    RecurringJob.Trigger(jobId);// 立即执行周期任务
+        //}
     }
 }

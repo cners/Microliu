@@ -37,7 +37,7 @@ namespace Microliu.EmailService.Domain.ViewModels
         /// <summary>
         /// 项目（服务）主键
         /// </summary>
-        public string ProjectId { get; set; }
+        public long ProjectId { get; set; }
 
         public EmailSendDto()
         {

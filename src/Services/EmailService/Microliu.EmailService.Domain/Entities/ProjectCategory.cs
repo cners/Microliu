@@ -8,7 +8,7 @@ using Microliu.Utils;
 
 namespace Microliu.EmailService.Domain
 {
-    [Table("PROJECT_CATEGORY")]
+    [Table("project_category")]
     public class ProjectCategory : BaseEntity
     {
         [Key]

@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Linq;
+using System.Threading.Tasks;
 using Microliu.EmailService.Domain;
 using Microliu.Utils;
 
@@ -48,6 +49,32 @@ namespace Microliu.EmailService.Application.Services
             await _unitOfWork.CommitAsync();
 
             return _return.SetSuccess(true);
+        }
+
+        public ProjectListDto GetProjects(ProjectQueryDto dto)
+        {
+            var returnProjects = new ProjectListDto();
+            var projects = _projectRepository.GetAll();
+            if (!string.IsNullOrEmpty(dto.ProjectName))
+            {
+                projects = projects.Where(x => x.Name.Contains(dto.ProjectName));
+            }
+            projects = projects.OrderByDescending(x => x.CreateTime);
+            returnProjects.Total = projects.Count();
+            returnProjects.Projects = projects.Skip((dto.Pagination - 1) * dto.PageSize).Take(dto.PageSize)
+                                   .AsEnumerable()
+                                   .Select(x =>
+                                   {
+                                       var node = new ProjectDto();
+                                       node.Id = x.Id.ToString();
+                                       node.Name = x.Name;
+                                       node.CreateTime = x.CreateTime.Value.ToString("yyyy-MM-dd HH:mm:ss");
+                                       var category  = _projectCategoryRepository.GetEntity(x.CategoryId);
+
+                                       node.CategoryName = category?.Name ?? "";
+                                       return node;
+                                   }).ToList();
+            return returnProjects;
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Threading.Tasks;
+using Microliu.EmailService.API.Models;
 using Microliu.EmailService.Application;
 using Microsoft.AspNetCore.Mvc;
 
@@ -41,6 +42,19 @@ namespace Microliu.EmailService.API.Controllers
         {
             var r = await _projectService.CreateProject(uid, categoryId, projectName);
             return Ok(r);
+        }
+
+        /// <summary>
+        /// 获取项目列表
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
+        [HttpPost("list")]
+        public IActionResult GetProjects(ProjectQueryDto dto)
+        {
+            if (dto == null) return Ok(ReturnResult.SetFail("参数无效"));
+            var projects = _projectService.GetProjects(dto);
+            return Ok(ReturnResult.SetSuccess("", projects));
         }
     }
 }

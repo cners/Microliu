@@ -3,7 +3,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Microliu.EmailService.Domain.Entities
 {
-    [Table("email_send")]
+    /// <summary>
+    /// Email Send Log
+    /// </summary>
+    [Table("email_send_log")]
     public class EmailSend : BaseEntity
     {
         [Key]
@@ -40,6 +43,11 @@ namespace Microliu.EmailService.Domain.Entities
         /// 错误原因
         /// </summary>
         public string ErrorMessage { get; set; }
+
+        /// <summary>
+        /// 所属项目主键
+        /// </summary>
+        public long ProjectId { get; set; }
 
 
         public EmailSend SetSendError(string errorMessage)
