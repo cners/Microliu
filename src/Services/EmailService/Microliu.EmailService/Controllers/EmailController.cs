@@ -1,5 +1,7 @@
 ﻿using DotNetCore.CAP;
+using Microliu.EmailService.API.Models;
 using Microliu.EmailService.Application.IServices;
+using Microliu.EmailService.Application.ViewModel;
 using Microliu.EmailService.Domain.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -45,6 +47,41 @@ namespace Microliu.EmailService.API.Controllers
             //_publisher.Publish<EmailSendDto>("microliu.email.send", input);
 
             return Ok(_emailService.SendAsync(dto));
+        }
+
+        /// <summary>
+        /// 获取邮件信息
+        /// </summary>
+        /// <param name="sendId"></param>
+        /// <returns></returns>
+        [HttpGet("{sendId}")]
+        public IActionResult GetEmail(long sendId)
+        {
+            var r = _emailService.GetEmail(sendId);
+            return Ok(r);
+        }
+
+        /// <summary>
+        /// 分页获取邮件发送记录
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
+        [HttpPost("LogList")]
+        public IActionResult GetEmailList([FromBody]EmailLogQueryDto dto)
+        {
+            // 检查参数
+            if (dto == null||!long.TryParse(dto.ProjectId,out long p))
+            {
+                return Ok(ReturnResult.SetFail("参数有误"));
+            }
+
+            // 获取数据
+            var list = _emailService.GetEmailList(dto, out long total);
+
+            // 返回数据
+            var r = ReturnResult.SetSuccess("", SkipPageContainerDto.Set(dto.Pagination, dto.PageSize, list, total));
+            return Ok(r);
+
         }
     }
 }

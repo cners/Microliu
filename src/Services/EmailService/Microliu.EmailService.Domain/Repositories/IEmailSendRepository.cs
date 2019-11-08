@@ -8,5 +8,6 @@ namespace Microliu.EmailService.Domain.Repositories
 {
     public interface IEmailSendRepository : IRepository<EmailSend>
     {
+        EmailSend GetEntity(long id);
     }
 }

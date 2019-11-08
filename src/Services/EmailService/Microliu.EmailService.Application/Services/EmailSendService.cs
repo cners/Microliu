@@ -1,6 +1,7 @@
 ﻿using DotNetCore.CAP;
 using Hangfire;
 using MailKit.Net.Smtp;
+using Microliu.EmailService.Application.ViewModel;
 using Microliu.EmailService.Domain;
 using Microliu.EmailService.Domain.Entities;
 using Microliu.EmailService.Domain.ViewModels;
@@ -9,6 +10,8 @@ using MimeKit;
 using MimeKit.Text;
 using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 
 namespace Microliu.EmailService.Application.Services
@@ -74,7 +77,15 @@ namespace Microliu.EmailService.Application.Services
                 {
                     using (var cts = new CancellationTokenSource(60000))//60s
                     {
-                        client.Connect(smtpHost, smtpPort, MailKit.Security.SecureSocketOptions.Auto, cts.Token);
+
+                        if (dto.From.ToLower().Trim().EndsWith("qq.com"))
+                        {
+                            client.Connect(smtpHost, smtpPort, MailKit.Security.SecureSocketOptions.Auto, cts.Token);
+                        }
+                        else
+                        {
+                            client.Connect(smtpHost, smtpPort, MailKit.Security.SecureSocketOptions.None, cts.Token);
+                        }
                         //client.AuthenticationMechanisms.Remove("XOAUTH2");
 
                         // Note: only needed if the SMTP server requires authentication
@@ -154,5 +165,29 @@ namespace Microliu.EmailService.Application.Services
         //    //RecurringJob.RemoveIfExists(jobId);// 移除一个周期任务
         //    RecurringJob.Trigger(jobId);// 立即执行周期任务
         //}
+
+        public ReturnResult GetEmail(long emailId)
+        {
+            var email = _emailSendRepository.GetEntity(emailId);
+            if (email == null) return ReturnResult.Set(false, "无法获取该邮件信息");
+
+            EmailDto ed = EmailDto.ConvertToEmailDto(email);
+            return ReturnResult.Set(true, "", ed);
+        }
+
+        public List<EmailDto> GetEmailList(EmailLogQueryDto dto, out long total)
+        {
+            total = 0;
+            var emails = _emailSendRepository.GetAll().Where(x => x.Deleted == Deleted.NotDelete)
+                                             .Where(x=>x.ProjectId==long.Parse(dto.ProjectId));
+            total = emails.LongCount();
+            emails = emails.OrderByDescending(x => x.CreateTime)
+                           .Skip((dto.Pagination - 1) * dto.PageSize)
+                           .Take(dto.PageSize);
+            var list = emails.AsEnumerable()
+                             .Select(x => EmailDto.ConvertToEmailDto(x))
+                             .ToList();
+            return list;
+        }
     }
 }

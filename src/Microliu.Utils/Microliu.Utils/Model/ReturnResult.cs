@@ -2,7 +2,18 @@
 {
     public class ReturnResult
     {
+
+        public enum ReturnCode
+        {
+            Unkonw = 0x10,
+        }
+
         public bool Success { get; set; }
+
+        /// <summary>
+        /// 默认：true=200,false=400
+        /// </summary>
+        public int Code { get; set; }
 
         public string Message { get; set; }
 
@@ -10,20 +21,23 @@
 
         public ReturnResult()
         {
-            Success = true;
+            Success = false;
             Message = "";
             Data = "";
+            Code = 400;
         }
         public ReturnResult(bool success, string message)
         {
             Success = success;
             Message = message;
             Data = "";
+            Code = success ? 200 : 400;
         }
 
         public ReturnResult SetSuccess(bool success = true)
         {
             Success = success;
+            Code = success ? 200 : 400;
             return this;
         }
 
@@ -43,6 +57,7 @@
         {
             Success = success;
             Data = data;
+            Code = success ? 200 : 400;
             return this;
         }
 
@@ -52,6 +67,7 @@
             dto.Success = success;
             dto.Message = message;
             dto.Data = data;
+            dto.Code = success ? 200 : 400;
             return dto;
         }
     }
