@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "c72c667fa8d5b6d37a99090413a924943a467620"
+    "signature": "7815a1dba3753e06f56c0ccf69350f0478b56659"
   },
   "compilationOptions": {},
   "targets": {
@@ -10,7 +10,6 @@
       "Microliu.Core.Logger/1.0.0": {
         "dependencies": {
           "Exceptionless": "4.3.2027",
-          "Exceptionless.AspNetCore": "4.3.2027",
           "NETStandard.Library": "2.0.3",
           "NLog": "4.6.7"
         },
@@ -25,14 +24,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/Exceptionless.dll": {
-            "assemblyVersion": "4.3.2027.0",
-            "fileVersion": "4.3.2027.0"
-          }
-        }
-      },
-      "Exceptionless.AspNetCore/4.3.2027": {
-        "runtime": {
-          "lib/net461/Exceptionless.AspNetCore.dll": {
             "assemblyVersion": "4.3.2027.0",
             "fileVersion": "4.3.2027.0"
           }
@@ -163,13 +154,6 @@
       "sha512": "sha512-b+XSF/qEmiMbUyAaO42kfbBBMmbFGaKsUoXyfiQ9uY3rVqk5cP49KN3U3G14yESg2404TaktcWseJ3TG5ch+3g==",
       "path": "exceptionless/4.3.2027",
       "hashPath": "exceptionless.4.3.2027.nupkg.sha512"
-    },
-    "Exceptionless.AspNetCore/4.3.2027": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-TrU1c6PpjYKMOSla6phhY8xgm4GFhb41buJoNXYgC04ElFxjTJSW0v/wqtV8xC83+A+GyahQ2tJu7d9DndDdOw==",
-      "path": "exceptionless.aspnetcore/4.3.2027",
-      "hashPath": "exceptionless.aspnetcore.4.3.2027.nupkg.sha512"
     },
     "Microsoft.Extensions.PlatformAbstractions/1.1.0": {
       "type": "package",

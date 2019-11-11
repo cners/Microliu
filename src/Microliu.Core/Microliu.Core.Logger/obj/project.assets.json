@@ -15,15 +15,6 @@
           "lib/netstandard2.0/Exceptionless.dll": {}
         }
       },
-      "Exceptionless.AspNetCore/4.3.2027": {
-        "type": "package",
-        "compile": {
-          "lib/net461/Exceptionless.AspNetCore.dll": {}
-        },
-        "runtime": {
-          "lib/net461/Exceptionless.AspNetCore.dll": {}
-        }
-      },
       "Microsoft.Extensions.PlatformAbstractions/1.1.0": {
         "type": "package",
         "dependencies": {
@@ -228,22 +219,6 @@
         "tools/exceptionless.psm1",
         "tools/install.ps1",
         "tools/uninstall.ps1"
-      ]
-    },
-    "Exceptionless.AspNetCore/4.3.2027": {
-      "sha512": "TrU1c6PpjYKMOSla6phhY8xgm4GFhb41buJoNXYgC04ElFxjTJSW0v/wqtV8xC83+A+GyahQ2tJu7d9DndDdOw==",
-      "type": "package",
-      "path": "exceptionless.aspnetcore/4.3.2027",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "exceptionless.aspnetcore.4.3.2027.nupkg.sha512",
-        "exceptionless.aspnetcore.nuspec",
-        "lib/net461/Exceptionless.AspNetCore.dll",
-        "lib/net461/Exceptionless.AspNetCore.xml",
-        "lib/netcoreapp2.0/Exceptionless.AspNetCore.dll",
-        "lib/netcoreapp2.0/Exceptionless.AspNetCore.xml",
-        "readme.txt"
       ]
     },
     "Microsoft.Extensions.PlatformAbstractions/1.1.0": {
@@ -1035,7 +1010,6 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "Exceptionless >= 4.3.2027",
-      "Exceptionless.AspNetCore >= 4.3.2027",
       "NETStandard.Library >= 2.0.3",
       "NLog >= 4.6.7"
     ]
@@ -1088,10 +1062,6 @@
             "target": "Package",
             "version": "[4.3.2027, )"
           },
-          "Exceptionless.AspNetCore": {
-            "target": "Package",
-            "version": "[4.3.2027, )"
-          },
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
@@ -1110,17 +1080,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "已使用“.NETFramework,Version=v4.6.1”而不是项目目标框架“.NETStandard,Version=v2.0”还原包“Exceptionless.AspNetCore 4.3.2027”。此包可能与项目不完全兼容。",
-      "libraryId": "Exceptionless.AspNetCore",
-      "targetGraphs": [
-        ".NETStandard,Version=v2.0"
-      ]
-    }
-  ]
+  }
 }

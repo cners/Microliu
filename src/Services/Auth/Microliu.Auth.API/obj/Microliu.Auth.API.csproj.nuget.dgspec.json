@@ -111,10 +111,6 @@
               "target": "Package",
               "version": "[4.3.2027, )"
             },
-            "Exceptionless.AspNetCore": {
-              "target": "Package",
-              "version": "[4.3.2027, )"
-            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
