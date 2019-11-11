@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20190904084123_Email09041.cs" />
+    <Compile Remove="Migrations\20190904084123_Email09041.Designer.cs" />
+    <Compile Remove="Migrations\20190904085637_EmailDb.cs" />
+    <Compile Remove="Migrations\20190904085637_EmailDb.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
+    <PackageReference Include="MySql.Data.EntityFrameworkCore" Version="8.0.17" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Microliu.EmailService.Domain\Microliu.EmailService.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,16 @@
+D:\Microliu\src\Test\Db.Test.Connection\bin\Release\netcoreapp2.2\linux-x64\Db.Test.Connection
+D:\Microliu\src\Test\Db.Test.Connection\bin\Release\netcoreapp2.2\linux-x64\Db.Test.Connection.deps.json
+D:\Microliu\src\Test\Db.Test.Connection\bin\Release\netcoreapp2.2\linux-x64\Db.Test.Connection.runtimeconfig.json
+D:\Microliu\src\Test\Db.Test.Connection\bin\Release\netcoreapp2.2\linux-x64\Db.Test.Connection.runtimeconfig.dev.json
+D:\Microliu\src\Test\Db.Test.Connection\bin\Release\netcoreapp2.2\linux-x64\Db.Test.Connection.dll
+D:\Microliu\src\Test\Db.Test.Connection\bin\Release\netcoreapp2.2\linux-x64\Db.Test.Connection.pdb
+D:\Microliu\src\Test\Db.Test.Connection\obj\Release\netcoreapp2.2\linux-x64\Db.Test.Connection.csprojAssemblyReference.cache
+D:\Microliu\src\Test\Db.Test.Connection\obj\Release\netcoreapp2.2\linux-x64\Db.Test.Connection.csproj.CoreCompileInputs.cache
+D:\Microliu\src\Test\Db.Test.Connection\obj\Release\netcoreapp2.2\linux-x64\Db.Test.Connection.RazorAssemblyInfo.cache
+D:\Microliu\src\Test\Db.Test.Connection\obj\Release\netcoreapp2.2\linux-x64\Db.Test.Connection.RazorAssemblyInfo.cs
+D:\Microliu\src\Test\Db.Test.Connection\obj\Release\netcoreapp2.2\linux-x64\Db.Test.Connection.AssemblyInfoInputs.cache
+D:\Microliu\src\Test\Db.Test.Connection\obj\Release\netcoreapp2.2\linux-x64\Db.Test.Connection.AssemblyInfo.cs
+D:\Microliu\src\Test\Db.Test.Connection\obj\Release\netcoreapp2.2\linux-x64\Db.Test.Connection.RazorTargetAssemblyInfo.cache
+D:\Microliu\src\Test\Db.Test.Connection\obj\Release\netcoreapp2.2\linux-x64\Db.Test.Connection.dll
+D:\Microliu\src\Test\Db.Test.Connection\obj\Release\netcoreapp2.2\linux-x64\Db.Test.Connection.pdb
+D:\Microliu\src\Test\Db.Test.Connection\bin\Release\netcoreapp2.2\linux-x64\Dockerfile

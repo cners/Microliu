@@ -1,0 +1,505 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Application\\Microliu.EmailService.Application.csproj": {}
+  },
+  "projects": {
+    "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Logger\\Microliu.Core.Logger.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Logger\\Microliu.Core.Logger.csproj",
+        "projectName": "Microliu.Core.Logger",
+        "projectPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Logger\\Microliu.Core.Logger.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Logger\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Exceptionless": {
+              "target": "Package",
+              "version": "[4.3.2027, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[4.6.7, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Redis\\Microliu.Core.Redis.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Redis\\Microliu.Core.Redis.csproj",
+        "projectName": "Microliu.Core.Redis",
+        "projectPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Redis\\Microliu.Core.Redis.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Redis\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Logger\\Microliu.Core.Logger.csproj": {
+                "projectPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Logger\\Microliu.Core.Logger.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.0.601, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\Microliu\\src\\Microliu.Utils\\Microliu.Utils\\Microliu.Utils.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Microliu\\src\\Microliu.Utils\\Microliu.Utils\\Microliu.Utils.csproj",
+        "projectName": "Microliu.Utils",
+        "projectPath": "D:\\Microliu\\src\\Microliu.Utils\\Microliu.Utils\\Microliu.Utils.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\src\\Microliu.Utils\\Microliu.Utils\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Binder": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.Extensions.Configuration.EnvironmentVariables": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Application\\Microliu.EmailService.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Application\\Microliu.EmailService.Application.csproj",
+        "projectName": "Microliu.EmailService.Application",
+        "projectPath": "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Application\\Microliu.EmailService.Application.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Data\\Microliu.EmailService.Data.csproj": {
+                "projectPath": "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Data\\Microliu.EmailService.Data.csproj"
+              },
+              "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Domain\\Microliu.EmailService.Domain.csproj": {
+                "projectPath": "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Domain\\Microliu.EmailService.Domain.csproj"
+              },
+              "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Infrastructure\\Microliu.EmailService.Infrastructure.csproj": {
+                "projectPath": "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Infrastructure\\Microliu.EmailService.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Data\\Microliu.EmailService.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Data\\Microliu.EmailService.Data.csproj",
+        "projectName": "Microliu.EmailService.Data",
+        "projectPath": "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Data\\Microliu.EmailService.Data.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Domain\\Microliu.EmailService.Domain.csproj": {
+                "projectPath": "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Domain\\Microliu.EmailService.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.17, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Domain\\Microliu.EmailService.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Domain\\Microliu.EmailService.Domain.csproj",
+        "projectName": "Microliu.EmailService.Domain",
+        "projectPath": "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Domain\\Microliu.EmailService.Domain.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Infrastructure\\Microliu.EmailService.Infrastructure.csproj": {
+                "projectPath": "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Infrastructure\\Microliu.EmailService.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Infrastructure\\Microliu.EmailService.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Infrastructure\\Microliu.EmailService.Infrastructure.csproj",
+        "projectName": "Microliu.EmailService.Infrastructure",
+        "projectPath": "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Infrastructure\\Microliu.EmailService.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\src\\Services\\EmailService\\Microliu.EmailService.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Logger\\Microliu.Core.Logger.csproj": {
+                "projectPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Logger\\Microliu.Core.Logger.csproj"
+              },
+              "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Redis\\Microliu.Core.Redis.csproj": {
+                "projectPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Redis\\Microliu.Core.Redis.csproj"
+              },
+              "D:\\Microliu\\src\\Microliu.Utils\\Microliu.Utils\\Microliu.Utils.csproj": {
+                "projectPath": "D:\\Microliu\\src\\Microliu.Utils\\Microliu.Utils\\Microliu.Utils.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "DotNetCore.CAP": {
+              "target": "Package",
+              "version": "[2.6.0, )"
+            },
+            "DotNetCore.CAP.MySql": {
+              "target": "Package",
+              "version": "[2.6.0, )"
+            },
+            "DotNetCore.CAP.RabbitMQ": {
+              "target": "Package",
+              "version": "[2.6.0, )"
+            },
+            "HangFire.Core": {
+              "target": "Package",
+              "version": "[1.7.6, )"
+            },
+            "HangFire.Redis.StackExchange": {
+              "target": "Package",
+              "version": "[1.8.0, )"
+            },
+            "HangFire.SqlServer": {
+              "target": "Package",
+              "version": "[1.7.6, )"
+            },
+            "Hangfire.AspNetCore": {
+              "target": "Package",
+              "version": "[1.7.6, )"
+            },
+            "MailKit": {
+              "target": "Package",
+              "version": "[2.3.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

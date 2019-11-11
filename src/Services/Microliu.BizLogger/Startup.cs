@@ -35,7 +35,7 @@ namespace Microliu.BizLogger
 
             app.UseMvc();
 
-            app.RegisterConsul(lifetime, Configuration);
+            app.UseMicroliuDiscovery();
         }
     }
 }

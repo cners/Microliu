@@ -1,9 +1,0 @@
-D:\Microliu\src\Microliu.Modules\Microliu.ApiGateway.SwaggerIntegration\bin\Debug\netstandard2.0\Microliu.ApiGateway.SwaggerIntegration.deps.json
-D:\Microliu\src\Microliu.Modules\Microliu.ApiGateway.SwaggerIntegration\bin\Debug\netstandard2.0\Microliu.ApiGateway.SwaggerIntegration.dll
-D:\Microliu\src\Microliu.Modules\Microliu.ApiGateway.SwaggerIntegration\bin\Debug\netstandard2.0\Microliu.ApiGateway.SwaggerIntegration.pdb
-D:\Microliu\src\Microliu.Modules\Microliu.ApiGateway.SwaggerIntegration\obj\Debug\netstandard2.0\Microliu.ApiGateway.SwaggerIntegration.csprojAssemblyReference.cache
-D:\Microliu\src\Microliu.Modules\Microliu.ApiGateway.SwaggerIntegration\obj\Debug\netstandard2.0\Microliu.ApiGateway.SwaggerIntegration.csproj.CoreCompileInputs.cache
-D:\Microliu\src\Microliu.Modules\Microliu.ApiGateway.SwaggerIntegration\obj\Debug\netstandard2.0\Microliu.ApiGateway.SwaggerIntegration.AssemblyInfoInputs.cache
-D:\Microliu\src\Microliu.Modules\Microliu.ApiGateway.SwaggerIntegration\obj\Debug\netstandard2.0\Microliu.ApiGateway.SwaggerIntegration.AssemblyInfo.cs
-D:\Microliu\src\Microliu.Modules\Microliu.ApiGateway.SwaggerIntegration\obj\Debug\netstandard2.0\Microliu.ApiGateway.SwaggerIntegration.dll
-D:\Microliu\src\Microliu.Modules\Microliu.ApiGateway.SwaggerIntegration\obj\Debug\netstandard2.0\Microliu.ApiGateway.SwaggerIntegration.pdb

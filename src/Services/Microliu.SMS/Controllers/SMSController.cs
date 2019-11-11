@@ -1,4 +1,4 @@
-﻿using Microliu.Core.Logger;
+﻿using Microliu.Core.Loggers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 

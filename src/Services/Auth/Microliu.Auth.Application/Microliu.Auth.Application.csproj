@@ -10,9 +10,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Microliu.Auth.DataMSSQL\Microliu.Auth.DataMSSQL.csproj" />
-    <ProjectReference Include="..\Microliu.Auth.DataMySQL\Microliu.Auth.DataMySQL.csproj" />
+    <ProjectReference Include="..\..\..\Microliu.Core\Microliu.Core.Logger\Microliu.Core.Logger.csproj" />
+    <ProjectReference Include="..\Microliu.Auth.Data\Microliu.Auth.Data.csproj" />
     <ProjectReference Include="..\Microliu.Auth.Domain\Microliu.Auth.Domain.csproj" />
+    <ProjectReference Include="..\Microliu.Auth.Infrastructure\Microliu.Auth.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

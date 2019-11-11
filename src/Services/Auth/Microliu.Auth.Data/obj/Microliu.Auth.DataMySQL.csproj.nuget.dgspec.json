@@ -1,0 +1,192 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.DataMySQL\\Microliu.Auth.DataMySQL.csproj": {}
+  },
+  "projects": {
+    "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.DataMySQL\\Microliu.Auth.DataMySQL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.DataMySQL\\Microliu.Auth.DataMySQL.csproj",
+        "projectName": "Microliu.Auth.DataMySQL",
+        "projectPath": "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.DataMySQL\\Microliu.Auth.DataMySQL.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.DataMySQL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Domain\\Microliu.Auth.Domain.csproj": {
+                "projectPath": "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Domain\\Microliu.Auth.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "MySql.Data.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.17, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            },
+            "Oracle.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.19.30, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Domain\\Microliu.Auth.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Domain\\Microliu.Auth.Domain.csproj",
+        "projectName": "Microliu.Auth.Domain",
+        "projectPath": "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Domain\\Microliu.Auth.Domain.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Infrastructure\\Microliu.Auth.Infrastructure.csproj": {
+                "projectPath": "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Infrastructure\\Microliu.Auth.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Infrastructure\\Microliu.Auth.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Infrastructure\\Microliu.Auth.Infrastructure.csproj",
+        "projectName": "Microliu.Auth.Infrastructure",
+        "projectPath": "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Infrastructure\\Microliu.Auth.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

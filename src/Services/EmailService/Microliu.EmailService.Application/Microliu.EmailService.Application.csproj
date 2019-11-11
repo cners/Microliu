@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Microliu.EmailService.Data\Microliu.EmailService.Data.csproj" />
+    <ProjectReference Include="..\Microliu.EmailService.Domain\Microliu.EmailService.Domain.csproj" />
+    <ProjectReference Include="..\Microliu.EmailService.Infrastructure\Microliu.EmailService.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

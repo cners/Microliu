@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microliu.FileService.API</name>
+    </assembly>
+    <members>
+        <member name="P:Microliu.FileService.API.Configurations.AppSettings.FastDFS">
+            <summary>
+            FastDFS 配置文件
+            </summary>
+        </member>
+        <member name="P:Microliu.FileService.API.Configurations.AppSettingsFastDFS.DownloadServer">
+            <summary>
+            下载服务器地址
+            </summary>
+        </member>
+        <member name="P:Microliu.FileService.API.Configurations.AppSettingsFastDFS.UploadServers">
+            <summary>
+            上传服务器
+            地址:端口
+            </summary>
+        </member>
+        <member name="M:Microliu.FileService.API.Configurations.AppSettingsFastDFS.GetUploadServers">
+            <summary>
+            获取上传服务器地址组
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microliu.FileService.API.Controllers.FilesController">
+            <summary>
+            文件控制器
+            </summary>
+        </member>
+        <member name="M:Microliu.FileService.API.Controllers.FilesController.Upload(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            单文件上传
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microliu.FileService.API.Controllers.FilesController.UploadAppendTest">
+            <summary>
+            断点续传，测试专用，看到横杠说明没问题。
+            </summary>
+            <param name="ct"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microliu.FileService.API.Controllers.HealthController">
+            <summary>
+            健康检查
+            </summary>
+        </member>
+        <member name="M:Microliu.FileService.API.Controllers.HealthController.Check">
+            <summary>
+            健康检查方法
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microliu.FileService.API.Controllers.HealthController.CheckTest">
+            <summary>
+            访问测试
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microliu.FileService.API.ExceptionHandlerMiddleWare">
+            <summary>
+            全局异常中间件
+            </summary>
+        </member>
+        <member name="M:Microliu.FileService.API.ExceptionHandlerMiddleWare.Object2XmlString(System.Object)">
+            <summary>
+            对象转为Xml
+            </summary>
+            <param name="o"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

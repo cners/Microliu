@@ -1,6 +1,6 @@
 ﻿using Microliu.Core.Consul;
 using Microliu.Core.Hystrix.Extensions.DI;
-using Microliu.Core.Logger;
+using Microliu.Core.Loggers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -41,7 +41,7 @@ namespace Microliu.SMS
 
             });
 
-            services.AddTransient<ILogger, ConsoleLogger>();
+            services.AddTransient<ILogger, Logger>();
             return services.UseHystrix(Assembly.GetEntryAssembly());
         }
 
@@ -55,7 +55,7 @@ namespace Microliu.SMS
 
             app.UseCookiePolicy();
             app.UseAuthentication();
-            app.RegisterConsul(lifetime, Configuration);
+            app.UseMicroliuDiscovery();
             app.UseStaticFiles();
             app.UseMvc();
         }

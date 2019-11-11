@@ -12,10 +12,8 @@ namespace Microliu.Auth.Domain.Converters
             var role = new Role();
             role.Id = Guid.NewGuid().ToString("N").ToUpper();
             role.CreateTime = DateTimeOffset.Now;
-            role.Creator = "";//model.CreatorId
-            role.IsDeleted = 1;
-            role.IsEnabled = 1;
-
+            role.IsEnabled = IsEnabled.Enabled;
+            role.IsDelete = IsDelete.NotDelete;
             role.RoleName = model.RoleName;
             return role;
         }

@@ -25,7 +25,10 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {},
+          "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
+          "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
@@ -41,11 +44,19 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Exceptionless": {
+              "target": "Package",
+              "version": "[4.3.2027, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[4.6.7, )"
             }
           },
           "imports": [

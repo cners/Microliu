@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Microliu.Core.Logger
+namespace Microliu.Core.Loggers
 {
     [Flags]
     public enum LogLevel

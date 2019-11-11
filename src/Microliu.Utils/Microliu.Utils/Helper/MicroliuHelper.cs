@@ -30,14 +30,14 @@ namespace Microliu
         /// </summary>
         /// <param name="fileName">setting json file</param>
         /// <returns></returns>
-        public static IConfigurationRoot GetConfig(string settingJson)
-        {
-            var provider = new JsonEnvParamParserFileProvider(settingJson);
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(AppContext.BaseDirectory)
-                .AddJsonFile(provider, settingJson, true, false);
-            return builder.Build();
-        }
+        //public static IConfigurationRoot GetConfig(string settingJson)
+        //{
+        //    var provider = new JsonEnvParamParserFileProvider(settingJson);
+        //    var builder = new ConfigurationBuilder()
+        //        .SetBasePath(AppContext.BaseDirectory)
+        //        .AddJsonFile(provider, settingJson, true, false);
+        //    return builder.Build();
+        //}
 
     }
 }
