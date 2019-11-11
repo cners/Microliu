@@ -3638,7 +3638,7 @@
           "Microliu.Auth.Data": "1.0.0",
           "Microliu.Auth.Domain": "1.0.0",
           "Microliu.Auth.Infrastructure": "1.0.0",
-          "Microliu.Core.Logger": "1.0.0",
+          "Microliu.Core.Logger": "1.0.1",
           "Microsoft.AspNetCore": "2.2.0",
           "Microsoft.EntityFrameworkCore": "2.2.6"
         },
@@ -3699,7 +3699,7 @@
           "bin/placeholder/Microliu.Auth.Infrastructure.dll": {}
         }
       },
-      "Microliu.Core.Logger/1.0.0": {
+      "Microliu.Core.Logger/1.0.1": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -10948,7 +10948,7 @@
       "path": "../../Services/Auth/Microliu.Auth.Infrastructure/Microliu.Auth.Infrastructure.csproj",
       "msbuildProject": "../../Services/Auth/Microliu.Auth.Infrastructure/Microliu.Auth.Infrastructure.csproj"
     },
-    "Microliu.Core.Logger/1.0.0": {
+    "Microliu.Core.Logger/1.0.1": {
       "type": "project",
       "path": "../../Microliu.Core/Microliu.Core.Logger/Microliu.Core.Logger.csproj",
       "msbuildProject": "../../Microliu.Core/Microliu.Core.Logger/Microliu.Core.Logger.csproj"
@@ -10993,6 +10993,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\liuzhuang\\nuget.test": {},
         "https://api.nuget.org/v3/index.json": {},
         "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {},
         "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},

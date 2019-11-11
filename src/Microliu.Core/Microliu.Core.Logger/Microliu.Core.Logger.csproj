@@ -4,8 +4,19 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>支持NLog、Exceptionless
-支持.NET Core 2.2</Description>
+支持.NET Core 2.2
+
+使用：
+再安装一下Exceptionless.AspNetCore(4.3.2027)
+ app.UseExceptionless(Configuration);
+ services.AddTransient&lt;ILogger, Logger&gt;();
+appSettings.json中新增
+ "Exceptionless": {
+    "ApiKey": ""
+    "ServerUrl": "http://ip:port"
+  }</Description>
     <Authors>刘壮</Authors>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

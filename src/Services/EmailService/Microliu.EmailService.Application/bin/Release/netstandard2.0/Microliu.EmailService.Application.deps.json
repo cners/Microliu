@@ -2369,10 +2369,9 @@
           }
         }
       },
-      "Microliu.Core.Logger/1.0.0": {
+      "Microliu.Core.Logger/1.0.1": {
         "dependencies": {
           "Exceptionless": "4.3.2027",
-          "Exceptionless.AspNetCore": "4.3.2027",
           "NLog": "4.6.7"
         },
         "runtime": {
@@ -2381,7 +2380,7 @@
       },
       "Microliu.Core.Redis/1.0.0": {
         "dependencies": {
-          "Microliu.Core.Logger": "1.0.0",
+          "Microliu.Core.Logger": "1.0.1",
           "Microsoft.AspNetCore": "2.2.0",
           "StackExchange.Redis": "2.0.601"
         },
@@ -2412,12 +2411,13 @@
           "DotNetCore.CAP": "2.6.0",
           "DotNetCore.CAP.MySql": "2.6.0",
           "DotNetCore.CAP.RabbitMQ": "2.6.0",
+          "Exceptionless.AspNetCore": "4.3.2027",
           "Hangfire.Core": "1.7.6",
           "Hangfire.Redis.StackExchange": "1.8.0",
           "Hangfire.SqlServer": "1.7.6",
           "Hangfire.AspNetCore": "1.7.6",
           "MailKit": "2.3.0",
-          "Microliu.Core.Logger": "1.0.0",
+          "Microliu.Core.Logger": "1.0.1",
           "Microliu.Core.Redis": "1.0.0",
           "Microliu.Utils": "1.0.0"
         },
@@ -3849,7 +3849,7 @@
       "path": "system.xml.xpath.xmldocument/4.0.1",
       "hashPath": "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512"
     },
-    "Microliu.Core.Logger/1.0.0": {
+    "Microliu.Core.Logger/1.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

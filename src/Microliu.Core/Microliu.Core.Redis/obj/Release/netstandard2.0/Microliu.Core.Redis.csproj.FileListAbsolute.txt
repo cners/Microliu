@@ -10,3 +10,4 @@ D:\Microliu\src\Microliu.Core\Microliu.Core.Redis\obj\Release\netstandard2.0\Mic
 D:\Microliu\src\Microliu.Core\Microliu.Core.Redis\obj\Release\netstandard2.0\Microliu.Core.Redis.csproj.CopyComplete
 D:\Microliu\src\Microliu.Core\Microliu.Core.Redis\obj\Release\netstandard2.0\Microliu.Core.Redis.dll
 D:\Microliu\src\Microliu.Core\Microliu.Core.Redis\obj\Release\netstandard2.0\Microliu.Core.Redis.pdb
+D:\Microliu\src\Microliu.Core\Microliu.Core.Redis\bin\Release\netstandard2.0\README.md

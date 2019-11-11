@@ -1098,7 +1098,7 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
-      "Microliu.Core.Logger/1.0.0": {
+      "Microliu.Core.Logger/1.0.1": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -3199,7 +3199,7 @@
         "version.txt"
       ]
     },
-    "Microliu.Core.Logger/1.0.0": {
+    "Microliu.Core.Logger/1.0.1": {
       "type": "project",
       "path": "../Microliu.Core.Logger/Microliu.Core.Logger.csproj",
       "msbuildProject": "../Microliu.Core.Logger/Microliu.Core.Logger.csproj"
@@ -3207,7 +3207,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "Microliu.Core.Logger >= 1.0.0",
+      "Microliu.Core.Logger >= 1.0.1",
       "Microsoft.AspNetCore >= 2.2.0",
       "NETStandard.Library >= 2.0.3",
       "StackExchange.Redis >= 2.0.601"
@@ -3238,6 +3238,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\liuzhuang\\nuget.test": {},
         "https://api.nuget.org/v3/index.json": {},
         "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {},
         "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},

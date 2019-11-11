@@ -33,3 +33,5 @@ D:\Microliu\src\Services\EmailService\Microliu.EmailService\bin\Release\netcorea
 D:\Microliu\src\Services\EmailService\Microliu.EmailService\bin\Release\netcoreapp2.2\Microliu.Core.Redis.dll
 D:\Microliu\src\Services\EmailService\Microliu.EmailService\bin\Release\netcoreapp2.2\Microliu.Core.Redis.pdb
 D:\Microliu\src\Services\EmailService\Microliu.EmailService\bin\Release\netcoreapp2.2\Dockerfile
+D:\Microliu\src\Services\EmailService\Microliu.EmailService\bin\Release\netcoreapp2.2\README.md
+D:\Microliu\src\Services\EmailService\Microliu.EmailService\bin\Release\netcoreapp2.2\jwt\README.md

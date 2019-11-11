@@ -1,13 +1,13 @@
 ﻿namespace Microliu.Utils
 {
+    /// <summary>
+    /// 返回响应结果
+    /// </summary>
     public class ReturnResult
     {
-
-        public enum ReturnCode
-        {
-            Unkonw = 0x10,
-        }
-
+        /// <summary>
+        /// 是否成功
+        /// </summary>
         public bool Success { get; set; }
 
         /// <summary>
@@ -15,8 +15,14 @@
         /// </summary>
         public int Code { get; set; }
 
+        /// <summary>
+        /// 返回信息
+        /// </summary>
         public string Message { get; set; }
 
+        /// <summary>
+        /// 返回附加数据
+        /// </summary>
         public object Data { get; set; }
 
         public ReturnResult()

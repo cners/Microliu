@@ -20,3 +20,5 @@ D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\R
 D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Release\netstandard2.0\Microsoft.IdentityModel.Tokens.xml
 D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Release\netstandard2.0\System.IdentityModel.Tokens.Jwt.pdb
 D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Release\netstandard2.0\System.IdentityModel.Tokens.Jwt.xml
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Release\netstandard2.0\README.md
+D:\Microliu\src\Services\EmailService\Microliu.EmailService.Infrastructure\bin\Release\netstandard2.0\jwt\README.md

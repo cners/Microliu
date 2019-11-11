@@ -4953,7 +4953,7 @@
           "bin/placeholder/Microliu.Core.Hystrix.Extensions.DI.dll": {}
         }
       },
-      "Microliu.Core.Logger/1.0.0": {
+      "Microliu.Core.Logger/1.0.1": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -13493,7 +13493,7 @@
       "path": "../../Microliu.Core/Microliu.Core.Hystrix.Extensions.DI/Microliu.Core.Hystrix.Extensions.DI.csproj",
       "msbuildProject": "../../Microliu.Core/Microliu.Core.Hystrix.Extensions.DI/Microliu.Core.Hystrix.Extensions.DI.csproj"
     },
-    "Microliu.Core.Logger/1.0.0": {
+    "Microliu.Core.Logger/1.0.1": {
       "type": "project",
       "path": "../../Microliu.Core/Microliu.Core.Logger/Microliu.Core.Logger.csproj",
       "msbuildProject": "../../Microliu.Core/Microliu.Core.Logger/Microliu.Core.Logger.csproj"
@@ -13505,7 +13505,7 @@
       "Microliu.Core.Consul >= 1.0.0",
       "Microliu.Core.Hystrix >= 1.0.0",
       "Microliu.Core.Hystrix.Extensions.DI >= 1.0.0",
-      "Microliu.Core.Logger >= 1.0.0",
+      "Microliu.Core.Logger >= 1.0.1",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
@@ -13538,6 +13538,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\liuzhuang\\nuget.test": {},
         "https://api.nuget.org/v3/index.json": {},
         "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {},
         "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
