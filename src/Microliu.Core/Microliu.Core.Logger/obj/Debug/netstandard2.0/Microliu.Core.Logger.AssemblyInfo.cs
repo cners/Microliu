@@ -13,14 +13,12 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("刘壮")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute("支持NLog、Exceptionless\r\n支持.NET Core 2.2\r\n\r\n使用：\r\n app.UseExceptionless(Configuration" +
-    ");\r\n services.AddTransient<ILogger, Logger>();\r\nappSettings.json中新增\r\n \"Exception" +
-    "less\": {\r\n    \"ApiKey\": \r\n    \"ServerUrl\": \"http://ip:port\"\r\n  }")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.1.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.1")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("Wiki地址：https://github.com/cners/Microliu/wiki/ä½¿ç¨Microliu.Core.Logger")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.2.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Microliu.Core.Logger")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Microliu.Core.Logger")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.1.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("1.0.2.0")]
 
 // 由 MSBuild WriteCodeFragment 类生成。
 

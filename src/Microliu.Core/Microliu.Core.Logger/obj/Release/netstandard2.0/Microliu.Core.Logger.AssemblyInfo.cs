@@ -13,23 +13,11 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("刘壮")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute(@"支持NLog、Exceptionless
-支持.NET Core 2.2
-
-使用：
-再安装一下Exceptionless.AspNetCore(4.3.2027)
- app.UseExceptionless(Configuration);
- services.AddTransient<ILogger, Logger>();
-appSettings.json中新增
- ""Exceptionless"": {
-    ""ApiKey"": """"
-    ""ServerUrl"": ""http://ip:port""
-  }")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.1.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.1")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.2.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Microliu.Core.Logger")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Microliu.Core.Logger")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.1.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("1.0.2.0")]
 
 // 由 MSBuild WriteCodeFragment 类生成。
 

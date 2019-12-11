@@ -1,14 +1,12 @@
 ﻿using Exceptionless;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Microliu.Core.Loggers
 {
     public interface ILogger
     {
 
-        ExceptionlessClient Exless { get; }
+        //ExceptionlessClient Exless { get; }
 
         void Trace(string content);
 
@@ -38,11 +36,11 @@ namespace Microliu.Core.Loggers
         void Error(string content, string[] tags, params object[] datas);
 
 
-        EventBuilder TraceBuilder(string content);
-        EventBuilder DebugBuilder(string content);
-        EventBuilder InfoBuilder(string content);
-        EventBuilder WarnBuilder(string content);
-        EventBuilder ErrorBuilder(string content);
-        EventBuilder ToException(Exception exception);
+        //EventBuilder TraceBuilder(string content);
+        //EventBuilder DebugBuilder(string content);
+        //EventBuilder InfoBuilder(string content);
+        //EventBuilder WarnBuilder(string content);
+        //EventBuilder ErrorBuilder(string content);
+        //EventBuilder ToException(Exception exception);
     }
 }

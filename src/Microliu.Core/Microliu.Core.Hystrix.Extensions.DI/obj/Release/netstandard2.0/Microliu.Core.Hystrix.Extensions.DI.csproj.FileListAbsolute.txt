@@ -1,0 +1,11 @@
+D:\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\bin\Release\netstandard2.0\Microliu.Core.Hystrix.Extensions.DI.deps.json
+D:\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\bin\Release\netstandard2.0\Microliu.Core.Hystrix.Extensions.DI.dll
+D:\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\bin\Release\netstandard2.0\Microliu.Core.Hystrix.Extensions.DI.pdb
+D:\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\bin\Release\netstandard2.0\Microliu.Core.Hystrix.dll
+D:\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\bin\Release\netstandard2.0\Microliu.Core.Hystrix.pdb
+D:\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\obj\Release\netstandard2.0\Microliu.Core.Hystrix.Extensions.DI.csprojAssemblyReference.cache
+D:\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\obj\Release\netstandard2.0\Microliu.Core.Hystrix.Extensions.DI.AssemblyInfoInputs.cache
+D:\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\obj\Release\netstandard2.0\Microliu.Core.Hystrix.Extensions.DI.AssemblyInfo.cs
+D:\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\obj\Release\netstandard2.0\Microliu.Core.Hystrix.Extensions.DI.csproj.CopyComplete
+D:\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\obj\Release\netstandard2.0\Microliu.Core.Hystrix.Extensions.DI.dll
+D:\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\obj\Release\netstandard2.0\Microliu.Core.Hystrix.Extensions.DI.pdb

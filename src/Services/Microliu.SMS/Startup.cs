@@ -30,16 +30,16 @@ namespace Microliu.SMS
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
-            services.AddAuthentication(options =>
-            {
-                options.DefaultScheme = "Bearer";
-            }).AddJwtBearer("Bearer", options =>
-            {
-                options.Authority = "http://localhost:10111";
-                options.RequireHttpsMetadata = false;
-                options.Audience = "smsApi";
+            //services.AddAuthentication(options =>
+            //{
+            //    options.DefaultScheme = "Bearer";
+            //}).AddJwtBearer("Bearer", options =>
+            //{
+            //    options.Authority = "http://localhost:10111";
+            //    options.RequireHttpsMetadata = false;
+            //    options.Audience = "smsApi";
 
-            });
+            //});
 
             services.AddTransient<ILogger, Logger>();
             return services.UseHystrix(Assembly.GetEntryAssembly());

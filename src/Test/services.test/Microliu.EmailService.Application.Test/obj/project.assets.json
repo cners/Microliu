@@ -1751,13 +1751,41 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "NLog/4.6.7": {
+      "NLog/4.6.8": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/NLog.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/NLog.dll": {}
+        }
+      },
+      "NLog.Extensions.Logging/1.6.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging": "2.1.0",
+          "NLog": "[4.6.7, 5.0.0-beta01)"
+        },
+        "compile": {
+          "lib/netstandard2.0/NLog.Extensions.Logging.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.Extensions.Logging.dll": {}
+        }
+      },
+      "NLog.Web.AspNetCore/4.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting.Abstractions": "2.1.1",
+          "Microsoft.AspNetCore.Http": "2.1.1",
+          "Microsoft.AspNetCore.Routing.Abstractions": "2.1.1",
+          "NLog.Extensions.Logging": "1.6.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/NLog.Web.AspNetCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.Web.AspNetCore.dll": {}
         }
       },
       "Pipelines.Sockets.Unofficial/2.0.22": {
@@ -3879,12 +3907,13 @@
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "Microliu.Core.Logger/1.0.1": {
+      "Microliu.Core.Logger/1.0.2": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Exceptionless": "4.3.2027",
-          "NLog": "4.6.7"
+          "Exceptionless.AspNetCore": "4.3.2027",
+          "NLog": "4.6.8",
+          "NLog.Web.AspNetCore": "4.9.0"
         },
         "compile": {
           "bin/placeholder/Microliu.Core.Logger.dll": {}
@@ -3897,7 +3926,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Microliu.Core.Logger": "1.0.1",
+          "Microliu.Core.Logger": "1.0.2",
           "Microsoft.AspNetCore": "2.2.0",
           "StackExchange.Redis": "2.0.601"
         },
@@ -3965,7 +3994,7 @@
           "HangFire.SqlServer": "1.7.6",
           "Hangfire.AspNetCore": "1.7.6",
           "MailKit": "2.3.0",
-          "Microliu.Core.Logger": "1.0.1",
+          "Microliu.Core.Logger": "1.0.2",
           "Microliu.Core.Redis": "1.0.0",
           "Microliu.Utils": "1.0.0"
         },
@@ -6139,10 +6168,10 @@
         "newtonsoft.json.nuspec"
       ]
     },
-    "NLog/4.6.7": {
-      "sha512": "xSIzXrIF89Ww6yoJPvyBcu4JLgNiDiEaTT4GyVltZEeVIvkgSm9J/srUy1Yz0EXwbTv502l8knoCFrgNc/MUMA==",
+    "NLog/4.6.8": {
+      "sha512": "LKB0uN5naOTxdNz++iapk6arNYv2asE8FPRBAmQZ1fe8y8C1Zm6sldh/w9TP/w5s7FGK8s0x6ny0og5ytFK1oQ==",
       "type": "package",
-      "path": "nlog/4.6.7",
+      "path": "nlog/4.6.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6168,8 +6197,52 @@
         "lib/wp8/NLog.xml",
         "lib/xamarinios10/NLog.dll",
         "lib/xamarinios10/NLog.xml",
-        "nlog.4.6.7.nupkg.sha512",
+        "nlog.4.6.8.nupkg.sha512",
         "nlog.nuspec"
+      ]
+    },
+    "NLog.Extensions.Logging/1.6.0": {
+      "sha512": "T4EoyIMeVG0hMRzbzAOALtTvzshsDkdlxcgpQ0h/MDNppe/VwG39/M4LwisR8ViLPJmakLO0y7ey/IrK46FMFA==",
+      "type": "package",
+      "path": "nlog.extensions.logging/1.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net451/NLog.Extensions.Logging.dll",
+        "lib/net451/NLog.Extensions.Logging.xml",
+        "lib/net461/NLog.Extensions.Logging.dll",
+        "lib/net461/NLog.Extensions.Logging.xml",
+        "lib/netcoreapp3.0/NLog.Extensions.Logging.dll",
+        "lib/netcoreapp3.0/NLog.Extensions.Logging.xml",
+        "lib/netstandard1.3/NLog.Extensions.Logging.dll",
+        "lib/netstandard1.3/NLog.Extensions.Logging.xml",
+        "lib/netstandard1.5/NLog.Extensions.Logging.dll",
+        "lib/netstandard1.5/NLog.Extensions.Logging.xml",
+        "lib/netstandard2.0/NLog.Extensions.Logging.dll",
+        "lib/netstandard2.0/NLog.Extensions.Logging.xml",
+        "nlog.extensions.logging.1.6.0.nupkg.sha512",
+        "nlog.extensions.logging.nuspec"
+      ]
+    },
+    "NLog.Web.AspNetCore/4.9.0": {
+      "sha512": "lEA+6Xm/DbU+Z6qVbJP1fgP4MvE0amlwXlJj3MyarcassZ/yuIAQIJsiLoJ/NMDFu1Jfh139L8F4mQpB/r5q/g==",
+      "type": "package",
+      "path": "nlog.web.aspnetcore/4.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net451/NLog.Web.AspNetCore.dll",
+        "lib/net451/NLog.Web.AspNetCore.xml",
+        "lib/net461/NLog.Web.AspNetCore.dll",
+        "lib/net461/NLog.Web.AspNetCore.xml",
+        "lib/netcoreapp3.0/NLog.Web.AspNetCore.dll",
+        "lib/netcoreapp3.0/NLog.Web.AspNetCore.xml",
+        "lib/netstandard1.5/NLog.Web.AspNetCore.dll",
+        "lib/netstandard1.5/NLog.Web.AspNetCore.xml",
+        "lib/netstandard2.0/NLog.Web.AspNetCore.dll",
+        "lib/netstandard2.0/NLog.Web.AspNetCore.xml",
+        "nlog.web.aspnetcore.4.9.0.nupkg.sha512",
+        "nlog.web.aspnetcore.nuspec"
       ]
     },
     "Pipelines.Sockets.Unofficial/2.0.22": {
@@ -11488,7 +11561,7 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "Microliu.Core.Logger/1.0.1": {
+    "Microliu.Core.Logger/1.0.2": {
       "type": "project",
       "path": "../../../Microliu.Core/Microliu.Core.Logger/Microliu.Core.Logger.csproj",
       "msbuildProject": "../../../Microliu.Core/Microliu.Core.Logger/Microliu.Core.Logger.csproj"
@@ -11559,10 +11632,7 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\liuzhuang\\nuget.test": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {},
-        "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
-        "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
@@ -11602,10 +11672,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,0 +1,6 @@
+2019-12-11 19:37:42.5557||DEBUG|Microliu.Core.LoggerTest.Program|初始化程序 Main |url: |action: 
+2019-12-11 19:37:44.4706|1|DEBUG|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|进入构造函数 |url: http://localhost/weatherforecast|action: Get
+2019-12-11 19:37:44.6164||INFO|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|进入get方法 |url: http://localhost/weatherforecast|action: Get
+2019-12-11 19:49:12.7345||DEBUG|Microliu.Core.LoggerTest.Program|初始化程序 Main |url: |action: 
+2019-12-11 19:49:14.1045|1|DEBUG|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|进入构造函数 |url: http://localhost/weatherforecast|action: Get
+2019-12-11 19:49:14.2016||INFO|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|进入get方法 |url: http://localhost/weatherforecast|action: Get
