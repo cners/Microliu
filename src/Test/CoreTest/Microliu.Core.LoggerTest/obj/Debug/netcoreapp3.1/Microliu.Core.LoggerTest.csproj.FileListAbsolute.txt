@@ -25,6 +25,12 @@ D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\obj\Debug\netcoreapp3.1\M
 D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\obj\Debug\netcoreapp3.1\Microliu.Core.LoggerTest.csproj.CopyComplete
 D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\obj\Debug\netcoreapp3.1\Microliu.Core.LoggerTest.dll
 D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\obj\Debug\netcoreapp3.1\Microliu.Core.LoggerTest.pdb
-D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\bin\Debug\netcoreapp3.1\README.MD
 D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\bin\Debug\netcoreapp3.1\Exceptionless.AspNetCore.dll
 D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DiagnosticAdapter.dll
+D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Https.dll
+D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\bin\Debug\netcoreapp3.1\runtimes\win-x64\nativeassets\netcoreapp2.2\aspnetcorev2_inprocess.dll
+D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\bin\Debug\netcoreapp3.1\runtimes\win-x86\nativeassets\netcoreapp2.2\aspnetcorev2_inprocess.dll
+D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\bin\Debug\netcoreapp3.1\Exceptionless.NLog.dll
+D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\bin\Debug\netcoreapp3.1\readme.txt

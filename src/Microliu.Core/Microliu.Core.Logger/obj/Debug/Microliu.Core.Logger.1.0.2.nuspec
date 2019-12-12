@@ -6,10 +6,13 @@
     <authors>刘壮</authors>
     <owners>刘壮</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Wiki地址：https://github.com/cners/Microliu/wiki/ä½¿ç¨Microliu.Core.Logger</description>
+    <description>Wiki Url：https://github.com/cners/Microliu/wiki/How-to-use-Microliu.Core.Logger</description>
     <dependencies>
       <group targetFramework=".NETStandard2.0">
+        <dependency id="Exceptionless" version="4.3.2027" exclude="Build,Analyzers" />
         <dependency id="Exceptionless.AspNetCore" version="4.3.2027" exclude="Build,Analyzers" />
+        <dependency id="Exceptionless.NLog" version="4.3.2027" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore" version="2.2.0" exclude="Build,Analyzers" />
         <dependency id="NLog" version="4.6.8" exclude="Build,Analyzers" />
         <dependency id="NLog.Web.AspNetCore" version="4.9.0" exclude="Build,Analyzers" />
       </group>

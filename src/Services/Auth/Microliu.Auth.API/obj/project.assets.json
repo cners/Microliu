@@ -150,6 +150,19 @@
           "lib/netcoreapp2.0/Exceptionless.AspNetCore.dll": {}
         }
       },
+      "Exceptionless.NLog/4.3.2027": {
+        "type": "package",
+        "dependencies": {
+          "Exceptionless": "4.3.2027",
+          "NLog": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Exceptionless.NLog.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Exceptionless.NLog.dll": {}
+        }
+      },
       "Google.Protobuf/3.6.1": {
         "type": "package",
         "dependencies": {
@@ -5490,7 +5503,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Exceptionless": "4.3.2027",
           "Exceptionless.AspNetCore": "4.3.2027",
+          "Exceptionless.NLog": "4.3.2027",
+          "Microsoft.AspNetCore": "2.2.0",
           "NLog": "4.6.8",
           "NLog.Web.AspNetCore": "4.9.0"
         },
@@ -5688,6 +5704,22 @@
         "lib/net461/Exceptionless.AspNetCore.xml",
         "lib/netcoreapp2.0/Exceptionless.AspNetCore.dll",
         "lib/netcoreapp2.0/Exceptionless.AspNetCore.xml",
+        "readme.txt"
+      ]
+    },
+    "Exceptionless.NLog/4.3.2027": {
+      "sha512": "CEMq2aBAdZHV9k7iX9U3wgT57CSCk9lVsMwwdr6AiC4ZKhG+zXFxTu7bPsUzBY2MbJ0p8yDf/k8T3bi3EMMrYQ==",
+      "type": "package",
+      "path": "exceptionless.nlog/4.3.2027",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "exceptionless.nlog.4.3.2027.nupkg.sha512",
+        "exceptionless.nlog.nuspec",
+        "lib/net45/Exceptionless.NLog.dll",
+        "lib/net45/Exceptionless.NLog.xml",
+        "lib/netstandard2.0/Exceptionless.NLog.dll",
+        "lib/netstandard2.0/Exceptionless.NLog.xml",
         "readme.txt"
       ]
     },

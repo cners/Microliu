@@ -13,6 +13,7 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgExceptionless Condition=" '$(PkgExceptionless)' == '' ">C:\Users\dk047\.nuget\packages\exceptionless\4.3.2027</PkgExceptionless>
     <PkgHangfire_SqlServer Condition=" '$(PkgHangfire_SqlServer)' == '' ">C:\Users\dk047\.nuget\packages\hangfire.sqlserver\1.7.6</PkgHangfire_SqlServer>
   </PropertyGroup>
 </Project>

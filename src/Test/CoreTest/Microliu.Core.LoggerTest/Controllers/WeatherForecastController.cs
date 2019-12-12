@@ -22,16 +22,16 @@ namespace Microliu.Core.LoggerTest.Controllers
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
         {
             _logger = logger;
-            _logger.LogDebug(1, "进入构造函数");
+            _logger.LogDebug("进入构造函数2", "构造函数", "刘壮");
 
-            ExceptionlessClient.Default.CreateLog("进入构造函数").Submit();
+            //ExceptionlessClient.Default.CreateLog("进入构造函数").Submit();
 
         }
 
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            _logger.LogInformation("进入get方法");
+            _logger.LogInformation("进入get方法", "Get", "请求参数");
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {

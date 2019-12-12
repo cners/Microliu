@@ -1,0 +1,16 @@
+2019-12-12 11:48:41.5798||DEBUG|Microliu.Core.LoggerTest.Program|初始化程序 Main 
+2019-12-12 11:48:41.9940||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2019-12-12 11:48:42.0019||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2019-12-12 11:48:42.0019||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2019-12-12 11:48:42.0019||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest 
+2019-12-12 11:48:43.4613||DEBUG|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|进入构造函数 
+2019-12-12 11:48:43.4709||INFO|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|进入get方法 
+2019-12-12 11:49:59.5816||DEBUG|Microliu.Core.LoggerTest.Program|初始化程序 Main 
+2019-12-12 11:50:00.0894||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2019-12-12 11:50:00.0998||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2019-12-12 11:50:00.0998||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2019-12-12 11:50:00.0998||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest 
+2019-12-12 11:50:01.5064||DEBUG|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|进入构造函数 
+2019-12-12 11:50:01.5178||INFO|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|进入get方法 
+2019-12-12 11:50:05.5646||INFO|Microsoft.Hosting.Lifetime|Application is shutting down... 
+2019-12-12 11:52:20.8255||DEBUG|Microliu.Core.LoggerTest.Program|初始化程序 Main 

@@ -102,6 +102,19 @@
           "lib/netstandard2.0/DotNetCore.CAP.RabbitMQ.dll": {}
         }
       },
+      "Exceptionless/4.3.2027": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.PlatformAbstractions": "1.1.0",
+          "System.Reflection.Emit.Lightweight": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Exceptionless.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Exceptionless.dll": {}
+        }
+      },
       "Exceptionless.AspNetCore/4.3.2027": {
         "type": "package",
         "compile": {
@@ -109,6 +122,19 @@
         },
         "runtime": {
           "lib/net461/Exceptionless.AspNetCore.dll": {}
+        }
+      },
+      "Exceptionless.NLog/4.3.2027": {
+        "type": "package",
+        "dependencies": {
+          "Exceptionless": "4.3.2027",
+          "NLog": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Exceptionless.NLog.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Exceptionless.NLog.dll": {}
         }
       },
       "Google.Protobuf/3.6.1": {
@@ -1046,6 +1072,19 @@
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.PlatformAbstractions/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "System.Reflection.TypeExtensions": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.Extensions.PlatformAbstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.Extensions.PlatformAbstractions.dll": {}
         }
       },
       "Microsoft.Extensions.Primitives/2.2.0": {
@@ -3000,7 +3039,10 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Exceptionless": "4.3.2027",
           "Exceptionless.AspNetCore": "4.3.2027",
+          "Exceptionless.NLog": "4.3.2027",
+          "Microsoft.AspNetCore": "2.2.0",
           "NLog": "4.6.8",
           "NLog.Web.AspNetCore": "4.9.0"
         },
@@ -3183,6 +3225,43 @@
         "lib/netstandard2.0/DotNetCore.CAP.RabbitMQ.xml"
       ]
     },
+    "Exceptionless/4.3.2027": {
+      "sha512": "b+XSF/qEmiMbUyAaO42kfbBBMmbFGaKsUoXyfiQ9uY3rVqk5cP49KN3U3G14yESg2404TaktcWseJ3TG5ch+3g==",
+      "type": "package",
+      "path": "exceptionless/4.3.2027",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "exceptionless.4.3.2027.nupkg.sha512",
+        "exceptionless.nuspec",
+        "lib/net45/Exceptionless.dll",
+        "lib/net45/Exceptionless.pdb",
+        "lib/net45/Exceptionless.xml",
+        "lib/netstandard1.2/Exceptionless.dll",
+        "lib/netstandard1.2/Exceptionless.pdb",
+        "lib/netstandard1.2/Exceptionless.xml",
+        "lib/netstandard1.3/Exceptionless.dll",
+        "lib/netstandard1.3/Exceptionless.pdb",
+        "lib/netstandard1.3/Exceptionless.xml",
+        "lib/netstandard1.4/Exceptionless.dll",
+        "lib/netstandard1.4/Exceptionless.pdb",
+        "lib/netstandard1.4/Exceptionless.xml",
+        "lib/netstandard1.5/Exceptionless.dll",
+        "lib/netstandard1.5/Exceptionless.pdb",
+        "lib/netstandard1.5/Exceptionless.xml",
+        "lib/netstandard2.0/Exceptionless.dll",
+        "lib/netstandard2.0/Exceptionless.pdb",
+        "lib/netstandard2.0/Exceptionless.xml",
+        "lib/portable46-net451+win81+wpa81/Exceptionless.dll",
+        "lib/portable46-net451+win81+wpa81/Exceptionless.pdb",
+        "lib/portable46-net451+win81+wpa81/Exceptionless.xml",
+        "readme.txt",
+        "tools/exceptionless.psm1",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
     "Exceptionless.AspNetCore/4.3.2027": {
       "sha512": "TrU1c6PpjYKMOSla6phhY8xgm4GFhb41buJoNXYgC04ElFxjTJSW0v/wqtV8xC83+A+GyahQ2tJu7d9DndDdOw==",
       "type": "package",
@@ -3196,6 +3275,22 @@
         "lib/net461/Exceptionless.AspNetCore.xml",
         "lib/netcoreapp2.0/Exceptionless.AspNetCore.dll",
         "lib/netcoreapp2.0/Exceptionless.AspNetCore.xml",
+        "readme.txt"
+      ]
+    },
+    "Exceptionless.NLog/4.3.2027": {
+      "sha512": "CEMq2aBAdZHV9k7iX9U3wgT57CSCk9lVsMwwdr6AiC4ZKhG+zXFxTu7bPsUzBY2MbJ0p8yDf/k8T3bi3EMMrYQ==",
+      "type": "package",
+      "path": "exceptionless.nlog/4.3.2027",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "exceptionless.nlog.4.3.2027.nupkg.sha512",
+        "exceptionless.nlog.nuspec",
+        "lib/net45/Exceptionless.NLog.dll",
+        "lib/net45/Exceptionless.NLog.xml",
+        "lib/netstandard2.0/Exceptionless.NLog.dll",
+        "lib/netstandard2.0/Exceptionless.NLog.xml",
         "readme.txt"
       ]
     },
@@ -4172,6 +4267,20 @@
         "lib/netstandard2.0/Microsoft.Extensions.Options.ConfigurationExtensions.xml",
         "microsoft.extensions.options.configurationextensions.2.2.0.nupkg.sha512",
         "microsoft.extensions.options.configurationextensions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.PlatformAbstractions/1.1.0": {
+      "sha512": "H6ZsQzxYw/6k2DfEQRXdC+vQ6obd6Uba3uGJrnJ2vG4PRXjQZ7seB13JdCfE72abp8E6Fk3gGgDzfJiLZi5ZpQ==",
+      "type": "package",
+      "path": "microsoft.extensions.platformabstractions/1.1.0",
+      "files": [
+        ".nupkg.metadata",
+        "lib/net451/Microsoft.Extensions.PlatformAbstractions.dll",
+        "lib/net451/Microsoft.Extensions.PlatformAbstractions.xml",
+        "lib/netstandard1.3/Microsoft.Extensions.PlatformAbstractions.dll",
+        "lib/netstandard1.3/Microsoft.Extensions.PlatformAbstractions.xml",
+        "microsoft.extensions.platformabstractions.1.1.0.nupkg.sha512",
+        "microsoft.extensions.platformabstractions.nuspec"
       ]
     },
     "Microsoft.Extensions.Primitives/2.2.0": {

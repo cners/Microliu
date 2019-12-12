@@ -13,21 +13,21 @@ namespace Microliu.Core.LoggerTest
             var logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
             try
             {
-                logger.Debug("初始化程序 Main");
+                logger.Debug("[启动程序] [Main]");
                 CreateHostBuilder(args).Build().Run();
             }
             catch (Exception exception)
             {
                 //NLog: catch setup errors
-                logger.Error(exception, "程序异常，停止运行");
+                logger.Error(exception, "[程序执行中异常]");
                 throw;
             }
             finally
             {
                 // Ensure to flush and stop internal timers/threads before application-exit (Avoid segmentation fault on Linux)
                 NLog.LogManager.Shutdown();
+                logger.Info("[程序停止运行]");
             }
-
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

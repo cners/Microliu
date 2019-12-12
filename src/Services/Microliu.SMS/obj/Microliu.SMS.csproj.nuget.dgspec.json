@@ -251,9 +251,21 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Exceptionless": {
+              "target": "Package",
+              "version": "[4.3.2027, )"
+            },
             "Exceptionless.AspNetCore": {
               "target": "Package",
               "version": "[4.3.2027, )"
+            },
+            "Exceptionless.NLog": {
+              "target": "Package",
+              "version": "[4.3.2027, )"
+            },
+            "Microsoft.AspNetCore": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",

@@ -13,7 +13,7 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("刘壮")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyDescriptionAttribute("Wiki地址：https://github.com/cners/Microliu/wiki/ä½¿ç¨Microliu.Core.Logger")]
+[assembly: System.Reflection.AssemblyDescriptionAttribute("Wiki Url：https://github.com/cners/Microliu/wiki/How-to-use-Microliu.Core.Logger")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.2.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Microliu.Core.Logger")]
