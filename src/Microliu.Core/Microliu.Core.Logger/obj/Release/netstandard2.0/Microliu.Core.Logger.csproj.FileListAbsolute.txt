@@ -7,3 +7,4 @@ D:\Microliu\src\Microliu.Core\Microliu.Core.Logger\obj\Release\netstandard2.0\Mi
 D:\Microliu\src\Microliu.Core\Microliu.Core.Logger\obj\Release\netstandard2.0\Microliu.Core.Logger.pdb
 D:\Microliu\src\Microliu.Core\Microliu.Core.Logger\obj\Release\netstandard2.0\Microliu.Core.Logger.csprojAssemblyReference.cache
 D:\Microliu\src\Microliu.Core\Microliu.Core.Logger\bin\Release\netstandard2.0\nlog.config
+D:\Microliu\src\Microliu.Core\Microliu.Core.Logger\bin\Release\netstandard2.0\readme.txt

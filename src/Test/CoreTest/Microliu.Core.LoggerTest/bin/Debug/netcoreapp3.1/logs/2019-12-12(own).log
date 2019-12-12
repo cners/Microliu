@@ -1,7 +1,35 @@
-2019-12-12 11:48:41.5798||DEBUG|Microliu.Core.LoggerTest.Program|初始化程序 Main |url: |action: 
-2019-12-12 11:48:43.4613||DEBUG|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|进入构造函数 |url: http://localhost/weatherforecast|action: Get
-2019-12-12 11:48:43.4709||INFO|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|进入get方法 |url: http://localhost/weatherforecast|action: Get
-2019-12-12 11:49:59.5816||DEBUG|Microliu.Core.LoggerTest.Program|初始化程序 Main |url: |action: 
-2019-12-12 11:50:01.5064||DEBUG|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|进入构造函数 |url: http://localhost/weatherforecast|action: Get
-2019-12-12 11:50:01.5178||INFO|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|进入get方法 |url: http://localhost/weatherforecast|action: Get
-2019-12-12 11:52:20.8255||DEBUG|Microliu.Core.LoggerTest.Program|初始化程序 Main |url: |action: 
+2019-12-12 13:16:35.9587||DEBUG|Microliu.Core.LoggerTest.Program|[启动程序] [Main] |url: |action: 
+2019-12-12 13:16:37.7653||DEBUG|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|进入构造函数2 |url: http://localhost/weatherforecast|action: Get
+2019-12-12 13:16:37.7653||INFO|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|进入get方法 |url: http://localhost/weatherforecast|action: Get
+2019-12-12 13:19:50.0743||DEBUG|Microliu.Core.LoggerTest.Program|[启动程序] [Main] |url: |action: 
+2019-12-12 13:19:51.8021||DEBUG|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|进入构造函数2 |url: http://localhost/weatherforecast|action: Get
+2019-12-12 13:19:51.8274||FATAL|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|[2019-12-12 13:19:51.821] [Critical] [test] |url: http://localhost/weatherforecast|action: Get
+2019-12-12 13:19:51.8274||ERROR|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|[2019/12/12 13:19:51] [Error] [test] |url: http://localhost/weatherforecast|action: Get
+2019-12-12 13:19:51.8481||WARN|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|[warning] |url: http://localhost/weatherforecast|action: Get
+2019-12-12 13:19:51.8481||INFO|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|进入get方法 |url: http://localhost/weatherforecast|action: Get
+2019-12-12 13:22:06.3526||DEBUG|Microliu.Core.LoggerTest.Program|[启动程序] [Main] |url: |action: 
+2019-12-12 13:22:08.3174||DEBUG|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|进入构造函数2 |url: http://localhost/weatherforecast|action: Get
+2019-12-12 13:22:08.3174||FATAL|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|[2019-12-12 13:22:08.324] [Critical] [test] |url: http://localhost/weatherforecast|action: Get
+2019-12-12 13:22:08.3342||ERROR|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|[2019/12/12 13:22:08] [Error] [test] |url: http://localhost/weatherforecast|action: Get
+2019-12-12 13:22:08.3342||WARN|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|[warning] |url: http://localhost/weatherforecast|action: Get
+2019-12-12 13:22:08.3462||INFO|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|进入get方法 |url: http://localhost/weatherforecast|action: Get
+2019-12-12 13:24:18.2523||DEBUG|Microliu.Core.LoggerTest.Program|[启动程序] [Main] |url: |action: 
+2019-12-12 13:24:20.1842||DEBUG|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|进入构造函数2 |url: http://localhost/weatherforecast|action: Get
+2019-12-12 13:24:20.1931||ERROR|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|[2019-12-12 13:24:20.191] [Error] [test] |url: http://localhost/weatherforecast|action: Get
+2019-12-12 13:24:20.2522||WARN|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|[warning] |url: http://localhost/weatherforecast|action: Get
+2019-12-12 13:24:20.2522||ERROR|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|[2019-12-12 13:24:20.260] [Error] [自定义异常] System.Exception: exception for debug
+   at Microliu.Core.LoggerTest.Controllers.WeatherForecastController..ctor(ILogger`1 logger) in D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\Controllers\WeatherForecastController.cs:line 34|url: http://localhost/weatherforecast|action: Get
+2019-12-12 13:24:20.3437||INFO|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|进入get方法 |url: http://localhost/weatherforecast|action: Get
+2019-12-12 13:38:10.7783||DEBUG|Microliu.Core.LoggerTest.Program|[启动程序] [Main] |url: |action: 
+2019-12-12 13:38:12.5663||ERROR|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|[2019-12-12 13:38:12.565] [Error] [test] |url: http://localhost/weatherforecast|action: Get
+2019-12-12 13:40:23.6188||DEBUG|Microliu.Core.LoggerTest.Program|[启动程序] [Main] |url: |action: 
+2019-12-12 13:40:25.4311||ERROR|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|[2019-12-12 13:40:25.429] [error] [构造函数] |url: http://localhost/weatherforecast|action: Get
+2019-12-12 14:05:24.8685||DEBUG|Microliu.Core.LoggerTest.Program|[启动程序] [Main] |url: |action: 
+2019-12-12 14:05:26.7205||ERROR|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|[2019-12-12 14:05:26.716] [Error] [人为错误] |url: http://localhost/weatherforecast|action: Get
+2019-12-12 14:05:26.7205||ERROR|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|[2019-12-12 14:05:26.730] [正常] [错误信息] |url: http://localhost/weatherforecast|action: Get
+2019-12-12 14:07:51.7181||DEBUG|Microliu.Core.LoggerTest.Program|[启动程序] [Main] |url: |action: 
+2019-12-12 14:07:53.5183||ERROR|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|[2019-12-12 14:07:53.516] [Error] [人为错误] |url: http://localhost/weatherforecast|action: Get
+2019-12-12 14:07:53.5292||ERROR|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|[2019-12-12 14:07:53.529] [正常] [错误信息] |url: http://localhost/weatherforecast|action: Get
+2019-12-12 14:07:53.5292||DEBUG|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|[980462345] [1] |url: http://localhost/weatherforecast|action: Get
+2019-12-12 14:07:53.5292||DEBUG|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|[980462346] |url: http://localhost/weatherforecast|action: Get
+2019-12-12 14:07:53.5508||DEBUG|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|[980462345] [2] |url: http://localhost/weatherforecast|action: Get

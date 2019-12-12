@@ -14,7 +14,6 @@ D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\bin\Debug\netcoreapp3.1\N
 D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
 D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
 D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\bin\Debug\netcoreapp3.1\Microliu.Core.Logger.dll
-D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\bin\Debug\netcoreapp3.1\Microliu.Core.Logger.pdb
 D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\obj\Debug\netcoreapp3.1\Microliu.Core.LoggerTest.csprojAssemblyReference.cache
 D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\obj\Debug\netcoreapp3.1\staticwebassets\Microliu.Core.LoggerTest.StaticWebAssets.Manifest.cache
 D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\obj\Debug\netcoreapp3.1\staticwebassets\Microliu.Core.LoggerTest.StaticWebAssets.xml
@@ -33,4 +32,4 @@ D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\bin\Debug\netcoreapp3.1\N
 D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\bin\Debug\netcoreapp3.1\runtimes\win-x64\nativeassets\netcoreapp2.2\aspnetcorev2_inprocess.dll
 D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\bin\Debug\netcoreapp3.1\runtimes\win-x86\nativeassets\netcoreapp2.2\aspnetcorev2_inprocess.dll
 D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\bin\Debug\netcoreapp3.1\Exceptionless.NLog.dll
-D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\bin\Debug\netcoreapp3.1\readme.txt
+D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\bin\Debug\netcoreapp3.1\Microliu.Core.Logger.pdb

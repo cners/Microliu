@@ -1,5 +1,4 @@
 using Exceptionless;
-using Microliu.Core.Logger;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -30,8 +29,7 @@ namespace Microliu.Core.LoggerTest
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseExceptionless(Configuration);
+           
             app.UseRouting();
 
             app.UseAuthorization();
