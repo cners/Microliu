@@ -4964,11 +4964,7 @@
       },
       "Microliu.Core.EventBusRabbitMQ/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "EasyNetQ": "3.6.0",
-          "Microsoft.AspNetCore": "2.2.0"
-        },
+        "framework": "Unsupported,Version=v0.0",
         "compile": {
           "bin/placeholder/Microliu.Core.EventBusRabbitMQ.dll": {}
         },
@@ -13699,5 +13695,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "项目 Microliu.Core.EventBusRabbitMQ 与 netcoreapp2.2 (.NETCoreApp,Version=v2.2) 不兼容。 项目 Microliu.Core.EventBusRabbitMQ 支持: netstandard2.1 (.NETStandard,Version=v2.1)",
+      "libraryId": "Microliu.Core.EventBusRabbitMQ",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    }
+  ]
 }
