@@ -6,22 +6,22 @@
         /// 发布
         /// </summary>
         /// <param name="event"></param>
-        void Publish(IntegrationEvent @event);
+        bool Publish(IntegrationEvent @event);
 
         /// <summary>
         /// 订阅
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        void Subscribe<T, TH>()
-            where T : IntegrationEvent
-            where TH : IIntegrationEventHandler;
+        /// <typeparam name="TEvent"></typeparam>
+        void Subscribe<TEvent, TEventHandler>()
+            where TEvent : IntegrationEvent
+            where TEventHandler : IIntegrationEventHandler<TEvent>;
 
         /// <summary>
         /// 取消订阅
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        void Unsubscribe<T, TH>()
-            where T : IntegrationEvent
-            where TH : IIntegrationEventHandler;
+        void Unsubscribe<TEvent, TEventHandler>()
+            where TEvent : IntegrationEvent
+            where TEventHandler : IIntegrationEventHandler<TEvent>;
     }
 }

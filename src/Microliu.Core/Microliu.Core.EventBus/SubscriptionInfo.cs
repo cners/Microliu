@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Microliu.Core.EventBus
 {
-    public partial class InMemoryEventBusSubscriptionsManager : IEventBusSubscrptionsManager
+    public partial class InMemoryEventBusSubscriptionsManager : IEventBusSubscriptionsManager
     {
 
         public class SubscriptionInfo

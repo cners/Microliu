@@ -10,6 +10,7 @@ namespace Microliu.Core.EventBusTest.EventBus
     public class EmailNoticeEventHandler : IIntegrationEventHandler<EmailNoticeEvent>
     {
         private readonly ILogger<EmailNoticeEventHandler> _logger;
+
         public EmailNoticeEventHandler(ILogger<EmailNoticeEventHandler> logger)
         {
             _logger = logger;
@@ -17,7 +18,7 @@ namespace Microliu.Core.EventBusTest.EventBus
 
         public async Task Handle(EmailNoticeEvent @event)
         {
-            _logger.LogDebug($"正在执行 {nameof(EmailNoticeEventHandler)}.Handle");
+            _logger.LogInformation($"正在执行 {nameof(EmailNoticeEventHandler)}.Handle,eventId:{@event.Id},creationTime:{@event.CreationTime.ToString("yyyy-MM-dd HH:mm:ss.fff")}, guid:{@event.NoticeId}");
         }
     }
 }

@@ -10,5 +10,4 @@ namespace Microliu.Core.EventBusTest.EventBus
     {
       public Guid NoticeId { get; set; }
     }
-
 }

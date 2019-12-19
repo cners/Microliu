@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microliu.Core.EventBus;
+using Microliu.Core.EventBusTest.EventBus;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -17,15 +19,23 @@ namespace Microliu.Core.EventBusTest.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly IEventBus _eventBus;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger,
+            IEventBus eventBus)
         {
             _logger = logger;
+            _eventBus = eventBus;
+
+          
         }
 
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
+
+            _eventBus.Publish(new EmailNoticeEvent() { });
+
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {

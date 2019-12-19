@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Microliu.Core.EventBus
 {
-    public partial class InMemoryEventBusSubscriptionsManager : IEventBusSubscrptionsManager
+    public partial class InMemoryEventBusSubscriptionsManager : IEventBusSubscriptionsManager
     {
         private readonly Dictionary<string, List<SubscriptionInfo>> _handlers;
         private readonly List<Type> _eventTypes;
@@ -46,7 +46,7 @@ namespace Microliu.Core.EventBus
             }
             _handlers[eventName].Add(SubscriptionInfo.Typed(@typeof));
 
-            _logger.LogTrace($"Added one subscription successed.eventName:{eventName}");
+            _logger.LogInformation($"Added one subscription successed.eventName:{eventName}");
 
             if (!_eventTypes.Contains(@typeof))
             {
