@@ -50,7 +50,7 @@ namespace Microliu.Core.EventBusTest
 
             RegisterEventBus(services);
 
-           
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -81,7 +81,6 @@ namespace Microliu.Core.EventBusTest
         {
             var subscriptionClientName = "BusTest";
 
-
             services.AddSingleton<IEventBus, EventBusRabbitMQ>(sp =>
             {
                 var rabbitMQPersistentConnection = sp.GetRequiredService<IRabbitMQPersistentConnection>();
@@ -98,6 +97,9 @@ namespace Microliu.Core.EventBusTest
             services.AddSingleton<IEventBusSubscriptionsManager, InMemoryEventBusSubscriptionsManager>();
 
             services.AddTransient<EmailNoticeEventHandler>();
+
+            
+           
         }
 
 
@@ -106,12 +108,18 @@ namespace Microliu.Core.EventBusTest
             var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
 
             eventBus.Subscribe<EmailNoticeEvent, EmailNoticeEventHandler>();
+
+          
+            
         }
 
         public void ConfigureContainer(ContainerBuilder builder)
         {
             builder.RegisterAssemblyTypes(typeof(Program).Assembly).
                 Where(x => x.Name.EndsWith("service", StringComparison.OrdinalIgnoreCase)).AsImplementedInterfaces();
+
+            builder.Register(c => new EmailNoticeEvent()).InstancePerLifetimeScope();
+
             builder.RegisterDynamicProxy();
         }
     }

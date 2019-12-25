@@ -27,7 +27,7 @@ namespace Microliu.Core.EventBusTest.Controllers
             _logger = logger;
             _eventBus = eventBus;
 
-          
+            _logger.LogDebug(1000,"调试");
         }
 
         [HttpGet]
@@ -35,6 +35,9 @@ namespace Microliu.Core.EventBusTest.Controllers
         {
 
             _eventBus.Publish(new EmailNoticeEvent() { });
+
+            _logger.LogDebug("发布完成-Debug");
+            _logger.LogTrace("发布完成-Trace");
 
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast

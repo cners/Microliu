@@ -41,7 +41,7 @@ namespace Microliu.Core.EventBusTest
             .ConfigureLogging(logging =>
                 {
                     logging.ClearProviders();
-                    logging.SetMinimumLevel(LogLevel.Trace);
+                    logging.AddDebug();
                 })
                 .UseNLog();
     }

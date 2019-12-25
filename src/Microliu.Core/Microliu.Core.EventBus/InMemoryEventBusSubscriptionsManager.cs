@@ -37,7 +37,7 @@ namespace Microliu.Core.EventBus
                 _handlers.Add(eventName, new List<SubscriptionInfo>());
             }
 
-            var @typeof = typeof(T);
+            var @typeof = typeof(TH);
             if (_handlers[eventName].Any(s => s.HandlerType == @typeof))
             {
                 _logger.LogWarning($"Handler Type {@typeof.Name} aleardy registered for '{eventName}'");
@@ -48,9 +48,9 @@ namespace Microliu.Core.EventBus
 
             _logger.LogInformation($"Added one subscription successed.eventName:{eventName}");
 
-            if (!_eventTypes.Contains(@typeof))
+            if (!_eventTypes.Contains(typeof(T)))
             {
-                _eventTypes.Add(@typeof);
+                _eventTypes.Add(typeof(T));
             }
         }
         public void RemoveSubscription<T, TH>()

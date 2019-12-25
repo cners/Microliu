@@ -19,6 +19,10 @@ namespace Microliu.Core.EventBusTest.EventBus
         public async Task Handle(EmailNoticeEvent @event)
         {
             _logger.LogInformation($"正在执行 {nameof(EmailNoticeEventHandler)}.Handle,eventId:{@event.Id},creationTime:{@event.CreationTime.ToString("yyyy-MM-dd HH:mm:ss.fff")}, guid:{@event.NoticeId}");
+
+            //....
+
+            _logger.LogTrace("执行完成");
         }
     }
 }

@@ -33,7 +33,7 @@ namespace Microliu.Core.EventBus.RabbitMQ
 
         public EventBusRabbitMQ(IRabbitMQPersistentConnection persistentConnection,
             ILogger<EventBusRabbitMQ> logger,
-             ILifetimeScope autofac,
+            ILifetimeScope autofac,
             IEventBusSubscriptionsManager eventBusSubscrptionsManager,
             ILogger<InMemoryEventBusSubscriptionsManager> loggerInMemory,
             string queueName = null,
@@ -46,7 +46,7 @@ namespace Microliu.Core.EventBus.RabbitMQ
             _consumerChannel = CreateConsumerChannel();
             _retryCount = retryCount;
             _subsManager.OnEventRemoved += SubsManager_OnEventRemoved;
-
+            _autofac = autofac;
 
         }
 
@@ -219,6 +219,7 @@ namespace Microliu.Core.EventBus.RabbitMQ
                     throw new InvalidOperationException($"Fake exception requested: \"{message}\"");
                 }
 
+                _logger.LogInformation("Consumer Received: {EventName},{message}",eventName,message);
                 await ProcessEvent(eventName, message);
             }
             catch (Exception ex)
@@ -245,7 +246,11 @@ namespace Microliu.Core.EventBus.RabbitMQ
                     foreach (var subscription in subscriptions)
                     {
                         var handler = scope.ResolveOptional(subscription.HandlerType);
-                        if (handler == null) continue;
+                        if (handler == null)
+                        {
+                            _logger.LogInformation("no handler,eventName: {EventName}", eventName);
+                            continue;
+                        }
                         var eventType = _subsManager.GetEventTypeByName(eventName);
                         var integrationEvent = JsonConvert.DeserializeObject(message, eventType);
                         var concreteType = typeof(IIntegrationEventHandler<>).MakeGenericType(eventType);
@@ -261,6 +266,8 @@ namespace Microliu.Core.EventBus.RabbitMQ
             }
         }
 
+
+
         private void SubsManager_OnEventRemoved(object sender, string eventName)
         {
             if (!_persistentConnection.IsConnected)
@@ -273,6 +280,8 @@ namespace Microliu.Core.EventBus.RabbitMQ
                 channel.QueueUnbind(queue: _queueName,
                     exchange: BROKER_NAME,
                     routingKey: eventName);
+
+                _logger.LogInformation("Removed for RabbitMQ event: {EventName}",eventName);
 
                 if (_subsManager.IsEmpty)
                 {
