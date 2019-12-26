@@ -1,15 +1,12 @@
 ﻿using Autofac;
-using Microliu.Core.EventBus;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using Polly;
 using Polly.Retry;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using RabbitMQ.Client.Exceptions;
 using System;
-using System.Collections.Generic;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,13 +20,13 @@ namespace Microliu.Core.EventBus.RabbitMQ
         private readonly IRabbitMQPersistentConnection _persistentConnection;
         private readonly ILogger<EventBusRabbitMQ> _logger;
         private readonly IEventBusSubscriptionsManager _subsManager;
-        private readonly int _retryCount;
         private readonly string AUTOFAC_SCOPE_NAME = "xxx_event_bus";
         private readonly ILifetimeScope _autofac;
 
 
         private IModel _consumerChannel;
         private string _queueName;
+        private readonly int _retryCount;
 
         public EventBusRabbitMQ(IRabbitMQPersistentConnection persistentConnection,
             ILogger<EventBusRabbitMQ> logger,
@@ -47,7 +44,6 @@ namespace Microliu.Core.EventBus.RabbitMQ
             _retryCount = retryCount;
             _subsManager.OnEventRemoved += SubsManager_OnEventRemoved;
             _autofac = autofac;
-
         }
 
 

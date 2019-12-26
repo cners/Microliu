@@ -5,4 +5,3 @@ D:\Microliu\src\Microliu.Core\Microliu.Core.EventBus\obj\Debug\netstandard2.0\Mi
 D:\Microliu\src\Microliu.Core\Microliu.Core.EventBus\obj\Debug\netstandard2.0\Microliu.Core.EventBus.AssemblyInfo.cs
 D:\Microliu\src\Microliu.Core\Microliu.Core.EventBus\obj\Debug\netstandard2.0\Microliu.Core.EventBus.dll
 D:\Microliu\src\Microliu.Core\Microliu.Core.EventBus\obj\Debug\netstandard2.0\Microliu.Core.EventBus.pdb
-D:\Microliu\src\Microliu.Core\Microliu.Core.EventBus\obj\Debug\netstandard2.0\Microliu.Core.EventBus.csprojAssemblyReference.cache
