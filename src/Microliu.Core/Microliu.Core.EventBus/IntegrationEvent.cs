@@ -21,9 +21,15 @@ namespace Microliu.Core.EventBus
             CreationTime = createDate;
         }
 
+        /// <summary>
+        /// 事件ID
+        /// </summary>
         [JsonProperty]
         public Guid Id { get; private set; }
 
+        /// <summary>
+        /// 创建时间
+        /// </summary>
         [JsonProperty]
         public DateTime CreationTime { get; private set; }
     }

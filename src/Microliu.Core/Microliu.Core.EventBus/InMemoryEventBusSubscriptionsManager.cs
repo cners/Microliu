@@ -46,7 +46,7 @@ namespace Microliu.Core.EventBus
             }
             _handlers[eventName].Add(SubscriptionInfo.Typed(@typeof));
 
-            _logger.LogInformation($"Added one subscription successed.eventName:{eventName}");
+            _logger.LogDebug($"Added one subscription successed.eventName:{eventName}");
 
             if (!_eventTypes.Contains(typeof(T)))
             {

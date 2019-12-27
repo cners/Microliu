@@ -23,8 +23,6 @@ namespace Microliu.Core.EventBusRabbitMQTest.Controllers
         [HttpGet(nameof(Send))]
         public IActionResult Send()
         {
-            _logger.LogDebug("Debug");
-            _logger.LogTrace("Trace");
             var emailNotice = EmailNoticeEvent.Default();
             _eventBus.Publish(emailNotice);
             return new JsonResult(emailNotice);

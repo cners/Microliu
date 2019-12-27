@@ -6,9 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Utils", "Microliu.Utils\Microliu.Utils\Microliu.Utils.csproj", "{AEDEC798-51C9-4BE7-BEAD-9CBDC8D7163A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microliu.Services", "Microliu.Services", "{052D9C23-996F-430C-8E5A-316BB053407E}"
-	ProjectSection(SolutionItems) = preProject
-		README.txt = README.txt
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{3030D236-A055-419B-B3E6-367500621BC3}"
 EndProject

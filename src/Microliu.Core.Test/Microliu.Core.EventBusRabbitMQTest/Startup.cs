@@ -12,6 +12,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using RabbitMQ.Client;
 using System;
+using System.Reflection;
+using System.Runtime.Loader;
 
 namespace Microliu.Core.EventBusTest
 {
@@ -29,28 +31,9 @@ namespace Microliu.Core.EventBusTest
         {
             services.AddControllers();
 
-            services.AddSingleton<IRabbitMQPersistentConnection>(sp =>
-            {
-                var logger = sp.GetRequiredService<ILogger<DefaultRabbitMQPersistentConnection>>();
-
-                var factory = new ConnectionFactory()
-                {
-                    HostName = "10.0.0.101",
-                    Port=5672,
-                    DispatchConsumersAsync = true,
-                };
-                factory.UserName = "microliu";
-                factory.Password = "microliu";
-                factory.VirtualHost = "MICROLIU";
-
-                var retryCount = 5;
-
-                return new DefaultRabbitMQPersistentConnection(factory, logger, retryCount);
-            });
-
-            RegisterEventBus(services);
-
-
+            services.AddEventBusRabbitMQ(clientName: "EventBusClientTest");
+            //services.RegisterEventBusHandler<EmailNoticeEventHandler>();
+            services.RegisterEventBusHandler();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -77,41 +60,6 @@ namespace Microliu.Core.EventBusTest
         }
 
 
-        private void RegisterEventBus(IServiceCollection services)
-        {
-            var subscriptionClientName = "BusTest";
-
-            services.AddSingleton<IEventBus, EventBusRabbitMQ>(sp =>
-            {
-                var rabbitMQPersistentConnection = sp.GetRequiredService<IRabbitMQPersistentConnection>();
-                var iLifetimeScope = sp.GetRequiredService<ILifetimeScope>();
-                var logger = sp.GetRequiredService<ILogger<EventBusRabbitMQ>>();
-                var loggerInMemory = sp.GetRequiredService<ILogger<InMemoryEventBusSubscriptionsManager>>();
-                var eventBusSubcriptionsManager = sp.GetRequiredService<IEventBusSubscriptionsManager>();
-
-                var retryCount = 5;
-
-                return new EventBusRabbitMQ(rabbitMQPersistentConnection, logger, iLifetimeScope, eventBusSubcriptionsManager, loggerInMemory, subscriptionClientName, retryCount);
-            });
-
-            services.AddSingleton<IEventBusSubscriptionsManager, InMemoryEventBusSubscriptionsManager>();
-
-            services.AddTransient<EmailNoticeEventHandler>();
-
-            
-           
-        }
-
-
-        private void ConfigureEventBus(IApplicationBuilder app)
-        {
-            var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
-
-            eventBus.Subscribe<EmailNoticeEvent, EmailNoticeEventHandler>();
-
-          
-            
-        }
 
         public void ConfigureContainer(ContainerBuilder builder)
         {
@@ -121,6 +69,13 @@ namespace Microliu.Core.EventBusTest
             builder.Register(c => new EmailNoticeEvent()).InstancePerLifetimeScope();
 
             builder.RegisterDynamicProxy();
+        }
+
+        private void ConfigureEventBus(IApplicationBuilder app)
+        {
+            var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
+
+            eventBus.Subscribe<EmailNoticeEvent, EmailNoticeEventHandler>();
         }
     }
 }

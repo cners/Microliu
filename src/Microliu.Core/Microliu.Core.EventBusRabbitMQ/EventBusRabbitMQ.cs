@@ -15,7 +15,6 @@ namespace Microliu.Core.EventBus.RabbitMQ
 {
     public class EventBusRabbitMQ : IEventBus, IDisposable
     {
-        private const string BROKER_NAME = "xxx_event_bus";
 
         private readonly IRabbitMQPersistentConnection _persistentConnection;
         private readonly ILogger<EventBusRabbitMQ> _logger;
@@ -23,7 +22,7 @@ namespace Microliu.Core.EventBus.RabbitMQ
         private readonly string AUTOFAC_SCOPE_NAME = "xxx_event_bus";
         private readonly ILifetimeScope _autofac;
 
-
+        private string _exchangeName;
         private IModel _consumerChannel;
         private string _queueName;
         private readonly int _retryCount;
@@ -33,6 +32,7 @@ namespace Microliu.Core.EventBus.RabbitMQ
             ILifetimeScope autofac,
             IEventBusSubscriptionsManager eventBusSubscrptionsManager,
             ILogger<InMemoryEventBusSubscriptionsManager> loggerInMemory,
+            string exchangeName,
             string queueName = null,
             int retryCount = 5)
         {
@@ -42,6 +42,7 @@ namespace Microliu.Core.EventBus.RabbitMQ
             _queueName = queueName;
             _consumerChannel = CreateConsumerChannel();
             _retryCount = retryCount;
+            _exchangeName = exchangeName;
             _subsManager.OnEventRemoved += SubsManager_OnEventRemoved;
             _autofac = autofac;
         }
@@ -63,14 +64,14 @@ namespace Microliu.Core.EventBus.RabbitMQ
 
             var eventName = @event.GetType().Name;
 
-            _logger.LogInformation("Creating RabbitMQ channel to publish event: {EventId} ({EventName})", @event.Id, eventName);
+            _logger.LogDebug("Creating RabbitMQ channel to publish event: {EventId} ({EventName})", @event.Id, eventName);
 
             using (var channel = _persistentConnection.CreateModel())
             {
 
-                _logger.LogInformation("Declaring RabbitMQ exchange to publish event: {EventId}", @event.Id);
+                _logger.LogDebug("Declaring RabbitMQ exchange to publish event: {EventId}", @event.Id);
 
-                channel.ExchangeDeclare(exchange: BROKER_NAME, type: "direct");
+                channel.ExchangeDeclare(exchange: _exchangeName, type: "direct");
 
                 var message = JsonConvert.SerializeObject(@event);
                 var body = Encoding.UTF8.GetBytes(message);
@@ -80,10 +81,10 @@ namespace Microliu.Core.EventBus.RabbitMQ
                     var properties = channel.CreateBasicProperties();
                     properties.DeliveryMode = 2; // persistent
 
-                    _logger.LogInformation("Publishing event to RabbitMQ: {EventId}", @event.Id);
+                    _logger.LogDebug("Publishing event to RabbitMQ: {EventId}", @event.Id);
 
                     channel.BasicPublish(
-                        exchange: BROKER_NAME,
+                        exchange: _exchangeName,
                         routingKey: eventName,
                         mandatory: true,
                         basicProperties: properties,
@@ -101,7 +102,7 @@ namespace Microliu.Core.EventBus.RabbitMQ
             var eventName = _subsManager.GetEventKey<TEvent>();
             DoInternalSubscription(eventName);
 
-            _logger.LogInformation("Subscribing to event {EventName} with {EventHandler}", eventName, typeof(TEventHandler).FullName);
+            _logger.LogDebug("Subscribing to event {EventName} with {EventHandler}", eventName, typeof(TEventHandler).FullName);
 
             _subsManager.AddSubscription<TEvent, TEventHandler>();
             StartBasicConsume();
@@ -120,7 +121,7 @@ namespace Microliu.Core.EventBus.RabbitMQ
                 using (var channel = _persistentConnection.CreateModel())
                 {
                     channel.QueueBind(queue: _queueName,
-                                      exchange: BROKER_NAME,
+                                      exchange: _exchangeName,
                                       routingKey: eventName);
                 }
             }
@@ -133,7 +134,7 @@ namespace Microliu.Core.EventBus.RabbitMQ
         {
             var eventName = _subsManager.GetEventKey<TEvent>();
 
-            _logger.LogInformation("Unsubscribing from event {EventName}", eventName);
+            _logger.LogDebug("Unsubscribing from event {EventName}", eventName);
 
             _subsManager.RemoveSubscription<TEvent, TEventHandler>();
         }
@@ -156,11 +157,11 @@ namespace Microliu.Core.EventBus.RabbitMQ
                 _persistentConnection.TryConnect();
             }
 
-            _logger.LogInformation("Creating RabbitMQ consumer channel");
+            _logger.LogDebug("Creating RabbitMQ consumer channel");
 
             var channel = _persistentConnection.CreateModel();
 
-            channel.ExchangeDeclare(exchange: BROKER_NAME,
+            channel.ExchangeDeclare(exchange: _exchangeName,
                                     type: "direct");
 
             channel.QueueDeclare(queue: _queueName,
@@ -184,7 +185,7 @@ namespace Microliu.Core.EventBus.RabbitMQ
 
         private void StartBasicConsume()
         {
-            _logger.LogInformation("Starting RabbitMQ basic consume");
+            _logger.LogDebug("Starting RabbitMQ basic consume");
 
             if (_consumerChannel != null)
             {
@@ -215,7 +216,7 @@ namespace Microliu.Core.EventBus.RabbitMQ
                     throw new InvalidOperationException($"Fake exception requested: \"{message}\"");
                 }
 
-                _logger.LogInformation("Consumer Received: {EventName},{message}",eventName,message);
+                _logger.LogDebug("Consumer Received: {EventName},{message}",eventName,message);
                 await ProcessEvent(eventName, message);
             }
             catch (Exception ex)
@@ -244,7 +245,7 @@ namespace Microliu.Core.EventBus.RabbitMQ
                         var handler = scope.ResolveOptional(subscription.HandlerType);
                         if (handler == null)
                         {
-                            _logger.LogInformation("no handler,eventName: {EventName}", eventName);
+                            _logger.LogDebug("no handler,eventName: {EventName}", eventName);
                             continue;
                         }
                         var eventType = _subsManager.GetEventTypeByName(eventName);
@@ -274,10 +275,10 @@ namespace Microliu.Core.EventBus.RabbitMQ
             using (var channel = _persistentConnection.CreateModel())
             {
                 channel.QueueUnbind(queue: _queueName,
-                    exchange: BROKER_NAME,
+                    exchange: _exchangeName,
                     routingKey: eventName);
 
-                _logger.LogInformation("Removed for RabbitMQ event: {EventName}",eventName);
+                _logger.LogDebug("Removed for RabbitMQ event: {EventName}",eventName);
 
                 if (_subsManager.IsEmpty)
                 {
