@@ -36,7 +36,7 @@ namespace Microliu.Core.ELKLoggerTest
                 app.UseDeveloperExceptionPage();
             }
 
-            loggerFactory.AddNLog();
+            //loggerFactory.AddNLog();
             //env.ConfigureNLog("NLog.config");//ÅäÖÃNLogÎÄ¼þ
 
             app.UseRouting();

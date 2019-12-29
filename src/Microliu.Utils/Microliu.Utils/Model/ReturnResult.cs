@@ -32,12 +32,18 @@
             Data = "";
             Code = 400;
         }
+
         public ReturnResult(bool success, string message)
         {
             Success = success;
             Message = message;
             Data = "";
             Code = success ? 200 : 400;
+        }
+
+        public static ReturnResult New()
+        {
+            return new ReturnResult();
         }
 
         public ReturnResult SetSuccess(bool success = true)
