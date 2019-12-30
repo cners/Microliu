@@ -1570,7 +1570,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dk047\\.nuget\\packages\\": {},
+    "C:\\Users\\liuzh\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -1579,14 +1579,14 @@
       "projectUniqueName": "D:\\Microliu\\src\\Services\\Microliu.Test.AOP\\Microliu.Test.AOP.csproj",
       "projectName": "Microliu.Test.AOP",
       "projectPath": "D:\\Microliu\\src\\Services\\Microliu.Test.AOP\\Microliu.Test.AOP.csproj",
-      "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\liuzh\\.nuget\\packages\\",
       "outputPath": "D:\\Microliu\\src\\Services\\Microliu.Test.AOP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\liuzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1594,10 +1594,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://dotnet.myget.org/F/aspnetcore-dev/api/v3/index.json": {},
-        "https://dotnetfeed.blob.core.windows.net/dotnet-core/index.json": {},
-        "https://dotnetfeed.blob.core.windows.net/dotnet-windowsdesktop/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
@@ -1625,10 +1622,16 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,0 +1,13 @@
+2019-12-12 13:10:32.5433||DEBUG|Microliu.Core.LoggerTest.Program|[启动程序] [Main] 
+2019-12-12 13:10:33.8361||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2019-12-12 13:10:33.8454||INFO|Microsoft.Hosting.Lifetime|Now listening on: https://localhost:5001 
+2019-12-12 13:10:33.8454||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2019-12-12 13:10:33.8454||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Production 
+2019-12-12 13:10:33.8454||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest\bin\Release\netcoreapp3.1 
+2019-12-12 13:10:50.2688||DEBUG|Microliu.Core.LoggerTest.Program|[启动程序] [Main] 
+2019-12-12 13:10:50.7401||INFO|Microsoft.Hosting.Lifetime|Now listening on: http://localhost:5000 
+2019-12-12 13:10:50.7401||INFO|Microsoft.Hosting.Lifetime|Application started. Press Ctrl+C to shut down. 
+2019-12-12 13:10:50.7487||INFO|Microsoft.Hosting.Lifetime|Hosting environment: Development 
+2019-12-12 13:10:50.7487||INFO|Microsoft.Hosting.Lifetime|Content root path: D:\Microliu\src\Test\CoreTest\Microliu.Core.LoggerTest 
+2019-12-12 13:10:52.1523||DEBUG|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|进入构造函数2 
+2019-12-12 13:10:52.1627||INFO|Microliu.Core.LoggerTest.Controllers.WeatherForecastController|进入get方法 

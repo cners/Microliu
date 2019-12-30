@@ -9,7 +9,6 @@ D:\Microliu\src\Microliu.Utils\Microliu.Utils\Microliu.Utils\obj\Debug\netstanda
 D:\Microliu\src\Microliu.Utils\Microliu.Utils\bin\Debug\netstandard2.0\Microliu.Utils.deps.json
 D:\Microliu\src\Microliu.Utils\Microliu.Utils\bin\Debug\netstandard2.0\Microliu.Utils.dll
 D:\Microliu\src\Microliu.Utils\Microliu.Utils\bin\Debug\netstandard2.0\Microliu.Utils.pdb
-D:\Microliu\src\Microliu.Utils\Microliu.Utils\obj\Debug\netstandard2.0\Microliu.Utils.csproj.CoreCompileInputs.cache
 D:\Microliu\src\Microliu.Utils\Microliu.Utils\obj\Debug\netstandard2.0\Microliu.Utils.AssemblyInfoInputs.cache
 D:\Microliu\src\Microliu.Utils\Microliu.Utils\obj\Debug\netstandard2.0\Microliu.Utils.AssemblyInfo.cs
 D:\Microliu\src\Microliu.Utils\Microliu.Utils\obj\Debug\netstandard2.0\Microliu.Utils.dll
@@ -22,3 +21,4 @@ D:\Microliu\src\Microliu.Utils\Microliu.Utils\bin\Debug\netstandard2.0\System.Id
 D:\Microliu\src\Microliu.Utils\Microliu.Utils\bin\Debug\netstandard2.0\System.IdentityModel.Tokens.Jwt.xml
 D:\Microliu\src\Microliu.Utils\Microliu.Utils\obj\Debug\netstandard2.0\Microliu.Utils.csproj.CopyComplete
 D:\Microliu\src\Microliu.Utils\Microliu.Utils\obj\Debug\netstandard2.0\Microliu.Utils.csprojAssemblyReference.cache
+D:\Microliu\src\Microliu.Utils\Microliu.Utils\bin\Debug\netstandard2.0\jwt\README.md

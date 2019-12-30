@@ -1,0 +1,8 @@
+D:\Microliu\src\Microliu.Core\Microliu.Core.EventBus\bin\Debug\netstandard2.0\Microliu.Core.EventBus.deps.json
+D:\Microliu\src\Microliu.Core\Microliu.Core.EventBus\bin\Debug\netstandard2.0\Microliu.Core.EventBus.dll
+D:\Microliu\src\Microliu.Core\Microliu.Core.EventBus\bin\Debug\netstandard2.0\Microliu.Core.EventBus.pdb
+D:\Microliu\src\Microliu.Core\Microliu.Core.EventBus\obj\Debug\netstandard2.0\Microliu.Core.EventBus.AssemblyInfoInputs.cache
+D:\Microliu\src\Microliu.Core\Microliu.Core.EventBus\obj\Debug\netstandard2.0\Microliu.Core.EventBus.AssemblyInfo.cs
+D:\Microliu\src\Microliu.Core\Microliu.Core.EventBus\obj\Debug\netstandard2.0\Microliu.Core.EventBus.dll
+D:\Microliu\src\Microliu.Core\Microliu.Core.EventBus\obj\Debug\netstandard2.0\Microliu.Core.EventBus.pdb
+D:\Microliu\src\Microliu.Core\Microliu.Core.EventBus\obj\Debug\netstandard2.0\Microliu.Core.EventBus.csprojAssemblyReference.cache

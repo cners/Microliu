@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "fa4271b4427e2930cbede9ae6a62aa73d8916be0"
+    "signature": "d56ae63adfaae097fdb6868e03072202af2e270e"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,7 +9,7 @@
     ".NETStandard,Version=v2.0/": {
       "Microliu.Core.Redis/1.0.0": {
         "dependencies": {
-          "Microliu.Core.Logger": "1.0.0",
+          "Microliu.Core.Logger": "1.0.1",
           "Microsoft.AspNetCore": "2.2.0",
           "NETStandard.Library": "2.0.3",
           "StackExchange.Redis": "2.0.601"
@@ -25,14 +25,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/Exceptionless.dll": {
-            "assemblyVersion": "4.3.2027.0",
-            "fileVersion": "4.3.2027.0"
-          }
-        }
-      },
-      "Exceptionless.AspNetCore/4.3.2027": {
-        "runtime": {
-          "lib/net461/Exceptionless.AspNetCore.dll": {
             "assemblyVersion": "4.3.2027.0",
             "fileVersion": "4.3.2027.0"
           }
@@ -976,10 +968,9 @@
           }
         }
       },
-      "Microliu.Core.Logger/1.0.0": {
+      "Microliu.Core.Logger/1.0.1": {
         "dependencies": {
           "Exceptionless": "4.3.2027",
-          "Exceptionless.AspNetCore": "4.3.2027",
           "NLog": "4.6.7"
         },
         "runtime": {
@@ -1000,13 +991,6 @@
       "sha512": "sha512-b+XSF/qEmiMbUyAaO42kfbBBMmbFGaKsUoXyfiQ9uY3rVqk5cP49KN3U3G14yESg2404TaktcWseJ3TG5ch+3g==",
       "path": "exceptionless/4.3.2027",
       "hashPath": "exceptionless.4.3.2027.nupkg.sha512"
-    },
-    "Exceptionless.AspNetCore/4.3.2027": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-TrU1c6PpjYKMOSla6phhY8xgm4GFhb41buJoNXYgC04ElFxjTJSW0v/wqtV8xC83+A+GyahQ2tJu7d9DndDdOw==",
-      "path": "exceptionless.aspnetcore/4.3.2027",
-      "hashPath": "exceptionless.aspnetcore.4.3.2027.nupkg.sha512"
     },
     "Microsoft.AspNetCore/2.2.0": {
       "type": "package",
@@ -1582,7 +1566,7 @@
       "path": "system.threading.tasks.extensions/4.5.1",
       "hashPath": "system.threading.tasks.extensions.4.5.1.nupkg.sha512"
     },
-    "Microliu.Core.Logger/1.0.0": {
+    "Microliu.Core.Logger/1.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
