@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Microliu\\src\\Microliu.IdentityServer\\Microliu.IdentityServer\\Microliu.IdentityServer.csproj": {}
+    "D:\\LiuZhuang\\Microliu\\src\\Microliu.IdentityServer\\Microliu.IdentityServer\\Microliu.IdentityServer.csproj": {}
   },
   "projects": {
-    "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj": {
+    "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj",
+        "projectUniqueName": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj",
         "projectName": "Microliu.Core.Consul",
-        "projectPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj",
-        "packagesPath": "C:\\Users\\liuzh\\.nuget\\packages\\",
-        "outputPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\obj\\",
+        "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\liuzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,6 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\liuzhuang\\nuget.test": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -70,20 +71,20 @@
         }
       }
     },
-    "D:\\Microliu\\src\\Microliu.IdentityServer\\Microliu.IdentityServer\\Microliu.IdentityServer.csproj": {
+    "D:\\LiuZhuang\\Microliu\\src\\Microliu.IdentityServer\\Microliu.IdentityServer\\Microliu.IdentityServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Microliu\\src\\Microliu.IdentityServer\\Microliu.IdentityServer\\Microliu.IdentityServer.csproj",
+        "projectUniqueName": "D:\\LiuZhuang\\Microliu\\src\\Microliu.IdentityServer\\Microliu.IdentityServer\\Microliu.IdentityServer.csproj",
         "projectName": "Microliu.IdentityServer",
-        "projectPath": "D:\\Microliu\\src\\Microliu.IdentityServer\\Microliu.IdentityServer\\Microliu.IdentityServer.csproj",
-        "packagesPath": "C:\\Users\\liuzh\\.nuget\\packages\\",
-        "outputPath": "D:\\Microliu\\src\\Microliu.IdentityServer\\Microliu.IdentityServer\\obj\\",
+        "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.IdentityServer\\Microliu.IdentityServer\\Microliu.IdentityServer.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.IdentityServer\\Microliu.IdentityServer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\liuzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -91,13 +92,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\liuzhuang\\nuget.test": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj": {
-                "projectPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj"
+              "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj": {
+                "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj"
               }
             }
           }

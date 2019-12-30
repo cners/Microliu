@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Microliu\\src\\Test\\Microliu.Test.Consumer\\Microliu.Test.Consumer.csproj": {}
+    "D:\\LiuZhuang\\Microliu\\src\\Test\\Microliu.Test.Consumer\\Microliu.Test.Consumer.csproj": {}
   },
   "projects": {
-    "D:\\Microliu\\src\\Services\\RestTemplateCore\\RestTemplateCore.csproj": {
+    "D:\\LiuZhuang\\Microliu\\src\\Services\\RestTemplateCore\\RestTemplateCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Microliu\\src\\Services\\RestTemplateCore\\RestTemplateCore.csproj",
+        "projectUniqueName": "D:\\LiuZhuang\\Microliu\\src\\Services\\RestTemplateCore\\RestTemplateCore.csproj",
         "projectName": "RestTemplateCore",
-        "projectPath": "D:\\Microliu\\src\\Services\\RestTemplateCore\\RestTemplateCore.csproj",
-        "packagesPath": "C:\\Users\\liuzh\\.nuget\\packages\\",
-        "outputPath": "D:\\Microliu\\src\\Services\\RestTemplateCore\\obj\\",
+        "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Services\\RestTemplateCore\\RestTemplateCore.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\LiuZhuang\\Microliu\\src\\Services\\RestTemplateCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\liuzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,6 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\liuzhuang\\nuget.test": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -70,20 +71,20 @@
         }
       }
     },
-    "D:\\Microliu\\src\\Test\\Microliu.Test.Consumer\\Microliu.Test.Consumer.csproj": {
+    "D:\\LiuZhuang\\Microliu\\src\\Test\\Microliu.Test.Consumer\\Microliu.Test.Consumer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Microliu\\src\\Test\\Microliu.Test.Consumer\\Microliu.Test.Consumer.csproj",
+        "projectUniqueName": "D:\\LiuZhuang\\Microliu\\src\\Test\\Microliu.Test.Consumer\\Microliu.Test.Consumer.csproj",
         "projectName": "Microliu.Test.Consumer",
-        "projectPath": "D:\\Microliu\\src\\Test\\Microliu.Test.Consumer\\Microliu.Test.Consumer.csproj",
-        "packagesPath": "C:\\Users\\liuzh\\.nuget\\packages\\",
-        "outputPath": "D:\\Microliu\\src\\Test\\Microliu.Test.Consumer\\obj\\",
+        "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Test\\Microliu.Test.Consumer\\Microliu.Test.Consumer.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\LiuZhuang\\Microliu\\src\\Test\\Microliu.Test.Consumer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\liuzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -91,13 +92,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\liuzhuang\\nuget.test": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "D:\\Microliu\\src\\Services\\RestTemplateCore\\RestTemplateCore.csproj": {
-                "projectPath": "D:\\Microliu\\src\\Services\\RestTemplateCore\\RestTemplateCore.csproj"
+              "D:\\LiuZhuang\\Microliu\\src\\Services\\RestTemplateCore\\RestTemplateCore.csproj": {
+                "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Services\\RestTemplateCore\\RestTemplateCore.csproj"
               }
             }
           }

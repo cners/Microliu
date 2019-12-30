@@ -1,5 +1,22 @@
 ﻿src/Consul/consul.exe
-SurgingDemo/
-/src/obj
-/src/*/obj
-/src/*/bin
+###############
+#    folder   #
+###############
+/**/packages/
+/**/bin/
+/**/obj/
+
+# User-specific files
+*.suo
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/

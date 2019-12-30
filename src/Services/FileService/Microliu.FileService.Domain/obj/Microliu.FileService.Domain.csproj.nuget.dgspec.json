@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Domain\\Microliu.FileService.Domain.csproj": {}
+    "D:\\LiuZhuang\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Domain\\Microliu.FileService.Domain.csproj": {}
   },
   "projects": {
-    "D:\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Domain\\Microliu.FileService.Domain.csproj": {
+    "D:\\LiuZhuang\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Domain\\Microliu.FileService.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Domain\\Microliu.FileService.Domain.csproj",
+        "projectUniqueName": "D:\\LiuZhuang\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Domain\\Microliu.FileService.Domain.csproj",
         "projectName": "Microliu.FileService.Domain",
-        "projectPath": "D:\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Domain\\Microliu.FileService.Domain.csproj",
-        "packagesPath": "C:\\Users\\liuzh\\.nuget\\packages\\",
-        "outputPath": "D:\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Domain\\obj\\",
+        "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Domain\\Microliu.FileService.Domain.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\LiuZhuang\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\liuzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,13 +25,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\liuzhuang\\nuget.test": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "D:\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Infrastructure\\Microliu.FileService.Infrastructure.csproj": {
-                "projectPath": "D:\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Infrastructure\\Microliu.FileService.Infrastructure.csproj"
+              "D:\\LiuZhuang\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Infrastructure\\Microliu.FileService.Infrastructure.csproj": {
+                "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Infrastructure\\Microliu.FileService.Infrastructure.csproj"
               }
             }
           }
@@ -66,20 +67,20 @@
         }
       }
     },
-    "D:\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Infrastructure\\Microliu.FileService.Infrastructure.csproj": {
+    "D:\\LiuZhuang\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Infrastructure\\Microliu.FileService.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Infrastructure\\Microliu.FileService.Infrastructure.csproj",
+        "projectUniqueName": "D:\\LiuZhuang\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Infrastructure\\Microliu.FileService.Infrastructure.csproj",
         "projectName": "Microliu.FileService.Infrastructure",
-        "projectPath": "D:\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Infrastructure\\Microliu.FileService.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\liuzh\\.nuget\\packages\\",
-        "outputPath": "D:\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Infrastructure\\obj\\",
+        "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Infrastructure\\Microliu.FileService.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\LiuZhuang\\Microliu\\src\\Services\\FileService\\Microliu.FileService.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\liuzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -87,6 +88,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\liuzhuang\\nuget.test": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

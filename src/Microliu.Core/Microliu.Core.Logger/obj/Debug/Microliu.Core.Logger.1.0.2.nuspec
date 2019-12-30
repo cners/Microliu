@@ -19,6 +19,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="D:\Microliu\src\Microliu.Core\Microliu.Core.Logger\bin\Debug\netstandard2.0\Microliu.Core.Logger.dll" target="lib\netstandard2.0\Microliu.Core.Logger.dll" />
+    <file src="D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Logger\bin\Debug\netstandard2.0\Microliu.Core.Logger.dll" target="lib\netstandard2.0\Microliu.Core.Logger.dll" />
   </files>
 </package>

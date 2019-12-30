@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Data\\Microliu.Auth.Data.csproj": {}
+    "D:\\LiuZhuang\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Data\\Microliu.Auth.Data.csproj": {}
   },
   "projects": {
-    "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Data\\Microliu.Auth.Data.csproj": {
+    "D:\\LiuZhuang\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Data\\Microliu.Auth.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Data\\Microliu.Auth.Data.csproj",
+        "projectUniqueName": "D:\\LiuZhuang\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Data\\Microliu.Auth.Data.csproj",
         "projectName": "Microliu.Auth.Data",
-        "projectPath": "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Data\\Microliu.Auth.Data.csproj",
-        "packagesPath": "C:\\Users\\liuzh\\.nuget\\packages\\",
-        "outputPath": "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Data\\obj\\",
+        "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Data\\Microliu.Auth.Data.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\LiuZhuang\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\liuzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,13 +25,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\liuzhuang\\nuget.test": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Domain\\Microliu.Auth.Domain.csproj": {
-                "projectPath": "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Domain\\Microliu.Auth.Domain.csproj"
+              "D:\\LiuZhuang\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Domain\\Microliu.Auth.Domain.csproj": {
+                "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Domain\\Microliu.Auth.Domain.csproj"
               }
             }
           }
@@ -78,20 +79,20 @@
         }
       }
     },
-    "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Domain\\Microliu.Auth.Domain.csproj": {
+    "D:\\LiuZhuang\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Domain\\Microliu.Auth.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Domain\\Microliu.Auth.Domain.csproj",
+        "projectUniqueName": "D:\\LiuZhuang\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Domain\\Microliu.Auth.Domain.csproj",
         "projectName": "Microliu.Auth.Domain",
-        "projectPath": "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Domain\\Microliu.Auth.Domain.csproj",
-        "packagesPath": "C:\\Users\\liuzh\\.nuget\\packages\\",
-        "outputPath": "D:\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Domain\\obj\\",
+        "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Domain\\Microliu.Auth.Domain.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\LiuZhuang\\Microliu\\src\\Services\\Auth\\Microliu.Auth.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\liuzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -99,6 +100,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\liuzhuang\\nuget.test": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

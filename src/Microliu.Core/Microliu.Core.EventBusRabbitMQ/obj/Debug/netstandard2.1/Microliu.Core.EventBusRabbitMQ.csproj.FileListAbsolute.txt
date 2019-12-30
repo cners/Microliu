@@ -9,3 +9,14 @@ D:\Microliu\src\Microliu.Core\Microliu.Core.EventBusRabbitMQ\obj\Debug\netstanda
 D:\Microliu\src\Microliu.Core\Microliu.Core.EventBusRabbitMQ\obj\Debug\netstandard2.1\Microliu.Core.EventBusRabbitMQ.csproj.CopyComplete
 D:\Microliu\src\Microliu.Core\Microliu.Core.EventBusRabbitMQ\obj\Debug\netstandard2.1\Microliu.Core.EventBusRabbitMQ.dll
 D:\Microliu\src\Microliu.Core\Microliu.Core.EventBusRabbitMQ\obj\Debug\netstandard2.1\Microliu.Core.EventBusRabbitMQ.pdb
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.EventBusRabbitMQ\bin\Debug\netstandard2.1\Microliu.Core.EventBusRabbitMQ.deps.json
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.EventBusRabbitMQ\bin\Debug\netstandard2.1\Microliu.Core.EventBusRabbitMQ.dll
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.EventBusRabbitMQ\bin\Debug\netstandard2.1\Microliu.Core.EventBusRabbitMQ.pdb
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.EventBusRabbitMQ\bin\Debug\netstandard2.1\Microliu.Core.EventBus.dll
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.EventBusRabbitMQ\bin\Debug\netstandard2.1\Microliu.Core.EventBus.pdb
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.EventBusRabbitMQ\obj\Debug\netstandard2.1\Microliu.Core.EventBusRabbitMQ.csprojAssemblyReference.cache
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.EventBusRabbitMQ\obj\Debug\netstandard2.1\Microliu.Core.EventBusRabbitMQ.AssemblyInfoInputs.cache
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.EventBusRabbitMQ\obj\Debug\netstandard2.1\Microliu.Core.EventBusRabbitMQ.AssemblyInfo.cs
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.EventBusRabbitMQ\obj\Debug\netstandard2.1\Microliu.Core.EventBusRabbitMQ.csproj.CopyComplete
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.EventBusRabbitMQ\obj\Debug\netstandard2.1\Microliu.Core.EventBusRabbitMQ.dll
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.EventBusRabbitMQ\obj\Debug\netstandard2.1\Microliu.Core.EventBusRabbitMQ.pdb

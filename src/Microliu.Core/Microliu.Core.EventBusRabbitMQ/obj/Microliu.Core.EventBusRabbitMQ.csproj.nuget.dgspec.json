@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.EventBusRabbitMQ\\Microliu.Core.EventBusRabbitMQ.csproj": {}
+    "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.EventBusRabbitMQ\\Microliu.Core.EventBusRabbitMQ.csproj": {}
   },
   "projects": {
-    "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.EventBusRabbitMQ\\Microliu.Core.EventBusRabbitMQ.csproj": {
+    "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.EventBusRabbitMQ\\Microliu.Core.EventBusRabbitMQ.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.EventBusRabbitMQ\\Microliu.Core.EventBusRabbitMQ.csproj",
+        "projectUniqueName": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.EventBusRabbitMQ\\Microliu.Core.EventBusRabbitMQ.csproj",
         "projectName": "Microliu.Core.EventBusRabbitMQ",
-        "projectPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.EventBusRabbitMQ\\Microliu.Core.EventBusRabbitMQ.csproj",
-        "packagesPath": "C:\\Users\\liuzh\\.nuget\\packages\\",
-        "outputPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.EventBusRabbitMQ\\obj\\",
+        "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.EventBusRabbitMQ\\Microliu.Core.EventBusRabbitMQ.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.EventBusRabbitMQ\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\liuzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,13 +25,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\liuzhuang\\nuget.test": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.EventBus\\Microliu.Core.EventBus.csproj": {
-                "projectPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.EventBus\\Microliu.Core.EventBus.csproj"
+              "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.EventBus\\Microliu.Core.EventBus.csproj": {
+                "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.EventBus\\Microliu.Core.EventBus.csproj"
               }
             }
           }
@@ -81,20 +82,20 @@
         }
       }
     },
-    "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.EventBus\\Microliu.Core.EventBus.csproj": {
+    "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.EventBus\\Microliu.Core.EventBus.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.EventBus\\Microliu.Core.EventBus.csproj",
+        "projectUniqueName": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.EventBus\\Microliu.Core.EventBus.csproj",
         "projectName": "Microliu.Core.EventBus",
-        "projectPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.EventBus\\Microliu.Core.EventBus.csproj",
-        "packagesPath": "C:\\Users\\liuzh\\.nuget\\packages\\",
-        "outputPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.EventBus\\obj\\",
+        "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.EventBus\\Microliu.Core.EventBus.csproj",
+        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
+        "outputPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.EventBus\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\liuzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -102,6 +103,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\liuzhuang\\nuget.test": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
