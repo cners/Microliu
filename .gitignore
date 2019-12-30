@@ -1,2 +1,5 @@
 ﻿src/Consul/consul.exe
 SurgingDemo/
+/src/obj
+/src/*/obj
+/src/*/bin
