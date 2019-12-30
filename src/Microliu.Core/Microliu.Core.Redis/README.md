@@ -2,6 +2,7 @@
 # 缓存服务
 基于DotNetCore 2.2实现，文本日志采用NLog，为了更好的支持webapi分布式日志记录，也同时支持了Exceptionless
 
+
 ## 如何使用？
 在AspNetCore中使用：
 

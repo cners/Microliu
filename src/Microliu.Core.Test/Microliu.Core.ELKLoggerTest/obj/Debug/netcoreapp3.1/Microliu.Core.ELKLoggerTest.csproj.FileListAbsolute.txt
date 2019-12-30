@@ -48,3 +48,4 @@ D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.ELKLoggerTest\obj\Deb
 D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.ELKLoggerTest\obj\Debug\netcoreapp3.1\Microliu.Core.ELKLoggerTest.csproj.CopyComplete
 D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.ELKLoggerTest\obj\Debug\netcoreapp3.1\Microliu.Core.ELKLoggerTest.dll
 D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.ELKLoggerTest\obj\Debug\netcoreapp3.1\Microliu.Core.ELKLoggerTest.pdb
+D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.ELKLoggerTest\obj\Debug\netcoreapp3.1\Microliu.Core.ELKLoggerTest.csprojAssemblyReference.cache
