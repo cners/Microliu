@@ -4,6 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>刘壮</Authors>
+    <Version>1.0.1</Version>
+    <Description>分布式id，字符串操作，密码辅助，jwt，微服务响应类</Description>
+    <PackageReleaseNotes>分布式id，字符串操作，密码辅助，jwt，微服务响应类</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

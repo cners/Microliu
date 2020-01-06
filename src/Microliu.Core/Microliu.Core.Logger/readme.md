@@ -2,6 +2,8 @@
 
 ### 新建Asp.net core 2.2+项目
 
+### 【注意】该类已暂停使用，已转用ELK
+
 ### 安装NuGet
 
 	Exceptionless 4.3.2027

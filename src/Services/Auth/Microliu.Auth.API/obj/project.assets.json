@@ -5475,7 +5475,7 @@
           "DotNetCore.CAP.RabbitMQ": "2.6.0",
           "MediatR": "7.0.0",
           "Microliu.Auth.Data": "1.0.0",
-          "Microliu.Utils": "1.0.0",
+          "Microliu.Utils": "1.0.1",
           "Microsoft.AspNetCore": "2.2.0"
         },
         "compile": {
@@ -5517,7 +5517,7 @@
           "bin/placeholder/Microliu.Core.Logger.dll": {}
         }
       },
-      "Microliu.Utils/1.0.0": {
+      "Microliu.Utils/1.0.1": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -14725,7 +14725,7 @@
       "path": "../../../Microliu.Core/Microliu.Core.Logger/Microliu.Core.Logger.csproj",
       "msbuildProject": "../../../Microliu.Core/Microliu.Core.Logger/Microliu.Core.Logger.csproj"
     },
-    "Microliu.Utils/1.0.0": {
+    "Microliu.Utils/1.0.1": {
       "type": "project",
       "path": "../../../Microliu.Utils/Microliu.Utils/Microliu.Utils.csproj",
       "msbuildProject": "../../../Microliu.Utils/Microliu.Utils/Microliu.Utils.csproj"

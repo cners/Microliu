@@ -10,6 +10,12 @@ D:\Microliu\src\Microliu.Core\Microliu.Core.Redis\bin\Debug\netstandard2.0\Micro
 D:\Microliu\src\Microliu.Core\Microliu.Core.Redis\obj\Debug\netstandard2.0\Microliu.Core.Redis.csproj.CopyComplete
 D:\Microliu\src\Microliu.Core\Microliu.Core.Redis\obj\Debug\netstandard2.0\Microliu.Core.Redis.dll
 D:\Microliu\src\Microliu.Core\Microliu.Core.Redis\obj\Debug\netstandard2.0\Microliu.Core.Redis.pdb
-D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Redis\obj\Debug\netstandard2.0\Microliu.Core.Redis.csprojAssemblyReference.cache
 D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Redis\obj\Debug\netstandard2.0\Microliu.Core.Redis.AssemblyInfoInputs.cache
 D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Redis\obj\Debug\netstandard2.0\Microliu.Core.Redis.AssemblyInfo.cs
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Redis\bin\Debug\netstandard2.0\README.md
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Redis\bin\Debug\netstandard2.0\Microliu.Core.Redis.deps.json
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Redis\bin\Debug\netstandard2.0\Microliu.Core.Redis.dll
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Redis\bin\Debug\netstandard2.0\Microliu.Core.Redis.pdb
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Redis\obj\Debug\netstandard2.0\Microliu.Core.Redis.dll
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Redis\obj\Debug\netstandard2.0\Microliu.Core.Redis.pdb
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Redis\obj\Debug\netstandard2.0\Microliu.Core.Redis.csprojAssemblyReference.cache

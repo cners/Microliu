@@ -18,6 +18,6 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="D:\Microliu\src\Microliu.Utils\Microliu.Utils\bin\Debug\netstandard2.0\Microliu.Utils.dll" target="lib\netstandard2.0\Microliu.Utils.dll" />
+    <file src="D:\LiuZhuang\Microliu\src\Microliu.Utils\Microliu.Utils\bin\Debug\netstandard2.0\Microliu.Utils.dll" target="lib\netstandard2.0\Microliu.Utils.dll" />
   </files>
 </package>

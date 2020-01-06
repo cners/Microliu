@@ -109,7 +109,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microliu.Core.Test", "Micro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Core.EventBusRabbitMQTest", "Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\Microliu.Core.EventBusRabbitMQTest.csproj", "{7BF0A4DC-84F6-4930-A2A4-28422304DF54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.Core.ELKLoggerTest", "Microliu.Core.Test\Microliu.Core.ELKLoggerTest\Microliu.Core.ELKLoggerTest.csproj", "{AC212191-8EB1-4CBE-9DEA-9CF00883006D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Core.ELKLoggerTest", "Microliu.Core.Test\Microliu.Core.ELKLoggerTest\Microliu.Core.ELKLoggerTest.csproj", "{AC212191-8EB1-4CBE-9DEA-9CF00883006D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microliu.Core.RedisTest", "Microliu.Core.Test\Microliu.Core.RedisTest\Microliu.Core.RedisTest.csproj", "{5729FA8F-5198-4282-89A8-51AE93E0F68C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microliu.Core.UtilsTest", "Microliu.Core.Test\Microliu.Core.UtilsTest\Microliu.Core.UtilsTest.csproj", "{139703F5-2621-47A5-B22E-0BD0ADA8E6C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -273,6 +277,14 @@ Global
 		{AC212191-8EB1-4CBE-9DEA-9CF00883006D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC212191-8EB1-4CBE-9DEA-9CF00883006D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC212191-8EB1-4CBE-9DEA-9CF00883006D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5729FA8F-5198-4282-89A8-51AE93E0F68C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5729FA8F-5198-4282-89A8-51AE93E0F68C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5729FA8F-5198-4282-89A8-51AE93E0F68C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5729FA8F-5198-4282-89A8-51AE93E0F68C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{139703F5-2621-47A5-B22E-0BD0ADA8E6C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{139703F5-2621-47A5-B22E-0BD0ADA8E6C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{139703F5-2621-47A5-B22E-0BD0ADA8E6C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{139703F5-2621-47A5-B22E-0BD0ADA8E6C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -322,6 +334,8 @@ Global
 		{48CCD130-38F9-4632-A0A5-14D35E734DBA} = {39F95D1B-AAE4-4FE1-9E1D-CCB59767A3F1}
 		{7BF0A4DC-84F6-4930-A2A4-28422304DF54} = {D974371F-BFCD-4357-B546-AB38DF73A985}
 		{AC212191-8EB1-4CBE-9DEA-9CF00883006D} = {D974371F-BFCD-4357-B546-AB38DF73A985}
+		{5729FA8F-5198-4282-89A8-51AE93E0F68C} = {D974371F-BFCD-4357-B546-AB38DF73A985}
+		{139703F5-2621-47A5-B22E-0BD0ADA8E6C7} = {D974371F-BFCD-4357-B546-AB38DF73A985}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2F32ECF0-6010-4F59-AC16-6FFA191BC558}

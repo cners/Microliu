@@ -1,13 +1,13 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "5e7cd9164d3728252c1ae5650c64e10b78d32e60"
+    "signature": ""
   },
   "compilationOptions": {},
   "targets": {
     ".NETStandard,Version=v2.0": {},
     ".NETStandard,Version=v2.0/": {
-      "Microliu.Utils/1.0.0": {
+      "Microliu.Utils/1.0.1": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.Extensions.Configuration.Binder": "2.2.4",
@@ -235,7 +235,7 @@
     }
   },
   "libraries": {
-    "Microliu.Utils/1.0.0": {
+    "Microliu.Utils/1.0.1": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

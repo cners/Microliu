@@ -1,42 +1,56 @@
 ﻿
-# 缓存服务
-基于DotNetCore 2.2实现，文本日志采用NLog，为了更好的支持webapi分布式日志记录，也同时支持了Exceptionless
+### 缓存服务
+支持.net core 2.2+，采用Redis缓存，使用阻塞队列创建redis连接池实现。
 
-## 如何使用？
-在AspNetCore中使用：
+### 如何使用？
+在.net core web项目中使用：
 
+#### 第一种方式：Starup.cs中【推荐】
 `
-// 日志服务
-services.AddTransient<ILogger, Logger>();
-
-// Redis Cache
-services.AddMicroliuRedis(options=>
+public void ConfigureServices(IServiceCollection services)
 {
-    options.HostName = "192.168.10.214:6379"; // redis主机和端口地址
-    options.Password = "pt_test";// redis密码
-    options.PoolSize = 50;		// redis连接池大小
-    options.QueueWait = 600;	// 等待时间
-    options.Startup = true;		// 是否启用redis
-    options.StorageIndex = 7;	// 存储库空间索引
-});
+	...
+	services.AddRedis();	//加入Redis
+	...
+}
 `
-
-## 特别注意
-如果在webapi中希望使用Exceptionless日志的话，请添加
-
-app.UseExceptionless(Configuration);
-
-另外需要在appSettings.json中添加
-
+然后在appsettings.json中加入：
 `
 {
-   ....
-  "Exceptionless": {
-    "ApiKey": "ov7WSaIWUYaeIRnenHCrxkmBt9OSPZHAFBvyHopY",
-    "ServerUrl": "http://192.168.10.214:11012"
+  "Redis": {
+    "HostName": "192.168.10.214:6379",// redis主机和端口地址
+    "Password": "",				      // redis密码
+    "PoolSize": 20,				 	  // redis连接池大小
+    "QueueWait": 400,				  // 等待时间
+    "Enabled": true,			 	  // 是否启用redis
+    "StorageIndex": 0				  // 存储库空间索引0-15
   }
-  ...
 }
 `
 
-另外，请再加入一个NLog.config文件，并在运行目录添加文件夹logs，否则是不会自动记录到文本文档中的。
+#### 第二种方式：Startup.cs中
+`
+// Redis Cache
+services.AddMicroliuRedis(options=>
+{
+    options.HostName = "192.168.10.214:6379";// redis主机和端口地址
+    options.Password = "pt_test";			 // redis密码
+    options.PoolSize = 50;					 // redis连接池大小
+    options.QueueWait = 600;				 // 等待时间
+    options.Enabled = true;					 // 是否启用redis
+    options.StorageIndex = 7;				 // 存储库空间索引0-15
+});
+`
+
+
+#### 最后
+
+直接在Controller的构造函数中，注入 `ICacheService` 即可。如
+
+```
+private ICacheService _cache;
+public RedisTestCase(ICacheService cache)
+{
+    _cache = cache ?? throw new ArgumentNullException(nameof(cache));
+}
+```

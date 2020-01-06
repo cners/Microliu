@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Net;
+using System.Net.Sockets;
 using System.Text;
 
 namespace Microliu.Utils
@@ -34,6 +35,20 @@ namespace Microliu.Utils
                 result = reader.ReadToEnd();
             }
             return result;
+        }
+
+
+        public static string GetLocalIPAddress()
+        {
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    return ip.ToString();
+                }
+            }
+            return null;
         }
     }
 }

@@ -2749,7 +2749,7 @@
           "bin/placeholder/Microliu.Auth.Domain.dll": {}
         }
       },
-      "Microliu.Utils/1.0.0": {
+      "Microliu.Utils/1.0.1": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
@@ -8352,7 +8352,7 @@
       "path": "../Microliu.Auth.Domain/Microliu.Auth.Domain.csproj",
       "msbuildProject": "../Microliu.Auth.Domain/Microliu.Auth.Domain.csproj"
     },
-    "Microliu.Utils/1.0.0": {
+    "Microliu.Utils/1.0.1": {
       "type": "project",
       "path": "../../../Microliu.Utils/Microliu.Utils/Microliu.Utils.csproj",
       "msbuildProject": "../../../Microliu.Utils/Microliu.Utils/Microliu.Utils.csproj"
@@ -8365,7 +8365,7 @@
       "DotNetCore.CAP.RabbitMQ >= 2.6.0",
       "MediatR >= 7.0.0",
       "Microliu.Auth.Data >= 1.0.0",
-      "Microliu.Utils >= 1.0.0",
+      "Microliu.Utils >= 1.0.1",
       "Microsoft.AspNetCore >= 2.2.0",
       "NETStandard.Library >= 2.0.3"
     ]
