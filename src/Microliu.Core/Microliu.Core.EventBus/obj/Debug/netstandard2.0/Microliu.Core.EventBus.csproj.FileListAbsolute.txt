@@ -13,3 +13,4 @@ D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.EventBus\obj\Debug\netstan
 D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.EventBus\obj\Debug\netstandard2.0\Microliu.Core.EventBus.AssemblyInfo.cs
 D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.EventBus\obj\Debug\netstandard2.0\Microliu.Core.EventBus.dll
 D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.EventBus\obj\Debug\netstandard2.0\Microliu.Core.EventBus.pdb
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.EventBus\obj\Debug\netstandard2.0\Microliu.Core.EventBus.csprojAssemblyReference.cache

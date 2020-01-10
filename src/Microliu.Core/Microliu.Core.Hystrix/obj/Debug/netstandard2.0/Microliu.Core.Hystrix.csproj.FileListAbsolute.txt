@@ -7,3 +7,11 @@ D:\Microliu\src\Microliu.Core\Microliu.Core.Hystrix\obj\Debug\netstandard2.0\Mic
 D:\Microliu\src\Microliu.Core\Microliu.Core.Hystrix\obj\Debug\netstandard2.0\Microliu.Core.Hystrix.AssemblyInfo.cs
 D:\Microliu\src\Microliu.Core\Microliu.Core.Hystrix\obj\Debug\netstandard2.0\Microliu.Core.Hystrix.dll
 D:\Microliu\src\Microliu.Core\Microliu.Core.Hystrix\obj\Debug\netstandard2.0\Microliu.Core.Hystrix.pdb
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Hystrix\bin\Debug\netstandard2.0\Microliu.Core.Hystrix.deps.json
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Hystrix\bin\Debug\netstandard2.0\Microliu.Core.Hystrix.dll
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Hystrix\bin\Debug\netstandard2.0\Microliu.Core.Hystrix.pdb
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Hystrix\obj\Debug\netstandard2.0\Microliu.Core.Hystrix.csprojAssemblyReference.cache
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Hystrix\obj\Debug\netstandard2.0\Microliu.Core.Hystrix.AssemblyInfoInputs.cache
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Hystrix\obj\Debug\netstandard2.0\Microliu.Core.Hystrix.AssemblyInfo.cs
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Hystrix\obj\Debug\netstandard2.0\Microliu.Core.Hystrix.dll
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Hystrix\obj\Debug\netstandard2.0\Microliu.Core.Hystrix.pdb

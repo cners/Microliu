@@ -8,32 +8,6 @@ namespace Microliu.Utils
     public class StringHelper
     {
         /// <summary>
-        /// 检查一个字符串是否是纯数字构成的，一般用于查询字符串参数的有效性验证。(0除外)
-        /// </summary>
-        /// <param name="_value">需验证的字符串。。</param>
-        /// <returns>是否合法的bool值。</returns>
-        public static bool IsNumberId(string _value)
-        {
-            return QuickValidate("^[1-9]*[0-9]*$", _value);
-        }
-        /// <summary>
-        /// 快速验证一个字符串是否符合指定的正则表达式。
-        /// </summary>
-        /// <param name="_express">正则表达式的内容。</param>
-        /// <param name="_value">需验证的字符串。</param>
-        /// <returns>是否合法的bool值。</returns>
-        public static bool QuickValidate(string _express, string _value)
-        {
-            if (_value == null) return false;
-            Regex myRegex = new Regex(_express);
-            if (_value.Length == 0)
-            {
-                return false;
-            }
-            return myRegex.IsMatch(_value);
-        }
-
-        /// <summary>
         /// 得到字符串长度，一个汉字长度为2
         /// </summary>
         /// <param name="inputString">参数字符串</param>
@@ -157,5 +131,17 @@ namespace Microliu.Utils
             return false;
         }
 
+
+        /// <summary>
+        /// 获取邮箱域名，不含@
+        /// </summary>
+        /// <param name="email">邮箱地址</param>
+        /// <returns></returns>
+        public static string GetEmailDomain(string email)
+        {
+            email = email ?? "";
+            if (!email.Contains("@")) return "";
+            return email.Substring(email.LastIndexOf('@')).Replace("@","");
+        }
     }
 }

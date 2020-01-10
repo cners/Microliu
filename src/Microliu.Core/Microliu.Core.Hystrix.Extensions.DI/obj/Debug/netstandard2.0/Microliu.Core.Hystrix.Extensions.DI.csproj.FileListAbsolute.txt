@@ -10,3 +10,14 @@ D:\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\obj\Debug\nets
 D:\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\obj\Debug\netstandard2.0\Microliu.Core.Hystrix.Extensions.DI.csproj.CopyComplete
 D:\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\obj\Debug\netstandard2.0\Microliu.Core.Hystrix.Extensions.DI.dll
 D:\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\obj\Debug\netstandard2.0\Microliu.Core.Hystrix.Extensions.DI.pdb
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\bin\Debug\netstandard2.0\Microliu.Core.Hystrix.Extensions.DI.deps.json
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\bin\Debug\netstandard2.0\Microliu.Core.Hystrix.Extensions.DI.dll
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\bin\Debug\netstandard2.0\Microliu.Core.Hystrix.Extensions.DI.pdb
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\bin\Debug\netstandard2.0\Microliu.Core.Hystrix.dll
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\bin\Debug\netstandard2.0\Microliu.Core.Hystrix.pdb
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\obj\Debug\netstandard2.0\Microliu.Core.Hystrix.Extensions.DI.csprojAssemblyReference.cache
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\obj\Debug\netstandard2.0\Microliu.Core.Hystrix.Extensions.DI.AssemblyInfoInputs.cache
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\obj\Debug\netstandard2.0\Microliu.Core.Hystrix.Extensions.DI.AssemblyInfo.cs
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\obj\Debug\netstandard2.0\Microliu.Core.Hystrix.Extensions.DI.csproj.CopyComplete
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\obj\Debug\netstandard2.0\Microliu.Core.Hystrix.Extensions.DI.dll
+D:\LiuZhuang\Microliu\src\Microliu.Core\Microliu.Core.Hystrix.Extensions.DI\obj\Debug\netstandard2.0\Microliu.Core.Hystrix.Extensions.DI.pdb

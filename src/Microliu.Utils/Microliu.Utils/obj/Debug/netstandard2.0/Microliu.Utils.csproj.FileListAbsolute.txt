@@ -37,4 +37,3 @@ D:\LiuZhuang\Microliu\src\Microliu.Utils\Microliu.Utils\obj\Debug\netstandard2.0
 D:\LiuZhuang\Microliu\src\Microliu.Utils\Microliu.Utils\obj\Debug\netstandard2.0\Microliu.Utils.csproj.CopyComplete
 D:\LiuZhuang\Microliu\src\Microliu.Utils\Microliu.Utils\obj\Debug\netstandard2.0\Microliu.Utils.dll
 D:\LiuZhuang\Microliu\src\Microliu.Utils\Microliu.Utils\obj\Debug\netstandard2.0\Microliu.Utils.pdb
-D:\LiuZhuang\Microliu\src\Microliu.Utils\Microliu.Utils\obj\Debug\netstandard2.0\Microliu.Utils.csprojAssemblyReference.cache
