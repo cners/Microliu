@@ -57,10 +57,6 @@
               "target": "Package",
               "version": "[5.0.1, )"
             },
-            "Microliu.Core.Logger": {
-              "target": "Package",
-              "version": "[1.0.2, )"
-            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.0-preview1.19506.2, )"
@@ -74,6 +70,14 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.0-preview1-19509-03, )"
+            },
+            "NLog.Targets.ElasticSearch": {
+              "target": "Package",
+              "version": "[7.1.1, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.9.0, )"
             }
           },
           "imports": [

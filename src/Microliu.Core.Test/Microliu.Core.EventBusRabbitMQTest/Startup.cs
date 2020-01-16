@@ -32,8 +32,8 @@ namespace Microliu.Core.EventBusTest
             services.AddControllers();
 
             services.AddEventBusRabbitMQ(clientName: "EventBusClientTest");
-            //services.RegisterEventBusHandler<EmailNoticeEventHandler>();
-            services.RegisterEventBusHandler();
+            services.RegisterEventBusHandler<EmailNoticeEventHandler>();
+           // services.RegisterEventBusHandler();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

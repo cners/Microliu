@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "Microliu.Core.RedisTest": {
+      "commandName": "Project"
+    }
+  }
+}

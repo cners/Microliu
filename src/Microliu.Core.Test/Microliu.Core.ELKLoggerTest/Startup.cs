@@ -26,7 +26,6 @@ namespace Microliu.Core.ELKLoggerTest
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.addtransie
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

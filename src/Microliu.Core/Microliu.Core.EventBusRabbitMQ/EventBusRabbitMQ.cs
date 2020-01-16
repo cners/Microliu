@@ -40,9 +40,9 @@ namespace Microliu.Core.EventBus.RabbitMQ
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _subsManager = eventBusSubscrptionsManager ?? new InMemoryEventBusSubscriptionsManager(loggerInMemory);
             _queueName = queueName;
+            _exchangeName = exchangeName;
             _consumerChannel = CreateConsumerChannel();
             _retryCount = retryCount;
-            _exchangeName = exchangeName;
             _subsManager.OnEventRemoved += SubsManager_OnEventRemoved;
             _autofac = autofac;
         }

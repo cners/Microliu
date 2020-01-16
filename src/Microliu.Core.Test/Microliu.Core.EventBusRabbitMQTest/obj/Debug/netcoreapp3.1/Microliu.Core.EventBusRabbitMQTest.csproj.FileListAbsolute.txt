@@ -157,10 +157,6 @@ D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\
 D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\bin\Debug\netcoreapp3.1\AspectCore.Extensions.Reflection.dll
 D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\bin\Debug\netcoreapp3.1\Autofac.dll
 D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
-D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\bin\Debug\netcoreapp3.1\Exceptionless.dll
-D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\bin\Debug\netcoreapp3.1\Exceptionless.AspNetCore.dll
-D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\bin\Debug\netcoreapp3.1\Exceptionless.NLog.dll
-D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\bin\Debug\netcoreapp3.1\Microliu.Core.Logger.dll
 D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Https.dll
 D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
@@ -175,8 +171,6 @@ D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\
 D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
 D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
-D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DiagnosticAdapter.dll
-D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\bin\Debug\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
 D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
 D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.dll
 D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\bin\Debug\netcoreapp3.1\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
@@ -277,3 +271,5 @@ D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\
 D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\obj\Debug\netcoreapp3.1\Microliu.Core.EventBusRabbitMQTest.csproj.CopyComplete
 D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\obj\Debug\netcoreapp3.1\Microliu.Core.EventBusRabbitMQTest.dll
 D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\obj\Debug\netcoreapp3.1\Microliu.Core.EventBusRabbitMQTest.pdb
+D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\bin\Debug\netcoreapp3.1\Elasticsearch.Net.dll
+D:\LiuZhuang\Microliu\src\Microliu.Core.Test\Microliu.Core.EventBusRabbitMQTest\bin\Debug\netcoreapp3.1\NLog.Targets.ElasticSearch.dll
