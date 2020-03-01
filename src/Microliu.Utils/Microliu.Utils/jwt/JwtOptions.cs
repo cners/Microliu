@@ -18,21 +18,14 @@ namespace Microliu.Utils.jwt
         /// </summary>
         public string SecretKey { get; set; }
         /// <summary>
-        /// 生命周期
+        /// 生命周期（分钟）
         /// </summary>
         public int Lifetime { get; set; }
         /// <summary>
         /// 是否验证生命周期
         /// </summary>
         public bool ValidateLifetime { get; set; }
-        /// <summary>
-        /// 验证头字段
-        /// </summary>
-        public string HeadField { get; set; }
-        /// <summary>
-        /// jwt验证前缀
-        /// </summary>
-        public string Prefix { get; set; }
+        
         /// <summary>
         /// 忽略验证的url
         /// </summary>

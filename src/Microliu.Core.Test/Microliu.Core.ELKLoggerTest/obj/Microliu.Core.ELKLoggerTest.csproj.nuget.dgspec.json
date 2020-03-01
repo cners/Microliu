@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core.Test\\Microliu.Core.ELKLoggerTest\\Microliu.Core.ELKLoggerTest.csproj": {}
+    "D:\\Microliu\\src\\Microliu.Core.Test\\Microliu.Core.ELKLoggerTest\\Microliu.Core.ELKLoggerTest.csproj": {}
   },
   "projects": {
-    "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core.Test\\Microliu.Core.ELKLoggerTest\\Microliu.Core.ELKLoggerTest.csproj": {
+    "D:\\Microliu\\src\\Microliu.Core.Test\\Microliu.Core.ELKLoggerTest\\Microliu.Core.ELKLoggerTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core.Test\\Microliu.Core.ELKLoggerTest\\Microliu.Core.ELKLoggerTest.csproj",
+        "projectUniqueName": "D:\\Microliu\\src\\Microliu.Core.Test\\Microliu.Core.ELKLoggerTest\\Microliu.Core.ELKLoggerTest.csproj",
         "projectName": "Microliu.Core.ELKLoggerTest",
-        "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core.Test\\Microliu.Core.ELKLoggerTest\\Microliu.Core.ELKLoggerTest.csproj",
-        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
-        "outputPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core.Test\\Microliu.Core.ELKLoggerTest\\obj\\",
+        "projectPath": "D:\\Microliu\\src\\Microliu.Core.Test\\Microliu.Core.ELKLoggerTest\\Microliu.Core.ELKLoggerTest.csproj",
+        "packagesPath": "C:\\Users\\liuzh\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\src\\Microliu.Core.Test\\Microliu.Core.ELKLoggerTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\liuzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,7 +25,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\liuzhuang\\nuget.test": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -69,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

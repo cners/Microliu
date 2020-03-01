@@ -1,5 +1,4 @@
 D:\Microliu\src\Microliu.Utils\Microliu.Utils\obj\Release\netstandard2.0\Microliu.Utils.csprojAssemblyReference.cache
-D:\Microliu\src\Microliu.Utils\Microliu.Utils\obj\Release\netstandard2.0\Microliu.Utils.csproj.CoreCompileInputs.cache
 D:\Microliu\src\Microliu.Utils\Microliu.Utils\obj\Release\netstandard2.0\Microliu.Utils.AssemblyInfoInputs.cache
 D:\Microliu\src\Microliu.Utils\Microliu.Utils\obj\Release\netstandard2.0\Microliu.Utils.AssemblyInfo.cs
 D:\Microliu\src\Microliu.Utils\Microliu.Utils\bin\Release\netstandard2.0\Microliu.Utils.deps.json

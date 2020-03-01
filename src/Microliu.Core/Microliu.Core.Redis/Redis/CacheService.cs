@@ -23,7 +23,9 @@ namespace Microliu.Core.RedisCache
         private BlockingQueue<ConnectionMultiplexer> _redisPool;
 
 
-        public CacheService(RedisOptions options, ILogger<CacheService> logger)
+        public CacheService(RedisOptions options
+            , ILogger<CacheService> logger
+            )
         {
             _options = options;
             _logger = logger;
@@ -914,7 +916,7 @@ namespace Microliu.Core.RedisCache
 
         private void Conn_ErrorMessage(object sender, RedisErrorEventArgs e)
         {
-            _logger.LogError("[Redis服务响应失败] [{errMsg}]", e.Message);
+           _logger.LogError("[Redis服务响应失败] [{errMsg}]", e.Message);
         }
 
         private void Conn_ConnectionFailed(object sender, ConnectionFailedEventArgs e)

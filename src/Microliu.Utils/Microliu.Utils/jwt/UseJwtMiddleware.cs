@@ -58,12 +58,13 @@ namespace Microliu.Utils.jwt
             }
             else
             {
-                if (context.Request.Headers.TryGetValue(this._jwtOptions.HeadField, out Microsoft.Extensions.Primitives.StringValues authValue))
+                if (context.Request.Headers.TryGetValue("Authorization", out Microsoft.Extensions.Primitives.StringValues authValue))
                 {
                     var authstr = authValue.ToString();
-                    if (this._jwtOptions.Prefix.Length > 0)
+                    var prefix = "Bearer";
+                    if (prefix.Length > 0)
                     {
-                        authstr = authValue.ToString().Substring(this._jwtOptions.Prefix.Length + 1, authValue.ToString().Length - (this._jwtOptions.Prefix.Length + 1));
+                        authstr = authValue.ToString().Substring(prefix.Length + 1, authValue.ToString().Length - (prefix.Length + 1));
                     }
                     if (this._jwt.ValidateToken(authstr, out Dictionary<string, string> Clims))
                     {

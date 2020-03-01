@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\LiuZhuang\\Microliu\\src\\Services\\Order\\Microliu.Order\\Microliu.Order.csproj": {}
+    "D:\\Microliu\\src\\Services\\Order\\Microliu.Order\\Microliu.Order.csproj": {}
   },
   "projects": {
-    "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj": {
+    "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj",
+        "projectUniqueName": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj",
         "projectName": "Microliu.Core.Consul",
-        "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj",
-        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
-        "outputPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\obj\\",
+        "projectPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj",
+        "packagesPath": "C:\\Users\\liuzh\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\liuzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,7 +25,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\liuzhuang\\nuget.test": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -67,24 +66,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix.Extensions.DI\\Microliu.Core.Hystrix.Extensions.DI.csproj": {
+    "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix.Extensions.DI\\Microliu.Core.Hystrix.Extensions.DI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix.Extensions.DI\\Microliu.Core.Hystrix.Extensions.DI.csproj",
+        "projectUniqueName": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix.Extensions.DI\\Microliu.Core.Hystrix.Extensions.DI.csproj",
         "projectName": "Microliu.Core.Hystrix.Extensions.DI",
-        "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix.Extensions.DI\\Microliu.Core.Hystrix.Extensions.DI.csproj",
-        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
-        "outputPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix.Extensions.DI\\obj\\",
+        "projectPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix.Extensions.DI\\Microliu.Core.Hystrix.Extensions.DI.csproj",
+        "packagesPath": "C:\\Users\\liuzh\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix.Extensions.DI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\liuzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -92,14 +91,13 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\liuzhuang\\nuget.test": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix\\Microliu.Core.Hystrix.csproj": {
-                "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix\\Microliu.Core.Hystrix.csproj"
+              "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix\\Microliu.Core.Hystrix.csproj": {
+                "projectPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix\\Microliu.Core.Hystrix.csproj"
               }
             }
           }
@@ -138,24 +136,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix\\Microliu.Core.Hystrix.csproj": {
+    "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix\\Microliu.Core.Hystrix.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix\\Microliu.Core.Hystrix.csproj",
+        "projectUniqueName": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix\\Microliu.Core.Hystrix.csproj",
         "projectName": "Microliu.Core.Hystrix",
-        "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix\\Microliu.Core.Hystrix.csproj",
-        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
-        "outputPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix\\obj\\",
+        "projectPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix\\Microliu.Core.Hystrix.csproj",
+        "packagesPath": "C:\\Users\\liuzh\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\liuzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -163,7 +161,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\liuzhuang\\nuget.test": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -209,24 +206,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\LiuZhuang\\Microliu\\src\\Services\\Order\\Microliu.Order\\Microliu.Order.csproj": {
+    "D:\\Microliu\\src\\Services\\Order\\Microliu.Order\\Microliu.Order.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\LiuZhuang\\Microliu\\src\\Services\\Order\\Microliu.Order\\Microliu.Order.csproj",
+        "projectUniqueName": "D:\\Microliu\\src\\Services\\Order\\Microliu.Order\\Microliu.Order.csproj",
         "projectName": "Microliu.Order",
-        "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Services\\Order\\Microliu.Order\\Microliu.Order.csproj",
-        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
-        "outputPath": "D:\\LiuZhuang\\Microliu\\src\\Services\\Order\\Microliu.Order\\obj\\",
+        "projectPath": "D:\\Microliu\\src\\Services\\Order\\Microliu.Order\\Microliu.Order.csproj",
+        "packagesPath": "C:\\Users\\liuzh\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\src\\Services\\Order\\Microliu.Order\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\liuzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -234,20 +231,19 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\liuzhuang\\nuget.test": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj": {
-                "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj"
+              "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj": {
+                "projectPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Consul\\Microliu.Core.Consul.csproj"
               },
-              "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix.Extensions.DI\\Microliu.Core.Hystrix.Extensions.DI.csproj": {
-                "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix.Extensions.DI\\Microliu.Core.Hystrix.Extensions.DI.csproj"
+              "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix.Extensions.DI\\Microliu.Core.Hystrix.Extensions.DI.csproj": {
+                "projectPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix.Extensions.DI\\Microliu.Core.Hystrix.Extensions.DI.csproj"
               },
-              "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix\\Microliu.Core.Hystrix.csproj": {
-                "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix\\Microliu.Core.Hystrix.csproj"
+              "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix\\Microliu.Core.Hystrix.csproj": {
+                "projectPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Hystrix\\Microliu.Core.Hystrix.csproj"
               }
             }
           }
@@ -293,7 +289,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

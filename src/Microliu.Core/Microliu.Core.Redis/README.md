@@ -1,6 +1,6 @@
 ﻿
 ### 缓存服务
-支持.net core 2.2+，采用Redis缓存，使用阻塞队列创建redis连接池实现。
+支持.net core 3.0+，采用Redis缓存，使用阻塞队列创建redis连接池实现。
 
 ### 如何使用？
 在.net core web项目中使用：

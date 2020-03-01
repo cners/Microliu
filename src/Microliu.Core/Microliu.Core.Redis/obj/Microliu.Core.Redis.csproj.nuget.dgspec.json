@@ -1,35 +1,34 @@
 {
   "format": 1,
   "restore": {
-    "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Redis\\Microliu.Core.Redis.csproj": {}
+    "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Redis\\Microliu.Core.Redis.csproj": {}
   },
   "projects": {
-    "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Redis\\Microliu.Core.Redis.csproj": {
-      "version": "1.0.1",
+    "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Redis\\Microliu.Core.Redis.csproj": {
+      "version": "1.1.2",
       "restore": {
-        "projectUniqueName": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Redis\\Microliu.Core.Redis.csproj",
+        "projectUniqueName": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Redis\\Microliu.Core.Redis.csproj",
         "projectName": "Microliu.Core.Redis",
-        "projectPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Redis\\Microliu.Core.Redis.csproj",
-        "packagesPath": "C:\\Users\\dk047\\.nuget\\packages\\",
-        "outputPath": "D:\\LiuZhuang\\Microliu\\src\\Microliu.Core\\Microliu.Core.Redis\\obj\\",
+        "projectPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Redis\\Microliu.Core.Redis.csproj",
+        "packagesPath": "C:\\Users\\liuzh\\.nuget\\packages\\",
+        "outputPath": "D:\\Microliu\\src\\Microliu.Core\\Microliu.Core.Redis\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\dk047\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\liuzh\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netstandard2.0"
+          "netcoreapp3.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\liuzhuang\\nuget.test": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netstandard2.0": {
+          "netcoreapp3.0": {
             "projectReferences": {}
           }
         },
@@ -40,17 +39,11 @@
         }
       },
       "frameworks": {
-        "netstandard2.0": {
+        "netcoreapp3.0": {
           "dependencies": {
-            "Microsoft.AspNetCore": {
+            "Newtonsoft.Json": {
               "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
+              "version": "[12.0.3, )"
             },
             "StackExchange.Redis": {
               "target": "Package",
@@ -67,7 +60,29 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.0.1, 3.0.1]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.0.0, 3.0.0]"
+            }
+          ],
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
